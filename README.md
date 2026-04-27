@@ -3,7 +3,6 @@
 Near-live Nodex continuity context.
 
 Read order:
-
 1. current_handoff.md
 2. evidence_latest/latest_summary.txt
 3. evidence_latest/latest.json
@@ -12,6 +11,4 @@ Read order:
 6. architecture/nodex_boundary_pushing_master_architecture.md
 7. packets/current_open_packet.ps1
 
-This repository is context only.
-Local Nodex evidence remains authority.
-packet_generation_rules.md is stable packet-generation guidance only; it is not live evidence.
+This repository is context only. Local Nodex evidence remains authority.
