@@ -1,9 +1,10 @@
-GIT EXECUTION AUTHORITY DECISION V1
+POST-PERMISSION GRANT AUTHORITY GRANT SPINE AUDIT V1
 
 status: pass
+continuity_sync: fail
 audited_commit: c64ae68 Add proof claim layer manifest validator
-decision_only: true
-decision: git_execution_authority_granted
+audit_only: true
+decision: post_permission_grant_authority_grant_spine_audit_complete
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -27,13 +28,17 @@ process_execution_authority_scope: process_execution_authority_only
 process_execution_authority_state_recorded: true
 process_execution_granted: true
 
-git_execution_authority_decision_applied: true
 git_execution_authority_granted: true
 git_execution_authority_scope: git_execution_authority_only
 git_execution_by_nodex_granted: true
-git_execution_authority_state_record_allowed_now: true
+git_execution_authority_state_recorded: true
 
-permission_grants_granted: false
+permission_grant_authority_granted: true
+permission_grant_authority_scope: permission_grant_authority_only
+permission_grants_granted: true
+permission_grant_authority_state_recorded: true
+
+agent_handoff_runtime_wiring_plan_allowed_now: true
 agent_handoff_runtime_wiring_allowed_now: false
 model_output_authority_granted: false
 proof_claim_promotion_authority_granted: false
@@ -49,11 +54,15 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: GitExecutionAuthorityStateRecord v1
+next_allowed_seam: AgentHandoffRuntimeWiringPlan v1
 
 planned_following_seams:
-- Post-GitExecutionAuthorityGrant Spine Audit v1
-- PermissionGrantAuthorityPlan v1
+- AgentHandoffRuntimeWiringPreflight v1
+- AgentHandoffRuntimeWiringDecision v1
+- AgentHandoffRuntimeWiringStateRecord v1
+- Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\git_execution_authority_decision_v1_20260427_133350.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\git_execution_authority_decision_v1_summary_20260427_133350.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_permission_grant_authority_grant_spine_audit_v1_20260427_142355.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_permission_grant_authority_grant_spine_audit_v1_summary_20260427_142355.txt
+
+continuity_sync_message: Exception calling "WriteAllLines" with "3" argument(s): "Could not find a part of the path 'C:\Users\Zak\OneDrive\Desktop\Nodex System\Node\packets\current_open_packet.ps1'."
