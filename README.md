@@ -1,14 +1,11 @@
-﻿# nodex-live-context
+# nodex-live-context
 
-Near-live Nodex continuity context.
+Near-live continuity context for Nodex.
 
-Read order:
+This repository is not Nodex authority.
 
-1. current_handoff.md
-2. evidence_latest/latest_summary.txt
-3. evidence_latest/latest.json
-4. architecture/nodex_exact_continuity_source_v1.md
-5. architecture/nodex_boundary_pushing_master_architecture.md
-6. packets/current_open_packet.ps1
+Latest completed seam: ModelOutputAuthorityPlan v1
+Current open seam: ModelOutputAuthorityPreflight v1
+Latest continuity sync: pass
 
-This repository is context only. Local Nodex evidence remains authority.
+Read current_handoff.md first.
