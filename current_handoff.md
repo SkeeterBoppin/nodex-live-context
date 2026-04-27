@@ -1,6 +1,6 @@
-# NODEX CURRENT HANDOFF
+﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T15:15:59.2899216-07:00
+Generated: 2026-04-27T15:30:33.7396019-07:00
 
 ## Boundary
 
@@ -11,38 +11,66 @@ It does NOT grant runtime, tool, file, process, git, permission, source mutation
 
 ## Nodex Repo
 
+``text
 C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
+``
 
-## Latest Observed Nodex Commit
+Latest observed Nodex commit:
 
+``text
 c64ae68 Add proof claim layer manifest validator
+``
 
-## Latest Observed Nodex Working Tree
+Latest observed Nodex working tree status:
 
-clean
+``text
+
+``
 
 ## Latest Completed Seam
 
-ModelOutputAuthorityDecision v1
+``text
+Post-ModelOutputAuthorityGrant Spine Audit v1
+``
+
+## Latest Result
+
+``text
+status: pass
+continuity_sync: repaired separately after initial sync failure
+decision: post_model_output_authority_grant_spine_audit_complete
+next_allowed_seam: ProofClaimPromotionAuthorityPlan v1
+``
 
 ## Current Open Seam
 
-ModelOutputAuthorityStateRecord v1
+``text
+ProofClaimPromotionAuthorityPlan v1
+``
 
 ## Current Packet
 
+``text
 not generated yet
+``
 
-packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it as a Nodex packet.
+The file below is a continuity placeholder only and must not be run as a Nodex packet:
 
-## Latest Evidence
+``text
+packets/current_open_packet.ps1
+``
 
-status: pass
-decision: model_output_authority_granted
-model_output_authority_granted: true
-next_allowed_seam: ModelOutputAuthorityStateRecord v1
+## Expected Next Action
 
-## Currently Granted
+Generate the next Nodex packet for:
+
+``text
+ProofClaimPromotionAuthorityPlan v1
+``
+
+Do not treat ProofClaimPromotionAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
+
+## Currently Granted After Latest Completed Seam
 
 - activation authority
 - runtime integration authority
@@ -55,7 +83,7 @@ next_allowed_seam: ModelOutputAuthorityStateRecord v1
 - AgentHandoffRunner runtime wiring authority
 - model-output authority
 
-## Still Blocked
+## Currently Not Granted After Latest Completed Seam
 
 - proof-claim promotion authority
 - external review authority
@@ -66,22 +94,25 @@ next_allowed_seam: ModelOutputAuthorityStateRecord v1
 - repo deletion
 - deletion
 - file move
+- commit
 - staging
-- commit authority outside explicit commit-gate seams
 
 ## Required Files To Read First
 
-- current_handoff.md
-- evidence_latest/latest_summary.txt
-- evidence_latest/latest.json
-- architecture/nodex_exact_continuity_source_v1.md
-- architecture/nodex_boundary_pushing_master_architecture.md
-- packets/current_open_packet.ps1
+``text
+current_handoff.md
+evidence_latest/latest_summary.txt
+evidence_latest/latest.json
+packet_generation_rules.md
+architecture/nodex_exact_continuity_source_v1.md
+architecture/nodex_boundary_pushing_master_architecture.md
+packets/current_open_packet.ps1
+``
 
 ## New Chat Rule
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not treat ModelOutputAuthorityStateRecord v1 as passed until Zak pastes status: pass.
+Do not generate beyond ProofClaimPromotionAuthorityPlan v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

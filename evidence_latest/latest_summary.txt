@@ -1,10 +1,10 @@
-MODEL OUTPUT AUTHORITY DECISION V1
+POST-MODEL OUTPUT AUTHORITY GRANT SPINE AUDIT V1
 
 status: pass
-continuity_sync: skipped
+continuity_sync: fail
 audited_commit: c64ae68 Add proof claim layer manifest validator
-decision_only: true
-decision: model_output_authority_granted
+audit_only: true
+decision: post_model_output_authority_grant_spine_audit_complete
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -43,11 +43,11 @@ agent_handoff_runtime_wiring_scope: agent_handoff_runtime_wiring_only
 agent_handoff_runtime_wiring_allowed_now: true
 agent_handoff_runtime_wiring_state_recorded: true
 
-model_output_authority_decision_applied: true
 model_output_authority_granted: true
 model_output_authority_scope: model_output_authority_only
-model_output_authority_state_record_allowed_now: true
+model_output_authority_state_recorded: true
 
+proof_claim_promotion_authority_plan_allowed_now: true
 proof_claim_promotion_authority_granted: false
 external_review_authority_granted: false
 deep_research_authority_granted: false
@@ -61,13 +61,12 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: ModelOutputAuthorityStateRecord v1
+next_allowed_seam: ProofClaimPromotionAuthorityPlan v1
 
 planned_following_seams:
-- Post-ModelOutputAuthorityGrant Spine Audit v1
 - ProofClaimPromotionAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\model_output_authority_decision_v1_20260427_151557.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\model_output_authority_decision_v1_summary_20260427_151557.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_model_output_authority_grant_spine_audit_v1_20260427_152400.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_model_output_authority_grant_spine_audit_v1_summary_20260427_152400.txt
 
-continuity_sync_message: continuity sync skipped until seam evidence write completed
+continuity_sync_message: Cannot overwrite the item C:\Users\Zak\OneDrive\Desktop\nodex-live-context\packet_generation_rules.md with itself.
