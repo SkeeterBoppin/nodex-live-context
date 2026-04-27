@@ -1,0 +1,1183 @@
+{
+  "schema": "nodex.git_execution_authority.preflight.v1",
+  "status": "pass",
+  "createdAt": "2026-04-27T12:10:06.1432715-07:00",
+  "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+  "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
+  "downloadsRoot": "C:\\Users\\Zak\\Downloads",
+  "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
+  "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
+  "seam": "GitExecutionAuthorityPreflight v1",
+  "auditedCommit": {
+    "expected": "c64ae68 Add proof claim layer manifest validator",
+    "head": "c64ae68 Add proof claim layer manifest validator"
+  },
+  "priorGitExecutionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_plan_v1_20260427_120804.json",
+  "priorPostProcessExecutionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_process_execution_authority_grant_spine_audit_v1_20260427_112153.json",
+  "priorProcessExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_state_record_v1_20260427_111856.json",
+  "priorProcessExecutionAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_decision_v1_20260427_111731.json",
+  "priorRuntimeFileWriteAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_state_record_v1_20260427_111122.json",
+  "priorRuntimeFileWriteAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_decision_v1_20260427_111001.json",
+  "priorToolExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\tool_execution_authority_state_record_v1_20260427_110244.json",
+  "priorRuntimeExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_execution_authority_state_record_v1_20260427_105110.json",
+  "priorRuntimeIntegrationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_integration_authority_state_record_v1_20260427_104206.json",
+  "priorActivationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\activation_authority_state_record_v1_20260427_103039.json",
+  "preflightOnly": true,
+  "decision": "git_execution_authority_decision_ready",
+  "activationAuthorityGranted": true,
+  "activationAuthorityScope": "activation_authority_only",
+  "runtimeIntegrationAuthorityGranted": true,
+  "runtimeIntegrationAuthorityScope": "runtime_integration_authority_only",
+  "runtimeAuthorityGranted": true,
+  "runtimeExecutionAuthorityGranted": true,
+  "runtimeExecutionAuthorityScope": "runtime_execution_authority_only",
+  "toolExecutionAuthorityGranted": true,
+  "toolExecutionAuthorityScope": "tool_execution_authority_only",
+  "runtimeFileWriteAuthorityGranted": true,
+  "runtimeFileWriteAuthorityScope": "runtime_file_write_authority_only",
+  "runtimeFileWritesGranted": true,
+  "processExecutionAuthorityGranted": true,
+  "processExecutionAuthorityScope": "process_execution_authority_only",
+  "processExecutionAuthorityStateRecorded": true,
+  "processExecutionGranted": true,
+  "gitExecutionAuthorityDecisionAllowedNow": true,
+  "gitExecutionByNodexGranted": false,
+  "permissionGrantsGranted": false,
+  "agentHandoffRuntimeWiringAllowedNow": false,
+  "modelOutputAuthorityGranted": false,
+  "proofClaimPromotionAuthorityGranted": false,
+  "externalReviewAuthorityGranted": false,
+  "deepResearchAuthorityGranted": false,
+  "sourceMutationAllowedNow": false,
+  "evidenceRewriteAllowedNow": false,
+  "evidenceDeletionAllowedNow": false,
+  "repoDeletionAllowedNow": false,
+  "deletionAllowedNow": false,
+  "fileMoveAllowedNow": false,
+  "commitAllowedNow": false,
+  "stagingAllowedNow": false,
+  "nextAllowedSeam": "GitExecutionAuthorityDecision v1",
+  "decisionConstraints": [
+    "may grant git execution by Nodex authority only",
+    "must not grant permission changes",
+    "must not wire AgentHandoffRunner to runtime adapters",
+    "must not grant model-output authority",
+    "must not grant proof-claim promotion authority",
+    "must not grant external review authority",
+    "must not grant Deep Research authority",
+    "must not grant source mutation",
+    "must not grant evidence rewrite",
+    "must not grant evidence deletion",
+    "must not grant repo deletion",
+    "must not grant deletion",
+    "must not grant file move",
+    "must not grant commit authority outside explicit commit-gate seams"
+  ],
+  "stopConditions": [
+    "dirty working tree",
+    "full harness failure",
+    "missing GitExecutionAuthorityPlan v1 evidence",
+    "missing Post-ProcessExecutionAuthorityGrant Spine Audit v1 evidence",
+    "process execution authority not granted or wrong scope",
+    "git execution by Nodex already granted outside decision seam",
+    "permission authority already granted",
+    "AgentHandoffRunner runtime wiring already allowed",
+    "source mutation or evidence deletion after plan",
+    "attempt to combine git authority with permission or AgentHandoff authority"
+  ],
+  "boundary": {
+    "activationAuthorityAllowed": true,
+    "activationAuthorityGranted": true,
+    "activationAuthorityScope": "activation_authority_only",
+    "runtimeIntegrationAuthorityAllowed": true,
+    "runtimeIntegrationAuthorityGranted": true,
+    "runtimeIntegrationAuthorityScope": "runtime_integration_authority_only",
+    "runtimeExecutionAuthorityAllowed": true,
+    "runtimeExecutionAuthorityGranted": true,
+    "runtimeExecutionAuthorityScope": "runtime_execution_authority_only",
+    "runtimeAuthorityGranted": true,
+    "toolExecutionAuthorityAllowed": true,
+    "toolExecutionAuthorityGranted": true,
+    "toolExecutionAuthorityScope": "tool_execution_authority_only",
+    "toolExecutionAllowed": true,
+    "runtimeFileWriteAuthorityAllowed": true,
+    "runtimeFileWriteAuthorityGranted": true,
+    "runtimeFileWriteAuthorityScope": "runtime_file_write_authority_only",
+    "runtimeFileWritesAllowed": true,
+    "runtimeFileWritesGranted": true,
+    "processExecutionAuthorityAllowed": true,
+    "processExecutionAuthorityGranted": true,
+    "processExecutionAuthorityScope": "process_execution_authority_only",
+    "processExecutionAllowed": true,
+    "processExecutionGranted": true,
+    "gitExecutionAuthorityDecisionAllowed": true,
+    "gitExecutionAllowedByNodex": false,
+    "gitExecutionByNodexGranted": false,
+    "permissionGrantsAllowed": false,
+    "permissionGrantsGranted": false,
+    "agentHandoffRuntimeWiringAllowed": false,
+    "modelOutputAuthorityAllowed": false,
+    "proofClaimPromotionAuthorityAllowed": false,
+    "replayAuthorityAllowed": false,
+    "externalReviewAuthorityAllowed": false,
+    "deepResearchAuthorityAllowed": false,
+    "packetHelperExecutionAuthorityAllowed": false,
+    "runtimeAdapterSideEffectAuthorityAllowed": false
+  },
+  "blocked": {
+    "gitExecutionByNodex": true,
+    "permissionGrants": true,
+    "agentHandoffRuntimeWiring": true,
+    "modelOutputAuthority": true,
+    "proofClaimPromotionAuthority": true,
+    "externalReviewAuthority": true,
+    "deepResearchAuthority": true,
+    "sourceMutation": true,
+    "evidenceRewrite": true,
+    "evidenceDeletion": true,
+    "repoDeletion": true,
+    "deletion": true,
+    "fileMove": true,
+    "commit": true,
+    "staging": true,
+    "artifactQuarantine": true,
+    "packetQualityRepairImplementation": true,
+    "badCodeRepair": true,
+    "cleanupImplementation": true,
+    "additionalCleanupDeletion": true,
+    "additionalDownloadsCleanup": true
+  },
+  "validation": {
+    "gitExecutionAuthorityPlanVerified": true,
+    "priorSpineAuditVerified": true,
+    "processExecutionStateRecordVerified": true,
+    "processExecutionDecisionVerified": true,
+    "runtimeFileWriteStateRecordVerified": true,
+    "runtimeFileWriteDecisionVerified": true,
+    "toolExecutionStateRecordVerified": true,
+    "runtimeExecutionStateRecordVerified": true,
+    "runtimeIntegrationStateRecordVerified": true,
+    "activationStateRecordVerified": true,
+    "expectedHeadVerified": true,
+    "architectureSourcesVerified": true,
+    "prePreflightWorkingTreeClean": true,
+    "fullHarnessPassed": true,
+    "postPreflightWorkingTreeClean": true,
+    "activationAuthorityGranted": true,
+    "runtimeIntegrationAuthorityGranted": true,
+    "runtimeAuthorityGranted": true,
+    "runtimeExecutionAuthorityGranted": true,
+    "toolExecutionAuthorityGranted": true,
+    "runtimeFileWriteAuthorityGranted": true,
+    "runtimeFileWritesGranted": true,
+    "processExecutionAuthorityGranted": true,
+    "processExecutionGranted": true,
+    "gitExecutionByNodexGranted": false,
+    "permissionGrantsGranted": false,
+    "agentHandoffRuntimeWiringAllowed": false,
+    "modelOutputAuthorityGranted": false,
+    "proofClaimPromotionAuthorityGranted": false,
+    "externalReviewAuthorityGranted": false,
+    "deepResearchAuthorityGranted": false,
+    "sourceMutation": false,
+    "evidenceRewrite": false,
+    "evidenceDeletion": false,
+    "repoDeletion": false,
+    "deletion": false,
+    "fileMove": false,
+    "commit": false,
+    "staging": false
+  },
+  "checks": [
+    {
+      "name": "pre-preflight working tree clean",
+      "pass": true,
+      "reason": "GitExecutionAuthorityPreflight v1 must start with clean working tree",
+      "data": {
+        "statusShort": ""
+      }
+    },
+    {
+      "name": "committed baseline verified",
+      "pass": true,
+      "reason": "HEAD must match GitExecutionAuthorityPreflight baseline",
+      "data": {
+        "expected": "c64ae68 Add proof claim layer manifest validator",
+        "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "git execution authority plan JSON exists",
+      "pass": true,
+      "reason": "missing git_execution_authority_plan_v1_*.json evidence",
+      "data": {
+        "pattern": "git_execution_authority_plan_v1_*.json"
+      }
+    },
+    {
+      "name": "post-process execution authority grant spine audit JSON exists",
+      "pass": true,
+      "reason": "missing post_process_execution_authority_grant_spine_audit_v1_*.json evidence",
+      "data": {
+        "pattern": "post_process_execution_authority_grant_spine_audit_v1_*.json"
+      }
+    },
+    {
+      "name": "process execution authority state record JSON exists",
+      "pass": true,
+      "reason": "missing process_execution_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "process_execution_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "process execution authority decision JSON exists",
+      "pass": true,
+      "reason": "missing process_execution_authority_decision_v1_*.json evidence",
+      "data": {
+        "pattern": "process_execution_authority_decision_v1_*.json"
+      }
+    },
+    {
+      "name": "runtime file write authority state record JSON exists",
+      "pass": true,
+      "reason": "missing runtime_file_write_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "runtime_file_write_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "runtime file write authority decision JSON exists",
+      "pass": true,
+      "reason": "missing runtime_file_write_authority_decision_v1_*.json evidence",
+      "data": {
+        "pattern": "runtime_file_write_authority_decision_v1_*.json"
+      }
+    },
+    {
+      "name": "tool execution authority state record JSON exists",
+      "pass": true,
+      "reason": "missing tool_execution_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "tool_execution_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "runtime execution authority state record JSON exists",
+      "pass": true,
+      "reason": "missing runtime_execution_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "runtime_execution_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "runtime integration authority state record JSON exists",
+      "pass": true,
+      "reason": "missing runtime_integration_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "runtime_integration_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "activation authority state record JSON exists",
+      "pass": true,
+      "reason": "missing activation_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "activation_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "git execution authority plan path present",
+      "pass": true,
+      "reason": "git execution authority plan path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_plan_v1_20260427_120804.json"
+      }
+    },
+    {
+      "name": "git execution authority plan file exists",
+      "pass": true,
+      "reason": "git execution authority plan file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_plan_v1_20260427_120804.json"
+      }
+    },
+    {
+      "name": "post-process execution authority grant spine audit path present",
+      "pass": true,
+      "reason": "post-process execution authority grant spine audit path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_process_execution_authority_grant_spine_audit_v1_20260427_112153.json"
+      }
+    },
+    {
+      "name": "post-process execution authority grant spine audit file exists",
+      "pass": true,
+      "reason": "post-process execution authority grant spine audit file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_process_execution_authority_grant_spine_audit_v1_20260427_112153.json"
+      }
+    },
+    {
+      "name": "process execution authority state record path present",
+      "pass": true,
+      "reason": "process execution authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_state_record_v1_20260427_111856.json"
+      }
+    },
+    {
+      "name": "process execution authority state record file exists",
+      "pass": true,
+      "reason": "process execution authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_state_record_v1_20260427_111856.json"
+      }
+    },
+    {
+      "name": "process execution authority decision path present",
+      "pass": true,
+      "reason": "process execution authority decision path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_decision_v1_20260427_111731.json"
+      }
+    },
+    {
+      "name": "process execution authority decision file exists",
+      "pass": true,
+      "reason": "process execution authority decision file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_decision_v1_20260427_111731.json"
+      }
+    },
+    {
+      "name": "runtime file write authority state record path present",
+      "pass": true,
+      "reason": "runtime file write authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_state_record_v1_20260427_111122.json"
+      }
+    },
+    {
+      "name": "runtime file write authority state record file exists",
+      "pass": true,
+      "reason": "runtime file write authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_state_record_v1_20260427_111122.json"
+      }
+    },
+    {
+      "name": "runtime file write authority decision path present",
+      "pass": true,
+      "reason": "runtime file write authority decision path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_decision_v1_20260427_111001.json"
+      }
+    },
+    {
+      "name": "runtime file write authority decision file exists",
+      "pass": true,
+      "reason": "runtime file write authority decision file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_decision_v1_20260427_111001.json"
+      }
+    },
+    {
+      "name": "tool execution authority state record path present",
+      "pass": true,
+      "reason": "tool execution authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\tool_execution_authority_state_record_v1_20260427_110244.json"
+      }
+    },
+    {
+      "name": "tool execution authority state record file exists",
+      "pass": true,
+      "reason": "tool execution authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\tool_execution_authority_state_record_v1_20260427_110244.json"
+      }
+    },
+    {
+      "name": "runtime execution authority state record path present",
+      "pass": true,
+      "reason": "runtime execution authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_execution_authority_state_record_v1_20260427_105110.json"
+      }
+    },
+    {
+      "name": "runtime execution authority state record file exists",
+      "pass": true,
+      "reason": "runtime execution authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_execution_authority_state_record_v1_20260427_105110.json"
+      }
+    },
+    {
+      "name": "runtime integration authority state record path present",
+      "pass": true,
+      "reason": "runtime integration authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_integration_authority_state_record_v1_20260427_104206.json"
+      }
+    },
+    {
+      "name": "runtime integration authority state record file exists",
+      "pass": true,
+      "reason": "runtime integration authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_integration_authority_state_record_v1_20260427_104206.json"
+      }
+    },
+    {
+      "name": "activation authority state record path present",
+      "pass": true,
+      "reason": "activation authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\activation_authority_state_record_v1_20260427_103039.json"
+      }
+    },
+    {
+      "name": "activation authority state record file exists",
+      "pass": true,
+      "reason": "activation authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\activation_authority_state_record_v1_20260427_103039.json"
+      }
+    },
+    {
+      "name": "git execution plan status pass",
+      "pass": true,
+      "reason": "git execution authority plan must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_plan_v1_20260427_120804.json"
+      }
+    },
+    {
+      "name": "git execution plan exact decision",
+      "pass": true,
+      "reason": "git execution authority plan must plan preflight",
+      "data": {
+        "decision": "git_execution_authority_preflight_planned"
+      }
+    },
+    {
+      "name": "git execution plan routes to preflight",
+      "pass": true,
+      "reason": "git execution plan must route to GitExecutionAuthorityPreflight v1",
+      "data": {
+        "nextAllowedSeam": "GitExecutionAuthorityPreflight v1",
+        "gitExecutionAuthorityPreflightAllowedNow": true
+      }
+    },
+    {
+      "name": "git execution plan gitExecutionAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "git execution plan gitExecutionAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan gitExecutionByNodexGranted",
+      "pass": true,
+      "reason": "git execution plan gitExecutionByNodexGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan permissionGrantsGranted",
+      "pass": true,
+      "reason": "git execution plan permissionGrantsGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan agentHandoffRuntimeWiringAllowedNow",
+      "pass": true,
+      "reason": "git execution plan agentHandoffRuntimeWiringAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan modelOutputAuthorityGranted",
+      "pass": true,
+      "reason": "git execution plan modelOutputAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan proofClaimPromotionAuthorityGranted",
+      "pass": true,
+      "reason": "git execution plan proofClaimPromotionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "git execution plan externalReviewAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "git execution plan deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "git execution plan sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "git execution plan evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "git execution plan evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "git execution plan repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan deletionAllowedNow",
+      "pass": true,
+      "reason": "git execution plan deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan fileMoveAllowedNow",
+      "pass": true,
+      "reason": "git execution plan fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan commitAllowedNow",
+      "pass": true,
+      "reason": "git execution plan commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git execution plan stagingAllowedNow",
+      "pass": true,
+      "reason": "git execution plan stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior spine audit status pass",
+      "pass": true,
+      "reason": "prior post-process execution authority grant spine audit must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_process_execution_authority_grant_spine_audit_v1_20260427_112153.json"
+      }
+    },
+    {
+      "name": "prior spine audit decision exact",
+      "pass": true,
+      "reason": "prior spine audit decision must be complete",
+      "data": {
+        "decision": "post_process_execution_authority_grant_spine_audit_complete"
+      }
+    },
+    {
+      "name": "prior spine audit routes to git plan",
+      "pass": true,
+      "reason": "prior spine audit must route to GitExecutionAuthorityPlan v1",
+      "data": {
+        "nextAllowedSeam": "GitExecutionAuthorityPlan v1",
+        "gitExecutionAuthorityPlanAllowedNow": true
+      }
+    },
+    {
+      "name": "prior audit activationAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit activationAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit activation scope exact",
+      "pass": true,
+      "reason": "activation authority scope must be activation_authority_only",
+      "data": {
+        "actual": "activation_authority_only"
+      }
+    },
+    {
+      "name": "prior audit runtimeIntegrationAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit runtimeIntegrationAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit runtime integration scope exact",
+      "pass": true,
+      "reason": "runtime integration authority scope must be runtime_integration_authority_only",
+      "data": {
+        "actual": "runtime_integration_authority_only"
+      }
+    },
+    {
+      "name": "prior audit runtimeExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit runtimeExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit runtime execution scope exact",
+      "pass": true,
+      "reason": "runtime execution authority scope must be runtime_execution_authority_only",
+      "data": {
+        "actual": "runtime_execution_authority_only"
+      }
+    },
+    {
+      "name": "prior audit toolExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit toolExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit tool scope exact",
+      "pass": true,
+      "reason": "tool execution authority scope must be tool_execution_authority_only",
+      "data": {
+        "actual": "tool_execution_authority_only"
+      }
+    },
+    {
+      "name": "prior audit runtimeFileWriteAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit runtimeFileWriteAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit runtime file write scope exact",
+      "pass": true,
+      "reason": "runtime file write authority scope must be runtime_file_write_authority_only",
+      "data": {
+        "actual": "runtime_file_write_authority_only"
+      }
+    },
+    {
+      "name": "prior audit runtimeFileWritesGranted",
+      "pass": true,
+      "reason": "prior audit runtimeFileWritesGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit processExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit processExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit process scope exact",
+      "pass": true,
+      "reason": "process execution authority scope must be process_execution_authority_only",
+      "data": {
+        "actual": "process_execution_authority_only"
+      }
+    },
+    {
+      "name": "prior audit processExecutionGranted",
+      "pass": true,
+      "reason": "prior audit processExecutionGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "prior audit gitExecutionByNodexGranted",
+      "pass": true,
+      "reason": "prior audit gitExecutionByNodexGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit permissionGrantsGranted",
+      "pass": true,
+      "reason": "prior audit permissionGrantsGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit agentHandoffRuntimeWiringAllowedNow",
+      "pass": true,
+      "reason": "prior audit agentHandoffRuntimeWiringAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit modelOutputAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit modelOutputAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit proofClaimPromotionAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit proofClaimPromotionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit externalReviewAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "prior audit deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "prior audit sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "prior audit evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "prior audit evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "prior audit repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit deletionAllowedNow",
+      "pass": true,
+      "reason": "prior audit deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior audit fileMoveAllowedNow",
+      "pass": true,
+      "reason": "prior audit fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "process execution state status pass",
+      "pass": true,
+      "reason": "process execution state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_state_record_v1_20260427_111856.json"
+      }
+    },
+    {
+      "name": "process state processExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "process state processExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "process state processExecutionGranted",
+      "pass": true,
+      "reason": "process state processExecutionGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "process state scope exact",
+      "pass": true,
+      "reason": "process execution scope must be process_execution_authority_only",
+      "data": {
+        "actual": "process_execution_authority_only"
+      }
+    },
+    {
+      "name": "process state gitExecutionByNodexGranted",
+      "pass": true,
+      "reason": "process state gitExecutionByNodexGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "process state permissionGrantsGranted",
+      "pass": true,
+      "reason": "process state permissionGrantsGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "process state agentHandoffRuntimeWiringAllowedNow",
+      "pass": true,
+      "reason": "process state agentHandoffRuntimeWiringAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "process execution decision status pass",
+      "pass": true,
+      "reason": "process execution decision must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_decision_v1_20260427_111731.json"
+      }
+    },
+    {
+      "name": "process decision processExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "process decision processExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "process decision processExecutionGranted",
+      "pass": true,
+      "reason": "process decision processExecutionGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "process decision gitExecutionByNodexGranted",
+      "pass": true,
+      "reason": "process decision gitExecutionByNodexGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "process decision permissionGrantsGranted",
+      "pass": true,
+      "reason": "process decision permissionGrantsGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "runtime file write state status pass",
+      "pass": true,
+      "reason": "runtime file write state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_state_record_v1_20260427_111122.json"
+      }
+    },
+    {
+      "name": "runtime file write state runtimeFileWriteAuthorityGranted",
+      "pass": true,
+      "reason": "runtime file write state runtimeFileWriteAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "runtime file write state runtimeFileWritesGranted",
+      "pass": true,
+      "reason": "runtime file write state runtimeFileWritesGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "runtime file write decision status pass",
+      "pass": true,
+      "reason": "runtime file write decision must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_decision_v1_20260427_111001.json"
+      }
+    },
+    {
+      "name": "runtime file write decision runtimeFileWriteAuthorityGranted",
+      "pass": true,
+      "reason": "runtime file write decision runtimeFileWriteAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "runtime file write decision runtimeFileWritesGranted",
+      "pass": true,
+      "reason": "runtime file write decision runtimeFileWritesGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "tool execution state status pass",
+      "pass": true,
+      "reason": "tool execution state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\tool_execution_authority_state_record_v1_20260427_110244.json"
+      }
+    },
+    {
+      "name": "tool state toolExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "tool state toolExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "tool state scope exact",
+      "pass": true,
+      "reason": "tool execution scope must be tool_execution_authority_only",
+      "data": {
+        "actual": "tool_execution_authority_only"
+      }
+    },
+    {
+      "name": "runtime execution state status pass",
+      "pass": true,
+      "reason": "runtime execution state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_execution_authority_state_record_v1_20260427_105110.json"
+      }
+    },
+    {
+      "name": "runtime execution state runtimeExecutionAuthorityGranted",
+      "pass": true,
+      "reason": "runtime execution state runtimeExecutionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "runtime execution scope exact",
+      "pass": true,
+      "reason": "runtime execution scope must be runtime_execution_authority_only",
+      "data": {
+        "actual": "runtime_execution_authority_only"
+      }
+    },
+    {
+      "name": "runtime integration state status pass",
+      "pass": true,
+      "reason": "runtime integration state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_integration_authority_state_record_v1_20260427_104206.json"
+      }
+    },
+    {
+      "name": "runtime integration state runtimeIntegrationAuthorityGranted",
+      "pass": true,
+      "reason": "runtime integration state runtimeIntegrationAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "runtime integration scope exact",
+      "pass": true,
+      "reason": "runtime integration scope must be runtime_integration_authority_only",
+      "data": {
+        "actual": "runtime_integration_authority_only"
+      }
+    },
+    {
+      "name": "activation state status pass",
+      "pass": true,
+      "reason": "activation authority state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\activation_authority_state_record_v1_20260427_103039.json"
+      }
+    },
+    {
+      "name": "activation state activationAuthorityGranted",
+      "pass": true,
+      "reason": "activation state activationAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "activation scope exact",
+      "pass": true,
+      "reason": "activation scope must be activation_authority_only",
+      "data": {
+        "actual": "activation_authority_only"
+      }
+    },
+    {
+      "name": "architecture root exists",
+      "pass": true,
+      "reason": "architecture root must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
+      }
+    },
+    {
+      "name": "continuity source exists",
+      "pass": true,
+      "reason": "continuity source must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_exact_continuity_source_v1.md"
+      }
+    },
+    {
+      "name": "boundary architecture source exists",
+      "pass": true,
+      "reason": "boundary architecture source must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_boundary_pushing_master_architecture.md"
+      }
+    },
+    {
+      "name": "package.json exists",
+      "pass": true,
+      "reason": "package.json must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\package.json"
+      }
+    },
+    {
+      "name": "tests/run.js exists",
+      "pass": true,
+      "reason": "tests/run.js must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\tests\\run.js"
+      }
+    },
+    {
+      "name": "full harness passed during preflight",
+      "pass": true,
+      "reason": "node tests/run.js must pass during GitExecutionAuthorityPreflight v1",
+      "data": {
+        "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
+      }
+    },
+    {
+      "name": "post-preflight working tree clean",
+      "pass": true,
+      "reason": "GitExecutionAuthorityPreflight v1 must leave repo working tree clean",
+      "data": {
+        "statusShort": ""
+      }
+    }
+  ],
+  "commandResults": [
+    {
+      "label": "GIT STATUS --SHORT PRE",
+      "filePath": "git",
+      "arguments": [
+        "status",
+        "--short"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": ""
+    },
+    {
+      "label": "VERIFY HEAD",
+      "filePath": "git",
+      "arguments": [
+        "log",
+        "-1",
+        "--oneline"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
+    },
+    {
+      "label": "FULL HARNESS PREFLIGHT",
+      "filePath": "node",
+      "arguments": [
+        "tests/run.js"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
+    },
+    {
+      "label": "GIT STATUS --SHORT POST",
+      "filePath": "git",
+      "arguments": [
+        "status",
+        "--short"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": ""
+    }
+  ],
+  "failure": null
+}
