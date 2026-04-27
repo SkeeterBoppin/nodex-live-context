@@ -1,11 +1,17 @@
-# nodex-live-context
+﻿# nodex-live-context
 
-Near-live continuity context for Nodex.
+Near-live Nodex continuity context.
 
-This repository is not Nodex authority.
+Read order:
 
-Latest completed seam: ModelOutputAuthorityPreflight v1
-Current open seam: ModelOutputAuthorityDecision v1
-Latest continuity sync: pass
+1. current_handoff.md
+2. evidence_latest/latest_summary.txt
+3. evidence_latest/latest.json
+4. packet_generation_rules.md
+5. architecture/nodex_exact_continuity_source_v1.md
+6. architecture/nodex_boundary_pushing_master_architecture.md
+7. packets/current_open_packet.ps1
 
-Read current_handoff.md first.
+This repository is context only.
+Local Nodex evidence remains authority.
+packet_generation_rules.md is stable packet-generation guidance only; it is not live evidence.
