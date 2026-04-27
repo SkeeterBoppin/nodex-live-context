@@ -1,13 +1,13 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T14:35:00.1312072-07:00
+Generated: 2026-04-27T14:39:01.5742568-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
 
 It is NOT Nodex authority.
-Continuity sync is non-authoritative and cannot convert a Nodex seam pass/fail result.
+Continuity sync is non-authoritative.
 
 ## Nodex Repo
 
@@ -17,13 +17,17 @@ C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
 
 c64ae68 Add proof claim layer manifest validator
 
+## Latest Observed Nodex Working Tree
+
+clean
+
 ## Latest Completed Seam
 
-AgentHandoffRuntimeWiringPlan v1
+AgentHandoffRuntimeWiringPreflight v1
 
 ## Current Open Seam
 
-AgentHandoffRuntimeWiringPreflight v1
+AgentHandoffRuntimeWiringDecision v1
 
 ## Current Packet
 
@@ -34,9 +38,9 @@ packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it 
 ## Latest Evidence
 
 status: pass
-decision: agent_handoff_runtime_wiring_preflight_planned
-continuity_sync: tracked separately in latest evidence summary
-next_allowed_seam: AgentHandoffRuntimeWiringPreflight v1
+decision: agent_handoff_runtime_wiring_decision_ready
+continuity_sync: skipped
+next_allowed_seam: AgentHandoffRuntimeWiringDecision v1
 
 ## Currently Granted
 
@@ -48,7 +52,6 @@ next_allowed_seam: AgentHandoffRuntimeWiringPreflight v1
 - process execution authority
 - git execution by Nodex authority
 - permission grant authority
-- permission grants
 
 ## Still Blocked
 
@@ -79,6 +82,6 @@ next_allowed_seam: AgentHandoffRuntimeWiringPreflight v1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not treat AgentHandoffRuntimeWiringPreflight v1 as passed until Zak pastes status: pass.
+Do not treat AgentHandoffRuntimeWiringDecision v1 as passed until Zak pastes status: pass.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

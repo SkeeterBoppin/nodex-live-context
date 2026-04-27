@@ -1,10 +1,10 @@
-﻿AGENT HANDOFF RUNTIME WIRING PLAN V1
+﻿AGENT HANDOFF RUNTIME WIRING PREFLIGHT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-plan_only: true
-decision: agent_handoff_runtime_wiring_preflight_planned
+preflight_only: true
+decision: agent_handoff_runtime_wiring_decision_ready
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -38,9 +38,8 @@ permission_grant_authority_scope: permission_grant_authority_only
 permission_grants_granted: true
 permission_grant_authority_state_recorded: true
 
-agent_handoff_runtime_wiring_plan_allowed_now: true
 agent_handoff_runtime_wiring_preflight_allowed_now: true
-agent_handoff_runtime_wiring_decision_allowed_now: false
+agent_handoff_runtime_wiring_decision_allowed_now: true
 agent_handoff_runtime_wiring_allowed_now: false
 model_output_authority_granted: false
 proof_claim_promotion_authority_granted: false
@@ -56,14 +55,29 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: AgentHandoffRuntimeWiringPreflight v1
+next_allowed_seam: AgentHandoffRuntimeWiringDecision v1
 
 planned_following_seams:
 - AgentHandoffRuntimeWiringDecision v1
 - AgentHandoffRuntimeWiringStateRecord v1
 - Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_plan_v1_20260427_143458.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_plan_v1_summary_20260427_143458.txt
+decision_constraints:
+- may grant AgentHandoffRunner runtime wiring authority only
+- must not grant model-output authority
+- must not grant proof-claim promotion authority
+- must not grant external review authority
+- must not grant Deep Research authority
+- must not grant source mutation
+- must not grant evidence rewrite
+- must not grant evidence deletion
+- must not grant repo deletion
+- must not grant deletion
+- must not grant file move
+- must not grant staging authority
+- must not grant commit authority outside explicit commit-gate seams
+
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_preflight_v1_20260427_143900.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_preflight_v1_summary_20260427_143900.txt
 
 continuity_sync_message: continuity sync pending
