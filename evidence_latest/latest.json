@@ -1,23 +1,23 @@
 {
-  "schema": "nodex.model_output_authority.plan.v1",
+  "schema": "nodex.model_output_authority.preflight.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync not yet run",
-  "createdAt": "2026-04-27T14:57:38.8825212-07:00",
+  "createdAt": "2026-04-27T15:00:36.2845431-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "ModelOutputAuthorityPlan v1",
+  "seam": "ModelOutputAuthorityPreflight v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
-  "priorPostAgentHandoffRuntimeWiringGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_agent_handoff_runtime_wiring_grant_spine_audit_v1_20260427_145455.json",
-  "planOnly": true,
-  "decision": "model_output_authority_preflight_planned",
+  "priorModelOutputAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_plan_v1_20260427_145737.json",
+  "preflightOnly": true,
+  "decision": "model_output_authority_decision_ready",
   "activationAuthorityGranted": true,
   "activationAuthorityScope": "activation_authority_only",
   "runtimeIntegrationAuthorityGranted": true,
@@ -46,9 +46,8 @@
   "agentHandoffRuntimeWiringScope": "agent_handoff_runtime_wiring_only",
   "agentHandoffRuntimeWiringAllowedNow": true,
   "agentHandoffRuntimeWiringStateRecorded": true,
-  "modelOutputAuthorityPlanAllowedNow": true,
   "modelOutputAuthorityPreflightAllowedNow": true,
-  "modelOutputAuthorityDecisionAllowedNow": false,
+  "modelOutputAuthorityDecisionAllowedNow": true,
   "modelOutputAuthorityGranted": false,
   "proofClaimPromotionAuthorityGranted": false,
   "externalReviewAuthorityGranted": false,
@@ -61,11 +60,25 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "ModelOutputAuthorityPreflight v1",
+  "nextAllowedSeam": "ModelOutputAuthorityDecision v1",
   "plannedFollowingSeams": [
     "ModelOutputAuthorityDecision v1",
     "ModelOutputAuthorityStateRecord v1",
     "Post-ModelOutputAuthorityGrant Spine Audit v1"
+  ],
+  "decisionConstraints": [
+    "may grant model-output authority only",
+    "must not grant proof-claim promotion authority",
+    "must not grant external review authority",
+    "must not grant Deep Research authority",
+    "must not grant source mutation",
+    "must not grant evidence rewrite",
+    "must not grant evidence deletion",
+    "must not grant repo deletion",
+    "must not grant deletion",
+    "must not grant file move",
+    "must not grant staging authority",
+    "must not grant commit authority outside explicit commit-gate seams"
   ],
   "boundary": {
     "activationAuthorityGranted": true,
@@ -106,7 +119,7 @@
     "staging": true
   },
   "validation": {
-    "priorSpineAuditVerified": true,
+    "priorPlanVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
     "fullHarnessPassed": true,
@@ -123,9 +136,50 @@
   },
   "checks": [
     {
-      "name": "pre-plan working tree clean",
+      "name": "downloaded artifact path present",
       "pass": true,
-      "reason": "ModelOutputAuthorityPlan v1 must start with clean working tree",
+      "reason": "PSCommandPath must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\Downloads\\model_output_authority_preflight_v1_FULL_PACKET.ps1"
+      }
+    },
+    {
+      "name": "downloaded artifact exists",
+      "pass": true,
+      "reason": "downloaded packet artifact must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\Downloads\\model_output_authority_preflight_v1_FULL_PACKET.ps1"
+      }
+    },
+    {
+      "name": "Nodex repo root exists",
+      "pass": true,
+      "reason": "Nodex repo root must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
+      }
+    },
+    {
+      "name": "Nodex repo .git exists",
+      "pass": true,
+      "reason": "Nodex repo .git folder must exist before git commands",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\.git"
+      }
+    },
+    {
+      "name": "Nodex git root exact",
+      "pass": true,
+      "reason": "git root must be Nodex repo before any seam git checks",
+      "data": {
+        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+        "actual": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
+      }
+    },
+    {
+      "name": "pre-preflight working tree clean",
+      "pass": true,
+      "reason": "ModelOutputAuthorityPreflight v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -133,72 +187,72 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match ModelOutputAuthorityPlan baseline",
+      "reason": "HEAD must match ModelOutputAuthorityPreflight baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
       }
     },
     {
-      "name": "post-agent handoff runtime wiring grant spine audit JSON exists",
+      "name": "model output authority plan JSON exists",
       "pass": true,
-      "reason": "missing post_agent_handoff_runtime_wiring_grant_spine_audit_v1_*.json evidence",
+      "reason": "missing model_output_authority_plan_v1_*.json evidence",
       "data": {
-        "pattern": "post_agent_handoff_runtime_wiring_grant_spine_audit_v1_*.json"
+        "pattern": "model_output_authority_plan_v1_*.json"
       }
     },
     {
-      "name": "post-agent handoff runtime wiring grant spine audit path present",
+      "name": "model output authority plan path present",
       "pass": true,
-      "reason": "post-agent handoff runtime wiring grant spine audit path must be present",
+      "reason": "model output authority plan path must be present",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_agent_handoff_runtime_wiring_grant_spine_audit_v1_20260427_145455.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_plan_v1_20260427_145737.json"
       }
     },
     {
-      "name": "post-agent handoff runtime wiring grant spine audit file exists",
+      "name": "model output authority plan file exists",
       "pass": true,
-      "reason": "post-agent handoff runtime wiring grant spine audit file must exist",
+      "reason": "model output authority plan file must exist",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_agent_handoff_runtime_wiring_grant_spine_audit_v1_20260427_145455.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_plan_v1_20260427_145737.json"
       }
     },
     {
-      "name": "prior audit status pass",
+      "name": "prior plan status pass",
       "pass": true,
-      "reason": "prior audit status must be pass",
+      "reason": "prior plan status must be pass",
       "data": {
         "actual": "pass",
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_agent_handoff_runtime_wiring_grant_spine_audit_v1_20260427_145455.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_plan_v1_20260427_145737.json"
       }
     },
     {
-      "name": "prior audit exact decision",
+      "name": "prior plan exact decision",
       "pass": true,
-      "reason": "prior audit decision must be post_agent_handoff_runtime_wiring_grant_spine_audit_complete",
+      "reason": "prior plan decision must be model_output_authority_preflight_planned",
       "data": {
-        "actual": "post_agent_handoff_runtime_wiring_grant_spine_audit_complete"
+        "actual": "model_output_authority_preflight_planned"
       }
     },
     {
-      "name": "prior audit routes to model output plan",
+      "name": "prior plan routes to model output preflight",
       "pass": true,
-      "reason": "prior audit must route to ModelOutputAuthorityPlan v1",
+      "reason": "prior plan must route to ModelOutputAuthorityPreflight v1",
       "data": {
-        "nextAllowedSeam": "ModelOutputAuthorityPlan v1",
-        "modelOutputAuthorityPlanAllowedNow": true
+        "nextAllowedSeam": "ModelOutputAuthorityPreflight v1",
+        "modelOutputAuthorityPreflightAllowedNow": true
       }
     },
     {
-      "name": "prior audit activationAuthorityGranted",
+      "name": "prior plan activationAuthorityGranted",
       "pass": true,
-      "reason": "prior audit activationAuthorityGranted must be true",
+      "reason": "prior plan activationAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit activation scope exact",
+      "name": "prior plan activation scope exact",
       "pass": true,
       "reason": "activation scope must be activation_authority_only",
       "data": {
@@ -206,15 +260,15 @@
       }
     },
     {
-      "name": "prior audit runtimeIntegrationAuthorityGranted",
+      "name": "prior plan runtimeIntegrationAuthorityGranted",
       "pass": true,
-      "reason": "prior audit runtimeIntegrationAuthorityGranted must be true",
+      "reason": "prior plan runtimeIntegrationAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit runtime integration scope exact",
+      "name": "prior plan runtime integration scope exact",
       "pass": true,
       "reason": "runtime integration scope must be runtime_integration_authority_only",
       "data": {
@@ -222,15 +276,15 @@
       }
     },
     {
-      "name": "prior audit runtimeExecutionAuthorityGranted",
+      "name": "prior plan runtimeExecutionAuthorityGranted",
       "pass": true,
-      "reason": "prior audit runtimeExecutionAuthorityGranted must be true",
+      "reason": "prior plan runtimeExecutionAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit runtime execution scope exact",
+      "name": "prior plan runtime execution scope exact",
       "pass": true,
       "reason": "runtime execution scope must be runtime_execution_authority_only",
       "data": {
@@ -238,15 +292,15 @@
       }
     },
     {
-      "name": "prior audit toolExecutionAuthorityGranted",
+      "name": "prior plan toolExecutionAuthorityGranted",
       "pass": true,
-      "reason": "prior audit toolExecutionAuthorityGranted must be true",
+      "reason": "prior plan toolExecutionAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit tool execution scope exact",
+      "name": "prior plan tool execution scope exact",
       "pass": true,
       "reason": "tool execution scope must be tool_execution_authority_only",
       "data": {
@@ -254,15 +308,15 @@
       }
     },
     {
-      "name": "prior audit runtimeFileWriteAuthorityGranted",
+      "name": "prior plan runtimeFileWriteAuthorityGranted",
       "pass": true,
-      "reason": "prior audit runtimeFileWriteAuthorityGranted must be true",
+      "reason": "prior plan runtimeFileWriteAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit runtime file write scope exact",
+      "name": "prior plan runtime file write scope exact",
       "pass": true,
       "reason": "runtime file write scope must be runtime_file_write_authority_only",
       "data": {
@@ -270,23 +324,23 @@
       }
     },
     {
-      "name": "prior audit runtimeFileWritesGranted",
+      "name": "prior plan runtimeFileWritesGranted",
       "pass": true,
-      "reason": "prior audit runtimeFileWritesGranted must be true",
+      "reason": "prior plan runtimeFileWritesGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit processExecutionAuthorityGranted",
+      "name": "prior plan processExecutionAuthorityGranted",
       "pass": true,
-      "reason": "prior audit processExecutionAuthorityGranted must be true",
+      "reason": "prior plan processExecutionAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit process execution scope exact",
+      "name": "prior plan process execution scope exact",
       "pass": true,
       "reason": "process execution scope must be process_execution_authority_only",
       "data": {
@@ -294,153 +348,161 @@
       }
     },
     {
-      "name": "prior audit processExecutionGranted",
+      "name": "prior plan processExecutionGranted",
       "pass": true,
-      "reason": "prior audit processExecutionGranted must be true",
+      "reason": "prior plan processExecutionGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit gitExecutionAuthorityGranted",
+      "name": "prior plan gitExecutionAuthorityGranted",
       "pass": true,
-      "reason": "prior audit gitExecutionAuthorityGranted must be true",
+      "reason": "prior plan gitExecutionAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit gitExecutionByNodexGranted",
+      "name": "prior plan gitExecutionByNodexGranted",
       "pass": true,
-      "reason": "prior audit gitExecutionByNodexGranted must be true",
+      "reason": "prior plan gitExecutionByNodexGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit permissionGrantAuthorityGranted",
+      "name": "prior plan permissionGrantAuthorityGranted",
       "pass": true,
-      "reason": "prior audit permissionGrantAuthorityGranted must be true",
+      "reason": "prior plan permissionGrantAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit permissionGrantsGranted",
+      "name": "prior plan permissionGrantsGranted",
       "pass": true,
-      "reason": "prior audit permissionGrantsGranted must be true",
+      "reason": "prior plan permissionGrantsGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit agentHandoffRuntimeWiringAuthorityGranted",
+      "name": "prior plan agentHandoffRuntimeWiringAuthorityGranted",
       "pass": true,
-      "reason": "prior audit agentHandoffRuntimeWiringAuthorityGranted must be true",
+      "reason": "prior plan agentHandoffRuntimeWiringAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit agentHandoffRuntimeWiringAllowedNow",
+      "name": "prior plan agentHandoffRuntimeWiringAllowedNow",
       "pass": true,
-      "reason": "prior audit agentHandoffRuntimeWiringAllowedNow must be true",
+      "reason": "prior plan agentHandoffRuntimeWiringAllowedNow must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit modelOutputAuthorityGranted",
+      "name": "prior plan modelOutputAuthorityDecisionAllowedNow",
       "pass": true,
-      "reason": "prior audit modelOutputAuthorityGranted must be false",
+      "reason": "prior plan modelOutputAuthorityDecisionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit proofClaimPromotionAuthorityGranted",
+      "name": "prior plan modelOutputAuthorityGranted",
       "pass": true,
-      "reason": "prior audit proofClaimPromotionAuthorityGranted must be false",
+      "reason": "prior plan modelOutputAuthorityGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit externalReviewAuthorityGranted",
+      "name": "prior plan proofClaimPromotionAuthorityGranted",
       "pass": true,
-      "reason": "prior audit externalReviewAuthorityGranted must be false",
+      "reason": "prior plan proofClaimPromotionAuthorityGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit deepResearchAuthorityGranted",
+      "name": "prior plan externalReviewAuthorityGranted",
       "pass": true,
-      "reason": "prior audit deepResearchAuthorityGranted must be false",
+      "reason": "prior plan externalReviewAuthorityGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit sourceMutationAllowedNow",
+      "name": "prior plan deepResearchAuthorityGranted",
       "pass": true,
-      "reason": "prior audit sourceMutationAllowedNow must be false",
+      "reason": "prior plan deepResearchAuthorityGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit evidenceRewriteAllowedNow",
+      "name": "prior plan sourceMutationAllowedNow",
       "pass": true,
-      "reason": "prior audit evidenceRewriteAllowedNow must be false",
+      "reason": "prior plan sourceMutationAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit evidenceDeletionAllowedNow",
+      "name": "prior plan evidenceRewriteAllowedNow",
       "pass": true,
-      "reason": "prior audit evidenceDeletionAllowedNow must be false",
+      "reason": "prior plan evidenceRewriteAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit repoDeletionAllowedNow",
+      "name": "prior plan evidenceDeletionAllowedNow",
       "pass": true,
-      "reason": "prior audit repoDeletionAllowedNow must be false",
+      "reason": "prior plan evidenceDeletionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit deletionAllowedNow",
+      "name": "prior plan repoDeletionAllowedNow",
       "pass": true,
-      "reason": "prior audit deletionAllowedNow must be false",
+      "reason": "prior plan repoDeletionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit fileMoveAllowedNow",
+      "name": "prior plan deletionAllowedNow",
       "pass": true,
-      "reason": "prior audit fileMoveAllowedNow must be false",
+      "reason": "prior plan deletionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit commitAllowedNow",
+      "name": "prior plan fileMoveAllowedNow",
       "pass": true,
-      "reason": "prior audit commitAllowedNow must be false",
+      "reason": "prior plan fileMoveAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "prior audit stagingAllowedNow",
+      "name": "prior plan commitAllowedNow",
       "pass": true,
-      "reason": "prior audit stagingAllowedNow must be false",
+      "reason": "prior plan commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "prior plan stagingAllowedNow",
+      "pass": true,
+      "reason": "prior plan stagingAllowedNow must be false",
       "data": {
         "actual": false
       }
@@ -486,23 +548,33 @@
       }
     },
     {
-      "name": "full harness passed during plan",
+      "name": "full harness passed during preflight",
       "pass": true,
-      "reason": "node tests/run.js must pass during ModelOutputAuthorityPlan v1",
+      "reason": "node tests/run.js must pass during ModelOutputAuthorityPreflight v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-plan working tree clean",
+      "name": "post-preflight working tree clean",
       "pass": true,
-      "reason": "ModelOutputAuthorityPlan v1 must leave repo working tree clean",
+      "reason": "ModelOutputAuthorityPreflight v1 must leave repo working tree clean",
       "data": {
         "statusShort": ""
       }
     }
   ],
   "commandResults": [
+    {
+      "label": "VERIFY NODEX GIT ROOT",
+      "filePath": "git",
+      "arguments": [
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": "C:/Users/Zak/OneDrive/Desktop/Nodex System/Node"
+    },
     {
       "label": "GIT STATUS --SHORT PRE",
       "filePath": "git",
@@ -525,7 +597,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PLAN",
+      "label": "FULL HARNESS PREFLIGHT",
       "filePath": "node",
       "arguments": [
         "tests/run.js"

@@ -1,6 +1,6 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T14:57:39.0512137-07:00
+Generated: 2026-04-27T15:00:36.4515993-07:00
 
 ## Boundary
 
@@ -19,17 +19,17 @@ c64ae68 Add proof claim layer manifest validator
 
 ## Latest Completed Seam
 
-ModelOutputAuthorityPlan v1
+ModelOutputAuthorityPreflight v1
 
 ## Latest Result
 
 status: pass
 continuity_sync: pass
-decision: model_output_authority_preflight_planned
+decision: model_output_authority_decision_ready
 
 ## Current Open Seam
 
-ModelOutputAuthorityPreflight v1
+ModelOutputAuthorityDecision v1
 
 ## Current Packet
 
@@ -77,6 +77,6 @@ packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it 
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not treat ModelOutputAuthorityPreflight v1 as passed until Zak pastes status: pass.
+Do not treat ModelOutputAuthorityDecision v1 as passed until Zak pastes status: pass.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
