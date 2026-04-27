@@ -1,28 +1,34 @@
 {
-  "schema": "nodex.agent_handoff_runtime_wiring.preflight.v1",
+  "schema": "nodex.agent_handoff_runtime_wiring.decision.v1",
   "status": "pass",
-  "continuity_sync": "skipped",
-  "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-27T14:39:01.4512595-07:00",
+  "continuitySync": "skipped",
+  "continuitySyncMessage": "continuity sync skipped until seam evidence write completed",
+  "createdAt": "2026-04-27T14:44:07.4614899-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "AgentHandoffRuntimeWiringPreflight v1",
+  "seam": "AgentHandoffRuntimeWiringDecision v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorAgentHandoffRuntimeWiringPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_preflight_v1_20260427_143900.json",
   "priorAgentHandoffRuntimeWiringPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_plan_v1_20260427_143458.json",
   "priorPostPermissionGrantAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_permission_grant_authority_grant_spine_audit_v1_20260427_142355.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
   "priorPermissionGrantAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_decision_v1_20260427_140403.json",
   "priorGitExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_state_record_v1_20260427_135334.json",
-  "priorGitExecutionAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_decision_v1_20260427_133350.json",
-  "preflightOnly": true,
-  "decision": "agent_handoff_runtime_wiring_decision_ready",
+  "priorProcessExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_state_record_v1_20260427_111856.json",
+  "priorRuntimeFileWriteAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_file_write_authority_state_record_v1_20260427_111122.json",
+  "priorToolExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\tool_execution_authority_state_record_v1_20260427_110244.json",
+  "priorRuntimeExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_execution_authority_state_record_v1_20260427_105110.json",
+  "priorRuntimeIntegrationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_integration_authority_state_record_v1_20260427_104206.json",
+  "priorActivationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\activation_authority_state_record_v1_20260427_103039.json",
+  "decisionOnly": true,
+  "decision": "agent_handoff_runtime_wiring_granted",
   "activationAuthorityGranted": true,
   "activationAuthorityScope": "activation_authority_only",
   "runtimeIntegrationAuthorityGranted": true,
@@ -47,10 +53,11 @@
   "permissionGrantAuthorityScope": "permission_grant_authority_only",
   "permissionGrantsGranted": true,
   "permissionGrantAuthorityStateRecorded": true,
-  "agentHandoffRuntimeWiringPreflightAllowedNow": true,
-  "agentHandoffRuntimeWiringDecisionAllowedNow": true,
-  "agentHandoffRuntimeWiringAllowedNow": false,
-  "agentHandoffRuntimeWiringGranted": false,
+  "agentHandoffRuntimeWiringDecisionApplied": true,
+  "agentHandoffRuntimeWiringAuthorityGranted": true,
+  "agentHandoffRuntimeWiringScope": "agent_handoff_runtime_wiring_only",
+  "agentHandoffRuntimeWiringAllowedNow": true,
+  "agentHandoffRuntimeWiringStateRecordAllowedNow": true,
   "modelOutputAuthorityGranted": false,
   "proofClaimPromotionAuthorityGranted": false,
   "externalReviewAuthorityGranted": false,
@@ -63,29 +70,81 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "AgentHandoffRuntimeWiringDecision v1",
+  "nextAllowedSeam": "AgentHandoffRuntimeWiringStateRecord v1",
   "plannedFollowingSeams": [
-    "AgentHandoffRuntimeWiringDecision v1",
-    "AgentHandoffRuntimeWiringStateRecord v1",
-    "Post-AgentHandoffRuntimeWiringGrant Spine Audit v1"
+    "Post-AgentHandoffRuntimeWiringGrant Spine Audit v1",
+    "ModelOutputAuthorityPlan v1"
   ],
-  "decisionConstraints": [
-    "may grant AgentHandoffRunner runtime wiring authority only",
-    "must not grant model-output authority",
-    "must not grant proof-claim promotion authority",
-    "must not grant external review authority",
-    "must not grant Deep Research authority",
-    "must not grant source mutation",
-    "must not grant evidence rewrite",
-    "must not grant evidence deletion",
-    "must not grant repo deletion",
-    "must not grant deletion",
-    "must not grant file move",
-    "must not grant staging authority",
-    "must not grant commit authority outside explicit commit-gate seams"
+  "explicitNonGrants": [
+    "model-output authority",
+    "proof-claim promotion authority",
+    "external review authority",
+    "Deep Research authority",
+    "source mutation",
+    "evidence rewrite",
+    "evidence deletion",
+    "repo deletion",
+    "deletion",
+    "file move",
+    "staging",
+    "commit authority outside explicit commit-gate seams"
   ],
+  "boundary": {
+    "activationAuthorityAllowed": true,
+    "activationAuthorityGranted": true,
+    "activationAuthorityScope": "activation_authority_only",
+    "runtimeIntegrationAuthorityAllowed": true,
+    "runtimeIntegrationAuthorityGranted": true,
+    "runtimeIntegrationAuthorityScope": "runtime_integration_authority_only",
+    "runtimeExecutionAuthorityAllowed": true,
+    "runtimeExecutionAuthorityGranted": true,
+    "runtimeExecutionAuthorityScope": "runtime_execution_authority_only",
+    "runtimeAuthorityGranted": true,
+    "toolExecutionAuthorityAllowed": true,
+    "toolExecutionAuthorityGranted": true,
+    "toolExecutionAuthorityScope": "tool_execution_authority_only",
+    "toolExecutionAllowed": true,
+    "runtimeFileWriteAuthorityAllowed": true,
+    "runtimeFileWriteAuthorityGranted": true,
+    "runtimeFileWriteAuthorityScope": "runtime_file_write_authority_only",
+    "runtimeFileWritesAllowed": true,
+    "runtimeFileWritesGranted": true,
+    "processExecutionAuthorityAllowed": true,
+    "processExecutionAuthorityGranted": true,
+    "processExecutionAuthorityScope": "process_execution_authority_only",
+    "processExecutionAllowed": true,
+    "processExecutionGranted": true,
+    "gitExecutionAuthorityAllowed": true,
+    "gitExecutionAuthorityGranted": true,
+    "gitExecutionAuthorityScope": "git_execution_authority_only",
+    "gitExecutionAllowedByNodex": true,
+    "gitExecutionByNodexGranted": true,
+    "permissionGrantAuthorityAllowed": true,
+    "permissionGrantAuthorityGranted": true,
+    "permissionGrantAuthorityScope": "permission_grant_authority_only",
+    "permissionGrantsAllowed": true,
+    "permissionGrantsGranted": true,
+    "agentHandoffRuntimeWiringAuthorityAllowed": true,
+    "agentHandoffRuntimeWiringAuthorityGranted": true,
+    "agentHandoffRuntimeWiringScope": "agent_handoff_runtime_wiring_only",
+    "agentHandoffRuntimeWiringAllowed": true,
+    "modelOutputAuthorityAllowed": false,
+    "proofClaimPromotionAuthorityAllowed": false,
+    "replayAuthorityAllowed": false,
+    "externalReviewAuthorityAllowed": false,
+    "deepResearchAuthorityAllowed": false,
+    "packetHelperExecutionAuthorityAllowed": false,
+    "runtimeAdapterSideEffectAuthorityAllowed": false,
+    "sourceMutationAllowed": false,
+    "evidenceRewriteAllowed": false,
+    "evidenceDeletionAllowed": false,
+    "repoDeletionAllowed": false,
+    "deletionAllowed": false,
+    "fileMoveAllowed": false,
+    "stagingAllowed": false,
+    "commitAllowed": false
+  },
   "blocked": {
-    "agentHandoffRuntimeWiring": true,
     "modelOutputAuthority": true,
     "proofClaimPromotionAuthority": true,
     "externalReviewAuthority": true,
@@ -97,41 +156,61 @@
     "deletion": true,
     "fileMove": true,
     "commit": true,
-    "staging": true
+    "staging": true,
+    "artifactQuarantine": true,
+    "packetQualityRepairImplementation": true,
+    "badCodeRepair": true,
+    "cleanupImplementation": true,
+    "additionalCleanupDeletion": true,
+    "additionalDownloadsCleanup": true
   },
   "validation": {
-    "prePreflightWorkingTreeClean": true,
-    "expectedHeadVerified": true,
-    "priorPlanVerified": true,
-    "priorAuditVerified": true,
+    "agentHandoffRuntimeWiringPreflightVerified": true,
+    "agentHandoffRuntimeWiringPlanVerified": true,
+    "priorPermissionAuditVerified": true,
     "permissionGrantAuthorityStateRecordVerified": true,
-    "gitExecutionAuthorityStateRecordVerified": true,
+    "expectedHeadVerified": true,
+    "architectureSourcesVerified": true,
+    "preDecisionWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postPreflightWorkingTreeClean": true
+    "postDecisionWorkingTreeClean": true,
+    "agentHandoffRuntimeWiringAuthorityGranted": true,
+    "agentHandoffRuntimeWiringAllowedNow": true,
+    "modelOutputAuthorityGranted": false,
+    "proofClaimPromotionAuthorityGranted": false,
+    "externalReviewAuthorityGranted": false,
+    "deepResearchAuthorityGranted": false,
+    "sourceMutation": false,
+    "evidenceRewrite": false,
+    "evidenceDeletion": false,
+    "repoDeletion": false,
+    "deletion": false,
+    "fileMove": false,
+    "commit": false,
+    "staging": false
   },
   "checks": [
     {
-      "name": "Nodex repo git root resolved",
+      "name": "Nodex git root command passed",
       "pass": true,
-      "reason": "Nodex repo git root must resolve",
+      "reason": "Nodex git root command must pass",
       "data": {
-        "actual": "C:/Users/Zak/OneDrive/Desktop/Nodex System/Node",
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
+        "output": "C:/Users/Zak/OneDrive/Desktop/Nodex System/Node"
       }
     },
     {
-      "name": "Nodex repo git root exact",
+      "name": "Nodex git root exact",
       "pass": true,
-      "reason": "Nodex repo git root mismatch",
+      "reason": "Nodex git root must match repo root",
       "data": {
-        "actual": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
+        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+        "actual": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
       }
     },
     {
-      "name": "pre-preflight working tree clean",
+      "name": "pre-decision working tree clean",
       "pass": true,
-      "reason": "AgentHandoffRuntimeWiringPreflight v1 must start with clean working tree",
+      "reason": "AgentHandoffRuntimeWiringDecision v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -139,10 +218,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match AgentHandoffRuntimeWiringPreflight baseline",
+      "reason": "HEAD must match AgentHandoffRuntimeWiringDecision baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "agent handoff runtime wiring preflight JSON exists",
+      "pass": true,
+      "reason": "missing agent_handoff_runtime_wiring_preflight_v1_*.json evidence",
+      "data": {
+        "pattern": "agent_handoff_runtime_wiring_preflight_v1_*.json"
       }
     },
     {
@@ -183,14 +270,6 @@
       "reason": "missing git_execution_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "git_execution_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "git execution authority decision JSON exists",
-      "pass": true,
-      "reason": "missing git_execution_authority_decision_v1_*.json evidence",
-      "data": {
-        "pattern": "git_execution_authority_decision_v1_*.json"
       }
     },
     {
@@ -239,6 +318,22 @@
       "reason": "missing activation_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "activation_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "agent handoff runtime wiring preflight path present",
+      "pass": true,
+      "reason": "agent handoff runtime wiring preflight path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_preflight_v1_20260427_143900.json"
+      }
+    },
+    {
+      "name": "agent handoff runtime wiring preflight file exists",
+      "pass": true,
+      "reason": "agent handoff runtime wiring preflight file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_preflight_v1_20260427_143900.json"
       }
     },
     {
@@ -319,22 +414,6 @@
       "reason": "git execution authority state record file must exist",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_state_record_v1_20260427_135334.json"
-      }
-    },
-    {
-      "name": "git execution authority decision path present",
-      "pass": true,
-      "reason": "git execution authority decision path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_decision_v1_20260427_133350.json"
-      }
-    },
-    {
-      "name": "git execution authority decision file exists",
-      "pass": true,
-      "reason": "git execution authority decision file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_decision_v1_20260427_133350.json"
       }
     },
     {
@@ -434,7 +513,135 @@
       }
     },
     {
-      "name": "plan status pass",
+      "name": "agent preflight status pass",
+      "pass": true,
+      "reason": "agent handoff runtime wiring preflight must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_preflight_v1_20260427_143900.json"
+      }
+    },
+    {
+      "name": "agent preflight decision ready",
+      "pass": true,
+      "reason": "agent preflight decision must be ready",
+      "data": {
+        "decision": "agent_handoff_runtime_wiring_decision_ready"
+      }
+    },
+    {
+      "name": "agent preflight agentHandoffRuntimeWiringDecisionAllowedNow",
+      "pass": true,
+      "reason": "agent preflight agentHandoffRuntimeWiringDecisionAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "agent preflight agentHandoffRuntimeWiringAllowedNow",
+      "pass": true,
+      "reason": "agent preflight agentHandoffRuntimeWiringAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight modelOutputAuthorityGranted",
+      "pass": true,
+      "reason": "agent preflight modelOutputAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight proofClaimPromotionAuthorityGranted",
+      "pass": true,
+      "reason": "agent preflight proofClaimPromotionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "agent preflight externalReviewAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "agent preflight deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "agent preflight sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "agent preflight evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "agent preflight evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "agent preflight repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight deletionAllowedNow",
+      "pass": true,
+      "reason": "agent preflight deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight fileMoveAllowedNow",
+      "pass": true,
+      "reason": "agent preflight fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight commitAllowedNow",
+      "pass": true,
+      "reason": "agent preflight commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent preflight stagingAllowedNow",
+      "pass": true,
+      "reason": "agent preflight stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "agent plan status pass",
       "pass": true,
       "reason": "agent handoff runtime wiring plan must be pass",
       "data": {
@@ -442,143 +649,39 @@
       }
     },
     {
-      "name": "plan decision exact",
+      "name": "agent plan decision exact",
       "pass": true,
-      "reason": "agent handoff runtime wiring plan decision mismatch",
+      "reason": "agent handoff runtime wiring plan must plan preflight",
       "data": {
         "decision": "agent_handoff_runtime_wiring_preflight_planned"
       }
     },
     {
-      "name": "plan routes to preflight",
+      "name": "agent plan agentHandoffRuntimeWiringPreflightAllowedNow",
       "pass": true,
-      "reason": "agent handoff runtime wiring plan must route to preflight",
-      "data": {
-        "nextAllowedSeam": "AgentHandoffRuntimeWiringPreflight v1"
-      }
-    },
-    {
-      "name": "plan agentHandoffRuntimeWiringPreflightAllowedNow",
-      "pass": true,
-      "reason": "plan agentHandoffRuntimeWiringPreflightAllowedNow must be true",
+      "reason": "agent plan agentHandoffRuntimeWiringPreflightAllowedNow must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "plan agentHandoffRuntimeWiringDecisionAllowedNow",
+      "name": "agent plan agentHandoffRuntimeWiringDecisionAllowedNow",
       "pass": true,
-      "reason": "plan agentHandoffRuntimeWiringDecisionAllowedNow must be false",
+      "reason": "agent plan agentHandoffRuntimeWiringDecisionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan agentHandoffRuntimeWiringAllowedNow",
+      "name": "agent plan agentHandoffRuntimeWiringAllowedNow",
       "pass": true,
-      "reason": "plan agentHandoffRuntimeWiringAllowedNow must be false",
+      "reason": "agent plan agentHandoffRuntimeWiringAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan modelOutputAuthorityGranted",
-      "pass": true,
-      "reason": "plan modelOutputAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan proofClaimPromotionAuthorityGranted",
-      "pass": true,
-      "reason": "plan proofClaimPromotionAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "plan externalReviewAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "plan deepResearchAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "plan sourceMutationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "plan evidenceRewriteAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "plan evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "plan repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan deletionAllowedNow",
-      "pass": true,
-      "reason": "plan deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan fileMoveAllowedNow",
-      "pass": true,
-      "reason": "plan fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan commitAllowedNow",
-      "pass": true,
-      "reason": "plan commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan stagingAllowedNow",
-      "pass": true,
-      "reason": "plan stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "prior audit status pass",
+      "name": "permission audit status pass",
       "pass": true,
       "reason": "post-permission grant authority grant spine audit must be pass",
       "data": {
@@ -586,25 +689,25 @@
       }
     },
     {
-      "name": "prior audit decision exact",
+      "name": "permission audit decision exact",
       "pass": true,
-      "reason": "post-permission grant authority grant spine audit decision mismatch",
+      "reason": "permission audit decision must be complete",
       "data": {
         "decision": "post_permission_grant_authority_grant_spine_audit_complete"
       }
     },
     {
-      "name": "prior audit agentHandoffRuntimeWiringPlanAllowedNow",
+      "name": "permission audit agentHandoffRuntimeWiringPlanAllowedNow",
       "pass": true,
-      "reason": "prior audit agentHandoffRuntimeWiringPlanAllowedNow must be true",
+      "reason": "permission audit agentHandoffRuntimeWiringPlanAllowedNow must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit agentHandoffRuntimeWiringAllowedNow",
+      "name": "permission audit agentHandoffRuntimeWiringAllowedNow",
       "pass": true,
-      "reason": "prior audit agentHandoffRuntimeWiringAllowedNow must be false",
+      "reason": "permission audit agentHandoffRuntimeWiringAllowedNow must be false",
       "data": {
         "actual": false
       }
@@ -644,17 +747,9 @@
     {
       "name": "permission state scope exact",
       "pass": true,
-      "reason": "permission grant authority scope mismatch",
+      "reason": "permission grant authority scope must be exact",
       "data": {
         "actual": "permission_grant_authority_only"
-      }
-    },
-    {
-      "name": "permission state agentHandoffRuntimeWiringAllowedNow",
-      "pass": true,
-      "reason": "permission state agentHandoffRuntimeWiringAllowedNow must be false",
-      "data": {
-        "actual": false
       }
     },
     {
@@ -679,14 +774,6 @@
       "reason": "permission decision permissionGrantsGranted must be true",
       "data": {
         "actual": true
-      }
-    },
-    {
-      "name": "permission decision agentHandoffRuntimeWiringAllowedNow",
-      "pass": true,
-      "reason": "permission decision agentHandoffRuntimeWiringAllowedNow must be false",
-      "data": {
-        "actual": false
       }
     },
     {
@@ -717,30 +804,6 @@
       "name": "git state gitExecutionAuthorityStateRecorded",
       "pass": true,
       "reason": "git state gitExecutionAuthorityStateRecorded must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "git decision status pass",
-      "pass": true,
-      "reason": "git execution authority decision must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_decision_v1_20260427_133350.json"
-      }
-    },
-    {
-      "name": "git decision gitExecutionAuthorityGranted",
-      "pass": true,
-      "reason": "git decision gitExecutionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "git decision gitExecutionByNodexGranted",
-      "pass": true,
-      "reason": "git decision gitExecutionByNodexGranted must be true",
       "data": {
         "actual": true
       }
@@ -898,23 +961,33 @@
       }
     },
     {
-      "name": "full harness passed during preflight",
+      "name": "full harness passed during decision",
       "pass": true,
-      "reason": "node tests/run.js must pass during AgentHandoffRuntimeWiringPreflight v1",
+      "reason": "node tests/run.js must pass during AgentHandoffRuntimeWiringDecision v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-preflight working tree clean",
+      "name": "post-decision working tree clean",
       "pass": true,
-      "reason": "AgentHandoffRuntimeWiringPreflight v1 must leave Nodex repo clean",
+      "reason": "AgentHandoffRuntimeWiringDecision v1 must leave repo working tree clean",
       "data": {
         "statusShort": ""
       }
     }
   ],
   "commandResults": [
+    {
+      "label": "NODEX GIT ROOT",
+      "filePath": "git",
+      "arguments": [
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": "C:/Users/Zak/OneDrive/Desktop/Nodex System/Node"
+    },
     {
       "label": "GIT STATUS --SHORT PRE",
       "filePath": "git",
@@ -937,7 +1010,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PREFLIGHT",
+      "label": "FULL HARNESS DECISION",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
@@ -955,5 +1028,6 @@
       "exitCode": 0,
       "stdoutStderr": ""
     }
-  ]
+  ],
+  "continuityChecks": []
 }
