@@ -1,12 +1,13 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T14:50:22.3023646-07:00
+Generated: 2026-04-27T14:54:57.3068378-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
-
 It is NOT Nodex authority.
+It does NOT grant runtime, tool, file, process, git, permission, source mutation, staging, commit, deletion, or AgentHandoffRunner authority.
+Continuity sync is non-authoritative.
 
 ## Nodex Repo
 
@@ -16,29 +17,24 @@ C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
 
 c64ae68 Add proof claim layer manifest validator
 
-## Latest Observed Nodex Working Tree
-
-clean
-
 ## Latest Completed Seam
-
-AgentHandoffRuntimeWiringStateRecord v1
-
-## Current Open Seam
 
 Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
+## Current Open Seam
+
+ModelOutputAuthorityPlan v1
+
 ## Current Packet
 
-not generated yet
-
-packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it as a Nodex packet.
+packets/current_open_packet.ps1
 
 ## Latest Evidence
 
 status: pass
-decision: agent_handoff_runtime_wiring_state_recorded
-next_allowed_seam: Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
+continuity_sync: skipped
+decision: post_agent_handoff_runtime_wiring_grant_spine_audit_complete
+next_allowed_seam: ModelOutputAuthorityPlan v1
 
 ## Currently Granted
 
@@ -80,6 +76,6 @@ next_allowed_seam: Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not treat Post-AgentHandoffRuntimeWiringGrant Spine Audit v1 as passed until Zak pastes status: pass.
+Do not treat ModelOutputAuthorityPlan v1 as passed until Zak pastes status: pass.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
