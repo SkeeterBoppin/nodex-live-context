@@ -1,9 +1,9 @@
 ﻿{
   "schema": "nodex.proof_claim_promotion_authority.plan.v1",
   "status": "pass",
-  "continuity_sync": "pending",
-  "continuitySyncMessage": "continuity sync pending after seam evidence write",
-  "createdAt": "2026-04-27T15:45:25.8440482-07:00",
+  "continuity_sync": "pass",
+  "continuitySyncMessage": "continuity sync committed and pushed",
+  "createdAt": "2026-04-27T15:45:27.8910312-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
@@ -156,6 +156,15 @@
       "reason": "ProofClaimPromotionAuthorityPlan v1 left Nodex repo dirty",
       "data": {
         "statusShort": ""
+      }
+    },
+    {
+      "name": "evidence readback status",
+      "pass": true,
+      "reason": "evidence readback status mismatch",
+      "data": {
+        "actual": "pass",
+        "expected": "pass"
       }
     }
   ],

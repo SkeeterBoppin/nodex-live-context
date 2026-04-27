@@ -1,7 +1,7 @@
 ﻿PROOF CLAIM PROMOTION AUTHORITY PLAN V1
 
 status: pass
-continuity_sync: pending
+continuity_sync: pass
 audited_commit: c64ae68 Add proof claim layer manifest validator
 plan_only: true
 decision: proof_claim_promotion_authority_preflight_planned
@@ -48,4 +48,4 @@ planned_following_seams:
 
 evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\proof_claim_promotion_authority_plan_v1_20260427_154524.json
 evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\proof_claim_promotion_authority_plan_v1_summary_20260427_154524.txt
-continuity_sync_message: continuity sync pending after seam evidence write
+continuity_sync_message: continuity sync committed and pushed
