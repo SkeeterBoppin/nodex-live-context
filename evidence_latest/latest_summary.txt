@@ -1,10 +1,10 @@
-AGENT HANDOFF RUNTIME WIRING DECISION V1
+AGENT HANDOFF RUNTIME WIRING STATE RECORD V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-decision_only: true
-decision: agent_handoff_runtime_wiring_granted
+state_record_only: true
+decision: agent_handoff_runtime_wiring_state_recorded
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -38,11 +38,10 @@ permission_grant_authority_scope: permission_grant_authority_only
 permission_grants_granted: true
 permission_grant_authority_state_recorded: true
 
-agent_handoff_runtime_wiring_decision_applied: true
 agent_handoff_runtime_wiring_authority_granted: true
 agent_handoff_runtime_wiring_scope: agent_handoff_runtime_wiring_only
 agent_handoff_runtime_wiring_allowed_now: true
-agent_handoff_runtime_wiring_state_record_allowed_now: true
+agent_handoff_runtime_wiring_state_recorded: true
 
 model_output_authority_granted: false
 proof_claim_promotion_authority_granted: false
@@ -58,13 +57,12 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: AgentHandoffRuntimeWiringStateRecord v1
+next_allowed_seam: Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
 planned_following_seams:
-- Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 - ModelOutputAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_decision_v1_20260427_144406.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_decision_v1_summary_20260427_144406.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_state_record_v1_summary_20260427_145020.txt
 
-continuity_sync_message: continuity sync skipped until seam evidence write completed
+continuity_sync_message: continuity sync pending

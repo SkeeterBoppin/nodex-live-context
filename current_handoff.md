@@ -1,13 +1,12 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T14:44:07.6573159-07:00
+Generated: 2026-04-27T14:50:22.3023646-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
 
 It is NOT Nodex authority.
-It does NOT grant runtime, tool, file, process, git, permission, source mutation, staging, commit, deletion, or AgentHandoffRunner authority.
 
 ## Nodex Repo
 
@@ -23,11 +22,11 @@ clean
 
 ## Latest Completed Seam
 
-AgentHandoffRuntimeWiringDecision v1
+AgentHandoffRuntimeWiringStateRecord v1
 
 ## Current Open Seam
 
-AgentHandoffRuntimeWiringStateRecord v1
+Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
 ## Current Packet
 
@@ -38,10 +37,8 @@ packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it 
 ## Latest Evidence
 
 status: pass
-decision: agent_handoff_runtime_wiring_granted
-agent_handoff_runtime_wiring_authority_granted: true
-agent_handoff_runtime_wiring_allowed_now: true
-next_allowed_seam: AgentHandoffRuntimeWiringStateRecord v1
+decision: agent_handoff_runtime_wiring_state_recorded
+next_allowed_seam: Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
 ## Currently Granted
 
@@ -83,6 +80,6 @@ next_allowed_seam: AgentHandoffRuntimeWiringStateRecord v1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not treat AgentHandoffRuntimeWiringStateRecord v1 as passed until Zak pastes status: pass.
+Do not treat Post-AgentHandoffRuntimeWiringGrant Spine Audit v1 as passed until Zak pastes status: pass.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
