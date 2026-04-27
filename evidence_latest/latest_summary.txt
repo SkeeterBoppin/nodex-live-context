@@ -1,10 +1,10 @@
-POST-PERMISSION GRANT AUTHORITY GRANT SPINE AUDIT V1
+﻿AGENT HANDOFF RUNTIME WIRING PLAN V1
 
 status: pass
-continuity_sync: fail
+continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-audit_only: true
-decision: post_permission_grant_authority_grant_spine_audit_complete
+plan_only: true
+decision: agent_handoff_runtime_wiring_preflight_planned
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -39,6 +39,8 @@ permission_grants_granted: true
 permission_grant_authority_state_recorded: true
 
 agent_handoff_runtime_wiring_plan_allowed_now: true
+agent_handoff_runtime_wiring_preflight_allowed_now: true
+agent_handoff_runtime_wiring_decision_allowed_now: false
 agent_handoff_runtime_wiring_allowed_now: false
 model_output_authority_granted: false
 proof_claim_promotion_authority_granted: false
@@ -54,15 +56,14 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: AgentHandoffRuntimeWiringPlan v1
+next_allowed_seam: AgentHandoffRuntimeWiringPreflight v1
 
 planned_following_seams:
-- AgentHandoffRuntimeWiringPreflight v1
 - AgentHandoffRuntimeWiringDecision v1
 - AgentHandoffRuntimeWiringStateRecord v1
 - Post-AgentHandoffRuntimeWiringGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_permission_grant_authority_grant_spine_audit_v1_20260427_142355.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_permission_grant_authority_grant_spine_audit_v1_summary_20260427_142355.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_plan_v1_20260427_143458.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\agent_handoff_runtime_wiring_plan_v1_summary_20260427_143458.txt
 
-continuity_sync_message: Exception calling "WriteAllLines" with "3" argument(s): "Could not find a part of the path 'C:\Users\Zak\OneDrive\Desktop\Nodex System\Node\packets\current_open_packet.ps1'."
+continuity_sync_message: continuity sync pending

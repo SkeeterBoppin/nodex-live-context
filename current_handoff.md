@@ -1,76 +1,44 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T14:27:01.5266408-07:00
+Generated: 2026-04-27T14:35:00.1312072-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
 
 It is NOT Nodex authority.
-It does NOT grant runtime, tool, file, process, git, permission, source mutation, staging, commit, deletion, or AgentHandoffRunner authority.
+Continuity sync is non-authoritative and cannot convert a Nodex seam pass/fail result.
 
 ## Nodex Repo
 
-``text
 C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
-``
 
-Latest observed Nodex commit:
+## Latest Observed Nodex Commit
 
-``text
 c64ae68 Add proof claim layer manifest validator
-``
-
-Latest observed Nodex working tree status:
-
-``text
-
-``
 
 ## Latest Completed Seam
 
-``text
-Post-PermissionGrantAuthorityGrant Spine Audit v1
-``
-
-## Latest Result
-
-``text
-status: pass
-continuity_sync: repaired separately after initial sync failure
-decision: post_permission_grant_authority_grant_spine_audit_complete
-next_allowed_seam: AgentHandoffRuntimeWiringPlan v1
-``
+AgentHandoffRuntimeWiringPlan v1
 
 ## Current Open Seam
 
-``text
-AgentHandoffRuntimeWiringPlan v1
-``
+AgentHandoffRuntimeWiringPreflight v1
 
 ## Current Packet
 
-``text
 not generated yet
-``
 
-The file below is a continuity placeholder only and must not be run as a Nodex packet:
+packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it as a Nodex packet.
 
-``text
-packets/current_open_packet.ps1
-``
+## Latest Evidence
 
-## Expected Next Action
+status: pass
+decision: agent_handoff_runtime_wiring_preflight_planned
+continuity_sync: tracked separately in latest evidence summary
+next_allowed_seam: AgentHandoffRuntimeWiringPreflight v1
 
-Generate the next Nodex packet for:
-
-``text
-AgentHandoffRuntimeWiringPlan v1
-``
-
-Do not treat AgentHandoffRuntimeWiringPlan v1 as passed unless terminal/evidence output shows status: pass.
-
-## Currently Granted After Latest Completed Seam
+## Currently Granted
 
 - activation authority
 - runtime integration authority
@@ -80,8 +48,9 @@ Do not treat AgentHandoffRuntimeWiringPlan v1 as passed unless terminal/evidence
 - process execution authority
 - git execution by Nodex authority
 - permission grant authority
+- permission grants
 
-## Currently Not Granted After Latest Completed Seam
+## Still Blocked
 
 - AgentHandoffRunner runtime wiring
 - model-output authority
@@ -94,24 +63,22 @@ Do not treat AgentHandoffRuntimeWiringPlan v1 as passed unless terminal/evidence
 - repo deletion
 - deletion
 - file move
-- commit
 - staging
+- commit authority outside explicit commit-gate seams
 
 ## Required Files To Read First
 
-``text
-current_handoff.md
-evidence_latest/latest_summary.txt
-evidence_latest/latest.json
-architecture/nodex_exact_continuity_source_v1.md
-architecture/nodex_boundary_pushing_master_architecture.md
-packets/current_open_packet.ps1
-``
+- current_handoff.md
+- evidence_latest/latest_summary.txt
+- evidence_latest/latest.json
+- architecture/nodex_exact_continuity_source_v1.md
+- architecture/nodex_boundary_pushing_master_architecture.md
+- packets/current_open_packet.ps1
 
 ## New Chat Rule
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond AgentHandoffRuntimeWiringPlan v1.
+Do not treat AgentHandoffRuntimeWiringPreflight v1 as passed until Zak pastes status: pass.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
