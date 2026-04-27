@@ -1,17 +1,18 @@
 {
-  "schema": "nodex.git_execution_authority.preflight.v1",
+  "schema": "nodex.git_execution_authority.decision.v1",
   "status": "pass",
-  "createdAt": "2026-04-27T12:10:06.1432715-07:00",
+  "createdAt": "2026-04-27T13:33:51.5605830-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
-  "seam": "GitExecutionAuthorityPreflight v1",
+  "seam": "GitExecutionAuthorityDecision v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorGitExecutionAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_preflight_v1_20260427_121004.json",
   "priorGitExecutionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_plan_v1_20260427_120804.json",
   "priorPostProcessExecutionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_process_execution_authority_grant_spine_audit_v1_20260427_112153.json",
   "priorProcessExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\process_execution_authority_state_record_v1_20260427_111856.json",
@@ -22,8 +23,8 @@
   "priorRuntimeExecutionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_execution_authority_state_record_v1_20260427_105110.json",
   "priorRuntimeIntegrationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\runtime_integration_authority_state_record_v1_20260427_104206.json",
   "priorActivationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\activation_authority_state_record_v1_20260427_103039.json",
-  "preflightOnly": true,
-  "decision": "git_execution_authority_decision_ready",
+  "decisionOnly": true,
+  "decision": "git_execution_authority_granted",
   "activationAuthorityGranted": true,
   "activationAuthorityScope": "activation_authority_only",
   "runtimeIntegrationAuthorityGranted": true,
@@ -40,8 +41,11 @@
   "processExecutionAuthorityScope": "process_execution_authority_only",
   "processExecutionAuthorityStateRecorded": true,
   "processExecutionGranted": true,
-  "gitExecutionAuthorityDecisionAllowedNow": true,
-  "gitExecutionByNodexGranted": false,
+  "gitExecutionAuthorityDecisionApplied": true,
+  "gitExecutionAuthorityGranted": true,
+  "gitExecutionAuthorityScope": "git_execution_authority_only",
+  "gitExecutionByNodexGranted": true,
+  "gitExecutionAuthorityStateRecordAllowedNow": true,
   "permissionGrantsGranted": false,
   "agentHandoffRuntimeWiringAllowedNow": false,
   "modelOutputAuthorityGranted": false,
@@ -56,34 +60,45 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "GitExecutionAuthorityDecision v1",
-  "decisionConstraints": [
-    "may grant git execution by Nodex authority only",
-    "must not grant permission changes",
-    "must not wire AgentHandoffRunner to runtime adapters",
-    "must not grant model-output authority",
-    "must not grant proof-claim promotion authority",
-    "must not grant external review authority",
-    "must not grant Deep Research authority",
-    "must not grant source mutation",
-    "must not grant evidence rewrite",
-    "must not grant evidence deletion",
-    "must not grant repo deletion",
-    "must not grant deletion",
-    "must not grant file move",
-    "must not grant commit authority outside explicit commit-gate seams"
+  "nextAllowedSeam": "GitExecutionAuthorityStateRecord v1",
+  "plannedFollowingSeams": [
+    "Post-GitExecutionAuthorityGrant Spine Audit v1",
+    "PermissionGrantAuthorityPlan v1"
   ],
-  "stopConditions": [
-    "dirty working tree",
-    "full harness failure",
-    "missing GitExecutionAuthorityPlan v1 evidence",
-    "missing Post-ProcessExecutionAuthorityGrant Spine Audit v1 evidence",
-    "process execution authority not granted or wrong scope",
-    "git execution by Nodex already granted outside decision seam",
-    "permission authority already granted",
-    "AgentHandoffRunner runtime wiring already allowed",
-    "source mutation or evidence deletion after plan",
-    "attempt to combine git authority with permission or AgentHandoff authority"
+  "grantBasis": {
+    "activationAuthorityGranted": true,
+    "runtimeIntegrationAuthorityGranted": true,
+    "runtimeExecutionAuthorityGranted": true,
+    "toolExecutionAuthorityGranted": true,
+    "runtimeFileWriteAuthorityGranted": true,
+    "processExecutionAuthorityGranted": true,
+    "postProcessExecutionSpineAuditPassed": true,
+    "gitExecutionAuthorityPreflightPassed": true,
+    "fullHarnessPassed": true,
+    "workingTreeClean": true
+  },
+  "gitExecutionAuthorityAllowedEffects": [
+    "record git execution by Nodex authority as granted",
+    "allow future planning/audit seams explicitly derived from git execution authority",
+    "preserve permission/model-output/proof-promotion/external-review/Deep-Research authority blocks",
+    "preserve AgentHandoffRunner runtime wiring block until explicit later seam",
+    "preserve source mutation/evidence rewrite/evidence deletion/repo deletion/deletion/file move/staging/commit blocks until explicit later seams"
+  ],
+  "explicitNonGrants": [
+    "permission grants",
+    "AgentHandoffRunner runtime wiring",
+    "model-output authority",
+    "proof-claim promotion authority",
+    "external review authority",
+    "Deep Research authority",
+    "source mutation",
+    "evidence rewrite",
+    "evidence deletion",
+    "repo deletion",
+    "deletion",
+    "file move",
+    "staging",
+    "commit authority outside explicit commit-gate seams"
   ],
   "boundary": {
     "activationAuthorityAllowed": true,
@@ -110,9 +125,11 @@
     "processExecutionAuthorityScope": "process_execution_authority_only",
     "processExecutionAllowed": true,
     "processExecutionGranted": true,
-    "gitExecutionAuthorityDecisionAllowed": true,
-    "gitExecutionAllowedByNodex": false,
-    "gitExecutionByNodexGranted": false,
+    "gitExecutionAuthorityAllowed": true,
+    "gitExecutionAuthorityGranted": true,
+    "gitExecutionAuthorityScope": "git_execution_authority_only",
+    "gitExecutionAllowedByNodex": true,
+    "gitExecutionByNodexGranted": true,
     "permissionGrantsAllowed": false,
     "permissionGrantsGranted": false,
     "agentHandoffRuntimeWiringAllowed": false,
@@ -122,10 +139,17 @@
     "externalReviewAuthorityAllowed": false,
     "deepResearchAuthorityAllowed": false,
     "packetHelperExecutionAuthorityAllowed": false,
-    "runtimeAdapterSideEffectAuthorityAllowed": false
+    "runtimeAdapterSideEffectAuthorityAllowed": false,
+    "sourceMutationAllowed": false,
+    "evidenceRewriteAllowed": false,
+    "evidenceDeletionAllowed": false,
+    "repoDeletionAllowed": false,
+    "deletionAllowed": false,
+    "fileMoveAllowed": false,
+    "stagingAllowed": false,
+    "commitAllowed": false
   },
   "blocked": {
-    "gitExecutionByNodex": true,
     "permissionGrants": true,
     "agentHandoffRuntimeWiring": true,
     "modelOutputAuthority": true,
@@ -148,6 +172,7 @@
     "additionalDownloadsCleanup": true
   },
   "validation": {
+    "gitExecutionAuthorityPreflightVerified": true,
     "gitExecutionAuthorityPlanVerified": true,
     "priorSpineAuditVerified": true,
     "processExecutionStateRecordVerified": true,
@@ -160,9 +185,9 @@
     "activationStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "prePreflightWorkingTreeClean": true,
+    "preDecisionWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postPreflightWorkingTreeClean": true,
+    "postDecisionWorkingTreeClean": true,
     "activationAuthorityGranted": true,
     "runtimeIntegrationAuthorityGranted": true,
     "runtimeAuthorityGranted": true,
@@ -172,7 +197,8 @@
     "runtimeFileWritesGranted": true,
     "processExecutionAuthorityGranted": true,
     "processExecutionGranted": true,
-    "gitExecutionByNodexGranted": false,
+    "gitExecutionAuthorityGranted": true,
+    "gitExecutionByNodexGranted": true,
     "permissionGrantsGranted": false,
     "agentHandoffRuntimeWiringAllowed": false,
     "modelOutputAuthorityGranted": false,
@@ -190,9 +216,9 @@
   },
   "checks": [
     {
-      "name": "pre-preflight working tree clean",
+      "name": "pre-decision working tree clean",
       "pass": true,
-      "reason": "GitExecutionAuthorityPreflight v1 must start with clean working tree",
+      "reason": "GitExecutionAuthorityDecision v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -200,10 +226,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match GitExecutionAuthorityPreflight baseline",
+      "reason": "HEAD must match GitExecutionAuthorityDecision baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "git execution authority preflight JSON exists",
+      "pass": true,
+      "reason": "missing git_execution_authority_preflight_v1_*.json evidence",
+      "data": {
+        "pattern": "git_execution_authority_preflight_v1_*.json"
       }
     },
     {
@@ -284,6 +318,22 @@
       "reason": "missing activation_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "activation_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "git execution authority preflight path present",
+      "pass": true,
+      "reason": "git execution authority preflight path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_preflight_v1_20260427_121004.json"
+      }
+    },
+    {
+      "name": "git execution authority preflight file exists",
+      "pass": true,
+      "reason": "git execution authority preflight file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_preflight_v1_20260427_121004.json"
       }
     },
     {
@@ -447,6 +497,159 @@
       }
     },
     {
+      "name": "git execution preflight status pass",
+      "pass": true,
+      "reason": "git execution authority preflight must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\git_execution_authority_preflight_v1_20260427_121004.json"
+      }
+    },
+    {
+      "name": "git execution preflight exact decision",
+      "pass": true,
+      "reason": "git execution preflight must be decision ready",
+      "data": {
+        "decision": "git_execution_authority_decision_ready"
+      }
+    },
+    {
+      "name": "git execution preflight routes to decision",
+      "pass": true,
+      "reason": "git execution preflight must route to GitExecutionAuthorityDecision v1",
+      "data": {
+        "nextAllowedSeam": "GitExecutionAuthorityDecision v1",
+        "gitExecutionAuthorityDecisionAllowedNow": true
+      }
+    },
+    {
+      "name": "git preflight gitExecutionAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "git preflight gitExecutionAuthorityDecisionAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "git preflight gitExecutionByNodexGranted",
+      "pass": true,
+      "reason": "git preflight gitExecutionByNodexGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight permissionGrantsGranted",
+      "pass": true,
+      "reason": "git preflight permissionGrantsGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight agentHandoffRuntimeWiringAllowedNow",
+      "pass": true,
+      "reason": "git preflight agentHandoffRuntimeWiringAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight modelOutputAuthorityGranted",
+      "pass": true,
+      "reason": "git preflight modelOutputAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight proofClaimPromotionAuthorityGranted",
+      "pass": true,
+      "reason": "git preflight proofClaimPromotionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "git preflight externalReviewAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "git preflight deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "git preflight sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "git preflight evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "git preflight evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "git preflight repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight deletionAllowedNow",
+      "pass": true,
+      "reason": "git preflight deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight fileMoveAllowedNow",
+      "pass": true,
+      "reason": "git preflight fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight commitAllowedNow",
+      "pass": true,
+      "reason": "git preflight commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "git preflight stagingAllowedNow",
+      "pass": true,
+      "reason": "git preflight stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
       "name": "git execution plan status pass",
       "pass": true,
       "reason": "git execution authority plan must be pass",
@@ -457,144 +660,55 @@
     {
       "name": "git execution plan exact decision",
       "pass": true,
-      "reason": "git execution authority plan must plan preflight",
+      "reason": "git execution plan must have planned preflight",
       "data": {
         "decision": "git_execution_authority_preflight_planned"
       }
     },
     {
-      "name": "git execution plan routes to preflight",
+      "name": "git plan gitExecutionAuthorityDecisionAllowedNow",
       "pass": true,
-      "reason": "git execution plan must route to GitExecutionAuthorityPreflight v1",
-      "data": {
-        "nextAllowedSeam": "GitExecutionAuthorityPreflight v1",
-        "gitExecutionAuthorityPreflightAllowedNow": true
-      }
-    },
-    {
-      "name": "git execution plan gitExecutionAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "git execution plan gitExecutionAuthorityDecisionAllowedNow must be false",
+      "reason": "git plan gitExecutionAuthorityDecisionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "git execution plan gitExecutionByNodexGranted",
+      "name": "git plan gitExecutionByNodexGranted",
       "pass": true,
-      "reason": "git execution plan gitExecutionByNodexGranted must be false",
+      "reason": "git plan gitExecutionByNodexGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "git execution plan permissionGrantsGranted",
+      "name": "git plan permissionGrantsGranted",
       "pass": true,
-      "reason": "git execution plan permissionGrantsGranted must be false",
+      "reason": "git plan permissionGrantsGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "git execution plan agentHandoffRuntimeWiringAllowedNow",
+      "name": "git plan agentHandoffRuntimeWiringAllowedNow",
       "pass": true,
-      "reason": "git execution plan agentHandoffRuntimeWiringAllowedNow must be false",
+      "reason": "git plan agentHandoffRuntimeWiringAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "git execution plan modelOutputAuthorityGranted",
+      "name": "git plan commitAllowedNow",
       "pass": true,
-      "reason": "git execution plan modelOutputAuthorityGranted must be false",
+      "reason": "git plan commitAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "git execution plan proofClaimPromotionAuthorityGranted",
+      "name": "git plan stagingAllowedNow",
       "pass": true,
-      "reason": "git execution plan proofClaimPromotionAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "git execution plan externalReviewAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "git execution plan deepResearchAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "git execution plan sourceMutationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "git execution plan evidenceRewriteAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "git execution plan evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "git execution plan repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan deletionAllowedNow",
-      "pass": true,
-      "reason": "git execution plan deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan fileMoveAllowedNow",
-      "pass": true,
-      "reason": "git execution plan fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan commitAllowedNow",
-      "pass": true,
-      "reason": "git execution plan commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "git execution plan stagingAllowedNow",
-      "pass": true,
-      "reason": "git execution plan stagingAllowedNow must be false",
+      "reason": "git plan stagingAllowedNow must be false",
       "data": {
         "actual": false
       }
@@ -616,103 +730,6 @@
       }
     },
     {
-      "name": "prior spine audit routes to git plan",
-      "pass": true,
-      "reason": "prior spine audit must route to GitExecutionAuthorityPlan v1",
-      "data": {
-        "nextAllowedSeam": "GitExecutionAuthorityPlan v1",
-        "gitExecutionAuthorityPlanAllowedNow": true
-      }
-    },
-    {
-      "name": "prior audit activationAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit activationAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "prior audit activation scope exact",
-      "pass": true,
-      "reason": "activation authority scope must be activation_authority_only",
-      "data": {
-        "actual": "activation_authority_only"
-      }
-    },
-    {
-      "name": "prior audit runtimeIntegrationAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit runtimeIntegrationAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "prior audit runtime integration scope exact",
-      "pass": true,
-      "reason": "runtime integration authority scope must be runtime_integration_authority_only",
-      "data": {
-        "actual": "runtime_integration_authority_only"
-      }
-    },
-    {
-      "name": "prior audit runtimeExecutionAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit runtimeExecutionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "prior audit runtime execution scope exact",
-      "pass": true,
-      "reason": "runtime execution authority scope must be runtime_execution_authority_only",
-      "data": {
-        "actual": "runtime_execution_authority_only"
-      }
-    },
-    {
-      "name": "prior audit toolExecutionAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit toolExecutionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "prior audit tool scope exact",
-      "pass": true,
-      "reason": "tool execution authority scope must be tool_execution_authority_only",
-      "data": {
-        "actual": "tool_execution_authority_only"
-      }
-    },
-    {
-      "name": "prior audit runtimeFileWriteAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit runtimeFileWriteAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "prior audit runtime file write scope exact",
-      "pass": true,
-      "reason": "runtime file write authority scope must be runtime_file_write_authority_only",
-      "data": {
-        "actual": "runtime_file_write_authority_only"
-      }
-    },
-    {
-      "name": "prior audit runtimeFileWritesGranted",
-      "pass": true,
-      "reason": "prior audit runtimeFileWritesGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
       "name": "prior audit processExecutionAuthorityGranted",
       "pass": true,
       "reason": "prior audit processExecutionAuthorityGranted must be true",
@@ -721,19 +738,19 @@
       }
     },
     {
-      "name": "prior audit process scope exact",
-      "pass": true,
-      "reason": "process execution authority scope must be process_execution_authority_only",
-      "data": {
-        "actual": "process_execution_authority_only"
-      }
-    },
-    {
       "name": "prior audit processExecutionGranted",
       "pass": true,
       "reason": "prior audit processExecutionGranted must be true",
       "data": {
         "actual": true
+      }
+    },
+    {
+      "name": "prior audit process scope exact",
+      "pass": true,
+      "reason": "process execution scope must be process_execution_authority_only",
+      "data": {
+        "actual": "process_execution_authority_only"
       }
     },
     {
@@ -756,38 +773,6 @@
       "name": "prior audit agentHandoffRuntimeWiringAllowedNow",
       "pass": true,
       "reason": "prior audit agentHandoffRuntimeWiringAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "prior audit modelOutputAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit modelOutputAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "prior audit proofClaimPromotionAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit proofClaimPromotionAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "prior audit externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit externalReviewAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "prior audit deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "prior audit deepResearchAuthorityGranted must be false",
       "data": {
         "actual": false
       }
@@ -884,14 +869,6 @@
       "name": "process state permissionGrantsGranted",
       "pass": true,
       "reason": "process state permissionGrantsGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "process state agentHandoffRuntimeWiringAllowedNow",
-      "pass": true,
-      "reason": "process state agentHandoffRuntimeWiringAllowedNow must be false",
       "data": {
         "actual": false
       }
@@ -1121,17 +1098,17 @@
       }
     },
     {
-      "name": "full harness passed during preflight",
+      "name": "full harness passed during decision",
       "pass": true,
-      "reason": "node tests/run.js must pass during GitExecutionAuthorityPreflight v1",
+      "reason": "node tests/run.js must pass during GitExecutionAuthorityDecision v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-preflight working tree clean",
+      "name": "post-decision working tree clean",
       "pass": true,
-      "reason": "GitExecutionAuthorityPreflight v1 must leave repo working tree clean",
+      "reason": "GitExecutionAuthorityDecision v1 must leave repo working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -1160,7 +1137,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PREFLIGHT",
+      "label": "FULL HARNESS DECISION",
       "filePath": "node",
       "arguments": [
         "tests/run.js"

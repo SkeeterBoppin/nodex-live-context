@@ -1,9 +1,9 @@
-GIT EXECUTION AUTHORITY PREFLIGHT V1
+GIT EXECUTION AUTHORITY DECISION V1
 
 status: pass
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: git_execution_authority_decision_ready
+decision_only: true
+decision: git_execution_authority_granted
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -27,8 +27,11 @@ process_execution_authority_scope: process_execution_authority_only
 process_execution_authority_state_recorded: true
 process_execution_granted: true
 
-git_execution_authority_decision_allowed_now: true
-git_execution_by_nodex_granted: false
+git_execution_authority_decision_applied: true
+git_execution_authority_granted: true
+git_execution_authority_scope: git_execution_authority_only
+git_execution_by_nodex_granted: true
+git_execution_authority_state_record_allowed_now: true
 
 permission_grants_granted: false
 agent_handoff_runtime_wiring_allowed_now: false
@@ -46,23 +49,11 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: GitExecutionAuthorityDecision v1
+next_allowed_seam: GitExecutionAuthorityStateRecord v1
 
-decision_constraints:
-- may grant git execution by Nodex authority only
-- must not grant permission changes
-- must not wire AgentHandoffRunner to runtime adapters
-- must not grant model-output authority
-- must not grant proof-claim promotion authority
-- must not grant external review authority
-- must not grant Deep Research authority
-- must not grant source mutation
-- must not grant evidence rewrite
-- must not grant evidence deletion
-- must not grant repo deletion
-- must not grant deletion
-- must not grant file move
-- must not grant commit authority outside explicit commit-gate seams
+planned_following_seams:
+- Post-GitExecutionAuthorityGrant Spine Audit v1
+- PermissionGrantAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\git_execution_authority_preflight_v1_20260427_121004.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\git_execution_authority_preflight_v1_summary_20260427_121004.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\git_execution_authority_decision_v1_20260427_133350.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\git_execution_authority_decision_v1_summary_20260427_133350.txt

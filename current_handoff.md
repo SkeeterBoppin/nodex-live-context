@@ -1,63 +1,48 @@
-﻿# NODEX CURRENT HANDOFF
+# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T12:55:08.0497611-07:00
+Generated: 2026-04-27T13:46:31.6281100-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
 
 It is NOT Nodex authority.
-It does NOT grant runtime, tool, file, process, git, permission, source mutation, staging, commit, deletion, or AgentHandoffRunner authority.
 
 ## Nodex Repo
 
-``text
 C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
-``
 
-Latest observed Nodex commit:
+## Latest Observed Nodex Commit
 
-``text
 c64ae68 Add proof claim layer manifest validator
-``
 
-Latest observed Nodex working tree status:
+## Latest Observed Nodex Working Tree
 
-``text
-
-``
+clean
 
 ## Latest Completed Seam
 
-``text
-GitExecutionAuthorityPreflight v1
-``
+GitExecutionAuthorityDecision v1
 
 ## Current Open Seam
 
-``text
-GitExecutionAuthorityDecision v1
-``
-
-Current downloaded packet copied into this repo:
-
-``text
-packets/current_open_packet.ps1
-``
-
-Expected success line:
-
-``text
-GIT EXECUTION AUTHORITY DECISION V1 COMPLETE
-``
-
-Expected next seam if pass:
-
-``text
 GitExecutionAuthorityStateRecord v1
-``
 
-## Current Granted Authorities Before Open Seam
+## Current Packet
+
+not generated yet
+
+packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it as a Nodex packet.
+
+## Latest Evidence
+
+status: pass
+decision: git_execution_authority_granted
+git_execution_authority_granted: true
+git_execution_by_nodex_granted: true
+next_allowed_seam: GitExecutionAuthorityStateRecord v1
+
+## Currently Granted
 
 - activation authority
 - runtime integration authority
@@ -65,10 +50,10 @@ GitExecutionAuthorityStateRecord v1
 - tool execution authority
 - runtime file write authority
 - process execution authority
+- git execution by Nodex authority
 
-## Currently Not Granted Before Open Seam
+## Still Blocked
 
-- git execution by Nodex
 - permission grants
 - AgentHandoffRunner runtime wiring
 - model-output authority
@@ -81,28 +66,22 @@ GitExecutionAuthorityStateRecord v1
 - repo deletion
 - deletion
 - file move
-- commit
 - staging
+- commit authority outside explicit commit-gate seams
+
+## Required Files To Read First
+
+- current_handoff.md
+- evidence_latest/latest_summary.txt
+- evidence_latest/latest.json
+- architecture/nodex_exact_continuity_source_v1.md
+- architecture/nodex_boundary_pushing_master_architecture.md
+- packets/current_open_packet.ps1
 
 ## New Chat Rule
 
-Read this repo first.
-
-Required files:
-
-``text
-current_handoff.md
-evidence_latest/latest_summary.txt
-evidence_latest/latest.json
-architecture/nodex_exact_continuity_source_v1.md
-architecture/nodex_boundary_pushing_master_architecture.md
-packets/current_open_packet.ps1
-``
-
-Do not treat GitExecutionAuthorityDecision v1 as passed unless Zak pastes actual terminal output or evidence showing:
-
-``text
-status: pass
-decision: git_execution_authority_granted
-next_allowed_seam: GitExecutionAuthorityStateRecord v1
-``
+Do not answer from memory.
+Do not infer from expected output.
+Do not treat GitExecutionAuthorityStateRecord v1 as passed until Zak pastes status: pass.
+Do not modify the Nodex repo.
+Do not commit or stage anything in the Nodex repo.
