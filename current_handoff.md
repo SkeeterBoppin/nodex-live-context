@@ -1,6 +1,6 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T15:00:36.4515993-07:00
+Generated: 2026-04-27T15:15:59.2899216-07:00
 
 ## Boundary
 
@@ -17,25 +17,30 @@ C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
 
 c64ae68 Add proof claim layer manifest validator
 
+## Latest Observed Nodex Working Tree
+
+clean
+
 ## Latest Completed Seam
 
-ModelOutputAuthorityPreflight v1
-
-## Latest Result
-
-status: pass
-continuity_sync: pass
-decision: model_output_authority_decision_ready
+ModelOutputAuthorityDecision v1
 
 ## Current Open Seam
 
-ModelOutputAuthorityDecision v1
+ModelOutputAuthorityStateRecord v1
 
 ## Current Packet
 
 not generated yet
 
 packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it as a Nodex packet.
+
+## Latest Evidence
+
+status: pass
+decision: model_output_authority_granted
+model_output_authority_granted: true
+next_allowed_seam: ModelOutputAuthorityStateRecord v1
 
 ## Currently Granted
 
@@ -48,10 +53,10 @@ packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it 
 - git execution by Nodex authority
 - permission grant authority
 - AgentHandoffRunner runtime wiring authority
+- model-output authority
 
 ## Still Blocked
 
-- model-output authority
 - proof-claim promotion authority
 - external review authority
 - Deep Research authority
@@ -77,6 +82,6 @@ packets/current_open_packet.ps1 is a continuity placeholder only. Do not run it 
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not treat ModelOutputAuthorityDecision v1 as passed until Zak pastes status: pass.
+Do not treat ModelOutputAuthorityStateRecord v1 as passed until Zak pastes status: pass.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

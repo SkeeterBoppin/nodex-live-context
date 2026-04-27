@@ -1,10 +1,10 @@
-MODEL OUTPUT AUTHORITY PREFLIGHT V1
+MODEL OUTPUT AUTHORITY DECISION V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: model_output_authority_decision_ready
+decision_only: true
+decision: model_output_authority_granted
 
 activation_authority_granted: true
 activation_authority_scope: activation_authority_only
@@ -43,9 +43,10 @@ agent_handoff_runtime_wiring_scope: agent_handoff_runtime_wiring_only
 agent_handoff_runtime_wiring_allowed_now: true
 agent_handoff_runtime_wiring_state_recorded: true
 
-model_output_authority_preflight_allowed_now: true
-model_output_authority_decision_allowed_now: true
-model_output_authority_granted: false
+model_output_authority_decision_applied: true
+model_output_authority_granted: true
+model_output_authority_scope: model_output_authority_only
+model_output_authority_state_record_allowed_now: true
 
 proof_claim_promotion_authority_granted: false
 external_review_authority_granted: false
@@ -60,28 +61,13 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: ModelOutputAuthorityDecision v1
+next_allowed_seam: ModelOutputAuthorityStateRecord v1
 
 planned_following_seams:
-- ModelOutputAuthorityDecision v1
-- ModelOutputAuthorityStateRecord v1
 - Post-ModelOutputAuthorityGrant Spine Audit v1
+- ProofClaimPromotionAuthorityPlan v1
 
-decision_constraints:
-- may grant model-output authority only
-- must not grant proof-claim promotion authority
-- must not grant external review authority
-- must not grant Deep Research authority
-- must not grant source mutation
-- must not grant evidence rewrite
-- must not grant evidence deletion
-- must not grant repo deletion
-- must not grant deletion
-- must not grant file move
-- must not grant staging authority
-- must not grant commit authority outside explicit commit-gate seams
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\model_output_authority_decision_v1_20260427_151557.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\model_output_authority_decision_v1_summary_20260427_151557.txt
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\model_output_authority_preflight_v1_20260427_150034.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\model_output_authority_preflight_v1_summary_20260427_150034.txt
-
-continuity_sync_message: continuity sync not yet run
+continuity_sync_message: continuity sync skipped until seam evidence write completed
