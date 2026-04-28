@@ -1,10 +1,10 @@
-﻿FILE MOVE AUTHORITY PLAN V1
+﻿FILE MOVE AUTHORITY PREFLIGHT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-plan_only: true
-decision: file_move_authority_preflight_planned
+preflight_only: true
+decision: file_move_authority_decision_ready
 
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
@@ -19,42 +19,41 @@ general_deletion_authority_scope: general_deletion_authority_only
 deletion_allowed_now: true
 general_deletion_authority_state_recorded: true
 
-file_move_authority_plan_allowed_now: true
-file_move_authority_preflight_allowed_now: true
-file_move_authority_decision_allowed_now: false
+file_move_authority_decision_allowed_now: true
 file_move_authority_granted: false
 file_move_allowed_now: false
 
 commit_allowed_now: false
 staging_allowed_now: false
 
-file_move_plan_constraints:
-- plan_only
-- no_file_move_performed
-- no_deletion_performed_by_this_packet
-- preflight_must_verify_allowed_source_roots
-- preflight_must_verify_allowed_destination_roots
-- preflight_must_verify_denied_system_paths
-- preflight_must_verify_move_source_destination_pairing
-- preflight_must_verify_move_is_not_implicit_delete_outside_scope
-- preflight_must_verify_exact_scope_classification
-- preflight_must_verify_no_generated_code_execution_escape
-- preflight_must_verify_no_network_download_execution
-- preflight_must_verify_no_hidden_persistence
-- preflight_must_verify_no_privilege_escalation
-- preflight_must_preserve_zak_final_authority_claim_structure
-- preflight_must_preserve_master_goal_not_redefined_claim_structure
-- preflight_must_preserve_audit_stable_structure_priority
+file_move_preflight_verified:
+- plan_verified: true
+- allowed_source_roots_verified: true
+- allowed_destination_roots_verified: true
+- denied_system_paths_verified: true
+- move_source_destination_pairing_verified: true
+- move_is_not_implicit_delete_outside_scope_verified: true
+- exact_scope_classification_verified: true
+- no_generated_code_execution_escape_verified: true
+- no_network_download_execution_verified: true
+- no_hidden_persistence_verified: true
+- no_privilege_escalation_verified: true
+- zak_final_authority_claim_structure_preserved: true
+- master_goal_not_redefined_claim_structure_preserved: true
+- audit_stable_structure_priority_preserved: true
 
-next_allowed_seam: FileMoveAuthorityPreflight v1
+next_allowed_seam: FileMoveAuthorityDecision v1
 
-planned_following_seams:
-- FileMoveAuthorityPreflight v1
-- FileMoveAuthorityDecision v1
-- FileMoveAuthorityStateRecord v1
-- Post-FileMoveAuthorityGrant Spine Audit v1
+decision_constraints:
+- may grant file move authority only
+- must not grant commit authority outside explicit commit-gate seams
+- must not grant staging authority
+- must preserve narrow deterministic evidence-scoped claim structure
+- must preserve audit-stable-over-human-readable structure priority
+- must preserve Zak final authority as scoped claim only
+- must preserve master-copy design goal as not-redefined scoped claim only
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\file_move_authority_plan_v1_20260428_144403.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\file_move_authority_plan_v1_summary_20260428_144403.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\file_move_authority_preflight_v1_20260428_145414.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\file_move_authority_preflight_v1_summary_20260428_145414.txt
 
 continuity_sync_message: continuity sync pending

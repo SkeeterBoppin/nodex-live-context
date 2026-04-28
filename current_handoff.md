@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T14:44:05.0966987-07:00
+Generated: 2026-04-28T14:54:15.7375639-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-FileMoveAuthorityPlan v1
+FileMoveAuthorityPreflight v1
 ``
 
 ## Latest Result
@@ -36,16 +36,16 @@ FileMoveAuthorityPlan v1
 ``text
 status: pass
 continuity_sync: pass
-decision: file_move_authority_preflight_planned
+decision: file_move_authority_decision_ready
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
-next_allowed_seam: FileMoveAuthorityPreflight v1
+next_allowed_seam: FileMoveAuthorityDecision v1
 ``
 
 ## Current Open Seam
 
 ``text
-FileMoveAuthorityPreflight v1
+FileMoveAuthorityDecision v1
 ``
 
 ## Current Packet
