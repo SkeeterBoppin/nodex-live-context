@@ -1,10 +1,11 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T10:15:54.9690475-07:00
+Generated: 2026-04-28T10:18:51.7317232-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
+
 It is NOT Nodex authority.
 It does NOT grant runtime, tool, file, process, git, permission, source mutation, staging, commit, deletion, or AgentHandoffRunner authority.
 
@@ -29,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-SourceMutationAuthorityStateRecord v1
+Post-SourceMutationAuthorityGrant Spine Audit v1
 ``
 
 ## Latest Result
@@ -37,14 +38,14 @@ SourceMutationAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
-decision: source_mutation_authority_state_recorded
-next_allowed_seam: Post-SourceMutationAuthorityGrant Spine Audit v1
+decision: post_source_mutation_authority_grant_spine_audit_complete
+next_allowed_seam: EvidenceRewriteAuthorityPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-Post-SourceMutationAuthorityGrant Spine Audit v1
+EvidenceRewriteAuthorityPlan v1
 ``
 
 ## Current Packet
@@ -58,6 +59,16 @@ The file below is a continuity placeholder only and must not be run as a Nodex p
 ``text
 packets/current_open_packet.ps1
 ``
+
+## Expected Next Action
+
+Generate the next Nodex packet for:
+
+``text
+EvidenceRewriteAuthorityPlan v1
+``
+
+Do not treat EvidenceRewriteAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -102,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond Post-SourceMutationAuthorityGrant Spine Audit v1.
+Do not generate beyond EvidenceRewriteAuthorityPlan v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

@@ -1,10 +1,10 @@
-﻿SOURCE MUTATION AUTHORITY STATE RECORD V1
+﻿POST-SOURCE MUTATION AUTHORITY GRANT SPINE AUDIT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-state_record_only: true
-decision: source_mutation_authority_state_recorded
+audit_only: true
+decision: post_source_mutation_authority_grant_spine_audit_complete
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -29,13 +29,12 @@ external_review_authority_granted: true
 external_review_authority_state_recorded: true
 deep_research_authority_granted: true
 deep_research_authority_state_recorded: true
-
 source_mutation_authority_granted: true
 source_mutation_authority_scope: source_mutation_authority_only
 source_mutation_allowed_now: true
 source_mutation_authority_state_recorded: true
-source_mutation_authority_decision_applied: true
 
+evidence_rewrite_authority_plan_allowed_now: true
 evidence_rewrite_allowed_now: false
 evidence_deletion_allowed_now: false
 repo_deletion_allowed_now: false
@@ -44,12 +43,20 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: Post-SourceMutationAuthorityGrant Spine Audit v1
+audit_findings:
+- high_findings: 0
+- medium_findings: 0
+- blocking_findings: 0
+
+next_allowed_seam: EvidenceRewriteAuthorityPlan v1
 
 planned_following_seams:
-- EvidenceRewriteAuthorityPlan v1
+- EvidenceRewriteAuthorityPreflight v1
+- EvidenceRewriteAuthorityDecision v1
+- EvidenceRewriteAuthorityStateRecord v1
+- Post-EvidenceRewriteAuthorityGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\source_mutation_authority_state_record_v1_20260428_101553.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\source_mutation_authority_state_record_v1_summary_20260428_101553.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_source_mutation_authority_grant_spine_audit_v1_20260428_101850.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_source_mutation_authority_grant_spine_audit_v1_summary_20260428_101850.txt
 
 continuity_sync_message: continuity sync pending
