@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T23:10:51.9059337-07:00
+Generated: 2026-04-27T23:15:26.0581831-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-ProofClaimPromotionAuthorityPreflight v1
+ProofClaimPromotionAuthorityDecision v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ ProofClaimPromotionAuthorityPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: proof_claim_promotion_authority_decision_ready
-next_allowed_seam: ProofClaimPromotionAuthorityDecision v1
+decision: proof_claim_promotion_authority_granted
+next_allowed_seam: ProofClaimPromotionAuthorityStateRecord v1
 ``
 
 ## Current Open Seam
 
 ``text
-ProofClaimPromotionAuthorityDecision v1
+ProofClaimPromotionAuthorityStateRecord v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-ProofClaimPromotionAuthorityDecision v1
+ProofClaimPromotionAuthorityStateRecord v1
 ``
 
-Do not treat ProofClaimPromotionAuthorityDecision v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat ProofClaimPromotionAuthorityStateRecord v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -82,10 +82,10 @@ Do not treat ProofClaimPromotionAuthorityDecision v1 as passed unless terminal/e
 - permission grant authority
 - AgentHandoffRunner runtime wiring authority
 - model-output authority
+- proof-claim promotion authority
 
 ## Currently Not Granted After Latest Completed Seam
 
-- proof-claim promotion authority
 - external review authority
 - Deep Research authority
 - source mutation
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond ProofClaimPromotionAuthorityDecision v1.
+Do not generate beyond ProofClaimPromotionAuthorityStateRecord v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

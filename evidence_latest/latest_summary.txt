@@ -1,10 +1,10 @@
-﻿PROOF CLAIM PROMOTION AUTHORITY PREFLIGHT V1
+﻿PROOF CLAIM PROMOTION AUTHORITY DECISION V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: proof_claim_promotion_authority_decision_ready
+decision_only: true
+decision: proof_claim_promotion_authority_granted
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -24,11 +24,13 @@ agent_handoff_runtime_wiring_allowed_now: true
 model_output_authority_granted: true
 model_output_authority_state_recorded: true
 
-proof_claim_promotion_authority_decision_allowed_now: true
-proof_claim_promotion_authority_granted: false
+proof_claim_promotion_authority_decision_applied: true
+proof_claim_promotion_authority_granted: true
+proof_claim_promotion_authority_scope: proof_claim_promotion_authority_only
+proof_claim_promotion_authority_state_record_allowed_now: true
+
 external_review_authority_granted: false
 deep_research_authority_granted: false
-
 source_mutation_allowed_now: false
 evidence_rewrite_allowed_now: false
 evidence_deletion_allowed_now: false
@@ -38,22 +40,11 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: ProofClaimPromotionAuthorityDecision v1
+next_allowed_seam: ProofClaimPromotionAuthorityStateRecord v1
 
-decision_constraints:
-- may grant proof-claim promotion authority only
-- must not grant external review authority
-- must not grant Deep Research authority
-- must not grant source mutation
-- must not grant evidence rewrite
-- must not grant evidence deletion
-- must not grant repo deletion
-- must not grant deletion
-- must not grant file move
-- must not grant commit authority outside explicit commit-gate seams
-- must not grant staging authority
+planned_following_seams:
+- Post-ProofClaimPromotionAuthorityGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\proof_claim_promotion_authority_preflight_v1_20260427_231050.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\proof_claim_promotion_authority_preflight_v1_summary_20260427_231050.txt
-
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\proof_claim_promotion_authority_decision_v1_20260427_231524.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\proof_claim_promotion_authority_decision_v1_summary_20260427_231524.txt
 continuity_sync_message: continuity sync pending
