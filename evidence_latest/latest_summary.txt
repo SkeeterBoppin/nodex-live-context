@@ -1,10 +1,10 @@
-﻿REPO DELETION AUTHORITY DECISION V1
+﻿REPO DELETION AUTHORITY STATE RECORD V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-decision_only: true
-decision: repo_deletion_authority_granted
+state_record_only: true
+decision: repo_deletion_authority_state_recorded
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -39,11 +39,11 @@ evidence_deletion_authority_granted: true
 evidence_deletion_allowed_now: true
 evidence_deletion_authority_state_recorded: true
 
-repo_deletion_authority_decision_applied: true
 repo_deletion_authority_granted: true
 repo_deletion_authority_scope: repo_deletion_authority_only
 repo_deletion_allowed_now: true
-repo_deletion_authority_state_record_allowed_now: true
+repo_deletion_authority_state_recorded: true
+repo_deletion_authority_decision_applied: true
 
 trusted_access_boundary_verified: true
 zak_final_authority_preserved: true
@@ -54,13 +54,12 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: RepoDeletionAuthorityStateRecord v1
+next_allowed_seam: Post-RepoDeletionAuthorityGrant Spine Audit v1
 
 planned_following_seams:
-- Post-RepoDeletionAuthorityGrant Spine Audit v1
 - GeneralDeletionAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_decision_v1_20260428_131453.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_decision_v1_summary_20260428_131453.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_state_record_v1_20260428_131934.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_state_record_v1_summary_20260428_131934.txt
 
 continuity_sync_message: continuity sync pending

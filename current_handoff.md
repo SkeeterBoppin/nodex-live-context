@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T13:14:54.7891339-07:00
+Generated: 2026-04-28T13:19:36.3465515-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-RepoDeletionAuthorityDecision v1
+RepoDeletionAuthorityStateRecord v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ RepoDeletionAuthorityDecision v1
 ``text
 status: pass
 continuity_sync: pass
-decision: repo_deletion_authority_granted
-next_allowed_seam: RepoDeletionAuthorityStateRecord v1
+decision: repo_deletion_authority_state_recorded
+next_allowed_seam: Post-RepoDeletionAuthorityGrant Spine Audit v1
 ``
 
 ## Current Open Seam
 
 ``text
-RepoDeletionAuthorityStateRecord v1
+Post-RepoDeletionAuthorityGrant Spine Audit v1
 ``
 
 ## Current Packet
@@ -60,20 +60,15 @@ The file below is a continuity placeholder only and must not be run as a Nodex p
 packets/current_open_packet.ps1
 ``
 
-## TrustedAccessCyber Local Boundary
-
-TrustedAccessCyber was verified as a local access-control boundary before repo deletion authority decision.
-It grants no authority and performs no network activity, scanning, credential access, persistence, privilege escalation, or external security work.
-
 ## Expected Next Action
 
 Generate the next Nodex packet for:
 
 ``text
-RepoDeletionAuthorityStateRecord v1
+Post-RepoDeletionAuthorityGrant Spine Audit v1
 ``
 
-Do not treat RepoDeletionAuthorityStateRecord v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat Post-RepoDeletionAuthorityGrant Spine Audit v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -118,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond RepoDeletionAuthorityStateRecord v1.
+Do not generate beyond Post-RepoDeletionAuthorityGrant Spine Audit v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

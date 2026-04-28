@@ -1,23 +1,22 @@
 {
-  "schema": "nodex.repo_deletion_authority.decision.v1",
+  "schema": "nodex.repo_deletion_authority.state_record.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T13:14:54.6426317-07:00",
+  "createdAt": "2026-04-28T13:19:36.2033197-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
-  "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "RepoDeletionAuthorityDecision v1",
+  "seam": "RepoDeletionAuthorityStateRecord v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorRepoDeletionAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json",
   "priorRepoDeletionAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json",
   "priorRepoDeletionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json",
-  "priorPostEvidenceDeletionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_deletion_authority_grant_spine_audit_v1_20260428_121614.json",
   "priorEvidenceDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_state_record_v1_20260428_121210.json",
   "priorEvidenceRewriteAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json",
   "priorSourceMutationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_state_record_v1_20260428_101553.json",
@@ -27,8 +26,8 @@
   "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
   "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "decisionOnly": true,
-  "decision": "repo_deletion_authority_granted",
+  "stateRecordOnly": true,
+  "decision": "repo_deletion_authority_state_recorded",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -61,11 +60,11 @@
   "evidenceDeletionAuthorityGranted": true,
   "evidenceDeletionAllowedNow": true,
   "evidenceDeletionAuthorityStateRecorded": true,
-  "repoDeletionAuthorityDecisionApplied": true,
   "repoDeletionAuthorityGranted": true,
   "repoDeletionAuthorityScope": "repo_deletion_authority_only",
   "repoDeletionAllowedNow": true,
-  "repoDeletionAuthorityStateRecordAllowedNow": true,
+  "repoDeletionAuthorityStateRecorded": true,
+  "repoDeletionAuthorityDecisionApplied": true,
   "trustedAccessBoundaryVerified": true,
   "zakFinalAuthorityPreserved": true,
   "masterCopyDesignGoalPreserved": true,
@@ -73,22 +72,15 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "RepoDeletionAuthorityStateRecord v1",
+  "nextAllowedSeam": "Post-RepoDeletionAuthorityGrant Spine Audit v1",
   "plannedFollowingSeams": [
-    "Post-RepoDeletionAuthorityGrant Spine Audit v1",
     "GeneralDeletionAuthorityPlan v1"
   ],
-  "explicitNonGrants": [
-    "deletion outside repo-deletion-specific authority",
-    "file move",
-    "staging",
-    "commit authority outside explicit commit-gate seams"
-  ],
   "validation": {
+    "decisionVerified": true,
     "preflightVerified": true,
     "planVerified": true,
     "trustedAccessCyberBoundaryVerified": true,
-    "postEvidenceDeletionAuthorityGrantSpineAuditVerified": true,
     "evidenceDeletionAuthorityStateRecordVerified": true,
     "evidenceRewriteAuthorityStateRecordVerified": true,
     "sourceMutationAuthorityStateRecordVerified": true,
@@ -100,10 +92,11 @@
     "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preDecisionWorkingTreeClean": true,
+    "preStateRecordWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postDecisionWorkingTreeClean": true,
+    "postStateRecordWorkingTreeClean": true,
     "repoDeletionAuthorityGranted": true,
+    "repoDeletionAuthorityStateRecorded": true,
     "repoDeletionAuthorityScope": "repo_deletion_authority_only",
     "repoDeletionAllowedNow": true,
     "zakFinalAuthorityPreserved": true,
@@ -124,9 +117,9 @@
       }
     },
     {
-      "name": "pre-decision working tree clean",
+      "name": "pre-state-record working tree clean",
       "pass": true,
-      "reason": "RepoDeletionAuthorityDecision v1 must start with clean working tree",
+      "reason": "RepoDeletionAuthorityStateRecord v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -134,10 +127,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match RepoDeletionAuthorityDecision baseline",
+      "reason": "HEAD must match RepoDeletionAuthorityStateRecord baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "repo deletion authority decision JSON exists",
+      "pass": true,
+      "reason": "missing repo_deletion_authority_decision_v1_*.json evidence",
+      "data": {
+        "pattern": "repo_deletion_authority_decision_v1_*.json"
       }
     },
     {
@@ -154,14 +155,6 @@
       "reason": "missing repo_deletion_authority_plan_v1_*.json evidence",
       "data": {
         "pattern": "repo_deletion_authority_plan_v1_*.json"
-      }
-    },
-    {
-      "name": "post-evidence deletion authority grant spine audit JSON exists",
-      "pass": true,
-      "reason": "missing post_evidence_deletion_authority_grant_spine_audit_v1_*.json evidence",
-      "data": {
-        "pattern": "post_evidence_deletion_authority_grant_spine_audit_v1_*.json"
       }
     },
     {
@@ -237,6 +230,22 @@
       }
     },
     {
+      "name": "repo deletion authority decision path present",
+      "pass": true,
+      "reason": "repo deletion authority decision path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json"
+      }
+    },
+    {
+      "name": "repo deletion authority decision file exists",
+      "pass": true,
+      "reason": "repo deletion authority decision file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json"
+      }
+    },
+    {
       "name": "repo deletion authority preflight path present",
       "pass": true,
       "reason": "repo deletion authority preflight path must be present",
@@ -266,22 +275,6 @@
       "reason": "repo deletion authority plan file must exist",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
-      }
-    },
-    {
-      "name": "post-evidence deletion authority grant spine audit path present",
-      "pass": true,
-      "reason": "post-evidence deletion authority grant spine audit path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_deletion_authority_grant_spine_audit_v1_20260428_121614.json"
-      }
-    },
-    {
-      "name": "post-evidence deletion authority grant spine audit file exists",
-      "pass": true,
-      "reason": "post-evidence deletion authority grant spine audit file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_deletion_authority_grant_spine_audit_v1_20260428_121614.json"
       }
     },
     {
@@ -429,6 +422,126 @@
       }
     },
     {
+      "name": "decision status pass",
+      "pass": true,
+      "reason": "repo deletion authority decision must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json"
+      }
+    },
+    {
+      "name": "decision exact",
+      "pass": true,
+      "reason": "repo deletion authority decision must grant authority",
+      "data": {
+        "decision": "repo_deletion_authority_granted"
+      }
+    },
+    {
+      "name": "decision repoDeletionAuthorityDecisionApplied",
+      "pass": true,
+      "reason": "decision repoDeletionAuthorityDecisionApplied must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision repoDeletionAuthorityGranted",
+      "pass": true,
+      "reason": "decision repoDeletionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision scope exact",
+      "pass": true,
+      "reason": "repo deletion authority scope must be exact",
+      "data": {
+        "actual": "repo_deletion_authority_only"
+      }
+    },
+    {
+      "name": "decision repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "decision repoDeletionAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision repoDeletionAuthorityStateRecordAllowedNow",
+      "pass": true,
+      "reason": "decision repoDeletionAuthorityStateRecordAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision trustedAccessBoundaryVerified",
+      "pass": true,
+      "reason": "decision trustedAccessBoundaryVerified must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision zakFinalAuthorityPreserved",
+      "pass": true,
+      "reason": "decision zakFinalAuthorityPreserved must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision masterCopyDesignGoalPreserved",
+      "pass": true,
+      "reason": "decision masterCopyDesignGoalPreserved must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision deletionAllowedNow",
+      "pass": true,
+      "reason": "decision deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision fileMoveAllowedNow",
+      "pass": true,
+      "reason": "decision fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision commitAllowedNow",
+      "pass": true,
+      "reason": "decision commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision stagingAllowedNow",
+      "pass": true,
+      "reason": "decision stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision routes to state record",
+      "pass": true,
+      "reason": "decision must route to state record",
+      "data": {
+        "nextAllowedSeam": "RepoDeletionAuthorityStateRecord v1"
+      }
+    },
+    {
       "name": "preflight status pass",
       "pass": true,
       "reason": "repo deletion authority preflight must be pass",
@@ -439,7 +552,7 @@
     {
       "name": "preflight decision exact",
       "pass": true,
-      "reason": "repo deletion authority preflight must be decision ready",
+      "reason": "preflight must be decision ready",
       "data": {
         "decision": "repo_deletion_authority_decision_ready"
       }
@@ -453,215 +566,11 @@
       }
     },
     {
-      "name": "preflight repoDeletionAuthorityGranted",
-      "pass": true,
-      "reason": "preflight repoDeletionAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "preflight repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight deletionAllowedNow",
-      "pass": true,
-      "reason": "preflight deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight fileMoveAllowedNow",
-      "pass": true,
-      "reason": "preflight fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight commitAllowedNow",
-      "pass": true,
-      "reason": "preflight commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight stagingAllowedNow",
-      "pass": true,
-      "reason": "preflight stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight routes to decision",
-      "pass": true,
-      "reason": "preflight must route to decision",
-      "data": {
-        "nextAllowedSeam": "RepoDeletionAuthorityDecision v1"
-      }
-    },
-    {
-      "name": "TrustedAccessCyber preflight verification present",
-      "pass": true,
-      "reason": "TrustedAccessCyber verification must exist in preflight",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
-      }
-    },
-    {
-      "name": "TrustedAccessCyber name exact",
-      "pass": true,
-      "reason": "TrustedAccessCyber name must be exact",
-      "data": {
-        "name": "TrustedAccessCyber",
-        "localOnly": true,
-        "grantsAuthority": false,
-        "performsSecurityWork": false,
-        "requiredBeforeRepoDeletionDecision": true,
-        "allowedRootsVerified": true,
-        "deniedSystemPathsVerified": true,
-        "destructiveOperationTokensVerified": true,
-        "generatedCodeExecutionBoundariesVerified": true,
-        "authoritySpecificWriteDeleteScopeVerified": true,
-        "noPrivilegeEscalationVerified": true,
-        "noHiddenPersistenceVerified": true,
-        "noNetworkDownloadExecutionVerified": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber localOnly",
-      "pass": true,
-      "reason": "TrustedAccessCyber localOnly must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber grantsAuthority",
-      "pass": true,
-      "reason": "TrustedAccessCyber grantsAuthority must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber performsSecurityWork",
-      "pass": true,
-      "reason": "TrustedAccessCyber performsSecurityWork must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber requiredBeforeRepoDeletionDecision",
-      "pass": true,
-      "reason": "TrustedAccessCyber requiredBeforeRepoDeletionDecision must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber allowedRootsVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber allowedRootsVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber deniedSystemPathsVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber deniedSystemPathsVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber destructiveOperationTokensVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber destructiveOperationTokensVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber generatedCodeExecutionBoundariesVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber generatedCodeExecutionBoundariesVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber authoritySpecificWriteDeleteScopeVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber authoritySpecificWriteDeleteScopeVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber noPrivilegeEscalationVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber noPrivilegeEscalationVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber noHiddenPersistenceVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber noHiddenPersistenceVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "TrustedAccessCyber noNetworkDownloadExecutionVerified",
-      "pass": true,
-      "reason": "TrustedAccessCyber noNetworkDownloadExecutionVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
       "name": "plan status pass",
       "pass": true,
       "reason": "repo deletion authority plan must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
-      }
-    },
-    {
-      "name": "plan repoDeletionAuthorityPreflightAllowedNow",
-      "pass": true,
-      "reason": "plan repoDeletionAuthorityPreflightAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "deletion audit status pass",
-      "pass": true,
-      "reason": "post-evidence deletion authority grant spine audit must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_deletion_authority_grant_spine_audit_v1_20260428_121614.json"
-      }
-    },
-    {
-      "name": "deletion audit repoDeletionAuthorityPlanAllowedNow",
-      "pass": true,
-      "reason": "deletion audit repoDeletionAuthorityPlanAllowedNow must be true",
-      "data": {
-        "actual": true
       }
     },
     {
@@ -676,14 +585,6 @@
       "name": "deletion state evidenceDeletionAuthorityGranted",
       "pass": true,
       "reason": "deletion state evidenceDeletionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "deletion state evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "deletion state evidenceDeletionAllowedNow must be true",
       "data": {
         "actual": true
       }
@@ -865,17 +766,17 @@
       }
     },
     {
-      "name": "full harness passed during decision",
+      "name": "full harness passed during state record",
       "pass": true,
-      "reason": "node tests/run.js must pass during RepoDeletionAuthorityDecision v1",
+      "reason": "node tests/run.js must pass during RepoDeletionAuthorityStateRecord v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-decision working tree clean",
+      "name": "post-state-record working tree clean",
       "pass": true,
-      "reason": "RepoDeletionAuthorityDecision v1 must leave working tree clean",
+      "reason": "RepoDeletionAuthorityStateRecord v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -904,7 +805,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS DECISION",
+      "label": "FULL HARNESS STATE RECORD",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
