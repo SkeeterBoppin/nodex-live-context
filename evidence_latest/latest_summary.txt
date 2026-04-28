@@ -1,10 +1,10 @@
-﻿DEEP RESEARCH AUTHORITY PLAN V1
+﻿DEEP RESEARCH AUTHORITY PREFLIGHT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-plan_only: true
-decision: deep_research_authority_preflight_planned
+preflight_only: true
+decision: deep_research_authority_decision_ready
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -28,9 +28,7 @@ proof_claim_promotion_authority_state_recorded: true
 external_review_authority_granted: true
 external_review_authority_state_recorded: true
 
-deep_research_authority_plan_allowed_now: true
-deep_research_authority_preflight_allowed_now: true
-deep_research_authority_decision_allowed_now: false
+deep_research_authority_decision_allowed_now: true
 deep_research_authority_granted: false
 
 source_mutation_allowed_now: false
@@ -42,15 +40,20 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: DeepResearchAuthorityPreflight v1
+next_allowed_seam: DeepResearchAuthorityDecision v1
 
-planned_following_seams:
-- DeepResearchAuthorityPreflight v1
-- DeepResearchAuthorityDecision v1
-- DeepResearchAuthorityStateRecord v1
-- Post-DeepResearchAuthorityGrant Spine Audit v1
+decision_constraints:
+- may grant Deep Research authority only
+- must not grant source mutation
+- must not grant evidence rewrite
+- must not grant evidence deletion
+- must not grant repo deletion
+- must not grant deletion
+- must not grant file move
+- must not grant commit authority outside explicit commit-gate seams
+- must not grant staging authority
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_plan_v1_20260427_235641.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_plan_v1_summary_20260427_235641.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_preflight_v1_20260428_000024.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_preflight_v1_summary_20260428_000024.txt
 
 continuity_sync_message: continuity sync pending
