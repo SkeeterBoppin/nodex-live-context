@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T23:27:57.0351644-07:00
+Generated: 2026-04-27T23:31:18.4452814-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-ExternalReviewAuthorityPlan v1
+ExternalReviewAuthorityPreflight v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ ExternalReviewAuthorityPlan v1
 ``text
 status: pass
 continuity_sync: pass
-decision: external_review_authority_preflight_planned
-next_allowed_seam: ExternalReviewAuthorityPreflight v1
+decision: external_review_authority_decision_ready
+next_allowed_seam: ExternalReviewAuthorityDecision v1
 ``
 
 ## Current Open Seam
 
 ``text
-ExternalReviewAuthorityPreflight v1
+ExternalReviewAuthorityDecision v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-ExternalReviewAuthorityPreflight v1
+ExternalReviewAuthorityDecision v1
 ``
 
-Do not treat ExternalReviewAuthorityPreflight v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat ExternalReviewAuthorityDecision v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond ExternalReviewAuthorityPreflight v1.
+Do not generate beyond ExternalReviewAuthorityDecision v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.

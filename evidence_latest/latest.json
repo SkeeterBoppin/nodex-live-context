@@ -1,27 +1,28 @@
 {
-  "schema": "nodex.external_review_authority.plan.v1",
+  "schema": "nodex.external_review_authority.preflight.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-27T23:27:56.9160000-07:00",
+  "createdAt": "2026-04-27T23:31:18.3058877-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "ExternalReviewAuthorityPlan v1",
+  "seam": "ExternalReviewAuthorityPreflight v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorExternalReviewAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json",
   "priorPostProofClaimPromotionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_proof_claim_promotion_authority_grant_spine_audit_v1_20260427_232332.json",
   "priorProofClaimPromotionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json",
   "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
   "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "planOnly": true,
-  "decision": "external_review_authority_preflight_planned",
+  "preflightOnly": true,
+  "decision": "external_review_authority_decision_ready",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -41,9 +42,7 @@
   "modelOutputAuthorityStateRecorded": true,
   "proofClaimPromotionAuthorityGranted": true,
   "proofClaimPromotionAuthorityStateRecorded": true,
-  "externalReviewAuthorityPlanAllowedNow": true,
-  "externalReviewAuthorityPreflightAllowedNow": true,
-  "externalReviewAuthorityDecisionAllowedNow": false,
+  "externalReviewAuthorityDecisionAllowedNow": true,
   "externalReviewAuthorityGranted": false,
   "deepResearchAuthorityGranted": false,
   "sourceMutationAllowedNow": false,
@@ -54,14 +53,21 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "ExternalReviewAuthorityPreflight v1",
-  "plannedFollowingSeams": [
-    "ExternalReviewAuthorityPreflight v1",
-    "ExternalReviewAuthorityDecision v1",
-    "ExternalReviewAuthorityStateRecord v1",
-    "Post-ExternalReviewAuthorityGrant Spine Audit v1"
+  "nextAllowedSeam": "ExternalReviewAuthorityDecision v1",
+  "decisionConstraints": [
+    "may grant external review authority only",
+    "must not grant Deep Research authority",
+    "must not grant source mutation",
+    "must not grant evidence rewrite",
+    "must not grant evidence deletion",
+    "must not grant repo deletion",
+    "must not grant deletion",
+    "must not grant file move",
+    "must not grant commit authority outside explicit commit-gate seams",
+    "must not grant staging authority"
   ],
   "validation": {
+    "planVerified": true,
     "postProofClaimPromotionAuthorityGrantSpineAuditVerified": true,
     "proofClaimPromotionAuthorityStateRecordVerified": true,
     "modelOutputAuthorityStateRecordVerified": true,
@@ -69,10 +75,10 @@
     "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "prePlanWorkingTreeClean": true,
+    "preflightWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postPlanWorkingTreeClean": true,
-    "externalReviewAuthorityPreflightAllowedNow": true,
+    "postPreflightWorkingTreeClean": true,
+    "externalReviewAuthorityDecisionAllowedNow": true,
     "externalReviewAuthorityGranted": false,
     "deepResearchAuthorityGranted": false,
     "sourceMutation": false,
@@ -95,9 +101,9 @@
       }
     },
     {
-      "name": "pre-plan working tree clean",
+      "name": "preflight working tree clean",
       "pass": true,
-      "reason": "ExternalReviewAuthorityPlan v1 must start with clean working tree",
+      "reason": "ExternalReviewAuthorityPreflight v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -105,10 +111,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match ExternalReviewAuthorityPlan baseline",
+      "reason": "HEAD must match ExternalReviewAuthorityPreflight baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "external review authority plan JSON exists",
+      "pass": true,
+      "reason": "missing external_review_authority_plan_v1_*.json evidence",
+      "data": {
+        "pattern": "external_review_authority_plan_v1_*.json"
       }
     },
     {
@@ -149,6 +163,22 @@
       "reason": "missing permission_grant_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "permission_grant_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "external review authority plan path present",
+      "pass": true,
+      "reason": "external review authority plan path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json"
+      }
+    },
+    {
+      "name": "external review authority plan file exists",
+      "pass": true,
+      "reason": "external review authority plan file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json"
       }
     },
     {
@@ -232,19 +262,131 @@
       }
     },
     {
+      "name": "plan status pass",
+      "pass": true,
+      "reason": "external review authority plan must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json"
+      }
+    },
+    {
+      "name": "plan decision exact",
+      "pass": true,
+      "reason": "external review authority plan must plan preflight",
+      "data": {
+        "decision": "external_review_authority_preflight_planned"
+      }
+    },
+    {
+      "name": "plan externalReviewAuthorityPreflightAllowedNow",
+      "pass": true,
+      "reason": "plan externalReviewAuthorityPreflightAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "plan externalReviewAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "plan externalReviewAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "plan externalReviewAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "plan deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "plan sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "plan evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "plan evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "plan repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan deletionAllowedNow",
+      "pass": true,
+      "reason": "plan deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan fileMoveAllowedNow",
+      "pass": true,
+      "reason": "plan fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan commitAllowedNow",
+      "pass": true,
+      "reason": "plan commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan stagingAllowedNow",
+      "pass": true,
+      "reason": "plan stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan routes to preflight",
+      "pass": true,
+      "reason": "external review plan must route to preflight",
+      "data": {
+        "nextAllowedSeam": "ExternalReviewAuthorityPreflight v1"
+      }
+    },
+    {
       "name": "proof audit status pass",
       "pass": true,
       "reason": "post-proof claim promotion authority grant spine audit must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_proof_claim_promotion_authority_grant_spine_audit_v1_20260427_232332.json"
-      }
-    },
-    {
-      "name": "proof audit decision exact",
-      "pass": true,
-      "reason": "post-proof claim promotion authority grant spine audit decision must be exact",
-      "data": {
-        "decision": "post_proof_claim_promotion_authority_grant_spine_audit_complete"
       }
     },
     {
@@ -269,86 +411,6 @@
       "reason": "proof audit deepResearchAuthorityGranted must be false",
       "data": {
         "actual": false
-      }
-    },
-    {
-      "name": "proof audit sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "proof audit sourceMutationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "proof audit evidenceRewriteAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "proof audit evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "proof audit repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit deletionAllowedNow",
-      "pass": true,
-      "reason": "proof audit deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit fileMoveAllowedNow",
-      "pass": true,
-      "reason": "proof audit fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit commitAllowedNow",
-      "pass": true,
-      "reason": "proof audit commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit stagingAllowedNow",
-      "pass": true,
-      "reason": "proof audit stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit routes to external review plan",
-      "pass": true,
-      "reason": "post-proof claim promotion authority audit must route to ExternalReviewAuthorityPlan v1",
-      "data": {
-        "nextAllowedSeam": "ExternalReviewAuthorityPlan v1"
-      }
-    },
-    {
-      "name": "proof audit blocking findings zero",
-      "pass": true,
-      "reason": "post-proof claim promotion authority audit blocking findings must be zero",
-      "data": {
-        "blockingFindings": 0
       }
     },
     {
@@ -472,17 +534,17 @@
       }
     },
     {
-      "name": "full harness passed during plan",
+      "name": "full harness passed during preflight",
       "pass": true,
-      "reason": "node tests/run.js must pass during ExternalReviewAuthorityPlan v1",
+      "reason": "node tests/run.js must pass during ExternalReviewAuthorityPreflight v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-plan working tree clean",
+      "name": "post-preflight working tree clean",
       "pass": true,
-      "reason": "ExternalReviewAuthorityPlan v1 must leave working tree clean",
+      "reason": "ExternalReviewAuthorityPreflight v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -511,7 +573,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PLAN",
+      "label": "FULL HARNESS PREFLIGHT",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
