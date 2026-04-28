@@ -1,20 +1,21 @@
 {
-  "schema": "nodex.evidence_deletion_authority.preflight.v1",
+  "schema": "nodex.evidence_deletion_authority.decision.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T11:29:34.7133682-07:00",
+  "createdAt": "2026-04-28T12:08:49.2380094-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "EvidenceDeletionAuthorityPreflight v1",
+  "seam": "EvidenceDeletionAuthorityDecision v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorEvidenceDeletionAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_preflight_v1_20260428_112933.json",
   "priorEvidenceDeletionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_plan_v1_20260428_112610.json",
   "priorPostEvidenceRewriteAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_rewrite_authority_grant_spine_audit_v1_20260428_112201.json",
   "priorEvidenceRewriteAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json",
@@ -25,8 +26,8 @@
   "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
   "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "preflightOnly": true,
-  "decision": "evidence_deletion_authority_decision_ready",
+  "decisionOnly": true,
+  "decision": "evidence_deletion_authority_granted",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -56,24 +57,30 @@
   "evidenceRewriteAuthorityGranted": true,
   "evidenceRewriteAllowedNow": true,
   "evidenceRewriteAuthorityStateRecorded": true,
-  "evidenceDeletionAuthorityDecisionAllowedNow": true,
-  "evidenceDeletionAuthorityGranted": false,
-  "evidenceDeletionAllowedNow": false,
+  "evidenceDeletionAuthorityDecisionApplied": true,
+  "evidenceDeletionAuthorityGranted": true,
+  "evidenceDeletionAuthorityScope": "evidence_deletion_authority_only",
+  "evidenceDeletionAllowedNow": true,
+  "evidenceDeletionAuthorityStateRecordAllowedNow": true,
   "repoDeletionAllowedNow": false,
   "deletionAllowedNow": false,
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "EvidenceDeletionAuthorityDecision v1",
-  "decisionConstraints": [
-    "may grant evidence deletion authority only",
-    "must not grant repo deletion",
-    "must not grant deletion outside evidence-deletion-specific authority",
-    "must not grant file move",
-    "must not grant commit authority outside explicit commit-gate seams",
-    "must not grant staging authority"
+  "nextAllowedSeam": "EvidenceDeletionAuthorityStateRecord v1",
+  "plannedFollowingSeams": [
+    "Post-EvidenceDeletionAuthorityGrant Spine Audit v1",
+    "RepoDeletionAuthorityPlan v1"
+  ],
+  "explicitNonGrants": [
+    "repo deletion",
+    "deletion outside evidence-deletion-specific authority",
+    "file move",
+    "staging",
+    "commit authority outside explicit commit-gate seams"
   ],
   "validation": {
+    "preflightVerified": true,
     "planVerified": true,
     "postEvidenceRewriteAuthorityGrantSpineAuditVerified": true,
     "evidenceRewriteAuthorityStateRecordVerified": true,
@@ -86,14 +93,14 @@
     "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preflightWorkingTreeClean": true,
+    "preDecisionWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postPreflightWorkingTreeClean": true,
-    "evidenceDeletionAuthorityDecisionAllowedNow": true,
-    "evidenceDeletionAuthorityGranted": false,
-    "evidenceDeletionAllowedNow": false,
+    "postDecisionWorkingTreeClean": true,
+    "evidenceDeletionAuthorityGranted": true,
+    "evidenceDeletionAuthorityScope": "evidence_deletion_authority_only",
+    "evidenceDeletionAllowedNow": true,
     "repoDeletion": false,
-    "deletion": false,
+    "deletionOutsideEvidenceDeletionSpecificAuthority": false,
     "fileMove": false,
     "commit": false,
     "staging": false
@@ -109,9 +116,9 @@
       }
     },
     {
-      "name": "preflight working tree clean",
+      "name": "pre-decision working tree clean",
       "pass": true,
-      "reason": "EvidenceDeletionAuthorityPreflight v1 must start with clean working tree",
+      "reason": "EvidenceDeletionAuthorityDecision v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -119,10 +126,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match EvidenceDeletionAuthorityPreflight baseline",
+      "reason": "HEAD must match EvidenceDeletionAuthorityDecision baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "evidence deletion authority preflight JSON exists",
+      "pass": true,
+      "reason": "missing evidence_deletion_authority_preflight_v1_*.json evidence",
+      "data": {
+        "pattern": "evidence_deletion_authority_preflight_v1_*.json"
       }
     },
     {
@@ -203,6 +218,22 @@
       "reason": "missing permission_grant_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "permission_grant_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "evidence deletion authority preflight path present",
+      "pass": true,
+      "reason": "evidence deletion authority preflight path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_preflight_v1_20260428_112933.json"
+      }
+    },
+    {
+      "name": "evidence deletion authority preflight file exists",
+      "pass": true,
+      "reason": "evidence deletion authority preflight file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_preflight_v1_20260428_112933.json"
       }
     },
     {
@@ -366,6 +397,94 @@
       }
     },
     {
+      "name": "preflight status pass",
+      "pass": true,
+      "reason": "evidence deletion authority preflight must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_preflight_v1_20260428_112933.json"
+      }
+    },
+    {
+      "name": "preflight decision exact",
+      "pass": true,
+      "reason": "evidence deletion authority preflight must be decision ready",
+      "data": {
+        "decision": "evidence_deletion_authority_decision_ready"
+      }
+    },
+    {
+      "name": "preflight evidenceDeletionAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "preflight evidenceDeletionAuthorityDecisionAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "preflight evidenceDeletionAuthorityGranted",
+      "pass": true,
+      "reason": "preflight evidenceDeletionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "preflight evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "preflight repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight deletionAllowedNow",
+      "pass": true,
+      "reason": "preflight deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight fileMoveAllowedNow",
+      "pass": true,
+      "reason": "preflight fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight commitAllowedNow",
+      "pass": true,
+      "reason": "preflight commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight stagingAllowedNow",
+      "pass": true,
+      "reason": "preflight stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "preflight routes to decision",
+      "pass": true,
+      "reason": "preflight must route to decision",
+      "data": {
+        "nextAllowedSeam": "EvidenceDeletionAuthorityDecision v1"
+      }
+    },
+    {
       "name": "plan status pass",
       "pass": true,
       "reason": "evidence deletion authority plan must be pass",
@@ -374,91 +493,11 @@
       }
     },
     {
-      "name": "plan decision exact",
-      "pass": true,
-      "reason": "evidence deletion authority plan must plan preflight",
-      "data": {
-        "decision": "evidence_deletion_authority_preflight_planned"
-      }
-    },
-    {
       "name": "plan evidenceDeletionAuthorityPreflightAllowedNow",
       "pass": true,
       "reason": "plan evidenceDeletionAuthorityPreflightAllowedNow must be true",
       "data": {
         "actual": true
-      }
-    },
-    {
-      "name": "plan evidenceDeletionAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "plan evidenceDeletionAuthorityDecisionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan evidenceDeletionAuthorityGranted",
-      "pass": true,
-      "reason": "plan evidenceDeletionAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "plan evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "plan repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan deletionAllowedNow",
-      "pass": true,
-      "reason": "plan deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan fileMoveAllowedNow",
-      "pass": true,
-      "reason": "plan fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan commitAllowedNow",
-      "pass": true,
-      "reason": "plan commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan stagingAllowedNow",
-      "pass": true,
-      "reason": "plan stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "plan routes to preflight",
-      "pass": true,
-      "reason": "evidence deletion authority plan must route to preflight",
-      "data": {
-        "nextAllowedSeam": "EvidenceDeletionAuthorityPreflight v1"
       }
     },
     {
@@ -478,14 +517,6 @@
       }
     },
     {
-      "name": "rewrite audit evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "rewrite audit evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
       "name": "rewrite state status pass",
       "pass": true,
       "reason": "evidence rewrite authority state record must be pass",
@@ -502,22 +533,6 @@
       }
     },
     {
-      "name": "rewrite state evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "rewrite state evidenceRewriteAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "rewrite state evidenceRewriteAuthorityStateRecorded",
-      "pass": true,
-      "reason": "rewrite state evidenceRewriteAuthorityStateRecorded must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
       "name": "source state status pass",
       "pass": true,
       "reason": "source mutation authority state record must be pass",
@@ -529,14 +544,6 @@
       "name": "source state sourceMutationAuthorityGranted",
       "pass": true,
       "reason": "source state sourceMutationAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "source state sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "source state sourceMutationAllowedNow must be true",
       "data": {
         "actual": true
       }
@@ -686,17 +693,17 @@
       }
     },
     {
-      "name": "full harness passed during preflight",
+      "name": "full harness passed during decision",
       "pass": true,
-      "reason": "node tests/run.js must pass during EvidenceDeletionAuthorityPreflight v1",
+      "reason": "node tests/run.js must pass during EvidenceDeletionAuthorityDecision v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-preflight working tree clean",
+      "name": "post-decision working tree clean",
       "pass": true,
-      "reason": "EvidenceDeletionAuthorityPreflight v1 must leave working tree clean",
+      "reason": "EvidenceDeletionAuthorityDecision v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -725,7 +732,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PREFLIGHT",
+      "label": "FULL HARNESS DECISION",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
