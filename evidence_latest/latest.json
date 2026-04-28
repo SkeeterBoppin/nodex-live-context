@@ -1,28 +1,27 @@
 {
-  "schema": "nodex.general_deletion_authority.post_grant_spine_audit.v1",
+  "schema": "nodex.file_move_authority.plan.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T14:36:28.4435078-07:00",
+  "createdAt": "2026-04-28T14:44:04.9391968-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "Post-GeneralDeletionAuthorityGrant Spine Audit v1",
-  "auditOnly": true,
-  "claimStructureModeVerified": "narrow_deterministic_evidence_scoped",
+  "seam": "FileMoveAuthorityPlan v1",
+  "planOnly": true,
+  "claimStructureMode": "narrow_deterministic_evidence_scoped",
+  "structurePriority": "audit_stable_over_human_readable",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorPostGeneralDeletionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_general_deletion_authority_grant_spine_audit_v1_20260428_143627.json",
   "priorGeneralDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_state_record_v1_20260428_143006.json",
   "priorGeneralDeletionAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_decision_v1_20260428_142304.json",
-  "priorGeneralDeletionAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_preflight_v1_20260428_141847.json",
-  "priorGeneralDeletionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_plan_v1_20260428_134911.json",
-  "priorPostRepoDeletionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json",
   "priorRepoDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json",
-  "decision": "post_general_deletion_authority_grant_spine_audit_complete",
+  "decision": "file_move_authority_preflight_planned",
   "repoDeletionAuthorityGranted": true,
   "repoDeletionAuthorityScope": "repo_deletion_authority_only",
   "repoDeletionAllowedNow": true,
@@ -32,16 +31,34 @@
   "deletionAllowedNow": true,
   "generalDeletionAuthorityStateRecorded": true,
   "fileMoveAuthorityPlanAllowedNow": true,
+  "fileMoveAuthorityPreflightAllowedNow": true,
+  "fileMoveAuthorityDecisionAllowedNow": false,
   "fileMoveAuthorityGranted": false,
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "auditFindings": {
-    "highFindings": 0,
-    "mediumFindings": 0,
-    "blockingFindings": 0
-  },
-  "nextAllowedSeam": "FileMoveAuthorityPlan v1",
+  "zakFinalAuthorityClaimStructurePreserved": true,
+  "masterGoalNotRedefinedClaimStructurePreserved": true,
+  "buildGroundworkSourceGrounded": true,
+  "fileMovePlanConstraints": [
+    "plan_only",
+    "no_file_move_performed",
+    "no_deletion_performed_by_this_packet",
+    "preflight_must_verify_allowed_source_roots",
+    "preflight_must_verify_allowed_destination_roots",
+    "preflight_must_verify_denied_system_paths",
+    "preflight_must_verify_move_source_destination_pairing",
+    "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
+    "preflight_must_verify_exact_scope_classification",
+    "preflight_must_verify_no_generated_code_execution_escape",
+    "preflight_must_verify_no_network_download_execution",
+    "preflight_must_verify_no_hidden_persistence",
+    "preflight_must_verify_no_privilege_escalation",
+    "preflight_must_preserve_zak_final_authority_claim_structure",
+    "preflight_must_preserve_master_goal_not_redefined_claim_structure",
+    "preflight_must_preserve_audit_stable_structure_priority"
+  ],
+  "nextAllowedSeam": "FileMoveAuthorityPreflight v1",
   "plannedFollowingSeams": [
     "FileMoveAuthorityPreflight v1",
     "FileMoveAuthorityDecision v1",
@@ -49,21 +66,23 @@
     "Post-FileMoveAuthorityGrant Spine Audit v1"
   ],
   "validation": {
+    "postGeneralDeletionAuthorityGrantSpineAuditVerified": true,
     "generalDeletionAuthorityStateRecordVerified": true,
     "generalDeletionAuthorityDecisionVerified": true,
-    "generalDeletionAuthorityPreflightVerified": true,
-    "generalDeletionAuthorityPlanVerified": true,
-    "repoDeletionAuthorityPostGrantSpineAuditVerified": true,
     "repoDeletionAuthorityStateRecordVerified": true,
-    "claimStructureModeVerified": true,
+    "claimStructureModePreserved": true,
+    "structurePriorityAuditStable": true,
+    "zakFinalAuthorityClaimStructurePreserved": true,
+    "masterGoalNotRedefinedClaimStructurePreserved": true,
+    "buildGroundworkSourceGrounded": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preAuditWorkingTreeClean": true,
+    "prePlanWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postAuditWorkingTreeClean": true,
-    "fileMoveAuthorityPlanAllowedNow": true,
+    "postPlanWorkingTreeClean": true,
+    "fileMoveAuthorityPreflightAllowedNow": true,
     "fileMoveAuthorityGranted": false,
-    "fileMove": false,
+    "fileMoveAllowedNow": false,
     "commit": false,
     "staging": false
   },
@@ -78,9 +97,9 @@
       }
     },
     {
-      "name": "pre-audit working tree clean",
+      "name": "pre-plan working tree clean",
       "pass": true,
-      "reason": "Post-GeneralDeletionAuthorityGrant Spine Audit v1 must start with clean working tree",
+      "reason": "FileMoveAuthorityPlan v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -88,10 +107,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match Post-GeneralDeletionAuthorityGrant Spine Audit baseline",
+      "reason": "HEAD must match FileMoveAuthorityPlan baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "post general deletion authority grant spine audit JSON exists",
+      "pass": true,
+      "reason": "missing post_general_deletion_authority_grant_spine_audit_v1_*.json evidence",
+      "data": {
+        "pattern": "post_general_deletion_authority_grant_spine_audit_v1_*.json"
       }
     },
     {
@@ -111,35 +138,27 @@
       }
     },
     {
-      "name": "general deletion authority preflight JSON exists",
-      "pass": true,
-      "reason": "missing general_deletion_authority_preflight_v1_*.json evidence",
-      "data": {
-        "pattern": "general_deletion_authority_preflight_v1_*.json"
-      }
-    },
-    {
-      "name": "general deletion authority plan JSON exists",
-      "pass": true,
-      "reason": "missing general_deletion_authority_plan_v1_*.json evidence",
-      "data": {
-        "pattern": "general_deletion_authority_plan_v1_*.json"
-      }
-    },
-    {
-      "name": "post repo deletion authority grant spine audit JSON exists",
-      "pass": true,
-      "reason": "missing post_repo_deletion_authority_grant_spine_audit_v1_*.json evidence",
-      "data": {
-        "pattern": "post_repo_deletion_authority_grant_spine_audit_v1_*.json"
-      }
-    },
-    {
       "name": "repo deletion authority state record JSON exists",
       "pass": true,
       "reason": "missing repo_deletion_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "repo_deletion_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "post general deletion authority grant spine audit path present",
+      "pass": true,
+      "reason": "post general deletion authority grant spine audit path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_general_deletion_authority_grant_spine_audit_v1_20260428_143627.json"
+      }
+    },
+    {
+      "name": "post general deletion authority grant spine audit file exists",
+      "pass": true,
+      "reason": "post general deletion authority grant spine audit file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_general_deletion_authority_grant_spine_audit_v1_20260428_143627.json"
       }
     },
     {
@@ -175,54 +194,6 @@
       }
     },
     {
-      "name": "general deletion authority preflight path present",
-      "pass": true,
-      "reason": "general deletion authority preflight path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_preflight_v1_20260428_141847.json"
-      }
-    },
-    {
-      "name": "general deletion authority preflight file exists",
-      "pass": true,
-      "reason": "general deletion authority preflight file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_preflight_v1_20260428_141847.json"
-      }
-    },
-    {
-      "name": "general deletion authority plan path present",
-      "pass": true,
-      "reason": "general deletion authority plan path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_plan_v1_20260428_134911.json"
-      }
-    },
-    {
-      "name": "general deletion authority plan file exists",
-      "pass": true,
-      "reason": "general deletion authority plan file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_plan_v1_20260428_134911.json"
-      }
-    },
-    {
-      "name": "post repo deletion authority grant spine audit path present",
-      "pass": true,
-      "reason": "post repo deletion authority grant spine audit path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json"
-      }
-    },
-    {
-      "name": "post repo deletion authority grant spine audit file exists",
-      "pass": true,
-      "reason": "post repo deletion authority grant spine audit file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json"
-      }
-    },
-    {
       "name": "repo deletion authority state record path present",
       "pass": true,
       "reason": "repo deletion authority state record path must be present",
@@ -239,6 +210,86 @@
       }
     },
     {
+      "name": "general audit status pass",
+      "pass": true,
+      "reason": "post general deletion authority grant spine audit must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_general_deletion_authority_grant_spine_audit_v1_20260428_143627.json"
+      }
+    },
+    {
+      "name": "general audit decision exact",
+      "pass": true,
+      "reason": "post general deletion authority grant spine audit decision must be exact",
+      "data": {
+        "decision": "post_general_deletion_authority_grant_spine_audit_complete"
+      }
+    },
+    {
+      "name": "general audit claim structure verified",
+      "pass": true,
+      "reason": "general audit claim structure must be verified",
+      "data": {
+        "actual": "narrow_deterministic_evidence_scoped"
+      }
+    },
+    {
+      "name": "general audit fileMoveAuthorityPlanAllowedNow",
+      "pass": true,
+      "reason": "general audit fileMoveAuthorityPlanAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "general audit fileMoveAuthorityGranted",
+      "pass": true,
+      "reason": "general audit fileMoveAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "general audit fileMoveAllowedNow",
+      "pass": true,
+      "reason": "general audit fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "general audit commitAllowedNow",
+      "pass": true,
+      "reason": "general audit commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "general audit stagingAllowedNow",
+      "pass": true,
+      "reason": "general audit stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "general audit routes to file move plan",
+      "pass": true,
+      "reason": "general audit must route to FileMoveAuthorityPlan v1",
+      "data": {
+        "nextAllowedSeam": "FileMoveAuthorityPlan v1"
+      }
+    },
+    {
+      "name": "general audit blocking findings zero",
+      "pass": true,
+      "reason": "general audit blocking findings must be zero",
+      "data": {
+        "blockingFindings": 0
+      }
+    },
+    {
       "name": "general state status pass",
       "pass": true,
       "reason": "general deletion authority state record must be pass",
@@ -247,17 +298,9 @@
       }
     },
     {
-      "name": "general state decision exact",
-      "pass": true,
-      "reason": "general deletion authority state record decision must be exact",
-      "data": {
-        "decision": "general_deletion_authority_state_recorded"
-      }
-    },
-    {
       "name": "general state claim structure exact",
       "pass": true,
-      "reason": "general deletion authority state record claim structure must be exact",
+      "reason": "general deletion authority state record must use scoped claims",
       "data": {
         "actual": "narrow_deterministic_evidence_scoped"
       }
@@ -271,25 +314,9 @@
       }
     },
     {
-      "name": "general state scope exact",
-      "pass": true,
-      "reason": "general deletion authority scope must be exact",
-      "data": {
-        "actual": "general_deletion_authority_only"
-      }
-    },
-    {
       "name": "general state deletionAllowedNow",
       "pass": true,
       "reason": "general state deletionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "general state generalDeletionAuthorityStateRecorded",
-      "pass": true,
-      "reason": "general state generalDeletionAuthorityStateRecorded must be true",
       "data": {
         "actual": true
       }
@@ -300,106 +327,6 @@
       "reason": "general state fileMoveAllowedNow must be false",
       "data": {
         "actual": false
-      }
-    },
-    {
-      "name": "general state commitAllowedNow",
-      "pass": true,
-      "reason": "general state commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "general state stagingAllowedNow",
-      "pass": true,
-      "reason": "general state stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "general state routes to audit",
-      "pass": true,
-      "reason": "general deletion state record must route to spine audit",
-      "data": {
-        "nextAllowedSeam": "Post-GeneralDeletionAuthorityGrant Spine Audit v1"
-      }
-    },
-    {
-      "name": "general state scoped claim present",
-      "pass": true,
-      "reason": "general state must contain scoped general deletion authority claim",
-      "data": {
-        "claim": "general_deletion_authority_granted"
-      }
-    },
-    {
-      "name": "general state scoped claim scope exact",
-      "pass": true,
-      "reason": "general state scoped claim scope must be exact",
-      "data": {
-        "scope": "general_deletion_authority_only"
-      }
-    },
-    {
-      "name": "general state claim limit file move",
-      "pass": true,
-      "reason": "general state claim limit file move must contain does_not_grant_file_move",
-      "data": {
-        "expected": "does_not_grant_file_move",
-        "actual": [
-          "does_not_grant_file_move",
-          "does_not_grant_commit",
-          "does_not_grant_staging",
-          "does_not_execute_deletion",
-          "does_not_remove_manual_packet_execution_requirement"
-        ]
-      }
-    },
-    {
-      "name": "general state claim limit commit",
-      "pass": true,
-      "reason": "general state claim limit commit must contain does_not_grant_commit",
-      "data": {
-        "expected": "does_not_grant_commit",
-        "actual": [
-          "does_not_grant_file_move",
-          "does_not_grant_commit",
-          "does_not_grant_staging",
-          "does_not_execute_deletion",
-          "does_not_remove_manual_packet_execution_requirement"
-        ]
-      }
-    },
-    {
-      "name": "general state claim limit staging",
-      "pass": true,
-      "reason": "general state claim limit staging must contain does_not_grant_staging",
-      "data": {
-        "expected": "does_not_grant_staging",
-        "actual": [
-          "does_not_grant_file_move",
-          "does_not_grant_commit",
-          "does_not_grant_staging",
-          "does_not_execute_deletion",
-          "does_not_remove_manual_packet_execution_requirement"
-        ]
-      }
-    },
-    {
-      "name": "general state claim limit no execution",
-      "pass": true,
-      "reason": "general state claim limit no execution must contain does_not_execute_deletion",
-      "data": {
-        "expected": "does_not_execute_deletion",
-        "actual": [
-          "does_not_grant_file_move",
-          "does_not_grant_commit",
-          "does_not_grant_staging",
-          "does_not_execute_deletion",
-          "does_not_remove_manual_packet_execution_requirement"
-        ]
       }
     },
     {
@@ -419,46 +346,6 @@
       }
     },
     {
-      "name": "general decision deletionAllowedNow",
-      "pass": true,
-      "reason": "general decision deletionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "general preflight status pass",
-      "pass": true,
-      "reason": "general deletion authority preflight must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_preflight_v1_20260428_141847.json"
-      }
-    },
-    {
-      "name": "general preflight generalDeletionAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "general preflight generalDeletionAuthorityDecisionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "general plan status pass",
-      "pass": true,
-      "reason": "general deletion authority plan must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_plan_v1_20260428_134911.json"
-      }
-    },
-    {
-      "name": "repo audit status pass",
-      "pass": true,
-      "reason": "post repo deletion authority grant spine audit must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json"
-      }
-    },
-    {
       "name": "repo state status pass",
       "pass": true,
       "reason": "repo deletion authority state record must be pass",
@@ -469,9 +356,33 @@
     {
       "name": "repo state claim structure exact",
       "pass": true,
-      "reason": "repo state claim structure must be exact",
+      "reason": "repo deletion authority state record must use scoped claims",
       "data": {
         "actual": "narrow_deterministic_evidence_scoped"
+      }
+    },
+    {
+      "name": "Zak final authority scoped in repo state",
+      "pass": true,
+      "reason": "repo state must contain scoped Zak final authority claim",
+      "data": {
+        "claim": "zak_final_authority_preserved"
+      }
+    },
+    {
+      "name": "master goal not redefined scoped in repo state",
+      "pass": true,
+      "reason": "repo state must contain scoped master goal claim",
+      "data": {
+        "claim": "master_copy_design_goal_not_redefined"
+      }
+    },
+    {
+      "name": "build groundwork source grounded in repo state",
+      "pass": true,
+      "reason": "repo state must contain build groundwork claim",
+      "data": {
+        "claim": "build_groundwork_preserved"
       }
     },
     {
@@ -507,17 +418,17 @@
       }
     },
     {
-      "name": "full harness passed during audit",
+      "name": "full harness passed during plan",
       "pass": true,
-      "reason": "node tests/run.js must pass during Post-GeneralDeletionAuthorityGrant Spine Audit v1",
+      "reason": "node tests/run.js must pass during FileMoveAuthorityPlan v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-audit working tree clean",
+      "name": "post-plan working tree clean",
       "pass": true,
-      "reason": "Post-GeneralDeletionAuthorityGrant Spine Audit v1 must leave working tree clean",
+      "reason": "FileMoveAuthorityPlan v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -546,7 +457,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS AUDIT",
+      "label": "FULL HARNESS PLAN",
       "filePath": "node",
       "arguments": [
         "tests/run.js"

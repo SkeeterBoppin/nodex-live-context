@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T14:36:28.5924000-07:00
+Generated: 2026-04-28T14:44:05.0966987-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-Post-GeneralDeletionAuthorityGrant Spine Audit v1
+FileMoveAuthorityPlan v1
 ``
 
 ## Latest Result
@@ -36,15 +36,16 @@ Post-GeneralDeletionAuthorityGrant Spine Audit v1
 ``text
 status: pass
 continuity_sync: pass
-decision: post_general_deletion_authority_grant_spine_audit_complete
-claim_structure_mode_verified: narrow_deterministic_evidence_scoped
-next_allowed_seam: FileMoveAuthorityPlan v1
+decision: file_move_authority_preflight_planned
+claim_structure_mode: narrow_deterministic_evidence_scoped
+structure_priority: audit_stable_over_human_readable
+next_allowed_seam: FileMoveAuthorityPreflight v1
 ``
 
 ## Current Open Seam
 
 ``text
-FileMoveAuthorityPlan v1
+FileMoveAuthorityPreflight v1
 ``
 
 ## Current Packet
@@ -63,6 +64,7 @@ packets/current_open_packet.ps1
 
 No floating semantic booleans.
 All preservation or verification claims must be narrower, deterministic, evidence-scoped, and include validation mode plus limits.
+Structure priority is audit-stable over human-readable.
 
 ## Currently Granted After Latest Completed Seam
 
