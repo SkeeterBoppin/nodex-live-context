@@ -1,54 +1,57 @@
 {
-  "schema": "nodex.repo_deletion_authority.post_grant_spine_audit.v1",
+  "schema": "nodex.general_deletion_authority.plan.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T13:44:51.1010989-07:00",
+  "createdAt": "2026-04-28T13:49:12.4158192-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "Post-RepoDeletionAuthorityGrant Spine Audit v1",
-  "auditOnly": true,
-  "claimStructureModeVerified": "narrow_deterministic_evidence_scoped",
+  "seam": "GeneralDeletionAuthorityPlan v1",
+  "planOnly": true,
+  "claimStructureMode": "narrow_deterministic_evidence_scoped",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorPostRepoDeletionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json",
   "priorRepoDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json",
   "priorRepoDeletionAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json",
   "priorRepoDeletionAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json",
   "priorRepoDeletionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json",
-  "priorEvidenceDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_state_record_v1_20260428_121210.json",
-  "priorEvidenceRewriteAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json",
-  "priorSourceMutationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_state_record_v1_20260428_101553.json",
-  "priorDeepResearchAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json",
-  "priorExternalReviewAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json",
-  "priorProofClaimPromotionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json",
-  "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
-  "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
-  "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "decision": "post_repo_deletion_authority_grant_spine_audit_complete",
+  "decision": "general_deletion_authority_preflight_planned",
   "repoDeletionAuthorityGranted": true,
   "repoDeletionAuthorityScope": "repo_deletion_authority_only",
   "repoDeletionAllowedNow": true,
   "repoDeletionAuthorityStateRecorded": true,
-  "zakFinalAuthorityClaimScoped": true,
-  "masterCopyDesignGoalNotRedefinedScoped": true,
-  "buildGroundworkSourceGrounded": true,
   "generalDeletionAuthorityPlanAllowedNow": true,
+  "generalDeletionAuthorityPreflightAllowedNow": true,
+  "generalDeletionAuthorityDecisionAllowedNow": false,
   "generalDeletionAuthorityGranted": false,
   "deletionAllowedNow": false,
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "auditFindings": {
-    "highFindings": 0,
-    "mediumFindings": 0,
-    "blockingFindings": 0
-  },
-  "nextAllowedSeam": "GeneralDeletionAuthorityPlan v1",
+  "zakFinalAuthorityClaimStructurePreserved": true,
+  "masterGoalNotRedefinedClaimStructurePreserved": true,
+  "buildGroundworkSourceGrounded": true,
+  "generalDeletionPlanConstraints": [
+    "plan_only",
+    "no_deletion_performed",
+    "preflight_must_verify_allowed_roots",
+    "preflight_must_verify_denied_system_paths",
+    "preflight_must_verify_destructive_operation_tokens",
+    "preflight_must_verify_exact_scope_classification",
+    "preflight_must_verify_no_generated_code_execution_escape",
+    "preflight_must_verify_no_network_download_execution",
+    "preflight_must_verify_no_hidden_persistence",
+    "preflight_must_verify_no_privilege_escalation",
+    "preflight_must_preserve_zak_final_authority_claim_structure",
+    "preflight_must_preserve_master_goal_not_redefined_claim_structure"
+  ],
+  "nextAllowedSeam": "GeneralDeletionAuthorityPreflight v1",
   "plannedFollowingSeams": [
     "GeneralDeletionAuthorityPreflight v1",
     "GeneralDeletionAuthorityDecision v1",
@@ -56,31 +59,23 @@
     "Post-GeneralDeletionAuthorityGrant Spine Audit v1"
   ],
   "validation": {
+    "postRepoDeletionAuthorityGrantSpineAuditVerified": true,
     "repoDeletionAuthorityStateRecordVerified": true,
     "repoDeletionAuthorityDecisionVerified": true,
     "repoDeletionAuthorityPreflightVerified": true,
     "repoDeletionAuthorityPlanVerified": true,
-    "claimStructureModeVerified": true,
-    "zakFinalAuthorityClaimScoped": true,
-    "masterCopyDesignGoalNotRedefinedScoped": true,
+    "claimStructureModePreserved": true,
+    "zakFinalAuthorityClaimStructurePreserved": true,
+    "masterGoalNotRedefinedClaimStructurePreserved": true,
     "buildGroundworkSourceGrounded": true,
-    "evidenceDeletionAuthorityStateRecordVerified": true,
-    "evidenceRewriteAuthorityStateRecordVerified": true,
-    "sourceMutationAuthorityStateRecordVerified": true,
-    "deepResearchAuthorityStateRecordVerified": true,
-    "externalReviewAuthorityStateRecordVerified": true,
-    "proofClaimPromotionAuthorityStateRecordVerified": true,
-    "modelOutputAuthorityStateRecordVerified": true,
-    "agentHandoffRuntimeWiringStateRecordVerified": true,
-    "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preAuditWorkingTreeClean": true,
+    "prePlanWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postAuditWorkingTreeClean": true,
-    "generalDeletionAuthorityPlanAllowedNow": true,
+    "postPlanWorkingTreeClean": true,
+    "generalDeletionAuthorityPreflightAllowedNow": true,
     "generalDeletionAuthorityGranted": false,
-    "deletionOutsideRepoDeletionSpecificAuthority": false,
+    "deletionAllowedNow": false,
     "fileMove": false,
     "commit": false,
     "staging": false
@@ -96,9 +91,9 @@
       }
     },
     {
-      "name": "pre-audit working tree clean",
+      "name": "pre-plan working tree clean",
       "pass": true,
-      "reason": "Post-RepoDeletionAuthorityGrant Spine Audit v1 must start with clean working tree",
+      "reason": "GeneralDeletionAuthorityPlan v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -106,10 +101,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match Post-RepoDeletionAuthorityGrant Spine Audit baseline",
+      "reason": "HEAD must match GeneralDeletionAuthorityPlan baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "post repo deletion authority grant spine audit JSON exists",
+      "pass": true,
+      "reason": "missing post_repo_deletion_authority_grant_spine_audit_v1_*.json evidence",
+      "data": {
+        "pattern": "post_repo_deletion_authority_grant_spine_audit_v1_*.json"
       }
     },
     {
@@ -145,75 +148,19 @@
       }
     },
     {
-      "name": "evidence deletion authority state record JSON exists",
+      "name": "post repo deletion authority grant spine audit path present",
       "pass": true,
-      "reason": "missing evidence_deletion_authority_state_record_v1_*.json evidence",
+      "reason": "post repo deletion authority grant spine audit path must be present",
       "data": {
-        "pattern": "evidence_deletion_authority_state_record_v1_*.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json"
       }
     },
     {
-      "name": "evidence rewrite authority state record JSON exists",
+      "name": "post repo deletion authority grant spine audit file exists",
       "pass": true,
-      "reason": "missing evidence_rewrite_authority_state_record_v1_*.json evidence",
+      "reason": "post repo deletion authority grant spine audit file must exist",
       "data": {
-        "pattern": "evidence_rewrite_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "source mutation authority state record JSON exists",
-      "pass": true,
-      "reason": "missing source_mutation_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "source_mutation_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "deep research authority state record JSON exists",
-      "pass": true,
-      "reason": "missing deep_research_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "deep_research_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "external review authority state record JSON exists",
-      "pass": true,
-      "reason": "missing external_review_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "external_review_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "proof claim promotion authority state record JSON exists",
-      "pass": true,
-      "reason": "missing proof_claim_promotion_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "proof_claim_promotion_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "model output authority state record JSON exists",
-      "pass": true,
-      "reason": "missing model_output_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "model_output_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "agent handoff runtime wiring state record JSON exists",
-      "pass": true,
-      "reason": "missing agent_handoff_runtime_wiring_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "agent_handoff_runtime_wiring_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "permission grant authority state record JSON exists",
-      "pass": true,
-      "reason": "missing permission_grant_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "permission_grant_authority_state_record_v1_*.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json"
       }
     },
     {
@@ -281,147 +228,91 @@
       }
     },
     {
-      "name": "evidence deletion authority state record path present",
+      "name": "repo audit status pass",
       "pass": true,
-      "reason": "evidence deletion authority state record path must be present",
+      "reason": "post repo deletion authority grant spine audit must be pass",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_state_record_v1_20260428_121210.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_repo_deletion_authority_grant_spine_audit_v1_20260428_134449.json"
       }
     },
     {
-      "name": "evidence deletion authority state record file exists",
+      "name": "repo audit decision exact",
       "pass": true,
-      "reason": "evidence deletion authority state record file must exist",
+      "reason": "post repo deletion authority grant spine audit decision must be exact",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_state_record_v1_20260428_121210.json"
+        "decision": "post_repo_deletion_authority_grant_spine_audit_complete"
       }
     },
     {
-      "name": "evidence rewrite authority state record path present",
+      "name": "repo audit claim structure verified",
       "pass": true,
-      "reason": "evidence rewrite authority state record path must be present",
+      "reason": "repo audit claim structure must be verified",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json"
+        "actual": "narrow_deterministic_evidence_scoped"
       }
     },
     {
-      "name": "evidence rewrite authority state record file exists",
+      "name": "repo audit generalDeletionAuthorityPlanAllowedNow",
       "pass": true,
-      "reason": "evidence rewrite authority state record file must exist",
+      "reason": "repo audit generalDeletionAuthorityPlanAllowedNow must be true",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json"
+        "actual": true
       }
     },
     {
-      "name": "source mutation authority state record path present",
+      "name": "repo audit generalDeletionAuthorityGranted",
       "pass": true,
-      "reason": "source mutation authority state record path must be present",
+      "reason": "repo audit generalDeletionAuthorityGranted must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_state_record_v1_20260428_101553.json"
+        "actual": false
       }
     },
     {
-      "name": "source mutation authority state record file exists",
+      "name": "repo audit deletionAllowedNow",
       "pass": true,
-      "reason": "source mutation authority state record file must exist",
+      "reason": "repo audit deletionAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_state_record_v1_20260428_101553.json"
+        "actual": false
       }
     },
     {
-      "name": "deep research authority state record path present",
+      "name": "repo audit fileMoveAllowedNow",
       "pass": true,
-      "reason": "deep research authority state record path must be present",
+      "reason": "repo audit fileMoveAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json"
+        "actual": false
       }
     },
     {
-      "name": "deep research authority state record file exists",
+      "name": "repo audit commitAllowedNow",
       "pass": true,
-      "reason": "deep research authority state record file must exist",
+      "reason": "repo audit commitAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json"
+        "actual": false
       }
     },
     {
-      "name": "external review authority state record path present",
+      "name": "repo audit stagingAllowedNow",
       "pass": true,
-      "reason": "external review authority state record path must be present",
+      "reason": "repo audit stagingAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json"
+        "actual": false
       }
     },
     {
-      "name": "external review authority state record file exists",
+      "name": "repo audit routes to general deletion plan",
       "pass": true,
-      "reason": "external review authority state record file must exist",
+      "reason": "repo audit must route to GeneralDeletionAuthorityPlan v1",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json"
+        "nextAllowedSeam": "GeneralDeletionAuthorityPlan v1"
       }
     },
     {
-      "name": "proof claim promotion authority state record path present",
+      "name": "repo audit blocking findings zero",
       "pass": true,
-      "reason": "proof claim promotion authority state record path must be present",
+      "reason": "repo audit blocking findings must be zero",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json"
-      }
-    },
-    {
-      "name": "proof claim promotion authority state record file exists",
-      "pass": true,
-      "reason": "proof claim promotion authority state record file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json"
-      }
-    },
-    {
-      "name": "model output authority state record path present",
-      "pass": true,
-      "reason": "model output authority state record path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
-      }
-    },
-    {
-      "name": "model output authority state record file exists",
-      "pass": true,
-      "reason": "model output authority state record file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
-      }
-    },
-    {
-      "name": "agent handoff runtime wiring state record path present",
-      "pass": true,
-      "reason": "agent handoff runtime wiring state record path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
-      }
-    },
-    {
-      "name": "agent handoff runtime wiring state record file exists",
-      "pass": true,
-      "reason": "agent handoff runtime wiring state record file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
-      }
-    },
-    {
-      "name": "permission grant authority state record path present",
-      "pass": true,
-      "reason": "permission grant authority state record path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
-      }
-    },
-    {
-      "name": "permission grant authority state record file exists",
-      "pass": true,
-      "reason": "permission grant authority state record file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
+        "blockingFindings": 0
       }
     },
     {
@@ -433,7 +324,7 @@
       }
     },
     {
-      "name": "repo state replacement packet true",
+      "name": "repo state replacement true",
       "pass": true,
       "reason": "repo deletion authority state record must be replacement packet",
       "data": {
@@ -443,17 +334,9 @@
     {
       "name": "repo state claim structure exact",
       "pass": true,
-      "reason": "repo deletion authority state record must use narrow deterministic evidence-scoped claim structure",
+      "reason": "repo deletion authority state record must use scoped claims",
       "data": {
         "actual": "narrow_deterministic_evidence_scoped"
-      }
-    },
-    {
-      "name": "repo state decision exact",
-      "pass": true,
-      "reason": "repo deletion authority state record decision must be exact",
-      "data": {
-        "decision": "repo_deletion_authority_state_recorded"
       }
     },
     {
@@ -465,25 +348,9 @@
       }
     },
     {
-      "name": "repo state scope exact",
-      "pass": true,
-      "reason": "repo deletion authority scope must be exact",
-      "data": {
-        "actual": "repo_deletion_authority_only"
-      }
-    },
-    {
       "name": "repo state repoDeletionAllowedNow",
       "pass": true,
       "reason": "repo state repoDeletionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "repo state repoDeletionAuthorityStateRecorded",
-      "pass": true,
-      "reason": "repo state repoDeletionAuthorityStateRecorded must be true",
       "data": {
         "actual": true
       }
@@ -497,94 +364,49 @@
       }
     },
     {
-      "name": "repo state fileMoveAllowedNow",
+      "name": "repo decision status pass",
       "pass": true,
-      "reason": "repo state fileMoveAllowedNow must be false",
+      "reason": "repo deletion authority decision must be pass",
       "data": {
-        "actual": false
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json"
       }
     },
     {
-      "name": "repo state commitAllowedNow",
+      "name": "repo decision repoDeletionAuthorityGranted",
       "pass": true,
-      "reason": "repo state commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "repo state stagingAllowedNow",
-      "pass": true,
-      "reason": "repo state stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "repo state routes to audit",
-      "pass": true,
-      "reason": "repo deletion authority state record must route to spine audit",
-      "data": {
-        "nextAllowedSeam": "Post-RepoDeletionAuthorityGrant Spine Audit v1"
-      }
-    },
-    {
-      "name": "Zak final authority claim present",
-      "pass": true,
-      "reason": "zakFinalAuthorityClaim must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json"
-      }
-    },
-    {
-      "name": "Zak final authority claim exact",
-      "pass": true,
-      "reason": "zakFinalAuthorityClaim claim must be exact",
-      "data": {
-        "claim": "zak_final_authority_preserved",
-        "value": true,
-        "validationMode": [
-          "manual_packet_execution_required",
-          "no_self_authorization_granted",
-          "no_autonomous_final_approval_granted",
-          "no_conflicting_authority_grant_detected"
-        ],
-        "evidence": {
-          "decisionPacketWasUserRun": true,
-          "currentPacketWasUserRun": true,
-          "decisionGrantedRepoDeletionAuthorityOnly": true,
-          "selfAuthorizationGranted": false,
-          "autonomousFinalApprovalGranted": false,
-          "conflictingAuthorityGrantDetected": false
-        },
-        "inference": "Zak final authority is preserved for this seam because execution remains user-run and no self-authorization or autonomous final approval was granted.",
-        "limits": [
-          "does_not_prove_future_paths_enforce_final_authority",
-          "does_not_grant_autonomous_approval",
-          "does_not_allow_authority_self_expansion"
-        ],
-        "nonGrants": [
-          "autonomous_final_approval",
-          "authority_self_expansion",
-          "commit",
-          "staging",
-          "file_move",
-          "deletion_outside_repo_deletion_specific_authority"
-        ]
-      }
-    },
-    {
-      "name": "zakFinalAuthorityClaim value",
-      "pass": true,
-      "reason": "zakFinalAuthorityClaim value must be true",
+      "reason": "repo decision repoDeletionAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "Zak claim validationMode manual_packet_execution_required",
+      "name": "repo preflight status pass",
       "pass": true,
-      "reason": "Zak claim validationMode manual_packet_execution_required must contain manual_packet_execution_required",
+      "reason": "repo deletion authority preflight must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
+      }
+    },
+    {
+      "name": "repo plan status pass",
+      "pass": true,
+      "reason": "repo deletion authority plan must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
+      }
+    },
+    {
+      "name": "Zak final authority scoped in repo state",
+      "pass": true,
+      "reason": "repo state must contain scoped Zak final authority claim",
+      "data": {
+        "claim": "zak_final_authority_preserved"
+      }
+    },
+    {
+      "name": "Zak claim validation manual execution",
+      "pass": true,
+      "reason": "Zak claim validation manual execution must contain manual_packet_execution_required",
       "data": {
         "expected": "manual_packet_execution_required",
         "actual": [
@@ -596,39 +418,11 @@
       }
     },
     {
-      "name": "Zak claim validationMode no_self_authorization_granted",
+      "name": "Zak claim validation no self auth",
       "pass": true,
-      "reason": "Zak claim validationMode no_self_authorization_granted must contain no_self_authorization_granted",
+      "reason": "Zak claim validation no self auth must contain no_self_authorization_granted",
       "data": {
         "expected": "no_self_authorization_granted",
-        "actual": [
-          "manual_packet_execution_required",
-          "no_self_authorization_granted",
-          "no_autonomous_final_approval_granted",
-          "no_conflicting_authority_grant_detected"
-        ]
-      }
-    },
-    {
-      "name": "Zak claim validationMode no_autonomous_final_approval_granted",
-      "pass": true,
-      "reason": "Zak claim validationMode no_autonomous_final_approval_granted must contain no_autonomous_final_approval_granted",
-      "data": {
-        "expected": "no_autonomous_final_approval_granted",
-        "actual": [
-          "manual_packet_execution_required",
-          "no_self_authorization_granted",
-          "no_autonomous_final_approval_granted",
-          "no_conflicting_authority_grant_detected"
-        ]
-      }
-    },
-    {
-      "name": "Zak claim validationMode no_conflicting_authority_grant_detected",
-      "pass": true,
-      "reason": "Zak claim validationMode no_conflicting_authority_grant_detected must contain no_conflicting_authority_grant_detected",
-      "data": {
-        "expected": "no_conflicting_authority_grant_detected",
         "actual": [
           "manual_packet_execution_required",
           "no_self_authorization_granted",
@@ -651,200 +445,11 @@
       }
     },
     {
-      "name": "Zak claim limit autonomous approval",
+      "name": "master goal not redefined scoped in repo state",
       "pass": true,
-      "reason": "Zak claim limit autonomous approval must contain does_not_grant_autonomous_approval",
+      "reason": "repo state must contain scoped master goal claim",
       "data": {
-        "expected": "does_not_grant_autonomous_approval",
-        "actual": [
-          "does_not_prove_future_paths_enforce_final_authority",
-          "does_not_grant_autonomous_approval",
-          "does_not_allow_authority_self_expansion"
-        ]
-      }
-    },
-    {
-      "name": "Zak claim limit self expansion",
-      "pass": true,
-      "reason": "Zak claim limit self expansion must contain does_not_allow_authority_self_expansion",
-      "data": {
-        "expected": "does_not_allow_authority_self_expansion",
-        "actual": [
-          "does_not_prove_future_paths_enforce_final_authority",
-          "does_not_grant_autonomous_approval",
-          "does_not_allow_authority_self_expansion"
-        ]
-      }
-    },
-    {
-      "name": "master goal claim present",
-      "pass": true,
-      "reason": "masterCopyDesignGoalClaim must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json"
-      }
-    },
-    {
-      "name": "master goal claim exact",
-      "pass": true,
-      "reason": "masterCopyDesignGoalClaim claim must be exact",
-      "data": {
-        "claim": "master_copy_design_goal_not_redefined",
-        "value": true,
-        "sourceAuthority": [
-          "Zak operator authority",
-          "live validated continuation",
-          "prior evidence chain",
-          "architecture groundwork as supporting source only"
-        ],
-        "sourceFiles": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_boundary_pushing_master_architecture.md",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_exact_continuity_source_v1.md"
-        ],
-        "validationMode": [
-          "Zak-confirmed-current-operator-intent",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected",
-          "authority_grant_does_not_replace_or_redefine_goal"
-        ],
-        "evidence": {
-          "operatorClarifiedArchitectureIsGroundworkOnly": true,
-          "currentSeamScope": "repo_deletion_authority_only",
-          "conflictingAuthorityGrantDetected": false,
-          "packetTextReplacesGoal": false,
-          "sourceOverreachAvoided": true
-        },
-        "inference": "The master-copy design goal is not redefined by this seam; this packet records only that repo deletion authority does not replace or weaken the operator-confirmed goal.",
-        "limits": [
-          "not_semantically_proven_from_one_file",
-          "not_reduced_to_architecture_groundwork",
-          "not_replaced_by_packet_text"
-        ],
-        "nonGrants": [
-          "goal_redefinition",
-          "goal_replacement",
-          "autonomous_goal_mutation"
-        ]
-      }
-    },
-    {
-      "name": "masterCopyDesignGoalClaim value",
-      "pass": true,
-      "reason": "masterCopyDesignGoalClaim value must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "master goal sourceAuthority Zak",
-      "pass": true,
-      "reason": "master goal sourceAuthority Zak must contain Zak operator authority",
-      "data": {
-        "expected": "Zak operator authority",
-        "actual": [
-          "Zak operator authority",
-          "live validated continuation",
-          "prior evidence chain",
-          "architecture groundwork as supporting source only"
-        ]
-      }
-    },
-    {
-      "name": "master goal sourceAuthority continuation",
-      "pass": true,
-      "reason": "master goal sourceAuthority continuation must contain live validated continuation",
-      "data": {
-        "expected": "live validated continuation",
-        "actual": [
-          "Zak operator authority",
-          "live validated continuation",
-          "prior evidence chain",
-          "architecture groundwork as supporting source only"
-        ]
-      }
-    },
-    {
-      "name": "master goal sourceAuthority evidence chain",
-      "pass": true,
-      "reason": "master goal sourceAuthority evidence chain must contain prior evidence chain",
-      "data": {
-        "expected": "prior evidence chain",
-        "actual": [
-          "Zak operator authority",
-          "live validated continuation",
-          "prior evidence chain",
-          "architecture groundwork as supporting source only"
-        ]
-      }
-    },
-    {
-      "name": "master goal sourceAuthority groundwork supporting only",
-      "pass": true,
-      "reason": "master goal sourceAuthority groundwork supporting only must contain architecture groundwork as supporting source only",
-      "data": {
-        "expected": "architecture groundwork as supporting source only",
-        "actual": [
-          "Zak operator authority",
-          "live validated continuation",
-          "prior evidence chain",
-          "architecture groundwork as supporting source only"
-        ]
-      }
-    },
-    {
-      "name": "master goal validationMode Zak intent",
-      "pass": true,
-      "reason": "master goal validationMode Zak intent must contain Zak-confirmed-current-operator-intent",
-      "data": {
-        "expected": "Zak-confirmed-current-operator-intent",
-        "actual": [
-          "Zak-confirmed-current-operator-intent",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected",
-          "authority_grant_does_not_replace_or_redefine_goal"
-        ]
-      }
-    },
-    {
-      "name": "master goal validationMode seam scope",
-      "pass": true,
-      "reason": "master goal validationMode seam scope must contain current_seam_scope_is_repo_deletion_authority_only",
-      "data": {
-        "expected": "current_seam_scope_is_repo_deletion_authority_only",
-        "actual": [
-          "Zak-confirmed-current-operator-intent",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected",
-          "authority_grant_does_not_replace_or_redefine_goal"
-        ]
-      }
-    },
-    {
-      "name": "master goal validationMode no conflict",
-      "pass": true,
-      "reason": "master goal validationMode no conflict must contain no_conflicting_authority_grant_detected",
-      "data": {
-        "expected": "no_conflicting_authority_grant_detected",
-        "actual": [
-          "Zak-confirmed-current-operator-intent",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected",
-          "authority_grant_does_not_replace_or_redefine_goal"
-        ]
-      }
-    },
-    {
-      "name": "master goal validationMode no redefine",
-      "pass": true,
-      "reason": "master goal validationMode no redefine must contain authority_grant_does_not_replace_or_redefine_goal",
-      "data": {
-        "expected": "authority_grant_does_not_replace_or_redefine_goal",
-        "actual": [
-          "Zak-confirmed-current-operator-intent",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected",
-          "authority_grant_does_not_replace_or_redefine_goal"
-        ]
+        "claim": "master_copy_design_goal_not_redefined"
       }
     },
     {
@@ -861,9 +466,9 @@
       }
     },
     {
-      "name": "master goal limit not groundwork",
+      "name": "master goal limit groundwork",
       "pass": true,
-      "reason": "master goal limit not groundwork must contain not_reduced_to_architecture_groundwork",
+      "reason": "master goal limit groundwork must contain not_reduced_to_architecture_groundwork",
       "data": {
         "expected": "not_reduced_to_architecture_groundwork",
         "actual": [
@@ -874,9 +479,9 @@
       }
     },
     {
-      "name": "master goal limit not packet text",
+      "name": "master goal limit packet text",
       "pass": true,
-      "reason": "master goal limit not packet text must contain not_replaced_by_packet_text",
+      "reason": "master goal limit packet text must contain not_replaced_by_packet_text",
       "data": {
         "expected": "not_replaced_by_packet_text",
         "actual": [
@@ -887,61 +492,17 @@
       }
     },
     {
-      "name": "build groundwork claim present",
+      "name": "build groundwork source grounded in repo state",
       "pass": true,
-      "reason": "buildGroundworkClaim must be present",
+      "reason": "repo state must contain build groundwork claim",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json"
+        "claim": "build_groundwork_preserved"
       }
     },
     {
-      "name": "build groundwork claim exact",
+      "name": "build groundwork source presence",
       "pass": true,
-      "reason": "buildGroundworkClaim claim must be exact",
-      "data": {
-        "claim": "build_groundwork_preserved",
-        "value": true,
-        "sourceFiles": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_boundary_pushing_master_architecture.md",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_exact_continuity_source_v1.md"
-        ],
-        "validationMode": [
-          "source_file_presence_verified",
-          "source_file_content_checked_for_core_build_thesis",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected"
-        ],
-        "evidence": {
-          "boundaryArchitectureFilePresent": true,
-          "continuitySourceFilePresent": true,
-          "proofGovernedLocalCognitionSubstratePhrasePresent": true,
-          "onlyTrustValidatedStateTransitionsPhrasePresent": true,
-          "humansAuthorizeBoundaryExpansionPhrasePresent": true,
-          "conflictingAuthorityGrantDetected": false
-        },
-        "inference": "Architecture groundwork remains compatible with this state record because the seam is bounded and does not bypass validated state transitions.",
-        "limits": [
-          "supports_build_groundwork_only",
-          "does_not_define_full_inception_level_goal_by_itself"
-        ],
-        "nonGrants": [
-          "goal_redefinition",
-          "authority_bypass"
-        ]
-      }
-    },
-    {
-      "name": "buildGroundworkClaim value",
-      "pass": true,
-      "reason": "buildGroundworkClaim value must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "build groundwork validationMode source presence",
-      "pass": true,
-      "reason": "build groundwork validationMode source presence must contain source_file_presence_verified",
+      "reason": "build groundwork source presence must contain source_file_presence_verified",
       "data": {
         "expected": "source_file_presence_verified",
         "actual": [
@@ -953,9 +514,9 @@
       }
     },
     {
-      "name": "build groundwork validationMode content checked",
+      "name": "build groundwork content checked",
       "pass": true,
-      "reason": "build groundwork validationMode content checked must contain source_file_content_checked_for_core_build_thesis",
+      "reason": "build groundwork content checked must contain source_file_content_checked_for_core_build_thesis",
       "data": {
         "expected": "source_file_content_checked_for_core_build_thesis",
         "actual": [
@@ -964,226 +525,6 @@
           "current_seam_scope_is_repo_deletion_authority_only",
           "no_conflicting_authority_grant_detected"
         ]
-      }
-    },
-    {
-      "name": "build groundwork validationMode seam scope",
-      "pass": true,
-      "reason": "build groundwork validationMode seam scope must contain current_seam_scope_is_repo_deletion_authority_only",
-      "data": {
-        "expected": "current_seam_scope_is_repo_deletion_authority_only",
-        "actual": [
-          "source_file_presence_verified",
-          "source_file_content_checked_for_core_build_thesis",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected"
-        ]
-      }
-    },
-    {
-      "name": "build groundwork validationMode no conflict",
-      "pass": true,
-      "reason": "build groundwork validationMode no conflict must contain no_conflicting_authority_grant_detected",
-      "data": {
-        "expected": "no_conflicting_authority_grant_detected",
-        "actual": [
-          "source_file_presence_verified",
-          "source_file_content_checked_for_core_build_thesis",
-          "current_seam_scope_is_repo_deletion_authority_only",
-          "no_conflicting_authority_grant_detected"
-        ]
-      }
-    },
-    {
-      "name": "repo decision status pass",
-      "pass": true,
-      "reason": "repo deletion authority decision must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_decision_v1_20260428_131453.json"
-      }
-    },
-    {
-      "name": "repo decision repoDeletionAuthorityGranted",
-      "pass": true,
-      "reason": "repo decision repoDeletionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "repo decision repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "repo decision repoDeletionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "repo preflight status pass",
-      "pass": true,
-      "reason": "repo deletion authority preflight must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
-      }
-    },
-    {
-      "name": "repo preflight repoDeletionAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "repo preflight repoDeletionAuthorityDecisionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "repo plan status pass",
-      "pass": true,
-      "reason": "repo deletion authority plan must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
-      }
-    },
-    {
-      "name": "evidence deletion state status pass",
-      "pass": true,
-      "reason": "evidence deletion authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_state_record_v1_20260428_121210.json"
-      }
-    },
-    {
-      "name": "evidence deletion state evidenceDeletionAuthorityGranted",
-      "pass": true,
-      "reason": "evidence deletion state evidenceDeletionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "rewrite state status pass",
-      "pass": true,
-      "reason": "evidence rewrite authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json"
-      }
-    },
-    {
-      "name": "rewrite state evidenceRewriteAuthorityGranted",
-      "pass": true,
-      "reason": "rewrite state evidenceRewriteAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "source state status pass",
-      "pass": true,
-      "reason": "source mutation authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_state_record_v1_20260428_101553.json"
-      }
-    },
-    {
-      "name": "source state sourceMutationAuthorityGranted",
-      "pass": true,
-      "reason": "source state sourceMutationAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "deep state status pass",
-      "pass": true,
-      "reason": "deep research authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json"
-      }
-    },
-    {
-      "name": "deep state deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "deep state deepResearchAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "external state status pass",
-      "pass": true,
-      "reason": "external review authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json"
-      }
-    },
-    {
-      "name": "external state externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "external state externalReviewAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "proof state status pass",
-      "pass": true,
-      "reason": "proof claim promotion authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json"
-      }
-    },
-    {
-      "name": "proof state proofClaimPromotionAuthorityGranted",
-      "pass": true,
-      "reason": "proof state proofClaimPromotionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "model state status pass",
-      "pass": true,
-      "reason": "model output authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
-      }
-    },
-    {
-      "name": "model state modelOutputAuthorityGranted",
-      "pass": true,
-      "reason": "model state modelOutputAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "agent state status pass",
-      "pass": true,
-      "reason": "agent handoff runtime wiring state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
-      }
-    },
-    {
-      "name": "agent state agentHandoffRuntimeWiringAuthorityGranted",
-      "pass": true,
-      "reason": "agent state agentHandoffRuntimeWiringAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "permission state status pass",
-      "pass": true,
-      "reason": "permission grant authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
-      }
-    },
-    {
-      "name": "permission state permissionGrantAuthorityGranted",
-      "pass": true,
-      "reason": "permission state permissionGrantAuthorityGranted must be true",
-      "data": {
-        "actual": true
       }
     },
     {
@@ -1219,17 +560,17 @@
       }
     },
     {
-      "name": "full harness passed during audit",
+      "name": "full harness passed during plan",
       "pass": true,
-      "reason": "node tests/run.js must pass during Post-RepoDeletionAuthorityGrant Spine Audit v1",
+      "reason": "node tests/run.js must pass during GeneralDeletionAuthorityPlan v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-audit working tree clean",
+      "name": "post-plan working tree clean",
       "pass": true,
-      "reason": "Post-RepoDeletionAuthorityGrant Spine Audit v1 must leave working tree clean",
+      "reason": "GeneralDeletionAuthorityPlan v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -1258,7 +599,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS AUDIT",
+      "label": "FULL HARNESS PLAN",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
