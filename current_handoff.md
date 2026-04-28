@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T13:39:42.4244616-07:00
+Generated: 2026-04-28T13:44:51.2327818-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-RepoDeletionAuthorityStateRecord v1
+Post-RepoDeletionAuthorityGrant Spine Audit v1
 ``
 
 ## Latest Result
@@ -36,16 +36,15 @@ RepoDeletionAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
-replacement_packet: true
-decision: repo_deletion_authority_state_recorded
-claim_structure_mode: narrow_deterministic_evidence_scoped
-next_allowed_seam: Post-RepoDeletionAuthorityGrant Spine Audit v1
+decision: post_repo_deletion_authority_grant_spine_audit_complete
+claim_structure_mode_verified: narrow_deterministic_evidence_scoped
+next_allowed_seam: GeneralDeletionAuthorityPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-Post-RepoDeletionAuthorityGrant Spine Audit v1
+GeneralDeletionAuthorityPlan v1
 ``
 
 ## Current Packet
@@ -64,12 +63,6 @@ packets/current_open_packet.ps1
 
 No floating semantic booleans.
 All preservation or verification claims must be narrower, deterministic, evidence-scoped, and include validation mode plus limits.
-
-## Current Claim Boundaries
-
-- zak_final_authority_preserved is recorded as a scoped claim with validation mode and limits.
-- master_copy_design_goal_not_redefined is recorded as operator/evidence-chain scoped, not semantically proven from one file.
-- build_groundwork_preserved is recorded separately and source-file grounded.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -93,6 +86,7 @@ All preservation or verification claims must be narrower, deterministic, evidenc
 
 ## Currently Not Granted After Latest Completed Seam
 
+- general deletion authority
 - deletion outside repo-deletion-specific authority
 - file move
 - commit
