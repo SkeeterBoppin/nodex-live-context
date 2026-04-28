@@ -1,10 +1,10 @@
-﻿GENERAL DELETION AUTHORITY PLAN V1
+﻿GENERAL DELETION AUTHORITY PREFLIGHT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-plan_only: true
-decision: general_deletion_authority_preflight_planned
+preflight_only: true
+decision: general_deletion_authority_decision_ready
 
 claim_structure_mode: narrow_deterministic_evidence_scoped
 
@@ -13,9 +13,7 @@ repo_deletion_authority_scope: repo_deletion_authority_only
 repo_deletion_allowed_now: true
 repo_deletion_authority_state_recorded: true
 
-general_deletion_authority_plan_allowed_now: true
-general_deletion_authority_preflight_allowed_now: true
-general_deletion_authority_decision_allowed_now: false
+general_deletion_authority_decision_allowed_now: true
 general_deletion_authority_granted: false
 deletion_allowed_now: false
 
@@ -23,29 +21,31 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-general_deletion_plan_constraints:
-- plan_only
-- no_deletion_performed
-- preflight_must_verify_allowed_roots
-- preflight_must_verify_denied_system_paths
-- preflight_must_verify_destructive_operation_tokens
-- preflight_must_verify_exact_scope_classification
-- preflight_must_verify_no_generated_code_execution_escape
-- preflight_must_verify_no_network_download_execution
-- preflight_must_verify_no_hidden_persistence
-- preflight_must_verify_no_privilege_escalation
-- preflight_must_preserve_zak_final_authority_claim_structure
-- preflight_must_preserve_master_goal_not_redefined_claim_structure
+general_deletion_preflight_verified:
+- plan_verified: true
+- allowed_roots_verified: true
+- denied_system_paths_verified: true
+- destructive_operation_tokens_verified: true
+- exact_scope_classification_verified: true
+- no_generated_code_execution_escape_verified: true
+- no_network_download_execution_verified: true
+- no_hidden_persistence_verified: true
+- no_privilege_escalation_verified: true
+- zak_final_authority_claim_structure_preserved: true
+- master_goal_not_redefined_claim_structure_preserved: true
 
-next_allowed_seam: GeneralDeletionAuthorityPreflight v1
+next_allowed_seam: GeneralDeletionAuthorityDecision v1
 
-planned_following_seams:
-- GeneralDeletionAuthorityPreflight v1
-- GeneralDeletionAuthorityDecision v1
-- GeneralDeletionAuthorityStateRecord v1
-- Post-GeneralDeletionAuthorityGrant Spine Audit v1
+decision_constraints:
+- may grant general deletion authority only
+- must not grant file move
+- must not grant commit authority outside explicit commit-gate seams
+- must not grant staging authority
+- must preserve narrow deterministic evidence-scoped claim structure
+- must preserve Zak final authority as scoped claim only
+- must preserve master-copy design goal as not-redefined scoped claim only
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\general_deletion_authority_plan_v1_20260428_134911.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\general_deletion_authority_plan_v1_summary_20260428_134911.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\general_deletion_authority_preflight_v1_20260428_141847.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\general_deletion_authority_preflight_v1_summary_20260428_141847.txt
 
 continuity_sync_message: continuity sync pending

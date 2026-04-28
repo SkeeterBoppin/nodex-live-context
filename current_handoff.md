@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T13:49:12.5499738-07:00
+Generated: 2026-04-28T14:18:48.7712589-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-GeneralDeletionAuthorityPlan v1
+GeneralDeletionAuthorityPreflight v1
 ``
 
 ## Latest Result
@@ -36,15 +36,15 @@ GeneralDeletionAuthorityPlan v1
 ``text
 status: pass
 continuity_sync: pass
-decision: general_deletion_authority_preflight_planned
+decision: general_deletion_authority_decision_ready
 claim_structure_mode: narrow_deterministic_evidence_scoped
-next_allowed_seam: GeneralDeletionAuthorityPreflight v1
+next_allowed_seam: GeneralDeletionAuthorityDecision v1
 ``
 
 ## Current Open Seam
 
 ``text
-GeneralDeletionAuthorityPreflight v1
+GeneralDeletionAuthorityDecision v1
 ``
 
 ## Current Packet
