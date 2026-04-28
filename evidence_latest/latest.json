@@ -3,13 +3,14 @@
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T14:54:15.6303838-07:00",
+  "createdAt": "2026-04-28T16:31:08.5450128-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
   "seam": "FileMoveAuthorityPreflight v1",
+  "replacementPacket": true,
   "preflightOnly": true,
   "claimStructureMode": "narrow_deterministic_evidence_scoped",
   "structurePriority": "audit_stable_over_human_readable",
@@ -21,7 +22,7 @@
   "priorPostGeneralDeletionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_general_deletion_authority_grant_spine_audit_v1_20260428_143627.json",
   "priorGeneralDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\general_deletion_authority_state_record_v1_20260428_143006.json",
   "priorRepoDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json",
-  "decision": "file_move_authority_decision_ready",
+  "decision": "file_move_authority_preflight_complete_user_authority_contract_required",
   "repoDeletionAuthorityGranted": true,
   "repoDeletionAuthorityScope": "repo_deletion_authority_only",
   "repoDeletionAllowedNow": true,
@@ -30,7 +31,9 @@
   "generalDeletionAuthorityScope": "general_deletion_authority_only",
   "deletionAllowedNow": true,
   "generalDeletionAuthorityStateRecorded": true,
-  "fileMoveAuthorityDecisionAllowedNow": true,
+  "fileMoveAuthorityPreflightComplete": true,
+  "userAuthorityContractPlanAllowedNow": true,
+  "fileMoveAuthorityDecisionAllowedNow": false,
   "fileMoveAuthorityGranted": false,
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
@@ -79,15 +82,21 @@
     "masterGoalNotRedefinedClaimStructurePreserved": true,
     "auditStableStructurePriorityPreserved": true
   },
-  "nextAllowedSeam": "FileMoveAuthorityDecision v1",
-  "decisionConstraints": [
-    "may grant file move authority only",
-    "must not grant commit authority outside explicit commit-gate seams",
-    "must not grant staging authority",
-    "must preserve narrow deterministic evidence-scoped claim structure",
-    "must preserve audit-stable-over-human-readable structure priority",
-    "must preserve Zak final authority as scoped claim only",
-    "must preserve master-copy design goal as not-redefined scoped claim only"
+  "userAuthorityContractRequiredBefore": [
+    "FileMoveAuthorityDecision v1",
+    "broad physical filesystem capability use",
+    "third review packet generation"
+  ],
+  "nextAllowedSeam": "UserAuthorityContractPlan v1",
+  "plannedFollowingSeams": [
+    "UserAuthorityContractPreflight v1",
+    "UserAuthorityContractImplementationPlan v1",
+    "UserAuthorityContractImplementationPreflight v1",
+    "UserAuthorityContractImplementation v1",
+    "UserAuthorityContractCommitGate v1",
+    "UserAuthorityContractStateRecord v1",
+    "Post-UserAuthorityContract Spine Audit v1",
+    "FileMoveAuthorityDecision v1"
   ],
   "validation": {
     "planVerified": true,
@@ -113,7 +122,8 @@
     "preflightWorkingTreeClean": true,
     "fullHarnessPassed": true,
     "postPreflightWorkingTreeClean": true,
-    "fileMoveAuthorityDecisionAllowedNow": true,
+    "userAuthorityContractPlanAllowedNow": true,
+    "fileMoveAuthorityDecisionAllowedNow": false,
     "fileMoveAuthorityGranted": false,
     "fileMoveAllowedNow": false,
     "commit": false,
@@ -323,7 +333,7 @@
       }
     },
     {
-      "name": "plan routes to preflight",
+      "name": "plan routes to file move preflight",
       "pass": true,
       "reason": "file move authority plan must route to preflight",
       "data": {
@@ -362,32 +372,6 @@
       "reason": "plan constraint no file move must contain no_file_move_performed",
       "data": {
         "expected": "no_file_move_performed",
-        "actual": [
-          "plan_only",
-          "no_file_move_performed",
-          "no_deletion_performed_by_this_packet",
-          "preflight_must_verify_allowed_source_roots",
-          "preflight_must_verify_allowed_destination_roots",
-          "preflight_must_verify_denied_system_paths",
-          "preflight_must_verify_move_source_destination_pairing",
-          "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-          "preflight_must_verify_exact_scope_classification",
-          "preflight_must_verify_no_generated_code_execution_escape",
-          "preflight_must_verify_no_network_download_execution",
-          "preflight_must_verify_no_hidden_persistence",
-          "preflight_must_verify_no_privilege_escalation",
-          "preflight_must_preserve_zak_final_authority_claim_structure",
-          "preflight_must_preserve_master_goal_not_redefined_claim_structure",
-          "preflight_must_preserve_audit_stable_structure_priority"
-        ]
-      }
-    },
-    {
-      "name": "plan constraint no deletion",
-      "pass": true,
-      "reason": "plan constraint no deletion must contain no_deletion_performed_by_this_packet",
-      "data": {
-        "expected": "no_deletion_performed_by_this_packet",
         "actual": [
           "plan_only",
           "no_file_move_performed",
@@ -518,136 +502,6 @@
       "reason": "plan constraint implicit delete must contain preflight_must_verify_move_is_not_implicit_delete_outside_scope",
       "data": {
         "expected": "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-        "actual": [
-          "plan_only",
-          "no_file_move_performed",
-          "no_deletion_performed_by_this_packet",
-          "preflight_must_verify_allowed_source_roots",
-          "preflight_must_verify_allowed_destination_roots",
-          "preflight_must_verify_denied_system_paths",
-          "preflight_must_verify_move_source_destination_pairing",
-          "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-          "preflight_must_verify_exact_scope_classification",
-          "preflight_must_verify_no_generated_code_execution_escape",
-          "preflight_must_verify_no_network_download_execution",
-          "preflight_must_verify_no_hidden_persistence",
-          "preflight_must_verify_no_privilege_escalation",
-          "preflight_must_preserve_zak_final_authority_claim_structure",
-          "preflight_must_preserve_master_goal_not_redefined_claim_structure",
-          "preflight_must_preserve_audit_stable_structure_priority"
-        ]
-      }
-    },
-    {
-      "name": "plan constraint exact scope",
-      "pass": true,
-      "reason": "plan constraint exact scope must contain preflight_must_verify_exact_scope_classification",
-      "data": {
-        "expected": "preflight_must_verify_exact_scope_classification",
-        "actual": [
-          "plan_only",
-          "no_file_move_performed",
-          "no_deletion_performed_by_this_packet",
-          "preflight_must_verify_allowed_source_roots",
-          "preflight_must_verify_allowed_destination_roots",
-          "preflight_must_verify_denied_system_paths",
-          "preflight_must_verify_move_source_destination_pairing",
-          "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-          "preflight_must_verify_exact_scope_classification",
-          "preflight_must_verify_no_generated_code_execution_escape",
-          "preflight_must_verify_no_network_download_execution",
-          "preflight_must_verify_no_hidden_persistence",
-          "preflight_must_verify_no_privilege_escalation",
-          "preflight_must_preserve_zak_final_authority_claim_structure",
-          "preflight_must_preserve_master_goal_not_redefined_claim_structure",
-          "preflight_must_preserve_audit_stable_structure_priority"
-        ]
-      }
-    },
-    {
-      "name": "plan constraint generated code",
-      "pass": true,
-      "reason": "plan constraint generated code must contain preflight_must_verify_no_generated_code_execution_escape",
-      "data": {
-        "expected": "preflight_must_verify_no_generated_code_execution_escape",
-        "actual": [
-          "plan_only",
-          "no_file_move_performed",
-          "no_deletion_performed_by_this_packet",
-          "preflight_must_verify_allowed_source_roots",
-          "preflight_must_verify_allowed_destination_roots",
-          "preflight_must_verify_denied_system_paths",
-          "preflight_must_verify_move_source_destination_pairing",
-          "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-          "preflight_must_verify_exact_scope_classification",
-          "preflight_must_verify_no_generated_code_execution_escape",
-          "preflight_must_verify_no_network_download_execution",
-          "preflight_must_verify_no_hidden_persistence",
-          "preflight_must_verify_no_privilege_escalation",
-          "preflight_must_preserve_zak_final_authority_claim_structure",
-          "preflight_must_preserve_master_goal_not_redefined_claim_structure",
-          "preflight_must_preserve_audit_stable_structure_priority"
-        ]
-      }
-    },
-    {
-      "name": "plan constraint network",
-      "pass": true,
-      "reason": "plan constraint network must contain preflight_must_verify_no_network_download_execution",
-      "data": {
-        "expected": "preflight_must_verify_no_network_download_execution",
-        "actual": [
-          "plan_only",
-          "no_file_move_performed",
-          "no_deletion_performed_by_this_packet",
-          "preflight_must_verify_allowed_source_roots",
-          "preflight_must_verify_allowed_destination_roots",
-          "preflight_must_verify_denied_system_paths",
-          "preflight_must_verify_move_source_destination_pairing",
-          "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-          "preflight_must_verify_exact_scope_classification",
-          "preflight_must_verify_no_generated_code_execution_escape",
-          "preflight_must_verify_no_network_download_execution",
-          "preflight_must_verify_no_hidden_persistence",
-          "preflight_must_verify_no_privilege_escalation",
-          "preflight_must_preserve_zak_final_authority_claim_structure",
-          "preflight_must_preserve_master_goal_not_redefined_claim_structure",
-          "preflight_must_preserve_audit_stable_structure_priority"
-        ]
-      }
-    },
-    {
-      "name": "plan constraint persistence",
-      "pass": true,
-      "reason": "plan constraint persistence must contain preflight_must_verify_no_hidden_persistence",
-      "data": {
-        "expected": "preflight_must_verify_no_hidden_persistence",
-        "actual": [
-          "plan_only",
-          "no_file_move_performed",
-          "no_deletion_performed_by_this_packet",
-          "preflight_must_verify_allowed_source_roots",
-          "preflight_must_verify_allowed_destination_roots",
-          "preflight_must_verify_denied_system_paths",
-          "preflight_must_verify_move_source_destination_pairing",
-          "preflight_must_verify_move_is_not_implicit_delete_outside_scope",
-          "preflight_must_verify_exact_scope_classification",
-          "preflight_must_verify_no_generated_code_execution_escape",
-          "preflight_must_verify_no_network_download_execution",
-          "preflight_must_verify_no_hidden_persistence",
-          "preflight_must_verify_no_privilege_escalation",
-          "preflight_must_preserve_zak_final_authority_claim_structure",
-          "preflight_must_preserve_master_goal_not_redefined_claim_structure",
-          "preflight_must_preserve_audit_stable_structure_priority"
-        ]
-      }
-    },
-    {
-      "name": "plan constraint privilege",
-      "pass": true,
-      "reason": "plan constraint privilege must contain preflight_must_verify_no_privilege_escalation",
-      "data": {
-        "expected": "preflight_must_verify_no_privilege_escalation",
         "actual": [
           "plan_only",
           "no_file_move_performed",

@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T14:54:15.7375639-07:00
+Generated: 2026-04-28T16:31:08.7308132-07:00
 
 ## Boundary
 
@@ -36,16 +36,17 @@ FileMoveAuthorityPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: file_move_authority_decision_ready
+replacement_packet: true
+decision: file_move_authority_preflight_complete_user_authority_contract_required
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
-next_allowed_seam: FileMoveAuthorityDecision v1
+next_allowed_seam: UserAuthorityContractPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-FileMoveAuthorityDecision v1
+UserAuthorityContractPlan v1
 ``
 
 ## Current Packet
@@ -59,6 +60,11 @@ The file below is a continuity placeholder only and must not be run as a Nodex p
 ``text
 packets/current_open_packet.ps1
 ``
+
+## User Authority Boundary
+
+UserAuthorityContract is required before FileMoveAuthorityDecision v1.
+User authority must be modeled as a first-class enforceable contract, not only a preserved claim.
 
 ## Claim Structure Rule
 
