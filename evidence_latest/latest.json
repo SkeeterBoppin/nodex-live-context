@@ -1,31 +1,23 @@
 {
-  "schema": "nodex.source_mutation_authority.decision.v1",
+  "schema": "nodex.source_mutation_authority.state_record.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T09:37:30.5240263-07:00",
+  "createdAt": "2026-04-28T10:15:54.8392301-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-  "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
-  "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "SourceMutationAuthorityDecision v1",
+  "seam": "SourceMutationAuthorityStateRecord v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorSourceMutationAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_decision_v1_20260428_093729.json",
   "priorSourceMutationAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_preflight_v1_20260428_002511.json",
   "priorSourceMutationAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_plan_v1_20260428_001249.json",
-  "priorPostDeepResearchAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_deep_research_authority_grant_spine_audit_v1_20260428_000958.json",
-  "priorDeepResearchAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json",
-  "priorExternalReviewAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json",
-  "priorProofClaimPromotionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json",
-  "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
-  "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
-  "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "decisionOnly": true,
-  "decision": "source_mutation_authority_granted",
+  "stateRecordOnly": true,
+  "decision": "source_mutation_authority_state_recorded",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -49,11 +41,11 @@
   "externalReviewAuthorityStateRecorded": true,
   "deepResearchAuthorityGranted": true,
   "deepResearchAuthorityStateRecorded": true,
-  "sourceMutationAuthorityDecisionApplied": true,
   "sourceMutationAuthorityGranted": true,
   "sourceMutationAuthorityScope": "source_mutation_authority_only",
   "sourceMutationAllowedNow": true,
-  "sourceMutationAuthorityStateRecordAllowedNow": true,
+  "sourceMutationAuthorityStateRecorded": true,
+  "sourceMutationAuthorityDecisionApplied": true,
   "evidenceRewriteAllowedNow": false,
   "evidenceDeletionAllowedNow": false,
   "repoDeletionAllowedNow": false,
@@ -61,36 +53,21 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "SourceMutationAuthorityStateRecord v1",
+  "nextAllowedSeam": "Post-SourceMutationAuthorityGrant Spine Audit v1",
   "plannedFollowingSeams": [
-    "Post-SourceMutationAuthorityGrant Spine Audit v1",
     "EvidenceRewriteAuthorityPlan v1"
   ],
-  "explicitNonGrants": [
-    "evidence rewrite",
-    "evidence deletion",
-    "repo deletion",
-    "deletion",
-    "file move",
-    "staging",
-    "commit authority outside explicit commit-gate seams"
-  ],
   "validation": {
+    "decisionVerified": true,
     "preflightVerified": true,
     "planVerified": true,
-    "postDeepResearchAuthorityGrantSpineAuditVerified": true,
-    "deepResearchAuthorityStateRecordVerified": true,
-    "externalReviewAuthorityStateRecordVerified": true,
-    "proofClaimPromotionAuthorityStateRecordVerified": true,
-    "modelOutputAuthorityStateRecordVerified": true,
-    "agentHandoffRuntimeWiringStateRecordVerified": true,
-    "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preDecisionWorkingTreeClean": true,
+    "preStateRecordWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postDecisionWorkingTreeClean": true,
+    "postStateRecordWorkingTreeClean": true,
     "sourceMutationAuthorityGranted": true,
+    "sourceMutationAuthorityStateRecorded": true,
     "sourceMutationAuthorityScope": "source_mutation_authority_only",
     "sourceMutationAllowedNow": true,
     "evidenceRewrite": false,
@@ -112,9 +89,9 @@
       }
     },
     {
-      "name": "pre-decision working tree clean",
+      "name": "pre-state-record working tree clean",
       "pass": true,
-      "reason": "SourceMutationAuthorityDecision v1 must start with clean working tree",
+      "reason": "SourceMutationAuthorityStateRecord v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -122,10 +99,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match SourceMutationAuthorityDecision baseline",
+      "reason": "HEAD must match SourceMutationAuthorityStateRecord baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "source mutation authority decision JSON exists",
+      "pass": true,
+      "reason": "missing source_mutation_authority_decision_v1_*.json evidence",
+      "data": {
+        "pattern": "source_mutation_authority_decision_v1_*.json"
       }
     },
     {
@@ -145,67 +130,11 @@
       }
     },
     {
-      "name": "post-deep research authority grant spine audit JSON exists",
+      "name": "source mutation authority decision file exists",
       "pass": true,
-      "reason": "missing post_deep_research_authority_grant_spine_audit_v1_*.json evidence",
+      "reason": "source mutation authority decision file must exist",
       "data": {
-        "pattern": "post_deep_research_authority_grant_spine_audit_v1_*.json"
-      }
-    },
-    {
-      "name": "deep research authority state record JSON exists",
-      "pass": true,
-      "reason": "missing deep_research_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "deep_research_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "external review authority state record JSON exists",
-      "pass": true,
-      "reason": "missing external_review_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "external_review_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "proof claim promotion authority state record JSON exists",
-      "pass": true,
-      "reason": "missing proof_claim_promotion_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "proof_claim_promotion_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "model output authority state record JSON exists",
-      "pass": true,
-      "reason": "missing model_output_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "model_output_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "agent handoff runtime wiring state record JSON exists",
-      "pass": true,
-      "reason": "missing agent_handoff_runtime_wiring_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "agent_handoff_runtime_wiring_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "permission grant authority state record JSON exists",
-      "pass": true,
-      "reason": "missing permission_grant_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "permission_grant_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "source mutation authority preflight path present",
-      "pass": true,
-      "reason": "source mutation authority preflight path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_preflight_v1_20260428_002511.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_decision_v1_20260428_093729.json"
       }
     },
     {
@@ -217,14 +146,6 @@
       }
     },
     {
-      "name": "source mutation authority plan path present",
-      "pass": true,
-      "reason": "source mutation authority plan path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_plan_v1_20260428_001249.json"
-      }
-    },
-    {
       "name": "source mutation authority plan file exists",
       "pass": true,
       "reason": "source mutation authority plan file must exist",
@@ -233,115 +154,123 @@
       }
     },
     {
-      "name": "post-deep research authority grant spine audit path present",
+      "name": "decision status pass",
       "pass": true,
-      "reason": "post-deep research authority grant spine audit path must be present",
+      "reason": "source mutation authority decision must be pass",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_deep_research_authority_grant_spine_audit_v1_20260428_000958.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_decision_v1_20260428_093729.json"
       }
     },
     {
-      "name": "post-deep research authority grant spine audit file exists",
+      "name": "decision exact",
       "pass": true,
-      "reason": "post-deep research authority grant spine audit file must exist",
+      "reason": "source mutation authority decision must grant authority",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_deep_research_authority_grant_spine_audit_v1_20260428_000958.json"
+        "decision": "source_mutation_authority_granted"
       }
     },
     {
-      "name": "deep research authority state record path present",
+      "name": "decision sourceMutationAuthorityDecisionApplied",
       "pass": true,
-      "reason": "deep research authority state record path must be present",
+      "reason": "decision sourceMutationAuthorityDecisionApplied must be true",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json"
+        "actual": true
       }
     },
     {
-      "name": "deep research authority state record file exists",
+      "name": "decision sourceMutationAuthorityGranted",
       "pass": true,
-      "reason": "deep research authority state record file must exist",
+      "reason": "decision sourceMutationAuthorityGranted must be true",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json"
+        "actual": true
       }
     },
     {
-      "name": "external review authority state record path present",
+      "name": "decision scope exact",
       "pass": true,
-      "reason": "external review authority state record path must be present",
+      "reason": "source mutation authority scope must be exact",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json"
+        "actual": "source_mutation_authority_only"
       }
     },
     {
-      "name": "external review authority state record file exists",
+      "name": "decision sourceMutationAllowedNow",
       "pass": true,
-      "reason": "external review authority state record file must exist",
+      "reason": "decision sourceMutationAllowedNow must be true",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json"
+        "actual": true
       }
     },
     {
-      "name": "proof claim promotion authority state record path present",
+      "name": "decision sourceMutationAuthorityStateRecordAllowedNow",
       "pass": true,
-      "reason": "proof claim promotion authority state record path must be present",
+      "reason": "decision sourceMutationAuthorityStateRecordAllowedNow must be true",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json"
+        "actual": true
       }
     },
     {
-      "name": "proof claim promotion authority state record file exists",
+      "name": "decision evidenceRewriteAllowedNow",
       "pass": true,
-      "reason": "proof claim promotion authority state record file must exist",
+      "reason": "decision evidenceRewriteAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json"
+        "actual": false
       }
     },
     {
-      "name": "model output authority state record path present",
+      "name": "decision evidenceDeletionAllowedNow",
       "pass": true,
-      "reason": "model output authority state record path must be present",
+      "reason": "decision evidenceDeletionAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
+        "actual": false
       }
     },
     {
-      "name": "model output authority state record file exists",
+      "name": "decision repoDeletionAllowedNow",
       "pass": true,
-      "reason": "model output authority state record file must exist",
+      "reason": "decision repoDeletionAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
+        "actual": false
       }
     },
     {
-      "name": "agent handoff runtime wiring state record path present",
+      "name": "decision deletionAllowedNow",
       "pass": true,
-      "reason": "agent handoff runtime wiring state record path must be present",
+      "reason": "decision deletionAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
+        "actual": false
       }
     },
     {
-      "name": "agent handoff runtime wiring state record file exists",
+      "name": "decision fileMoveAllowedNow",
       "pass": true,
-      "reason": "agent handoff runtime wiring state record file must exist",
+      "reason": "decision fileMoveAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
+        "actual": false
       }
     },
     {
-      "name": "permission grant authority state record path present",
+      "name": "decision commitAllowedNow",
       "pass": true,
-      "reason": "permission grant authority state record path must be present",
+      "reason": "decision commitAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
+        "actual": false
       }
     },
     {
-      "name": "permission grant authority state record file exists",
+      "name": "decision stagingAllowedNow",
       "pass": true,
-      "reason": "permission grant authority state record file must exist",
+      "reason": "decision stagingAllowedNow must be false",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
+        "actual": false
+      }
+    },
+    {
+      "name": "decision routes to state record",
+      "pass": true,
+      "reason": "decision must route to state record",
+      "data": {
+        "nextAllowedSeam": "SourceMutationAuthorityStateRecord v1"
       }
     },
     {
@@ -355,97 +284,9 @@
     {
       "name": "preflight decision exact",
       "pass": true,
-      "reason": "source mutation authority preflight must be decision ready",
+      "reason": "preflight must be decision ready",
       "data": {
         "decision": "source_mutation_authority_decision_ready"
-      }
-    },
-    {
-      "name": "preflight sourceMutationAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "preflight sourceMutationAuthorityDecisionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "preflight sourceMutationAuthorityGranted",
-      "pass": true,
-      "reason": "preflight sourceMutationAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "preflight sourceMutationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "preflight evidenceRewriteAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "preflight evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "preflight repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight deletionAllowedNow",
-      "pass": true,
-      "reason": "preflight deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight fileMoveAllowedNow",
-      "pass": true,
-      "reason": "preflight fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight commitAllowedNow",
-      "pass": true,
-      "reason": "preflight commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight stagingAllowedNow",
-      "pass": true,
-      "reason": "preflight stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight routes to decision",
-      "pass": true,
-      "reason": "preflight must route to decision",
-      "data": {
-        "nextAllowedSeam": "SourceMutationAuthorityDecision v1"
       }
     },
     {
@@ -454,142 +295,6 @@
       "reason": "source mutation authority plan must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_plan_v1_20260428_001249.json"
-      }
-    },
-    {
-      "name": "plan sourceMutationAuthorityPreflightAllowedNow",
-      "pass": true,
-      "reason": "plan sourceMutationAuthorityPreflightAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "deep audit status pass",
-      "pass": true,
-      "reason": "post-deep research authority grant spine audit must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_deep_research_authority_grant_spine_audit_v1_20260428_000958.json"
-      }
-    },
-    {
-      "name": "deep audit sourceMutationAuthorityPlanAllowedNow",
-      "pass": true,
-      "reason": "deep audit sourceMutationAuthorityPlanAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "deep state status pass",
-      "pass": true,
-      "reason": "deep research authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json"
-      }
-    },
-    {
-      "name": "deep state deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "deep state deepResearchAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "external state status pass",
-      "pass": true,
-      "reason": "external review authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json"
-      }
-    },
-    {
-      "name": "external state externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "external state externalReviewAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "proof state status pass",
-      "pass": true,
-      "reason": "proof claim promotion authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json"
-      }
-    },
-    {
-      "name": "proof state proofClaimPromotionAuthorityGranted",
-      "pass": true,
-      "reason": "proof state proofClaimPromotionAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "model state status pass",
-      "pass": true,
-      "reason": "model output authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
-      }
-    },
-    {
-      "name": "model state modelOutputAuthorityGranted",
-      "pass": true,
-      "reason": "model state modelOutputAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "model state modelOutputAuthorityStateRecorded",
-      "pass": true,
-      "reason": "model state modelOutputAuthorityStateRecorded must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "agent state status pass",
-      "pass": true,
-      "reason": "agent handoff runtime wiring state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
-      }
-    },
-    {
-      "name": "agent state agentHandoffRuntimeWiringAuthorityGranted",
-      "pass": true,
-      "reason": "agent state agentHandoffRuntimeWiringAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "permission state status pass",
-      "pass": true,
-      "reason": "permission grant authority state record must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
-      }
-    },
-    {
-      "name": "permission state permissionGrantAuthorityGranted",
-      "pass": true,
-      "reason": "permission state permissionGrantAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "architecture root exists",
-      "pass": true,
-      "reason": "architecture root must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
       }
     },
     {
@@ -625,17 +330,17 @@
       }
     },
     {
-      "name": "full harness passed during decision",
+      "name": "full harness passed during state record",
       "pass": true,
-      "reason": "node tests/run.js must pass during SourceMutationAuthorityDecision v1",
+      "reason": "node tests/run.js must pass during SourceMutationAuthorityStateRecord v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-decision working tree clean",
+      "name": "post-state-record working tree clean",
       "pass": true,
-      "reason": "SourceMutationAuthorityDecision v1 must leave working tree clean",
+      "reason": "SourceMutationAuthorityStateRecord v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -664,7 +369,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS DECISION",
+      "label": "FULL HARNESS STATE RECORD",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
