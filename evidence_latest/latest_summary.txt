@@ -1,10 +1,10 @@
-﻿EVIDENCE REWRITE AUTHORITY STATE RECORD V1
+﻿POST-EVIDENCE REWRITE AUTHORITY GRANT SPINE AUDIT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-state_record_only: true
-decision: evidence_rewrite_authority_state_recorded
+audit_only: true
+decision: post_evidence_rewrite_authority_grant_spine_audit_complete
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -32,13 +32,12 @@ deep_research_authority_state_recorded: true
 source_mutation_authority_granted: true
 source_mutation_allowed_now: true
 source_mutation_authority_state_recorded: true
-
 evidence_rewrite_authority_granted: true
 evidence_rewrite_authority_scope: evidence_rewrite_authority_only
 evidence_rewrite_allowed_now: true
 evidence_rewrite_authority_state_recorded: true
-evidence_rewrite_authority_decision_applied: true
 
+evidence_deletion_authority_plan_allowed_now: true
 evidence_deletion_allowed_now: false
 repo_deletion_allowed_now: false
 deletion_allowed_now: false
@@ -46,12 +45,20 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: Post-EvidenceRewriteAuthorityGrant Spine Audit v1
+audit_findings:
+- high_findings: 0
+- medium_findings: 0
+- blocking_findings: 0
+
+next_allowed_seam: EvidenceDeletionAuthorityPlan v1
 
 planned_following_seams:
-- EvidenceDeletionAuthorityPlan v1
+- EvidenceDeletionAuthorityPreflight v1
+- EvidenceDeletionAuthorityDecision v1
+- EvidenceDeletionAuthorityStateRecord v1
+- Post-EvidenceDeletionAuthorityGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\evidence_rewrite_authority_state_record_v1_20260428_111849.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\evidence_rewrite_authority_state_record_v1_summary_20260428_111849.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_evidence_rewrite_authority_grant_spine_audit_v1_20260428_112201.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_evidence_rewrite_authority_grant_spine_audit_v1_summary_20260428_112201.txt
 
 continuity_sync_message: continuity sync pending

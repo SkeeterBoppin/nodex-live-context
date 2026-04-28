@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T11:18:50.7043522-07:00
+Generated: 2026-04-28T11:22:03.4067128-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-EvidenceRewriteAuthorityStateRecord v1
+Post-EvidenceRewriteAuthorityGrant Spine Audit v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ EvidenceRewriteAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
-decision: evidence_rewrite_authority_state_recorded
-next_allowed_seam: Post-EvidenceRewriteAuthorityGrant Spine Audit v1
+decision: post_evidence_rewrite_authority_grant_spine_audit_complete
+next_allowed_seam: EvidenceDeletionAuthorityPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-Post-EvidenceRewriteAuthorityGrant Spine Audit v1
+EvidenceDeletionAuthorityPlan v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-Post-EvidenceRewriteAuthorityGrant Spine Audit v1
+EvidenceDeletionAuthorityPlan v1
 ``
 
-Do not treat Post-EvidenceRewriteAuthorityGrant Spine Audit v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat EvidenceDeletionAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond Post-EvidenceRewriteAuthorityGrant Spine Audit v1.
+Do not generate beyond EvidenceDeletionAuthorityPlan v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
