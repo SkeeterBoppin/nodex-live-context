@@ -1,24 +1,45 @@
-﻿{
-  "schema": "nodex.proof_claim_promotion_authority.plan.v1",
+{
+  "schema": "nodex.proof_claim_promotion_authority.preflight.v1",
   "status": "pass",
-  "continuity_sync": "pass",
-  "continuitySyncMessage": "continuity sync committed and pushed",
-  "createdAt": "2026-04-27T15:45:27.8910312-07:00",
+  "continuity_sync": "skipped",
+  "continuity_sync_message": "continuity sync pending",
+  "createdAt": "2026-04-27T23:10:51.7310225-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+  "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
+  "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "ProofClaimPromotionAuthorityPlan v1",
+  "seam": "ProofClaimPromotionAuthorityPreflight v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorProofClaimPromotionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_plan_v1_20260427_154524.json",
   "priorPostModelOutputAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_model_output_authority_grant_spine_audit_v1_20260427_152400.json",
-  "planOnly": true,
-  "decision": "proof_claim_promotion_authority_preflight_planned",
-  "proofClaimPromotionAuthorityPlanAllowedNow": true,
-  "proofClaimPromotionAuthorityPreflightAllowedNow": true,
-  "proofClaimPromotionAuthorityDecisionAllowedNow": false,
+  "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
+  "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
+  "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
+  "preflightOnly": true,
+  "decision": "proof_claim_promotion_authority_decision_ready",
+  "activationAuthorityGranted": true,
+  "runtimeIntegrationAuthorityGranted": true,
+  "runtimeAuthorityGranted": true,
+  "runtimeExecutionAuthorityGranted": true,
+  "toolExecutionAuthorityGranted": true,
+  "runtimeFileWriteAuthorityGranted": true,
+  "runtimeFileWritesGranted": true,
+  "processExecutionAuthorityGranted": true,
+  "processExecutionGranted": true,
+  "gitExecutionAuthorityGranted": true,
+  "gitExecutionByNodexGranted": true,
+  "permissionGrantAuthorityGranted": true,
+  "permissionGrantsGranted": true,
+  "agentHandoffRuntimeWiringAuthorityGranted": true,
+  "agentHandoffRuntimeWiringAllowedNow": true,
+  "modelOutputAuthorityGranted": true,
+  "modelOutputAuthorityStateRecorded": true,
+  "proofClaimPromotionAuthorityDecisionAllowedNow": true,
   "proofClaimPromotionAuthorityGranted": false,
   "externalReviewAuthorityGranted": false,
   "deepResearchAuthorityGranted": false,
@@ -30,21 +51,58 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "ProofClaimPromotionAuthorityPreflight v1",
+  "nextAllowedSeam": "ProofClaimPromotionAuthorityDecision v1",
+  "decisionConstraints": [
+    "may grant proof-claim promotion authority only",
+    "must not grant external review authority",
+    "must not grant Deep Research authority",
+    "must not grant source mutation",
+    "must not grant evidence rewrite",
+    "must not grant evidence deletion",
+    "must not grant repo deletion",
+    "must not grant deletion",
+    "must not grant file move",
+    "must not grant commit authority outside explicit commit-gate seams",
+    "must not grant staging authority"
+  ],
+  "validation": {
+    "planVerified": true,
+    "postModelOutputAuthorityGrantSpineAuditVerified": true,
+    "modelOutputAuthorityStateRecordVerified": true,
+    "agentHandoffRuntimeWiringStateRecordVerified": true,
+    "permissionGrantAuthorityStateRecordVerified": true,
+    "expectedHeadVerified": true,
+    "architectureSourcesVerified": true,
+    "preflightWorkingTreeClean": true,
+    "fullHarnessPassed": true,
+    "postPreflightWorkingTreeClean": true,
+    "proofClaimPromotionAuthorityDecisionAllowedNow": true,
+    "proofClaimPromotionAuthorityGranted": false,
+    "externalReviewAuthorityGranted": false,
+    "deepResearchAuthorityGranted": false,
+    "sourceMutation": false,
+    "evidenceRewrite": false,
+    "evidenceDeletion": false,
+    "repoDeletion": false,
+    "deletion": false,
+    "fileMove": false,
+    "commit": false,
+    "staging": false
+  },
   "checks": [
     {
       "name": "Nodex git root exact",
       "pass": true,
-      "reason": "wrong Nodex git root",
+      "reason": "Nodex git root must match repo root",
       "data": {
-        "actual": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
+        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+        "actual": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node"
       }
     },
     {
-      "name": "pre-plan working tree clean",
+      "name": "preflight working tree clean",
       "pass": true,
-      "reason": "ProofClaimPromotionAuthorityPlan v1 must start clean",
+      "reason": "ProofClaimPromotionAuthorityPreflight v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -52,131 +110,446 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match expected baseline",
+      "reason": "HEAD must match ProofClaimPromotionAuthorityPreflight baseline",
       "data": {
-        "actual": "c64ae68 Add proof claim layer manifest validator",
-        "expected": "c64ae68 Add proof claim layer manifest validator"
+        "expected": "c64ae68 Add proof claim layer manifest validator",
+        "actual": "c64ae68 Add proof claim layer manifest validator"
       }
     },
     {
-      "name": "architecture continuity source exists",
+      "name": "proof claim promotion authority plan JSON exists",
       "pass": true,
-      "reason": "missing continuity source",
-      "data": {}
+      "reason": "missing proof_claim_promotion_authority_plan_v1_*.json evidence",
+      "data": {
+        "pattern": "proof_claim_promotion_authority_plan_v1_*.json"
+      }
     },
     {
-      "name": "architecture boundary source exists",
+      "name": "post-model output authority grant spine audit JSON exists",
       "pass": true,
-      "reason": "missing boundary architecture source",
-      "data": {}
+      "reason": "missing post_model_output_authority_grant_spine_audit_v1_*.json evidence",
+      "data": {
+        "pattern": "post_model_output_authority_grant_spine_audit_v1_*.json"
+      }
     },
     {
-      "name": "prior audit status pass",
+      "name": "model output authority state record JSON exists",
       "pass": true,
-      "reason": "prior audit must pass",
+      "reason": "missing model_output_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "model_output_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "agent handoff runtime wiring state record JSON exists",
+      "pass": true,
+      "reason": "missing agent_handoff_runtime_wiring_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "agent_handoff_runtime_wiring_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "permission grant authority state record JSON exists",
+      "pass": true,
+      "reason": "missing permission_grant_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "permission_grant_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "proof claim promotion authority plan path present",
+      "pass": true,
+      "reason": "proof claim promotion authority plan path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_plan_v1_20260427_154524.json"
+      }
+    },
+    {
+      "name": "proof claim promotion authority plan file exists",
+      "pass": true,
+      "reason": "proof claim promotion authority plan file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_plan_v1_20260427_154524.json"
+      }
+    },
+    {
+      "name": "post-model output authority grant spine audit path present",
+      "pass": true,
+      "reason": "post-model output authority grant spine audit path must be present",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_model_output_authority_grant_spine_audit_v1_20260427_152400.json"
       }
     },
     {
-      "name": "prior audit decision exact",
+      "name": "post-model output authority grant spine audit file exists",
       "pass": true,
-      "reason": "prior audit decision mismatch",
+      "reason": "post-model output authority grant spine audit file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_model_output_authority_grant_spine_audit_v1_20260427_152400.json"
+      }
+    },
+    {
+      "name": "model output authority state record path present",
+      "pass": true,
+      "reason": "model output authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
+      }
+    },
+    {
+      "name": "model output authority state record file exists",
+      "pass": true,
+      "reason": "model output authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
+      }
+    },
+    {
+      "name": "agent handoff runtime wiring state record path present",
+      "pass": true,
+      "reason": "agent handoff runtime wiring state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
+      }
+    },
+    {
+      "name": "agent handoff runtime wiring state record file exists",
+      "pass": true,
+      "reason": "agent handoff runtime wiring state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
+      }
+    },
+    {
+      "name": "permission grant authority state record path present",
+      "pass": true,
+      "reason": "permission grant authority state record path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
+      }
+    },
+    {
+      "name": "permission grant authority state record file exists",
+      "pass": true,
+      "reason": "permission grant authority state record file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
+      }
+    },
+    {
+      "name": "plan status pass",
+      "pass": true,
+      "reason": "proof claim promotion authority plan must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_plan_v1_20260427_154524.json"
+      }
+    },
+    {
+      "name": "plan decision exact",
+      "pass": true,
+      "reason": "proof claim promotion authority plan must plan preflight",
+      "data": {
+        "decision": "proof_claim_promotion_authority_preflight_planned"
+      }
+    },
+    {
+      "name": "plan proofClaimPromotionAuthorityPreflightAllowedNow",
+      "pass": true,
+      "reason": "plan proofClaimPromotionAuthorityPreflightAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "plan proofClaimPromotionAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "plan proofClaimPromotionAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan proofClaimPromotionAuthorityGranted",
+      "pass": true,
+      "reason": "plan proofClaimPromotionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "plan externalReviewAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "plan deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "plan sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "plan evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "plan evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "plan repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan deletionAllowedNow",
+      "pass": true,
+      "reason": "plan deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan fileMoveAllowedNow",
+      "pass": true,
+      "reason": "plan fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan commitAllowedNow",
+      "pass": true,
+      "reason": "plan commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan stagingAllowedNow",
+      "pass": true,
+      "reason": "plan stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "post model audit status pass",
+      "pass": true,
+      "reason": "post-model output authority grant spine audit must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_model_output_authority_grant_spine_audit_v1_20260427_152400.json"
+      }
+    },
+    {
+      "name": "post model audit decision exact",
+      "pass": true,
+      "reason": "post-model output authority grant spine audit decision must be exact",
       "data": {
         "decision": "post_model_output_authority_grant_spine_audit_complete"
       }
     },
     {
-      "name": "prior audit routes to plan",
+      "name": "post model audit routes to plan",
       "pass": true,
-      "reason": "prior audit does not route to ProofClaimPromotionAuthorityPlan v1",
+      "reason": "post-model output authority audit must route to plan",
       "data": {
         "nextAllowedSeam": "ProofClaimPromotionAuthorityPlan v1"
       }
     },
     {
-      "name": "prior audit plan allowed",
+      "name": "post model audit modelOutputAuthorityGranted",
       "pass": true,
-      "reason": "plan not allowed by prior audit",
+      "reason": "post model audit modelOutputAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit model-output granted",
+      "name": "post model audit proofClaimPromotionAuthorityGranted",
       "pass": true,
-      "reason": "model output authority not granted",
+      "reason": "post model audit proofClaimPromotionAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "model state status pass",
+      "pass": true,
+      "reason": "model output authority state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json"
+      }
+    },
+    {
+      "name": "model state modelOutputAuthorityGranted",
+      "pass": true,
+      "reason": "model state modelOutputAuthorityGranted must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "prior audit proof promotion still false",
+      "name": "model state modelOutputAuthorityStateRecorded",
       "pass": true,
-      "reason": "proof claim promotion already granted unexpectedly",
+      "reason": "model state modelOutputAuthorityStateRecorded must be true",
       "data": {
-        "actual": false
+        "actual": true
       }
     },
     {
-      "name": "prior audit no source mutation",
+      "name": "agent state status pass",
       "pass": true,
-      "reason": "source mutation unexpectedly allowed",
+      "reason": "agent handoff runtime wiring state record must be pass",
       "data": {
-        "actual": false
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json"
       }
     },
     {
-      "name": "prior audit no commit",
+      "name": "agent state agentHandoffRuntimeWiringAuthorityGranted",
       "pass": true,
-      "reason": "commit unexpectedly allowed",
+      "reason": "agent state agentHandoffRuntimeWiringAuthorityGranted must be true",
       "data": {
-        "actual": false
+        "actual": true
       }
     },
     {
-      "name": "prior audit no staging",
+      "name": "permission state status pass",
       "pass": true,
-      "reason": "staging unexpectedly allowed",
+      "reason": "permission grant authority state record must be pass",
       "data": {
-        "actual": false
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json"
       }
     },
     {
-      "name": "full harness passed",
+      "name": "permission state permissionGrantAuthorityGranted",
       "pass": true,
-      "reason": "node tests/run.js failed",
+      "reason": "permission state permissionGrantAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "architecture root exists",
+      "pass": true,
+      "reason": "architecture root must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
+      }
+    },
+    {
+      "name": "continuity source exists",
+      "pass": true,
+      "reason": "continuity source must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_exact_continuity_source_v1.md"
+      }
+    },
+    {
+      "name": "boundary architecture source exists",
+      "pass": true,
+      "reason": "boundary architecture source must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_boundary_pushing_master_architecture.md"
+      }
+    },
+    {
+      "name": "package.json exists",
+      "pass": true,
+      "reason": "package.json must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\package.json"
+      }
+    },
+    {
+      "name": "tests/run.js exists",
+      "pass": true,
+      "reason": "tests/run.js must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\tests\\run.js"
+      }
+    },
+    {
+      "name": "full harness passed during preflight",
+      "pass": true,
+      "reason": "node tests/run.js must pass during ProofClaimPromotionAuthorityPreflight v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-plan working tree clean",
+      "name": "post-preflight working tree clean",
       "pass": true,
-      "reason": "ProofClaimPromotionAuthorityPlan v1 left Nodex repo dirty",
+      "reason": "ProofClaimPromotionAuthorityPreflight v1 must leave working tree clean",
       "data": {
         "statusShort": ""
-      }
-    },
-    {
-      "name": "evidence readback status",
-      "pass": true,
-      "reason": "evidence readback status mismatch",
-      "data": {
-        "actual": "pass",
-        "expected": "pass"
       }
     }
   ],
   "commandResults": [
     {
-      "label": "FULL HARNESS PLAN",
+      "label": "GIT STATUS --SHORT PRE",
+      "filePath": "git",
+      "arguments": [
+        "status",
+        "--short"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": ""
+    },
+    {
+      "label": "VERIFY HEAD",
+      "filePath": "git",
+      "arguments": [
+        "log",
+        "-1",
+        "--oneline"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
+    },
+    {
+      "label": "FULL HARNESS PREFLIGHT",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
       ],
       "exitCode": 0,
       "stdoutStderr": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
+    },
+    {
+      "label": "GIT STATUS --SHORT POST",
+      "filePath": "git",
+      "arguments": [
+        "status",
+        "--short"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": ""
     }
-  ]
+  ],
+  "failure": null
 }
