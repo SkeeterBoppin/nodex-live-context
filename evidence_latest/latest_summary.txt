@@ -1,68 +1,57 @@
-﻿FILE MOVE AUTHORITY PREFLIGHT V1
+USER AUTHORITY CONTRACT PLAN V1 NAME CORRECTION
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-replacement_packet: true
-decision: file_move_authority_preflight_complete_user_authority_contract_required
+plan_only: true
+name_correction_only: true
+decision: user_authority_contract_name_corrected_to_zak_final_authority_contract_plan
 
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
 
-repo_deletion_authority_granted: true
-repo_deletion_authority_scope: repo_deletion_authority_only
-repo_deletion_allowed_now: true
-repo_deletion_authority_state_recorded: true
+canonical_authority_contract: ZakFinalAuthorityContract
 
-general_deletion_authority_granted: true
-general_deletion_authority_scope: general_deletion_authority_only
-deletion_allowed_now: true
-general_deletion_authority_state_recorded: true
+deprecated_authority_contract_names:
+- UserAuthorityContract
 
-file_move_authority_preflight_complete: true
-user_authority_contract_plan_allowed_now: true
+legacy_authority_labels:
+- zak_final_authority_preserved
+- zak_final_authority_claim_structure_preserved
+
+legacy_label_relationship:
+- legacy labels are compatibility/provenance labels only
+- legacy labels do not define a separate authority system
+- legacy labels grant no authority by themselves
+- legacy labels cannot bypass ZakFinalAuthorityContract
+
+duplicate_authority_sources_allowed: false
+user_authority_contract_granted: false
+zak_final_authority_contract_plan_allowed_now: true
+zak_final_authority_contract_preflight_allowed_now: false
+zak_final_authority_contract_implementation_allowed_now: false
+zak_final_authority_contract_granted: false
+
 file_move_authority_decision_allowed_now: false
 file_move_authority_granted: false
 file_move_allowed_now: false
-
 commit_allowed_now: false
 staging_allowed_now: false
 
-file_move_preflight_verified:
-- plan_verified: true
-- allowed_source_roots_verified: true
-- allowed_destination_roots_verified: true
-- denied_system_paths_verified: true
-- move_source_destination_pairing_verified: true
-- move_is_not_implicit_delete_outside_scope_verified: true
-- exact_scope_classification_verified: true
-- no_generated_code_execution_escape_verified: true
-- no_network_download_execution_verified: true
-- no_hidden_persistence_verified: true
-- no_privilege_escalation_verified: true
-- zak_final_authority_claim_structure_preserved: true
-- master_goal_not_redefined_claim_structure_preserved: true
-- audit_stable_structure_priority_preserved: true
-
-user_authority_contract_required_before:
-- FileMoveAuthorityDecision v1
-- broad physical filesystem capability use
-- third review packet generation
-
-next_allowed_seam: UserAuthorityContractPlan v1
+next_allowed_seam: ZakFinalAuthorityContractPlan v1
 
 planned_following_seams:
-- UserAuthorityContractPreflight v1
-- UserAuthorityContractImplementationPlan v1
-- UserAuthorityContractImplementationPreflight v1
-- UserAuthorityContractImplementation v1
-- UserAuthorityContractCommitGate v1
-- UserAuthorityContractStateRecord v1
-- Post-UserAuthorityContract Spine Audit v1
+- ZakFinalAuthorityContractPlan v1
+- ZakFinalAuthorityContractPreflight v1
+- ZakFinalAuthorityContractImplementationPlan v1
+- ZakFinalAuthorityContractImplementationPreflight v1
+- ZakFinalAuthorityContractImplementation v1
+- ZakFinalAuthorityContractCommitGate v1
+- ZakFinalAuthorityContractStateRecord v1
+- Post-ZakFinalAuthorityContract Spine Audit v1
 - FileMoveAuthorityDecision v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\file_move_authority_preflight_v1_20260428_163107.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\file_move_authority_preflight_v1_summary_20260428_163107.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\user_authority_contract_plan_v1_name_correction_20260428_165904.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\user_authority_contract_plan_v1_name_correction_summary_20260428_165904.txt
 
 continuity_sync_message: continuity sync pending
