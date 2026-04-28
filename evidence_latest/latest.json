@@ -1,24 +1,22 @@
 {
-  "schema": "nodex.evidence_rewrite_authority.post_grant_spine_audit.v1",
+  "schema": "nodex.evidence_deletion_authority.plan.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T11:22:03.2738309-07:00",
+  "createdAt": "2026-04-28T11:26:11.6431316-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "Post-EvidenceRewriteAuthorityGrant Spine Audit v1",
+  "seam": "EvidenceDeletionAuthorityPlan v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorPostEvidenceRewriteAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_rewrite_authority_grant_spine_audit_v1_20260428_112201.json",
   "priorEvidenceRewriteAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json",
-  "priorEvidenceRewriteAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_decision_v1_20260428_111549.json",
-  "priorEvidenceRewriteAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_preflight_v1_20260428_110349.json",
-  "priorEvidenceRewriteAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_plan_v1_20260428_102205.json",
   "priorSourceMutationAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\source_mutation_authority_state_record_v1_20260428_101553.json",
   "priorDeepResearchAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\deep_research_authority_state_record_v1_20260428_000653.json",
   "priorExternalReviewAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_state_record_v1_20260427_233928.json",
@@ -26,8 +24,8 @@
   "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
   "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "auditOnly": true,
-  "decision": "post_evidence_rewrite_authority_grant_spine_audit_complete",
+  "planOnly": true,
+  "decision": "evidence_deletion_authority_preflight_planned",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -55,22 +53,19 @@
   "sourceMutationAllowedNow": true,
   "sourceMutationAuthorityStateRecorded": true,
   "evidenceRewriteAuthorityGranted": true,
-  "evidenceRewriteAuthorityScope": "evidence_rewrite_authority_only",
   "evidenceRewriteAllowedNow": true,
   "evidenceRewriteAuthorityStateRecorded": true,
   "evidenceDeletionAuthorityPlanAllowedNow": true,
+  "evidenceDeletionAuthorityPreflightAllowedNow": true,
+  "evidenceDeletionAuthorityDecisionAllowedNow": false,
+  "evidenceDeletionAuthorityGranted": false,
   "evidenceDeletionAllowedNow": false,
   "repoDeletionAllowedNow": false,
   "deletionAllowedNow": false,
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "auditFindings": {
-    "highFindings": 0,
-    "mediumFindings": 0,
-    "blockingFindings": 0
-  },
-  "nextAllowedSeam": "EvidenceDeletionAuthorityPlan v1",
+  "nextAllowedSeam": "EvidenceDeletionAuthorityPreflight v1",
   "plannedFollowingSeams": [
     "EvidenceDeletionAuthorityPreflight v1",
     "EvidenceDeletionAuthorityDecision v1",
@@ -78,10 +73,8 @@
     "Post-EvidenceDeletionAuthorityGrant Spine Audit v1"
   ],
   "validation": {
+    "postEvidenceRewriteAuthorityGrantSpineAuditVerified": true,
     "evidenceRewriteAuthorityStateRecordVerified": true,
-    "evidenceRewriteAuthorityDecisionVerified": true,
-    "evidenceRewriteAuthorityPreflightVerified": true,
-    "evidenceRewriteAuthorityPlanVerified": true,
     "sourceMutationAuthorityStateRecordVerified": true,
     "deepResearchAuthorityStateRecordVerified": true,
     "externalReviewAuthorityStateRecordVerified": true,
@@ -91,14 +84,11 @@
     "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preAuditWorkingTreeClean": true,
+    "prePlanWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postAuditWorkingTreeClean": true,
-    "evidenceRewriteAuthorityGranted": true,
-    "evidenceRewriteAuthorityStateRecorded": true,
-    "evidenceRewriteAuthorityScope": "evidence_rewrite_authority_only",
-    "evidenceRewriteAllowedNow": true,
-    "evidenceDeletionAuthorityPlanAllowedNow": true,
+    "postPlanWorkingTreeClean": true,
+    "evidenceDeletionAuthorityPreflightAllowedNow": true,
+    "evidenceDeletionAuthorityGranted": false,
     "evidenceDeletionAllowedNow": false,
     "repoDeletion": false,
     "deletion": false,
@@ -117,9 +107,9 @@
       }
     },
     {
-      "name": "pre-audit working tree clean",
+      "name": "pre-plan working tree clean",
       "pass": true,
-      "reason": "Post-EvidenceRewriteAuthorityGrant Spine Audit v1 must start with clean working tree",
+      "reason": "EvidenceDeletionAuthorityPlan v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -127,10 +117,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match Post-EvidenceRewriteAuthorityGrant Spine Audit baseline",
+      "reason": "HEAD must match EvidenceDeletionAuthorityPlan baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "post-evidence rewrite authority grant spine audit JSON exists",
+      "pass": true,
+      "reason": "missing post_evidence_rewrite_authority_grant_spine_audit_v1_*.json evidence",
+      "data": {
+        "pattern": "post_evidence_rewrite_authority_grant_spine_audit_v1_*.json"
       }
     },
     {
@@ -139,30 +137,6 @@
       "reason": "missing evidence_rewrite_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "evidence_rewrite_authority_state_record_v1_*.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority decision JSON exists",
-      "pass": true,
-      "reason": "missing evidence_rewrite_authority_decision_v1_*.json evidence",
-      "data": {
-        "pattern": "evidence_rewrite_authority_decision_v1_*.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority preflight JSON exists",
-      "pass": true,
-      "reason": "missing evidence_rewrite_authority_preflight_v1_*.json evidence",
-      "data": {
-        "pattern": "evidence_rewrite_authority_preflight_v1_*.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority plan JSON exists",
-      "pass": true,
-      "reason": "missing evidence_rewrite_authority_plan_v1_*.json evidence",
-      "data": {
-        "pattern": "evidence_rewrite_authority_plan_v1_*.json"
       }
     },
     {
@@ -222,6 +196,22 @@
       }
     },
     {
+      "name": "post-evidence rewrite authority grant spine audit path present",
+      "pass": true,
+      "reason": "post-evidence rewrite authority grant spine audit path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_rewrite_authority_grant_spine_audit_v1_20260428_112201.json"
+      }
+    },
+    {
+      "name": "post-evidence rewrite authority grant spine audit file exists",
+      "pass": true,
+      "reason": "post-evidence rewrite authority grant spine audit file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_rewrite_authority_grant_spine_audit_v1_20260428_112201.json"
+      }
+    },
+    {
       "name": "evidence rewrite authority state record path present",
       "pass": true,
       "reason": "evidence rewrite authority state record path must be present",
@@ -235,54 +225,6 @@
       "reason": "evidence rewrite authority state record file must exist",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority decision path present",
-      "pass": true,
-      "reason": "evidence rewrite authority decision path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_decision_v1_20260428_111549.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority decision file exists",
-      "pass": true,
-      "reason": "evidence rewrite authority decision file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_decision_v1_20260428_111549.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority preflight path present",
-      "pass": true,
-      "reason": "evidence rewrite authority preflight path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_preflight_v1_20260428_110349.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority preflight file exists",
-      "pass": true,
-      "reason": "evidence rewrite authority preflight file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_preflight_v1_20260428_110349.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority plan path present",
-      "pass": true,
-      "reason": "evidence rewrite authority plan path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_plan_v1_20260428_102205.json"
-      }
-    },
-    {
-      "name": "evidence rewrite authority plan file exists",
-      "pass": true,
-      "reason": "evidence rewrite authority plan file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_plan_v1_20260428_102205.json"
       }
     },
     {
@@ -398,19 +340,99 @@
       }
     },
     {
+      "name": "rewrite audit status pass",
+      "pass": true,
+      "reason": "post-evidence rewrite authority grant spine audit must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_rewrite_authority_grant_spine_audit_v1_20260428_112201.json"
+      }
+    },
+    {
+      "name": "rewrite audit decision exact",
+      "pass": true,
+      "reason": "post-evidence rewrite authority grant spine audit decision must be exact",
+      "data": {
+        "decision": "post_evidence_rewrite_authority_grant_spine_audit_complete"
+      }
+    },
+    {
+      "name": "rewrite audit evidenceDeletionAuthorityPlanAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit evidenceDeletionAuthorityPlanAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "rewrite audit evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "rewrite audit repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "rewrite audit deletionAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "rewrite audit fileMoveAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "rewrite audit commitAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "rewrite audit stagingAllowedNow",
+      "pass": true,
+      "reason": "rewrite audit stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "rewrite audit routes to evidence deletion plan",
+      "pass": true,
+      "reason": "post-evidence rewrite authority audit must route to EvidenceDeletionAuthorityPlan v1",
+      "data": {
+        "nextAllowedSeam": "EvidenceDeletionAuthorityPlan v1"
+      }
+    },
+    {
+      "name": "rewrite audit blocking findings zero",
+      "pass": true,
+      "reason": "post-evidence rewrite authority audit blocking findings must be zero",
+      "data": {
+        "blockingFindings": 0
+      }
+    },
+    {
       "name": "rewrite state status pass",
       "pass": true,
       "reason": "evidence rewrite authority state record must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_state_record_v1_20260428_111849.json"
-      }
-    },
-    {
-      "name": "rewrite state decision exact",
-      "pass": true,
-      "reason": "evidence rewrite authority state record decision must be exact",
-      "data": {
-        "decision": "evidence_rewrite_authority_state_recorded"
       }
     },
     {
@@ -435,110 +457,6 @@
       "reason": "rewrite state evidenceRewriteAuthorityStateRecorded must be true",
       "data": {
         "actual": true
-      }
-    },
-    {
-      "name": "rewrite state scope exact",
-      "pass": true,
-      "reason": "evidence rewrite authority scope must be exact",
-      "data": {
-        "actual": "evidence_rewrite_authority_only"
-      }
-    },
-    {
-      "name": "rewrite state evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "rewrite state evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "rewrite state repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "rewrite state repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "rewrite state deletionAllowedNow",
-      "pass": true,
-      "reason": "rewrite state deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "rewrite state fileMoveAllowedNow",
-      "pass": true,
-      "reason": "rewrite state fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "rewrite state commitAllowedNow",
-      "pass": true,
-      "reason": "rewrite state commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "rewrite state stagingAllowedNow",
-      "pass": true,
-      "reason": "rewrite state stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "rewrite state routes to audit",
-      "pass": true,
-      "reason": "rewrite state must route to audit",
-      "data": {
-        "nextAllowedSeam": "Post-EvidenceRewriteAuthorityGrant Spine Audit v1"
-      }
-    },
-    {
-      "name": "rewrite decision status pass",
-      "pass": true,
-      "reason": "evidence rewrite authority decision must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_decision_v1_20260428_111549.json"
-      }
-    },
-    {
-      "name": "rewrite decision evidenceRewriteAuthorityGranted",
-      "pass": true,
-      "reason": "rewrite decision evidenceRewriteAuthorityGranted must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "rewrite decision evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "rewrite decision evidenceRewriteAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "rewrite preflight status pass",
-      "pass": true,
-      "reason": "evidence rewrite authority preflight must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_preflight_v1_20260428_110349.json"
-      }
-    },
-    {
-      "name": "rewrite plan status pass",
-      "pass": true,
-      "reason": "evidence rewrite authority plan must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_rewrite_authority_plan_v1_20260428_102205.json"
       }
     },
     {
@@ -710,17 +628,17 @@
       }
     },
     {
-      "name": "full harness passed during audit",
+      "name": "full harness passed during plan",
       "pass": true,
-      "reason": "node tests/run.js must pass during Post-EvidenceRewriteAuthorityGrant Spine Audit v1",
+      "reason": "node tests/run.js must pass during EvidenceDeletionAuthorityPlan v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-audit working tree clean",
+      "name": "post-plan working tree clean",
       "pass": true,
-      "reason": "Post-EvidenceRewriteAuthorityGrant Spine Audit v1 must leave working tree clean",
+      "reason": "EvidenceDeletionAuthorityPlan v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -749,7 +667,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS AUDIT",
+      "label": "FULL HARNESS PLAN",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
