@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T23:31:18.4452814-07:00
+Generated: 2026-04-27T23:37:08.8666497-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-ExternalReviewAuthorityPreflight v1
+ExternalReviewAuthorityDecision v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ ExternalReviewAuthorityPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: external_review_authority_decision_ready
-next_allowed_seam: ExternalReviewAuthorityDecision v1
+decision: external_review_authority_granted
+next_allowed_seam: ExternalReviewAuthorityStateRecord v1
 ``
 
 ## Current Open Seam
 
 ``text
-ExternalReviewAuthorityDecision v1
+ExternalReviewAuthorityStateRecord v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-ExternalReviewAuthorityDecision v1
+ExternalReviewAuthorityStateRecord v1
 ``
 
-Do not treat ExternalReviewAuthorityDecision v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat ExternalReviewAuthorityStateRecord v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -83,10 +83,10 @@ Do not treat ExternalReviewAuthorityDecision v1 as passed unless terminal/eviden
 - AgentHandoffRunner runtime wiring authority
 - model-output authority
 - proof-claim promotion authority
+- external review authority
 
 ## Currently Not Granted After Latest Completed Seam
 
-- external review authority
 - Deep Research authority
 - source mutation
 - evidence rewrite
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond ExternalReviewAuthorityDecision v1.
+Do not generate beyond ExternalReviewAuthorityStateRecord v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
