@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T10:18:51.7317232-07:00
+Generated: 2026-04-28T10:22:07.2972450-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-Post-SourceMutationAuthorityGrant Spine Audit v1
+EvidenceRewriteAuthorityPlan v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ Post-SourceMutationAuthorityGrant Spine Audit v1
 ``text
 status: pass
 continuity_sync: pass
-decision: post_source_mutation_authority_grant_spine_audit_complete
-next_allowed_seam: EvidenceRewriteAuthorityPlan v1
+decision: evidence_rewrite_authority_preflight_planned
+next_allowed_seam: EvidenceRewriteAuthorityPreflight v1
 ``
 
 ## Current Open Seam
 
 ``text
-EvidenceRewriteAuthorityPlan v1
+EvidenceRewriteAuthorityPreflight v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-EvidenceRewriteAuthorityPlan v1
+EvidenceRewriteAuthorityPreflight v1
 ``
 
-Do not treat EvidenceRewriteAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat EvidenceRewriteAuthorityPreflight v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -89,6 +89,7 @@ Do not treat EvidenceRewriteAuthorityPlan v1 as passed unless terminal/evidence 
 
 ## Currently Not Granted After Latest Completed Seam
 
+- evidence rewrite authority
 - evidence rewrite
 - evidence deletion
 - repo deletion
@@ -113,6 +114,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond EvidenceRewriteAuthorityPlan v1.
+Do not generate beyond EvidenceRewriteAuthorityPreflight v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
