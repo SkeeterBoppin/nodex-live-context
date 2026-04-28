@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T10:22:07.2972450-07:00
+Generated: 2026-04-28T11:03:51.1529381-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-EvidenceRewriteAuthorityPlan v1
+EvidenceRewriteAuthorityPreflight v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ EvidenceRewriteAuthorityPlan v1
 ``text
 status: pass
 continuity_sync: pass
-decision: evidence_rewrite_authority_preflight_planned
-next_allowed_seam: EvidenceRewriteAuthorityPreflight v1
+decision: evidence_rewrite_authority_decision_ready
+next_allowed_seam: EvidenceRewriteAuthorityDecision v1
 ``
 
 ## Current Open Seam
 
 ``text
-EvidenceRewriteAuthorityPreflight v1
+EvidenceRewriteAuthorityDecision v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-EvidenceRewriteAuthorityPreflight v1
+EvidenceRewriteAuthorityDecision v1
 ``
 
-Do not treat EvidenceRewriteAuthorityPreflight v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat EvidenceRewriteAuthorityDecision v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -114,6 +114,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond EvidenceRewriteAuthorityPreflight v1.
+Do not generate beyond EvidenceRewriteAuthorityDecision v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
