@@ -1,10 +1,10 @@
-﻿DEEP RESEARCH AUTHORITY DECISION V1
+﻿DEEP RESEARCH AUTHORITY STATE RECORD V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-decision_only: true
-decision: deep_research_authority_granted
+state_record_only: true
+decision: deep_research_authority_state_recorded
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -28,10 +28,10 @@ proof_claim_promotion_authority_state_recorded: true
 external_review_authority_granted: true
 external_review_authority_state_recorded: true
 
-deep_research_authority_decision_applied: true
 deep_research_authority_granted: true
 deep_research_authority_scope: deep_research_authority_only
-deep_research_authority_state_record_allowed_now: true
+deep_research_authority_state_recorded: true
+deep_research_authority_decision_applied: true
 
 source_mutation_allowed_now: false
 evidence_rewrite_allowed_now: false
@@ -42,12 +42,12 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: DeepResearchAuthorityStateRecord v1
+next_allowed_seam: Post-DeepResearchAuthorityGrant Spine Audit v1
 
 planned_following_seams:
-- Post-DeepResearchAuthorityGrant Spine Audit v1
+- SourceMutationAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_decision_v1_20260428_000347.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_decision_v1_summary_20260428_000347.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_state_record_v1_20260428_000653.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\deep_research_authority_state_record_v1_summary_20260428_000653.txt
 
 continuity_sync_message: continuity sync pending
