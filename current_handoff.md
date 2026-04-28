@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T00:25:12.8093073-07:00
+Generated: 2026-04-28T09:37:30.6765041-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-SourceMutationAuthorityPreflight v1
+SourceMutationAuthorityDecision v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ SourceMutationAuthorityPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: source_mutation_authority_decision_ready
-next_allowed_seam: SourceMutationAuthorityDecision v1
+decision: source_mutation_authority_granted
+next_allowed_seam: SourceMutationAuthorityStateRecord v1
 ``
 
 ## Current Open Seam
 
 ``text
-SourceMutationAuthorityDecision v1
+SourceMutationAuthorityStateRecord v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-SourceMutationAuthorityDecision v1
+SourceMutationAuthorityStateRecord v1
 ``
 
-Do not treat SourceMutationAuthorityDecision v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat SourceMutationAuthorityStateRecord v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -85,11 +85,10 @@ Do not treat SourceMutationAuthorityDecision v1 as passed unless terminal/eviden
 - proof-claim promotion authority
 - external review authority
 - Deep Research authority
+- source mutation authority
 
 ## Currently Not Granted After Latest Completed Seam
 
-- source mutation authority
-- source mutation
 - evidence rewrite
 - evidence deletion
 - repo deletion
@@ -114,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond SourceMutationAuthorityDecision v1.
+Do not generate beyond SourceMutationAuthorityStateRecord v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
