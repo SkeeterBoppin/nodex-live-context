@@ -1,12 +1,12 @@
-﻿GENERAL DELETION AUTHORITY STATE RECORD V1
+﻿POST-GENERAL DELETION AUTHORITY GRANT SPINE AUDIT V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-state_record_only: true
-decision: general_deletion_authority_state_recorded
+audit_only: true
+decision: post_general_deletion_authority_grant_spine_audit_complete
 
-claim_structure_mode: narrow_deterministic_evidence_scoped
+claim_structure_mode_verified: narrow_deterministic_evidence_scoped
 
 repo_deletion_authority_granted: true
 repo_deletion_authority_scope: repo_deletion_authority_only
@@ -17,43 +17,27 @@ general_deletion_authority_granted: true
 general_deletion_authority_scope: general_deletion_authority_only
 deletion_allowed_now: true
 general_deletion_authority_state_recorded: true
-general_deletion_authority_decision_applied: true
 
+file_move_authority_plan_allowed_now: true
+file_move_authority_granted: false
 file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-general_deletion_authority_claim:
-- claim: general_deletion_authority_granted
-- value: true
-- scope: general_deletion_authority_only
-- validation_mode:
-  - general_deletion_authority_preflight_passed
-  - allowed_roots_verified
-  - denied_system_paths_verified
-  - destructive_operation_tokens_verified
-  - exact_scope_classification_verified
-  - no_generated_code_execution_escape_verified
-  - no_network_download_execution_verified
-  - no_hidden_persistence_verified
-  - no_privilege_escalation_verified
-- limits:
-  - does_not_grant_file_move
-  - does_not_grant_commit
-  - does_not_grant_staging
-  - does_not_execute_deletion
-  - does_not_remove_manual_packet_execution_requirement
+audit_findings:
+- high_findings: 0
+- medium_findings: 0
+- blocking_findings: 0
 
-zak_final_authority_claim_structure_preserved: true
-master_goal_not_redefined_claim_structure_preserved: true
-build_groundwork_source_grounded: true
-
-next_allowed_seam: Post-GeneralDeletionAuthorityGrant Spine Audit v1
+next_allowed_seam: FileMoveAuthorityPlan v1
 
 planned_following_seams:
-- FileMoveAuthorityPlan v1
+- FileMoveAuthorityPreflight v1
+- FileMoveAuthorityDecision v1
+- FileMoveAuthorityStateRecord v1
+- Post-FileMoveAuthorityGrant Spine Audit v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\general_deletion_authority_state_record_v1_20260428_143006.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\general_deletion_authority_state_record_v1_summary_20260428_143006.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_general_deletion_authority_grant_spine_audit_v1_20260428_143627.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\post_general_deletion_authority_grant_spine_audit_v1_summary_20260428_143627.txt
 
 continuity_sync_message: continuity sync pending

@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T14:30:08.0790854-07:00
+Generated: 2026-04-28T14:36:28.5924000-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-GeneralDeletionAuthorityStateRecord v1
+Post-GeneralDeletionAuthorityGrant Spine Audit v1
 ``
 
 ## Latest Result
@@ -36,15 +36,15 @@ GeneralDeletionAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
-decision: general_deletion_authority_state_recorded
-claim_structure_mode: narrow_deterministic_evidence_scoped
-next_allowed_seam: Post-GeneralDeletionAuthorityGrant Spine Audit v1
+decision: post_general_deletion_authority_grant_spine_audit_complete
+claim_structure_mode_verified: narrow_deterministic_evidence_scoped
+next_allowed_seam: FileMoveAuthorityPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-Post-GeneralDeletionAuthorityGrant Spine Audit v1
+FileMoveAuthorityPlan v1
 ``
 
 ## Current Packet
@@ -87,6 +87,7 @@ All preservation or verification claims must be narrower, deterministic, evidenc
 
 ## Currently Not Granted After Latest Completed Seam
 
+- file move authority
 - file move
 - commit
 - staging
