@@ -1,29 +1,29 @@
 {
-  "schema": "nodex.external_review_authority.decision.v1",
+  "schema": "nodex.external_review_authority.state_record.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-27T23:37:08.7381093-07:00",
+  "createdAt": "2026-04-27T23:39:30.1885258-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "ExternalReviewAuthorityDecision v1",
+  "seam": "ExternalReviewAuthorityStateRecord v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorExternalReviewAuthorityDecision": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_decision_v1_20260427_233707.json",
   "priorExternalReviewAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_preflight_v1_20260427_233116.json",
   "priorExternalReviewAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json",
-  "priorPostProofClaimPromotionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_proof_claim_promotion_authority_grant_spine_audit_v1_20260427_232332.json",
   "priorProofClaimPromotionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\proof_claim_promotion_authority_state_record_v1_20260427_232037.json",
   "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
   "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "decisionOnly": true,
-  "decision": "external_review_authority_granted",
+  "stateRecordOnly": true,
+  "decision": "external_review_authority_state_recorded",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -43,10 +43,10 @@
   "modelOutputAuthorityStateRecorded": true,
   "proofClaimPromotionAuthorityGranted": true,
   "proofClaimPromotionAuthorityStateRecorded": true,
-  "externalReviewAuthorityDecisionApplied": true,
   "externalReviewAuthorityGranted": true,
   "externalReviewAuthorityScope": "external_review_authority_only",
-  "externalReviewAuthorityStateRecordAllowedNow": true,
+  "externalReviewAuthorityStateRecorded": true,
+  "externalReviewAuthorityDecisionApplied": true,
   "deepResearchAuthorityGranted": false,
   "sourceMutationAllowedNow": false,
   "evidenceRewriteAllowedNow": false,
@@ -56,36 +56,25 @@
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "ExternalReviewAuthorityStateRecord v1",
+  "nextAllowedSeam": "Post-ExternalReviewAuthorityGrant Spine Audit v1",
   "plannedFollowingSeams": [
-    "Post-ExternalReviewAuthorityGrant Spine Audit v1",
     "DeepResearchAuthorityPlan v1"
   ],
-  "explicitNonGrants": [
-    "Deep Research authority",
-    "source mutation",
-    "evidence rewrite",
-    "evidence deletion",
-    "repo deletion",
-    "deletion",
-    "file move",
-    "staging",
-    "commit authority outside explicit commit-gate seams"
-  ],
   "validation": {
+    "decisionVerified": true,
     "preflightVerified": true,
     "planVerified": true,
-    "postProofClaimPromotionAuthorityGrantSpineAuditVerified": true,
     "proofClaimPromotionAuthorityStateRecordVerified": true,
     "modelOutputAuthorityStateRecordVerified": true,
     "agentHandoffRuntimeWiringStateRecordVerified": true,
     "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preDecisionWorkingTreeClean": true,
+    "preStateRecordWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postDecisionWorkingTreeClean": true,
+    "postStateRecordWorkingTreeClean": true,
     "externalReviewAuthorityGranted": true,
+    "externalReviewAuthorityStateRecorded": true,
     "externalReviewAuthorityScope": "external_review_authority_only",
     "deepResearchAuthorityGranted": false,
     "sourceMutation": false,
@@ -108,9 +97,9 @@
       }
     },
     {
-      "name": "pre-decision working tree clean",
+      "name": "pre-state-record working tree clean",
       "pass": true,
-      "reason": "ExternalReviewAuthorityDecision v1 must start with clean working tree",
+      "reason": "ExternalReviewAuthorityStateRecord v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -118,10 +107,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match ExternalReviewAuthorityDecision baseline",
+      "reason": "HEAD must match ExternalReviewAuthorityStateRecord baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "external review authority decision JSON exists",
+      "pass": true,
+      "reason": "missing external_review_authority_decision_v1_*.json evidence",
+      "data": {
+        "pattern": "external_review_authority_decision_v1_*.json"
       }
     },
     {
@@ -138,14 +135,6 @@
       "reason": "missing external_review_authority_plan_v1_*.json evidence",
       "data": {
         "pattern": "external_review_authority_plan_v1_*.json"
-      }
-    },
-    {
-      "name": "post-proof claim promotion authority grant spine audit JSON exists",
-      "pass": true,
-      "reason": "missing post_proof_claim_promotion_authority_grant_spine_audit_v1_*.json evidence",
-      "data": {
-        "pattern": "post_proof_claim_promotion_authority_grant_spine_audit_v1_*.json"
       }
     },
     {
@@ -181,6 +170,22 @@
       }
     },
     {
+      "name": "external review authority decision path present",
+      "pass": true,
+      "reason": "external review authority decision path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_decision_v1_20260427_233707.json"
+      }
+    },
+    {
+      "name": "external review authority decision file exists",
+      "pass": true,
+      "reason": "external review authority decision file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_decision_v1_20260427_233707.json"
+      }
+    },
+    {
       "name": "external review authority preflight path present",
       "pass": true,
       "reason": "external review authority preflight path must be present",
@@ -210,22 +215,6 @@
       "reason": "external review authority plan file must exist",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json"
-      }
-    },
-    {
-      "name": "post-proof claim promotion authority grant spine audit path present",
-      "pass": true,
-      "reason": "post-proof claim promotion authority grant spine audit path must be present",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_proof_claim_promotion_authority_grant_spine_audit_v1_20260427_232332.json"
-      }
-    },
-    {
-      "name": "post-proof claim promotion authority grant spine audit file exists",
-      "pass": true,
-      "reason": "post-proof claim promotion authority grant spine audit file must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_proof_claim_promotion_authority_grant_spine_audit_v1_20260427_232332.json"
       }
     },
     {
@@ -293,6 +282,134 @@
       }
     },
     {
+      "name": "decision status pass",
+      "pass": true,
+      "reason": "external review authority decision must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_decision_v1_20260427_233707.json"
+      }
+    },
+    {
+      "name": "decision exact",
+      "pass": true,
+      "reason": "external review authority decision must grant authority",
+      "data": {
+        "decision": "external_review_authority_granted"
+      }
+    },
+    {
+      "name": "decision externalReviewAuthorityDecisionApplied",
+      "pass": true,
+      "reason": "decision externalReviewAuthorityDecisionApplied must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision externalReviewAuthorityGranted",
+      "pass": true,
+      "reason": "decision externalReviewAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision scope exact",
+      "pass": true,
+      "reason": "external review authority scope must be exact",
+      "data": {
+        "actual": "external_review_authority_only"
+      }
+    },
+    {
+      "name": "decision externalReviewAuthorityStateRecordAllowedNow",
+      "pass": true,
+      "reason": "decision externalReviewAuthorityStateRecordAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "decision deepResearchAuthorityGranted",
+      "pass": true,
+      "reason": "decision deepResearchAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision sourceMutationAllowedNow",
+      "pass": true,
+      "reason": "decision sourceMutationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision evidenceRewriteAllowedNow",
+      "pass": true,
+      "reason": "decision evidenceRewriteAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision evidenceDeletionAllowedNow",
+      "pass": true,
+      "reason": "decision evidenceDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision repoDeletionAllowedNow",
+      "pass": true,
+      "reason": "decision repoDeletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision deletionAllowedNow",
+      "pass": true,
+      "reason": "decision deletionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision fileMoveAllowedNow",
+      "pass": true,
+      "reason": "decision fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision commitAllowedNow",
+      "pass": true,
+      "reason": "decision commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision stagingAllowedNow",
+      "pass": true,
+      "reason": "decision stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "decision routes to state record",
+      "pass": true,
+      "reason": "decision must route to state record",
+      "data": {
+        "nextAllowedSeam": "ExternalReviewAuthorityStateRecord v1"
+      }
+    },
+    {
       "name": "preflight status pass",
       "pass": true,
       "reason": "external review authority preflight must be pass",
@@ -303,105 +420,9 @@
     {
       "name": "preflight decision exact",
       "pass": true,
-      "reason": "external review authority preflight must be decision ready",
+      "reason": "preflight must be decision ready",
       "data": {
         "decision": "external_review_authority_decision_ready"
-      }
-    },
-    {
-      "name": "preflight externalReviewAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "preflight externalReviewAuthorityDecisionAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "preflight externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "preflight externalReviewAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "preflight deepResearchAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "preflight sourceMutationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight evidenceRewriteAllowedNow",
-      "pass": true,
-      "reason": "preflight evidenceRewriteAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight evidenceDeletionAllowedNow",
-      "pass": true,
-      "reason": "preflight evidenceDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight repoDeletionAllowedNow",
-      "pass": true,
-      "reason": "preflight repoDeletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight deletionAllowedNow",
-      "pass": true,
-      "reason": "preflight deletionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight fileMoveAllowedNow",
-      "pass": true,
-      "reason": "preflight fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight commitAllowedNow",
-      "pass": true,
-      "reason": "preflight commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight stagingAllowedNow",
-      "pass": true,
-      "reason": "preflight stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "preflight routes to decision",
-      "pass": true,
-      "reason": "preflight must route to decision",
-      "data": {
-        "nextAllowedSeam": "ExternalReviewAuthorityDecision v1"
       }
     },
     {
@@ -410,54 +431,6 @@
       "reason": "external review authority plan must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\external_review_authority_plan_v1_20260427_232755.json"
-      }
-    },
-    {
-      "name": "plan externalReviewAuthorityPreflightAllowedNow",
-      "pass": true,
-      "reason": "plan externalReviewAuthorityPreflightAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "plan externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "plan externalReviewAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit status pass",
-      "pass": true,
-      "reason": "post-proof claim promotion authority grant spine audit must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_proof_claim_promotion_authority_grant_spine_audit_v1_20260427_232332.json"
-      }
-    },
-    {
-      "name": "proof audit externalReviewAuthorityPlanAllowedNow",
-      "pass": true,
-      "reason": "proof audit externalReviewAuthorityPlanAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "proof audit externalReviewAuthorityGranted",
-      "pass": true,
-      "reason": "proof audit externalReviewAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "proof audit deepResearchAuthorityGranted",
-      "pass": true,
-      "reason": "proof audit deepResearchAuthorityGranted must be false",
-      "data": {
-        "actual": false
       }
     },
     {
@@ -472,6 +445,14 @@
       "name": "proof state proofClaimPromotionAuthorityGranted",
       "pass": true,
       "reason": "proof state proofClaimPromotionAuthorityGranted must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "proof state proofClaimPromotionAuthorityStateRecorded",
+      "pass": true,
+      "reason": "proof state proofClaimPromotionAuthorityStateRecorded must be true",
       "data": {
         "actual": true
       }
@@ -573,17 +554,17 @@
       }
     },
     {
-      "name": "full harness passed during decision",
+      "name": "full harness passed during state record",
       "pass": true,
-      "reason": "node tests/run.js must pass during ExternalReviewAuthorityDecision v1",
+      "reason": "node tests/run.js must pass during ExternalReviewAuthorityStateRecord v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-decision working tree clean",
+      "name": "post-state-record working tree clean",
       "pass": true,
-      "reason": "ExternalReviewAuthorityDecision v1 must leave working tree clean",
+      "reason": "ExternalReviewAuthorityStateRecord v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -612,7 +593,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS DECISION",
+      "label": "FULL HARNESS STATE RECORD",
       "filePath": "node",
       "arguments": [
         "tests/run.js"

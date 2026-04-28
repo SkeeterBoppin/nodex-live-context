@@ -1,10 +1,10 @@
-﻿EXTERNAL REVIEW AUTHORITY DECISION V1
+﻿EXTERNAL REVIEW AUTHORITY STATE RECORD V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-decision_only: true
-decision: external_review_authority_granted
+state_record_only: true
+decision: external_review_authority_state_recorded
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -26,10 +26,10 @@ model_output_authority_state_recorded: true
 proof_claim_promotion_authority_granted: true
 proof_claim_promotion_authority_state_recorded: true
 
-external_review_authority_decision_applied: true
 external_review_authority_granted: true
 external_review_authority_scope: external_review_authority_only
-external_review_authority_state_record_allowed_now: true
+external_review_authority_state_recorded: true
+external_review_authority_decision_applied: true
 
 deep_research_authority_granted: false
 source_mutation_allowed_now: false
@@ -41,13 +41,12 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: ExternalReviewAuthorityStateRecord v1
+next_allowed_seam: Post-ExternalReviewAuthorityGrant Spine Audit v1
 
 planned_following_seams:
-- Post-ExternalReviewAuthorityGrant Spine Audit v1
 - DeepResearchAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\external_review_authority_decision_v1_20260427_233707.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\external_review_authority_decision_v1_summary_20260427_233707.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\external_review_authority_state_record_v1_20260427_233928.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\external_review_authority_state_record_v1_summary_20260427_233928.txt
 
 continuity_sync_message: continuity sync pending
