@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T12:08:49.3582367-07:00
+Generated: 2026-04-28T12:12:12.1792653-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-EvidenceDeletionAuthorityDecision v1
+EvidenceDeletionAuthorityStateRecord v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ EvidenceDeletionAuthorityDecision v1
 ``text
 status: pass
 continuity_sync: pass
-decision: evidence_deletion_authority_granted
-next_allowed_seam: EvidenceDeletionAuthorityStateRecord v1
+decision: evidence_deletion_authority_state_recorded
+next_allowed_seam: Post-EvidenceDeletionAuthorityGrant Spine Audit v1
 ``
 
 ## Current Open Seam
 
 ``text
-EvidenceDeletionAuthorityStateRecord v1
+Post-EvidenceDeletionAuthorityGrant Spine Audit v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-EvidenceDeletionAuthorityStateRecord v1
+Post-EvidenceDeletionAuthorityGrant Spine Audit v1
 ``
 
-Do not treat EvidenceDeletionAuthorityStateRecord v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat Post-EvidenceDeletionAuthorityGrant Spine Audit v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond EvidenceDeletionAuthorityStateRecord v1.
+Do not generate beyond Post-EvidenceDeletionAuthorityGrant Spine Audit v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
