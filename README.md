@@ -14,4 +14,3 @@ Read order:
 
 This repository is context only.
 Local Nodex evidence remains authority.
-packet_generation_rules.md is stable packet-generation guidance only; it is not live evidence.

@@ -1,13 +1,11 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T13:19:36.3465515-07:00
+Generated: 2026-04-28T13:39:42.4244616-07:00
 
 ## Boundary
 
 This repo is near-live continuity context only.
-
 It is NOT Nodex authority.
-It does NOT grant runtime, tool, file, process, git, permission, source mutation, staging, commit, deletion, or AgentHandoffRunner authority.
 
 ## Nodex Repo
 
@@ -38,7 +36,9 @@ RepoDeletionAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
+replacement_packet: true
 decision: repo_deletion_authority_state_recorded
+claim_structure_mode: narrow_deterministic_evidence_scoped
 next_allowed_seam: Post-RepoDeletionAuthorityGrant Spine Audit v1
 ``
 
@@ -60,15 +60,16 @@ The file below is a continuity placeholder only and must not be run as a Nodex p
 packets/current_open_packet.ps1
 ``
 
-## Expected Next Action
+## Claim Structure Rule
 
-Generate the next Nodex packet for:
+No floating semantic booleans.
+All preservation or verification claims must be narrower, deterministic, evidence-scoped, and include validation mode plus limits.
 
-``text
-Post-RepoDeletionAuthorityGrant Spine Audit v1
-``
+## Current Claim Boundaries
 
-Do not treat Post-RepoDeletionAuthorityGrant Spine Audit v1 as passed unless terminal/evidence output shows status: pass.
+- zak_final_authority_preserved is recorded as a scoped claim with validation mode and limits.
+- master_copy_design_goal_not_redefined is recorded as operator/evidence-chain scoped, not semantically proven from one file.
+- build_groundwork_preserved is recorded separately and source-file grounded.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -108,11 +109,3 @@ architecture/nodex_exact_continuity_source_v1.md
 architecture/nodex_boundary_pushing_master_architecture.md
 packets/current_open_packet.ps1
 ``
-
-## New Chat Rule
-
-Do not answer from memory.
-Do not infer from expected output.
-Do not generate beyond Post-RepoDeletionAuthorityGrant Spine Audit v1.
-Do not modify the Nodex repo.
-Do not commit or stage anything in the Nodex repo.
