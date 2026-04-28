@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T14:18:48.7712589-07:00
+Generated: 2026-04-28T14:23:05.9171670-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-GeneralDeletionAuthorityPreflight v1
+GeneralDeletionAuthorityDecision v1
 ``
 
 ## Latest Result
@@ -36,15 +36,15 @@ GeneralDeletionAuthorityPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: general_deletion_authority_decision_ready
+decision: general_deletion_authority_granted
 claim_structure_mode: narrow_deterministic_evidence_scoped
-next_allowed_seam: GeneralDeletionAuthorityDecision v1
+next_allowed_seam: GeneralDeletionAuthorityStateRecord v1
 ``
 
 ## Current Open Seam
 
 ``text
-GeneralDeletionAuthorityDecision v1
+GeneralDeletionAuthorityStateRecord v1
 ``
 
 ## Current Packet
@@ -83,11 +83,10 @@ All preservation or verification claims must be narrower, deterministic, evidenc
 - evidence rewrite authority
 - evidence deletion authority
 - repo deletion authority
+- general deletion authority
 
 ## Currently Not Granted After Latest Completed Seam
 
-- general deletion authority
-- deletion outside repo-deletion-specific authority
 - file move
 - commit
 - staging
