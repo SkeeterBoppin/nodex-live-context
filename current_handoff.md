@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-27T23:20:38.6156668-07:00
+Generated: 2026-04-27T23:23:33.5514642-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-ProofClaimPromotionAuthorityStateRecord v1
+Post-ProofClaimPromotionAuthorityGrant Spine Audit v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ ProofClaimPromotionAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
-decision: proof_claim_promotion_authority_state_recorded
-next_allowed_seam: Post-ProofClaimPromotionAuthorityGrant Spine Audit v1
+decision: post_proof_claim_promotion_authority_grant_spine_audit_complete
+next_allowed_seam: ExternalReviewAuthorityPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-Post-ProofClaimPromotionAuthorityGrant Spine Audit v1
+ExternalReviewAuthorityPlan v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-Post-ProofClaimPromotionAuthorityGrant Spine Audit v1
+ExternalReviewAuthorityPlan v1
 ``
 
-Do not treat Post-ProofClaimPromotionAuthorityGrant Spine Audit v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat ExternalReviewAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond Post-ProofClaimPromotionAuthorityGrant Spine Audit v1.
+Do not generate beyond ExternalReviewAuthorityPlan v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
