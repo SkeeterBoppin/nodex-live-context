@@ -1,10 +1,10 @@
-﻿REPO DELETION AUTHORITY PREFLIGHT V1
+﻿REPO DELETION AUTHORITY DECISION V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: repo_deletion_authority_decision_ready
+decision_only: true
+decision: repo_deletion_authority_granted
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -39,42 +39,28 @@ evidence_deletion_authority_granted: true
 evidence_deletion_allowed_now: true
 evidence_deletion_authority_state_recorded: true
 
-repo_deletion_authority_decision_allowed_now: true
-repo_deletion_authority_granted: false
-repo_deletion_allowed_now: false
+repo_deletion_authority_decision_applied: true
+repo_deletion_authority_granted: true
+repo_deletion_authority_scope: repo_deletion_authority_only
+repo_deletion_allowed_now: true
+repo_deletion_authority_state_record_allowed_now: true
+
+trusted_access_boundary_verified: true
+zak_final_authority_preserved: true
+master_copy_design_goal_preserved: true
 
 deletion_allowed_now: false
 file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-trusted_access_boundary_verified:
-- name: TrustedAccessCyber
-- local_only: true
-- grants_authority: false
-- performs_security_work: false
-- required_before_repo_deletion_decision: true
-- allowed_roots_verified: true
-- denied_system_paths_verified: true
-- destructive_operation_tokens_verified: true
-- generated_code_execution_boundaries_verified: true
-- authority_specific_write_delete_scope_verified: true
-- no_privilege_escalation_verified: true
-- no_hidden_persistence_verified: true
-- no_network_download_execution_verified: true
+next_allowed_seam: RepoDeletionAuthorityStateRecord v1
 
-next_allowed_seam: RepoDeletionAuthorityDecision v1
+planned_following_seams:
+- Post-RepoDeletionAuthorityGrant Spine Audit v1
+- GeneralDeletionAuthorityPlan v1
 
-decision_constraints:
-- may grant repo deletion authority only
-- must preserve Zak as final authority
-- must preserve master-copy design goal
-- must not grant deletion outside repo-deletion-specific authority
-- must not grant file move
-- must not grant commit authority outside explicit commit-gate seams
-- must not grant staging authority
-
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_preflight_v1_20260428_131052.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_preflight_v1_summary_20260428_131052.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_decision_v1_20260428_131453.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\repo_deletion_authority_decision_v1_summary_20260428_131453.txt
 
 continuity_sync_message: continuity sync pending

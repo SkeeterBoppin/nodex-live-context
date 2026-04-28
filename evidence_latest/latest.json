@@ -1,20 +1,21 @@
 {
-  "schema": "nodex.repo_deletion_authority.preflight.v1",
+  "schema": "nodex.repo_deletion_authority.decision.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T13:10:53.4243561-07:00",
+  "createdAt": "2026-04-28T13:14:54.6426317-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "downloadsRoot": "C:\\Users\\Zak\\Downloads",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "RepoDeletionAuthorityPreflight v1",
+  "seam": "RepoDeletionAuthorityDecision v1",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorRepoDeletionAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json",
   "priorRepoDeletionAuthorityPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json",
   "priorPostEvidenceDeletionAuthorityGrantSpineAudit": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_evidence_deletion_authority_grant_spine_audit_v1_20260428_121614.json",
   "priorEvidenceDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\evidence_deletion_authority_state_record_v1_20260428_121210.json",
@@ -26,8 +27,8 @@
   "priorModelOutputAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\model_output_authority_state_record_v1_20260427_151809.json",
   "priorAgentHandoffRuntimeWiringStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\agent_handoff_runtime_wiring_state_record_v1_20260427_145020.json",
   "priorPermissionGrantAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\permission_grant_authority_state_record_v1_20260427_142021.json",
-  "preflightOnly": true,
-  "decision": "repo_deletion_authority_decision_ready",
+  "decisionOnly": true,
+  "decision": "repo_deletion_authority_granted",
   "activationAuthorityGranted": true,
   "runtimeIntegrationAuthorityGranted": true,
   "runtimeAuthorityGranted": true,
@@ -60,39 +61,31 @@
   "evidenceDeletionAuthorityGranted": true,
   "evidenceDeletionAllowedNow": true,
   "evidenceDeletionAuthorityStateRecorded": true,
-  "repoDeletionAuthorityDecisionAllowedNow": true,
-  "repoDeletionAuthorityGranted": false,
-  "repoDeletionAllowedNow": false,
+  "repoDeletionAuthorityDecisionApplied": true,
+  "repoDeletionAuthorityGranted": true,
+  "repoDeletionAuthorityScope": "repo_deletion_authority_only",
+  "repoDeletionAllowedNow": true,
+  "repoDeletionAuthorityStateRecordAllowedNow": true,
+  "trustedAccessBoundaryVerified": true,
+  "zakFinalAuthorityPreserved": true,
+  "masterCopyDesignGoalPreserved": true,
   "deletionAllowedNow": false,
   "fileMoveAllowedNow": false,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "trustedAccessCyberBoundaryVerified": {
-    "name": "TrustedAccessCyber",
-    "localOnly": true,
-    "grantsAuthority": false,
-    "performsSecurityWork": false,
-    "requiredBeforeRepoDeletionDecision": true,
-    "allowedRootsVerified": true,
-    "deniedSystemPathsVerified": true,
-    "destructiveOperationTokensVerified": true,
-    "generatedCodeExecutionBoundariesVerified": true,
-    "authoritySpecificWriteDeleteScopeVerified": true,
-    "noPrivilegeEscalationVerified": true,
-    "noHiddenPersistenceVerified": true,
-    "noNetworkDownloadExecutionVerified": true
-  },
-  "nextAllowedSeam": "RepoDeletionAuthorityDecision v1",
-  "decisionConstraints": [
-    "may grant repo deletion authority only",
-    "must preserve Zak as final authority",
-    "must preserve master-copy design goal",
-    "must not grant deletion outside repo-deletion-specific authority",
-    "must not grant file move",
-    "must not grant commit authority outside explicit commit-gate seams",
-    "must not grant staging authority"
+  "nextAllowedSeam": "RepoDeletionAuthorityStateRecord v1",
+  "plannedFollowingSeams": [
+    "Post-RepoDeletionAuthorityGrant Spine Audit v1",
+    "GeneralDeletionAuthorityPlan v1"
+  ],
+  "explicitNonGrants": [
+    "deletion outside repo-deletion-specific authority",
+    "file move",
+    "staging",
+    "commit authority outside explicit commit-gate seams"
   ],
   "validation": {
+    "preflightVerified": true,
     "planVerified": true,
     "trustedAccessCyberBoundaryVerified": true,
     "postEvidenceDeletionAuthorityGrantSpineAuditVerified": true,
@@ -107,12 +100,14 @@
     "permissionGrantAuthorityStateRecordVerified": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "preflightWorkingTreeClean": true,
+    "preDecisionWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postPreflightWorkingTreeClean": true,
-    "repoDeletionAuthorityDecisionAllowedNow": true,
-    "repoDeletionAuthorityGranted": false,
-    "repoDeletionAllowedNow": false,
+    "postDecisionWorkingTreeClean": true,
+    "repoDeletionAuthorityGranted": true,
+    "repoDeletionAuthorityScope": "repo_deletion_authority_only",
+    "repoDeletionAllowedNow": true,
+    "zakFinalAuthorityPreserved": true,
+    "masterCopyDesignGoalPreserved": true,
     "deletionOutsideRepoDeletionSpecificAuthority": false,
     "fileMove": false,
     "commit": false,
@@ -129,9 +124,9 @@
       }
     },
     {
-      "name": "preflight working tree clean",
+      "name": "pre-decision working tree clean",
       "pass": true,
-      "reason": "RepoDeletionAuthorityPreflight v1 must start with clean working tree",
+      "reason": "RepoDeletionAuthorityDecision v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -139,10 +134,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match RepoDeletionAuthorityPreflight baseline",
+      "reason": "HEAD must match RepoDeletionAuthorityDecision baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "repo deletion authority preflight JSON exists",
+      "pass": true,
+      "reason": "missing repo_deletion_authority_preflight_v1_*.json evidence",
+      "data": {
+        "pattern": "repo_deletion_authority_preflight_v1_*.json"
       }
     },
     {
@@ -231,6 +234,22 @@
       "reason": "missing permission_grant_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "permission_grant_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "repo deletion authority preflight path present",
+      "pass": true,
+      "reason": "repo deletion authority preflight path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
+      }
+    },
+    {
+      "name": "repo deletion authority preflight file exists",
+      "pass": true,
+      "reason": "repo deletion authority preflight file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
       }
     },
     {
@@ -410,181 +429,111 @@
       }
     },
     {
-      "name": "plan status pass",
+      "name": "preflight status pass",
       "pass": true,
-      "reason": "repo deletion authority plan must be pass",
+      "reason": "repo deletion authority preflight must be pass",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
       }
     },
     {
-      "name": "plan decision exact",
+      "name": "preflight decision exact",
       "pass": true,
-      "reason": "repo deletion authority plan must plan preflight",
+      "reason": "repo deletion authority preflight must be decision ready",
       "data": {
-        "decision": "repo_deletion_authority_preflight_planned"
+        "decision": "repo_deletion_authority_decision_ready"
       }
     },
     {
-      "name": "plan repoDeletionAuthorityPreflightAllowedNow",
+      "name": "preflight repoDeletionAuthorityDecisionAllowedNow",
       "pass": true,
-      "reason": "plan repoDeletionAuthorityPreflightAllowedNow must be true",
+      "reason": "preflight repoDeletionAuthorityDecisionAllowedNow must be true",
       "data": {
         "actual": true
       }
     },
     {
-      "name": "plan repoDeletionAuthorityDecisionAllowedNow",
+      "name": "preflight repoDeletionAuthorityGranted",
       "pass": true,
-      "reason": "plan repoDeletionAuthorityDecisionAllowedNow must be false",
+      "reason": "preflight repoDeletionAuthorityGranted must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan repoDeletionAuthorityGranted",
+      "name": "preflight repoDeletionAllowedNow",
       "pass": true,
-      "reason": "plan repoDeletionAuthorityGranted must be false",
+      "reason": "preflight repoDeletionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan repoDeletionAllowedNow",
+      "name": "preflight deletionAllowedNow",
       "pass": true,
-      "reason": "plan repoDeletionAllowedNow must be false",
+      "reason": "preflight deletionAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan deletionAllowedNow",
+      "name": "preflight fileMoveAllowedNow",
       "pass": true,
-      "reason": "plan deletionAllowedNow must be false",
+      "reason": "preflight fileMoveAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan fileMoveAllowedNow",
+      "name": "preflight commitAllowedNow",
       "pass": true,
-      "reason": "plan fileMoveAllowedNow must be false",
+      "reason": "preflight commitAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan commitAllowedNow",
+      "name": "preflight stagingAllowedNow",
       "pass": true,
-      "reason": "plan commitAllowedNow must be false",
+      "reason": "preflight stagingAllowedNow must be false",
       "data": {
         "actual": false
       }
     },
     {
-      "name": "plan stagingAllowedNow",
+      "name": "preflight routes to decision",
       "pass": true,
-      "reason": "plan stagingAllowedNow must be false",
+      "reason": "preflight must route to decision",
       "data": {
-        "actual": false
+        "nextAllowedSeam": "RepoDeletionAuthorityDecision v1"
       }
     },
     {
-      "name": "plan routes to preflight",
+      "name": "TrustedAccessCyber preflight verification present",
       "pass": true,
-      "reason": "repo deletion authority plan must route to preflight",
+      "reason": "TrustedAccessCyber verification must exist in preflight",
       "data": {
-        "nextAllowedSeam": "RepoDeletionAuthorityPreflight v1"
-      }
-    },
-    {
-      "name": "TrustedAccessCyber boundary present",
-      "pass": true,
-      "reason": "TrustedAccessCyber boundary must exist in plan",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_preflight_v1_20260428_131052.json"
       }
     },
     {
       "name": "TrustedAccessCyber name exact",
       "pass": true,
-      "reason": "TrustedAccessCyber boundary name must be exact",
+      "reason": "TrustedAccessCyber name must be exact",
       "data": {
         "name": "TrustedAccessCyber",
-        "boundaryType": "local_access_control_boundary",
         "localOnly": true,
         "grantsAuthority": false,
         "performsSecurityWork": false,
-        "networkActivityAllowed": false,
-        "scanningAllowed": false,
-        "credentialAccessAllowed": false,
-        "persistenceAllowed": false,
-        "privilegeEscalationAllowed": false,
-        "externalTargetInteractionAllowed": false,
         "requiredBeforeRepoDeletionDecision": true,
-        "requiredChecks": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ],
-        "deniedSystemPaths": [
-          "C:\\Windows",
-          "C:\\Program Files",
-          "C:\\Program Files (x86)",
-          "C:\\Users\\Zak\\AppData"
-        ],
-        "allowedRoots": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber type exact",
-      "pass": true,
-      "reason": "TrustedAccessCyber boundary type must be local_access_control_boundary",
-      "data": {
-        "name": "TrustedAccessCyber",
-        "boundaryType": "local_access_control_boundary",
-        "localOnly": true,
-        "grantsAuthority": false,
-        "performsSecurityWork": false,
-        "networkActivityAllowed": false,
-        "scanningAllowed": false,
-        "credentialAccessAllowed": false,
-        "persistenceAllowed": false,
-        "privilegeEscalationAllowed": false,
-        "externalTargetInteractionAllowed": false,
-        "requiredBeforeRepoDeletionDecision": true,
-        "requiredChecks": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ],
-        "deniedSystemPaths": [
-          "C:\\Windows",
-          "C:\\Program Files",
-          "C:\\Program Files (x86)",
-          "C:\\Users\\Zak\\AppData"
-        ],
-        "allowedRoots": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
-        ]
+        "allowedRootsVerified": true,
+        "deniedSystemPathsVerified": true,
+        "destructiveOperationTokensVerified": true,
+        "generatedCodeExecutionBoundariesVerified": true,
+        "authoritySpecificWriteDeleteScopeVerified": true,
+        "noPrivilegeEscalationVerified": true,
+        "noHiddenPersistenceVerified": true,
+        "noNetworkDownloadExecutionVerified": true
       }
     },
     {
@@ -612,54 +561,6 @@
       }
     },
     {
-      "name": "TrustedAccessCyber networkActivityAllowed",
-      "pass": true,
-      "reason": "TrustedAccessCyber networkActivityAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber scanningAllowed",
-      "pass": true,
-      "reason": "TrustedAccessCyber scanningAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber credentialAccessAllowed",
-      "pass": true,
-      "reason": "TrustedAccessCyber credentialAccessAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber persistenceAllowed",
-      "pass": true,
-      "reason": "TrustedAccessCyber persistenceAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber privilegeEscalationAllowed",
-      "pass": true,
-      "reason": "TrustedAccessCyber privilegeEscalationAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "TrustedAccessCyber externalTargetInteractionAllowed",
-      "pass": true,
-      "reason": "TrustedAccessCyber externalTargetInteractionAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
       "name": "TrustedAccessCyber requiredBeforeRepoDeletionDecision",
       "pass": true,
       "reason": "TrustedAccessCyber requiredBeforeRepoDeletionDecision must be true",
@@ -668,259 +569,83 @@
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks allowed_roots",
+      "name": "TrustedAccessCyber allowedRootsVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks allowed_roots must contain allowed_roots",
+      "reason": "TrustedAccessCyber allowedRootsVerified must be true",
       "data": {
-        "expected": "allowed_roots",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks denied_system_paths",
+      "name": "TrustedAccessCyber deniedSystemPathsVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks denied_system_paths must contain denied_system_paths",
+      "reason": "TrustedAccessCyber deniedSystemPathsVerified must be true",
       "data": {
-        "expected": "denied_system_paths",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks destructive_operation_tokens",
+      "name": "TrustedAccessCyber destructiveOperationTokensVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks destructive_operation_tokens must contain destructive_operation_tokens",
+      "reason": "TrustedAccessCyber destructiveOperationTokensVerified must be true",
       "data": {
-        "expected": "destructive_operation_tokens",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks generated_code_execution_boundaries",
+      "name": "TrustedAccessCyber generatedCodeExecutionBoundariesVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks generated_code_execution_boundaries must contain generated_code_execution_boundaries",
+      "reason": "TrustedAccessCyber generatedCodeExecutionBoundariesVerified must be true",
       "data": {
-        "expected": "generated_code_execution_boundaries",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks authority_specific_write_delete_scope",
+      "name": "TrustedAccessCyber authoritySpecificWriteDeleteScopeVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks authority_specific_write_delete_scope must contain authority_specific_write_delete_scope",
+      "reason": "TrustedAccessCyber authoritySpecificWriteDeleteScopeVerified must be true",
       "data": {
-        "expected": "authority_specific_write_delete_scope",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks no_privilege_escalation",
+      "name": "TrustedAccessCyber noPrivilegeEscalationVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks no_privilege_escalation must contain no_privilege_escalation",
+      "reason": "TrustedAccessCyber noPrivilegeEscalationVerified must be true",
       "data": {
-        "expected": "no_privilege_escalation",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks no_hidden_persistence",
+      "name": "TrustedAccessCyber noHiddenPersistenceVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks no_hidden_persistence must contain no_hidden_persistence",
+      "reason": "TrustedAccessCyber noHiddenPersistenceVerified must be true",
       "data": {
-        "expected": "no_hidden_persistence",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber requiredChecks no_network_download_execution",
+      "name": "TrustedAccessCyber noNetworkDownloadExecutionVerified",
       "pass": true,
-      "reason": "TrustedAccessCyber requiredChecks no_network_download_execution must contain no_network_download_execution",
+      "reason": "TrustedAccessCyber noNetworkDownloadExecutionVerified must be true",
       "data": {
-        "expected": "no_network_download_execution",
-        "actual": [
-          "allowed_roots",
-          "denied_system_paths",
-          "destructive_operation_tokens",
-          "generated_code_execution_boundaries",
-          "authority_specific_write_delete_scope",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_network_download_execution"
-        ]
+        "actual": true
       }
     },
     {
-      "name": "TrustedAccessCyber allowedRoots Nodex repo",
+      "name": "plan status pass",
       "pass": true,
-      "reason": "TrustedAccessCyber allowedRoots Nodex repo must contain C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+      "reason": "repo deletion authority plan must be pass",
       "data": {
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-        "actual": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
-        ]
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_plan_v1_20260428_130042.json"
       }
     },
     {
-      "name": "TrustedAccessCyber allowedRoots evidence",
+      "name": "plan repoDeletionAuthorityPreflightAllowedNow",
       "pass": true,
-      "reason": "TrustedAccessCyber allowedRoots evidence must contain C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
+      "reason": "plan repoDeletionAuthorityPreflightAllowedNow must be true",
       "data": {
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-        "actual": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber allowedRoots live context",
-      "pass": true,
-      "reason": "TrustedAccessCyber allowedRoots live context must contain C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-      "data": {
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-        "actual": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber allowedRoots architecture",
-      "pass": true,
-      "reason": "TrustedAccessCyber allowedRoots architecture must contain C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
-      "data": {
-        "expected": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
-        "actual": [
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-          "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber deniedSystemPaths Windows",
-      "pass": true,
-      "reason": "TrustedAccessCyber deniedSystemPaths Windows must contain C:\\Windows",
-      "data": {
-        "expected": "C:\\Windows",
-        "actual": [
-          "C:\\Windows",
-          "C:\\Program Files",
-          "C:\\Program Files (x86)",
-          "C:\\Users\\Zak\\AppData"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber deniedSystemPaths Program Files",
-      "pass": true,
-      "reason": "TrustedAccessCyber deniedSystemPaths Program Files must contain C:\\Program Files",
-      "data": {
-        "expected": "C:\\Program Files",
-        "actual": [
-          "C:\\Windows",
-          "C:\\Program Files",
-          "C:\\Program Files (x86)",
-          "C:\\Users\\Zak\\AppData"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber deniedSystemPaths Program Files x86",
-      "pass": true,
-      "reason": "TrustedAccessCyber deniedSystemPaths Program Files x86 must contain C:\\Program Files (x86)",
-      "data": {
-        "expected": "C:\\Program Files (x86)",
-        "actual": [
-          "C:\\Windows",
-          "C:\\Program Files",
-          "C:\\Program Files (x86)",
-          "C:\\Users\\Zak\\AppData"
-        ]
-      }
-    },
-    {
-      "name": "TrustedAccessCyber deniedSystemPaths AppData",
-      "pass": true,
-      "reason": "TrustedAccessCyber deniedSystemPaths AppData must contain C:\\Users\\Zak\\AppData",
-      "data": {
-        "expected": "C:\\Users\\Zak\\AppData",
-        "actual": [
-          "C:\\Windows",
-          "C:\\Program Files",
-          "C:\\Program Files (x86)",
-          "C:\\Users\\Zak\\AppData"
-        ]
+        "actual": true
       }
     },
     {
@@ -1140,17 +865,17 @@
       }
     },
     {
-      "name": "full harness passed during preflight",
+      "name": "full harness passed during decision",
       "pass": true,
-      "reason": "node tests/run.js must pass during RepoDeletionAuthorityPreflight v1",
+      "reason": "node tests/run.js must pass during RepoDeletionAuthorityDecision v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-preflight working tree clean",
+      "name": "post-decision working tree clean",
       "pass": true,
-      "reason": "RepoDeletionAuthorityPreflight v1 must leave working tree clean",
+      "reason": "RepoDeletionAuthorityDecision v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -1179,7 +904,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PREFLIGHT",
+      "label": "FULL HARNESS DECISION",
       "filePath": "node",
       "arguments": [
         "tests/run.js"

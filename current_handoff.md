@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T13:10:53.5706216-07:00
+Generated: 2026-04-28T13:14:54.7891339-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-RepoDeletionAuthorityPreflight v1
+RepoDeletionAuthorityDecision v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ RepoDeletionAuthorityPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: repo_deletion_authority_decision_ready
-next_allowed_seam: RepoDeletionAuthorityDecision v1
+decision: repo_deletion_authority_granted
+next_allowed_seam: RepoDeletionAuthorityStateRecord v1
 ``
 
 ## Current Open Seam
 
 ``text
-RepoDeletionAuthorityDecision v1
+RepoDeletionAuthorityStateRecord v1
 ``
 
 ## Current Packet
@@ -62,7 +62,7 @@ packets/current_open_packet.ps1
 
 ## TrustedAccessCyber Local Boundary
 
-TrustedAccessCyber has been verified as a local access-control boundary only.
+TrustedAccessCyber was verified as a local access-control boundary before repo deletion authority decision.
 It grants no authority and performs no network activity, scanning, credential access, persistence, privilege escalation, or external security work.
 
 ## Expected Next Action
@@ -70,10 +70,10 @@ It grants no authority and performs no network activity, scanning, credential ac
 Generate the next Nodex packet for:
 
 ``text
-RepoDeletionAuthorityDecision v1
+RepoDeletionAuthorityStateRecord v1
 ``
 
-Do not treat RepoDeletionAuthorityDecision v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat RepoDeletionAuthorityStateRecord v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -93,12 +93,11 @@ Do not treat RepoDeletionAuthorityDecision v1 as passed unless terminal/evidence
 - source mutation authority
 - evidence rewrite authority
 - evidence deletion authority
+- repo deletion authority
 
 ## Currently Not Granted After Latest Completed Seam
 
-- repo deletion authority
-- repo deletion
-- deletion outside evidence-deletion-specific authority
+- deletion outside repo-deletion-specific authority
 - file move
 - commit
 - staging
@@ -119,6 +118,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond RepoDeletionAuthorityDecision v1.
+Do not generate beyond RepoDeletionAuthorityStateRecord v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
