@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T00:06:54.7843551-07:00
+Generated: 2026-04-28T00:09:59.9235146-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-DeepResearchAuthorityStateRecord v1
+Post-DeepResearchAuthorityGrant Spine Audit v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ DeepResearchAuthorityStateRecord v1
 ``text
 status: pass
 continuity_sync: pass
-decision: deep_research_authority_state_recorded
-next_allowed_seam: Post-DeepResearchAuthorityGrant Spine Audit v1
+decision: post_deep_research_authority_grant_spine_audit_complete
+next_allowed_seam: SourceMutationAuthorityPlan v1
 ``
 
 ## Current Open Seam
 
 ``text
-Post-DeepResearchAuthorityGrant Spine Audit v1
+SourceMutationAuthorityPlan v1
 ``
 
 ## Current Packet
@@ -65,10 +65,10 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-Post-DeepResearchAuthorityGrant Spine Audit v1
+SourceMutationAuthorityPlan v1
 ``
 
-Do not treat Post-DeepResearchAuthorityGrant Spine Audit v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat SourceMutationAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
 
 ## Currently Granted After Latest Completed Seam
 
@@ -113,6 +113,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond Post-DeepResearchAuthorityGrant Spine Audit v1.
+Do not generate beyond SourceMutationAuthorityPlan v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
