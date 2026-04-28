@@ -1,6 +1,6 @@
 ﻿# NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T12:16:15.7267674-07:00
+Generated: 2026-04-28T13:00:43.8002894-07:00
 
 ## Boundary
 
@@ -30,7 +30,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-Post-EvidenceDeletionAuthorityGrant Spine Audit v1
+RepoDeletionAuthorityPlan v1
 ``
 
 ## Latest Result
@@ -38,14 +38,14 @@ Post-EvidenceDeletionAuthorityGrant Spine Audit v1
 ``text
 status: pass
 continuity_sync: pass
-decision: post_evidence_deletion_authority_grant_spine_audit_complete
-next_allowed_seam: RepoDeletionAuthorityPlan v1
+decision: repo_deletion_authority_preflight_planned
+next_allowed_seam: RepoDeletionAuthorityPreflight v1
 ``
 
 ## Current Open Seam
 
 ``text
-RepoDeletionAuthorityPlan v1
+RepoDeletionAuthorityPreflight v1
 ``
 
 ## Current Packet
@@ -65,10 +65,26 @@ packets/current_open_packet.ps1
 Generate the next Nodex packet for:
 
 ``text
-RepoDeletionAuthorityPlan v1
+RepoDeletionAuthorityPreflight v1
 ``
 
-Do not treat RepoDeletionAuthorityPlan v1 as passed unless terminal/evidence output shows status: pass.
+Do not treat RepoDeletionAuthorityPreflight v1 as passed unless terminal/evidence output shows status: pass.
+
+## TrustedAccessCyber Local Boundary
+
+TrustedAccessCyber is a local access-control boundary only.
+It does not grant authority and performs no network activity, scanning, credential access, persistence, privilege escalation, or external security work.
+
+Required checks before repo deletion authority decision:
+
+- allowed roots
+- denied system paths
+- destructive-operation tokens
+- generated-code execution boundaries
+- authority-specific write/delete scope
+- no privilege escalation
+- no hidden persistence
+- no network/download execution
 
 ## Currently Granted After Latest Completed Seam
 
@@ -91,6 +107,7 @@ Do not treat RepoDeletionAuthorityPlan v1 as passed unless terminal/evidence out
 
 ## Currently Not Granted After Latest Completed Seam
 
+- repo deletion authority
 - repo deletion
 - deletion outside evidence-deletion-specific authority
 - file move
@@ -113,6 +130,6 @@ packets/current_open_packet.ps1
 
 Do not answer from memory.
 Do not infer from expected output.
-Do not generate beyond RepoDeletionAuthorityPlan v1.
+Do not generate beyond RepoDeletionAuthorityPreflight v1.
 Do not modify the Nodex repo.
 Do not commit or stage anything in the Nodex repo.
