@@ -1,10 +1,10 @@
-﻿EVIDENCE REWRITE AUTHORITY PREFLIGHT V1
+﻿EVIDENCE REWRITE AUTHORITY DECISION V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: evidence_rewrite_authority_decision_ready
+decision_only: true
+decision: evidence_rewrite_authority_granted
 
 activation_authority_granted: true
 runtime_integration_authority_granted: true
@@ -33,9 +33,11 @@ source_mutation_authority_granted: true
 source_mutation_allowed_now: true
 source_mutation_authority_state_recorded: true
 
-evidence_rewrite_authority_decision_allowed_now: true
-evidence_rewrite_authority_granted: false
-evidence_rewrite_allowed_now: false
+evidence_rewrite_authority_decision_applied: true
+evidence_rewrite_authority_granted: true
+evidence_rewrite_authority_scope: evidence_rewrite_authority_only
+evidence_rewrite_allowed_now: true
+evidence_rewrite_authority_state_record_allowed_now: true
 
 evidence_deletion_allowed_now: false
 repo_deletion_allowed_now: false
@@ -44,18 +46,13 @@ file_move_allowed_now: false
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: EvidenceRewriteAuthorityDecision v1
+next_allowed_seam: EvidenceRewriteAuthorityStateRecord v1
 
-decision_constraints:
-- may grant evidence rewrite authority only
-- must not grant evidence deletion
-- must not grant repo deletion
-- must not grant deletion
-- must not grant file move
-- must not grant commit authority outside explicit commit-gate seams
-- must not grant staging authority
+planned_following_seams:
+- Post-EvidenceRewriteAuthorityGrant Spine Audit v1
+- EvidenceDeletionAuthorityPlan v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\evidence_rewrite_authority_preflight_v1_20260428_110349.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\evidence_rewrite_authority_preflight_v1_summary_20260428_110349.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\evidence_rewrite_authority_decision_v1_20260428_111549.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\evidence_rewrite_authority_decision_v1_summary_20260428_111549.txt
 
 continuity_sync_message: continuity sync pending
