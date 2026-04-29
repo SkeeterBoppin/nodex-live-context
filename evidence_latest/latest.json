@@ -1,27 +1,28 @@
 {
-  "schema": "nodex.user_authority_contract.name_correction.v1",
+  "schema": "nodex.zak_final_authority_contract.plan.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T16:59:06.5304680-07:00",
+  "createdAt": "2026-04-28T17:07:14.6602915-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+  "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-  "seam": "UserAuthorityContractPlan v1",
+  "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
+  "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
+  "seam": "ZakFinalAuthorityContractPlan v1",
   "planOnly": true,
-  "nameCorrectionOnly": true,
+  "claimStructureMode": "narrow_deterministic_evidence_scoped",
+  "structurePriority": "audit_stable_over_human_readable",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorUserAuthorityContractNameCorrection": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json",
   "priorFileMoveAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\file_move_authority_preflight_v1_20260428_163107.json",
   "priorRepoDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json",
-  "decision": "user_authority_contract_name_corrected_to_zak_final_authority_contract_plan",
-  "claimStructureMode": "narrow_deterministic_evidence_scoped",
-  "structurePriority": "audit_stable_over_human_readable",
+  "decision": "zak_final_authority_contract_preflight_planned",
   "canonicalAuthorityContract": "ZakFinalAuthorityContract",
-  "deprecatedAuthorityContractNames": [
-    "UserAuthorityContract"
-  ],
+  "duplicateAuthoritySourcesAllowed": false,
   "legacyAuthorityLabels": [
     "zak_final_authority_preserved",
     "zak_final_authority_claim_structure_preserved"
@@ -32,20 +33,61 @@
     "legacy labels grant no authority by themselves",
     "legacy labels cannot bypass ZakFinalAuthorityContract"
   ],
-  "duplicateAuthoritySourcesAllowed": false,
-  "userAuthorityContractGranted": false,
   "zakFinalAuthorityContractPlanAllowedNow": true,
-  "zakFinalAuthorityContractPreflightAllowedNow": false,
+  "zakFinalAuthorityContractPreflightAllowedNow": true,
+  "zakFinalAuthorityContractImplementationPlanAllowedNow": false,
   "zakFinalAuthorityContractImplementationAllowedNow": false,
   "zakFinalAuthorityContractGranted": false,
+  "zakFinalAuthorityContractStateRecorded": false,
   "fileMoveAuthorityDecisionAllowedNow": false,
   "fileMoveAuthorityGranted": false,
   "fileMoveAllowedNow": false,
+  "sourceMutationAllowedNow": true,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "nextAllowedSeam": "ZakFinalAuthorityContractPlan v1",
+  "plannedContractInvariants": [
+    "explicit_operator_approval_required_for_authority_expansion",
+    "explicit_operator_approval_required_for_destructive_execution",
+    "explicit_operator_approval_required_for_cross_boundary_file_movement",
+    "operator_approval_cannot_be_inferred_from_model_output",
+    "operator_approval_cannot_be_simulated_by_generated_code",
+    "operator_approval_cannot_be_reused_outside_explicit_scope",
+    "operator_can_revoke_pause_or_narrow_authority",
+    "nodex_cannot_self_upgrade_authority",
+    "manual_packet_execution_requirement_preserved",
+    "autonomous_final_approval_not_granted"
+  ],
+  "plannedContractNonGrants": [
+    "no_file_move_authority",
+    "no_commit_authority",
+    "no_staging_authority",
+    "no_autonomous_approval",
+    "no_authority_self_expansion",
+    "no_privilege_escalation"
+  ],
+  "implementationCandidateFiles": [
+    "core/zakFinalAuthorityContract.js",
+    "tests/run.js"
+  ],
+  "plannedExports": [
+    "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+    "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+    "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+    "createZakFinalAuthorityContract",
+    "validateZakFinalAuthorityContract",
+    "assertZakFinalAuthorityContract",
+    "summarizeZakFinalAuthorityContract"
+  ],
+  "plannedTests": [
+    "testZakFinalAuthorityContractValidation",
+    "testZakFinalAuthorityContractBlocksModelOutputApproval",
+    "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+    "testZakFinalAuthorityContractRequiresExplicitScope",
+    "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+    "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+  ],
+  "nextAllowedSeam": "ZakFinalAuthorityContractPreflight v1",
   "plannedFollowingSeams": [
-    "ZakFinalAuthorityContractPlan v1",
     "ZakFinalAuthorityContractPreflight v1",
     "ZakFinalAuthorityContractImplementationPlan v1",
     "ZakFinalAuthorityContractImplementationPreflight v1",
@@ -56,13 +98,25 @@
     "FileMoveAuthorityDecision v1"
   ],
   "validation": {
-    "fileMoveAuthorityPreflightVerified": true,
-    "legacyZakFinalAuthorityLabelFound": true,
+    "nameCorrectionVerified": true,
+    "canonicalAuthorityContractVerified": true,
     "duplicateAuthoritySourcesAllowed": false,
+    "legacyLabelsMapped": true,
     "fileMoveAuthorityDecisionBlocked": true,
-    "preNameCorrectionWorkingTreeClean": true,
+    "zakFinalAuthorityContractPreflightAllowedNow": true,
+    "zakFinalAuthorityContractImplementationAllowedNow": false,
+    "zakFinalAuthorityContractGranted": false,
+    "claimStructureModePreserved": true,
+    "structurePriorityAuditStable": true,
+    "expectedHeadVerified": true,
+    "architectureSourcesVerified": true,
+    "prePlanWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postNameCorrectionWorkingTreeClean": true
+    "postPlanWorkingTreeClean": true,
+    "fileMoveAuthorityGranted": false,
+    "fileMoveAllowedNow": false,
+    "commit": false,
+    "staging": false
   },
   "checks": [
     {
@@ -75,9 +129,9 @@
       }
     },
     {
-      "name": "pre-name-correction working tree clean",
+      "name": "pre-plan working tree clean",
       "pass": true,
-      "reason": "UserAuthorityContractPlan name correction must start clean",
+      "reason": "ZakFinalAuthorityContractPlan v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -85,10 +139,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match baseline",
+      "reason": "HEAD must match ZakFinalAuthorityContractPlan baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "user authority contract name correction JSON exists",
+      "pass": true,
+      "reason": "missing user_authority_contract_plan_v1_name_correction_*.json evidence",
+      "data": {
+        "pattern": "user_authority_contract_plan_v1_name_correction_*.json"
       }
     },
     {
@@ -100,6 +162,38 @@
       }
     },
     {
+      "name": "repo deletion authority state record JSON exists",
+      "pass": true,
+      "reason": "missing repo_deletion_authority_state_record_v1_*.json evidence",
+      "data": {
+        "pattern": "repo_deletion_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "user authority contract name correction path present",
+      "pass": true,
+      "reason": "user authority contract name correction path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
+      }
+    },
+    {
+      "name": "user authority contract name correction file exists",
+      "pass": true,
+      "reason": "user authority contract name correction file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
+      }
+    },
+    {
+      "name": "file move authority preflight path present",
+      "pass": true,
+      "reason": "file move authority preflight path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\file_move_authority_preflight_v1_20260428_163107.json"
+      }
+    },
+    {
       "name": "file move authority preflight file exists",
       "pass": true,
       "reason": "file move authority preflight file must exist",
@@ -108,75 +202,11 @@
       }
     },
     {
-      "name": "file move preflight status pass",
+      "name": "repo deletion authority state record path present",
       "pass": true,
-      "reason": "file move preflight must be pass",
+      "reason": "repo deletion authority state record path must be present",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\file_move_authority_preflight_v1_20260428_163107.json"
-      }
-    },
-    {
-      "name": "file move preflight replacementPacket",
-      "pass": true,
-      "reason": "file move preflight replacementPacket must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "file move preflight decision exact",
-      "pass": true,
-      "reason": "file move preflight decision must require user authority contract",
-      "data": {
-        "decision": "file_move_authority_preflight_complete_user_authority_contract_required"
-      }
-    },
-    {
-      "name": "file move preflight userAuthorityContractPlanAllowedNow",
-      "pass": true,
-      "reason": "file move preflight userAuthorityContractPlanAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "file move preflight fileMoveAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "file move preflight fileMoveAuthorityDecisionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "file move preflight fileMoveAuthorityGranted",
-      "pass": true,
-      "reason": "file move preflight fileMoveAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "file move preflight fileMoveAllowedNow",
-      "pass": true,
-      "reason": "file move preflight fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "file move preflight routes to user authority plan",
-      "pass": true,
-      "reason": "file move preflight must route to UserAuthorityContractPlan v1",
-      "data": {
-        "nextAllowedSeam": "UserAuthorityContractPlan v1"
-      }
-    },
-    {
-      "name": "repo deletion authority state record JSON exists",
-      "pass": true,
-      "reason": "missing repo_deletion_authority_state_record_v1_*.json evidence",
-      "data": {
-        "pattern": "repo_deletion_authority_state_record_v1_*.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json"
       }
     },
     {
@@ -188,25 +218,220 @@
       }
     },
     {
-      "name": "legacy Zak final authority label exists",
+      "name": "name correction status pass",
       "pass": true,
-      "reason": "legacy Zak label must exist before canonicalization",
+      "reason": "name correction evidence must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
+      }
+    },
+    {
+      "name": "name correction decision exact",
+      "pass": true,
+      "reason": "name correction decision must be exact",
+      "data": {
+        "decision": "user_authority_contract_name_corrected_to_zak_final_authority_contract_plan"
+      }
+    },
+    {
+      "name": "name correction canonical contract exact",
+      "pass": true,
+      "reason": "canonical contract must be ZakFinalAuthorityContract",
+      "data": {
+        "actual": "ZakFinalAuthorityContract"
+      }
+    },
+    {
+      "name": "name correction duplicateAuthoritySourcesAllowed",
+      "pass": true,
+      "reason": "name correction duplicateAuthoritySourcesAllowed must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction userAuthorityContractGranted",
+      "pass": true,
+      "reason": "name correction userAuthorityContractGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction zakFinalAuthorityContractPlanAllowedNow",
+      "pass": true,
+      "reason": "name correction zakFinalAuthorityContractPlanAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "name correction zakFinalAuthorityContractPreflightAllowedNow",
+      "pass": true,
+      "reason": "name correction zakFinalAuthorityContractPreflightAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction zakFinalAuthorityContractImplementationAllowedNow",
+      "pass": true,
+      "reason": "name correction zakFinalAuthorityContractImplementationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction zakFinalAuthorityContractGranted",
+      "pass": true,
+      "reason": "name correction zakFinalAuthorityContractGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction fileMoveAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "name correction fileMoveAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction fileMoveAuthorityGranted",
+      "pass": true,
+      "reason": "name correction fileMoveAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction fileMoveAllowedNow",
+      "pass": true,
+      "reason": "name correction fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "name correction routes to Zak plan",
+      "pass": true,
+      "reason": "name correction must route to ZakFinalAuthorityContractPlan v1",
+      "data": {
+        "nextAllowedSeam": "ZakFinalAuthorityContractPlan v1"
+      }
+    },
+    {
+      "name": "deprecated name UserAuthorityContract",
+      "pass": true,
+      "reason": "deprecated name UserAuthorityContract must contain UserAuthorityContract",
+      "data": {
+        "expected": "UserAuthorityContract",
+        "actual": [
+          "UserAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "legacy label zak_final_authority_preserved",
+      "pass": true,
+      "reason": "legacy label zak_final_authority_preserved must contain zak_final_authority_preserved",
+      "data": {
+        "expected": "zak_final_authority_preserved",
+        "actual": [
+          "zak_final_authority_preserved",
+          "zak_final_authority_claim_structure_preserved"
+        ]
+      }
+    },
+    {
+      "name": "legacy label zak_final_authority_claim_structure_preserved",
+      "pass": true,
+      "reason": "legacy label zak_final_authority_claim_structure_preserved must contain zak_final_authority_claim_structure_preserved",
+      "data": {
+        "expected": "zak_final_authority_claim_structure_preserved",
+        "actual": [
+          "zak_final_authority_preserved",
+          "zak_final_authority_claim_structure_preserved"
+        ]
+      }
+    },
+    {
+      "name": "file move preflight status pass",
+      "pass": true,
+      "reason": "file move authority preflight must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\file_move_authority_preflight_v1_20260428_163107.json"
+      }
+    },
+    {
+      "name": "file move preflight fileMoveAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "file move preflight fileMoveAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "repo state status pass",
+      "pass": true,
+      "reason": "repo deletion authority state record must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json"
+      }
+    },
+    {
+      "name": "repo state legacy Zak claim present",
+      "pass": true,
+      "reason": "repo state must contain legacy Zak final authority claim",
       "data": {
         "claim": "zak_final_authority_preserved"
       }
     },
     {
-      "name": "full harness passed during name correction",
+      "name": "boundary architecture source exists",
       "pass": true,
-      "reason": "node tests/run.js must pass",
+      "reason": "boundary architecture source must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_boundary_pushing_master_architecture.md"
+      }
+    },
+    {
+      "name": "continuity source exists",
+      "pass": true,
+      "reason": "continuity source must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_exact_continuity_source_v1.md"
+      }
+    },
+    {
+      "name": "package.json exists",
+      "pass": true,
+      "reason": "package.json must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\package.json"
+      }
+    },
+    {
+      "name": "tests/run.js exists",
+      "pass": true,
+      "reason": "tests/run.js must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\tests\\run.js"
+      }
+    },
+    {
+      "name": "full harness passed during plan",
+      "pass": true,
+      "reason": "node tests/run.js must pass during ZakFinalAuthorityContractPlan v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-name-correction working tree clean",
+      "name": "post-plan working tree clean",
       "pass": true,
-      "reason": "UserAuthorityContractPlan name correction must leave working tree clean",
+      "reason": "ZakFinalAuthorityContractPlan v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -235,7 +460,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS NAME CORRECTION",
+      "label": "FULL HARNESS PLAN",
       "filePath": "node",
       "arguments": [
         "tests/run.js"

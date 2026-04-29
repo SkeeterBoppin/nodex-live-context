@@ -1,19 +1,16 @@
-USER AUTHORITY CONTRACT PLAN V1 NAME CORRECTION
+ZAK FINAL AUTHORITY CONTRACT PLAN V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
 plan_only: true
-name_correction_only: true
-decision: user_authority_contract_name_corrected_to_zak_final_authority_contract_plan
+decision: zak_final_authority_contract_preflight_planned
 
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
 
 canonical_authority_contract: ZakFinalAuthorityContract
-
-deprecated_authority_contract_names:
-- UserAuthorityContract
+duplicate_authority_sources_allowed: false
 
 legacy_authority_labels:
 - zak_final_authority_preserved
@@ -25,23 +22,65 @@ legacy_label_relationship:
 - legacy labels grant no authority by themselves
 - legacy labels cannot bypass ZakFinalAuthorityContract
 
-duplicate_authority_sources_allowed: false
-user_authority_contract_granted: false
 zak_final_authority_contract_plan_allowed_now: true
-zak_final_authority_contract_preflight_allowed_now: false
+zak_final_authority_contract_preflight_allowed_now: true
+zak_final_authority_contract_implementation_plan_allowed_now: false
 zak_final_authority_contract_implementation_allowed_now: false
 zak_final_authority_contract_granted: false
+zak_final_authority_contract_state_recorded: false
 
 file_move_authority_decision_allowed_now: false
 file_move_authority_granted: false
 file_move_allowed_now: false
+
+source_mutation_allowed_now: true
 commit_allowed_now: false
 staging_allowed_now: false
 
-next_allowed_seam: ZakFinalAuthorityContractPlan v1
+planned_contract_invariants:
+- explicit_operator_approval_required_for_authority_expansion
+- explicit_operator_approval_required_for_destructive_execution
+- explicit_operator_approval_required_for_cross_boundary_file_movement
+- operator_approval_cannot_be_inferred_from_model_output
+- operator_approval_cannot_be_simulated_by_generated_code
+- operator_approval_cannot_be_reused_outside_explicit_scope
+- operator_can_revoke_pause_or_narrow_authority
+- nodex_cannot_self_upgrade_authority
+- manual_packet_execution_requirement_preserved
+- autonomous_final_approval_not_granted
+
+planned_contract_non_grants:
+- no_file_move_authority
+- no_commit_authority
+- no_staging_authority
+- no_autonomous_approval
+- no_authority_self_expansion
+- no_privilege_escalation
+
+implementation_candidate_files:
+- core/zakFinalAuthorityContract.js
+- tests/run.js
+
+planned_exports:
+- ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES
+- ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS
+- ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS
+- createZakFinalAuthorityContract
+- validateZakFinalAuthorityContract
+- assertZakFinalAuthorityContract
+- summarizeZakFinalAuthorityContract
+
+planned_tests:
+- testZakFinalAuthorityContractValidation
+- testZakFinalAuthorityContractBlocksModelOutputApproval
+- testZakFinalAuthorityContractBlocksGeneratedCodeApproval
+- testZakFinalAuthorityContractRequiresExplicitScope
+- testZakFinalAuthorityContractSupportsRevocationAndNarrowing
+- testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade
+
+next_allowed_seam: ZakFinalAuthorityContractPreflight v1
 
 planned_following_seams:
-- ZakFinalAuthorityContractPlan v1
 - ZakFinalAuthorityContractPreflight v1
 - ZakFinalAuthorityContractImplementationPlan v1
 - ZakFinalAuthorityContractImplementationPreflight v1
@@ -51,7 +90,7 @@ planned_following_seams:
 - Post-ZakFinalAuthorityContract Spine Audit v1
 - FileMoveAuthorityDecision v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\user_authority_contract_plan_v1_name_correction_20260428_165904.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\user_authority_contract_plan_v1_name_correction_summary_20260428_165904.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_plan_v1_20260428_170713.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_plan_v1_summary_20260428_170713.txt
 
 continuity_sync_message: continuity sync pending

@@ -1,6 +1,6 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T16:59:06.7080886-07:00
+Generated: 2026-04-28T17:07:14.7730295-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-UserAuthorityContractPlan v1 name correction
+ZakFinalAuthorityContractPlan v1
 ``
 
 ## Latest Result
@@ -36,15 +36,15 @@ UserAuthorityContractPlan v1 name correction
 ``text
 status: pass
 continuity_sync: pass
-decision: user_authority_contract_name_corrected_to_zak_final_authority_contract_plan
+decision: zak_final_authority_contract_preflight_planned
 canonical_authority_contract: ZakFinalAuthorityContract
-next_allowed_seam: ZakFinalAuthorityContractPlan v1
+next_allowed_seam: ZakFinalAuthorityContractPreflight v1
 ``
 
 ## Current Open Seam
 
 ``text
-ZakFinalAuthorityContractPlan v1
+ZakFinalAuthorityContractPreflight v1
 ``
 
 ## Current Packet
@@ -52,3 +52,17 @@ ZakFinalAuthorityContractPlan v1
 ``text
 not generated yet
 ``
+
+## Authority Contract
+
+ZakFinalAuthorityContract is the canonical authority contract.
+UserAuthorityContract is deprecated and must not be used as a separate authority source.
+Legacy zak_final_authority_* labels are compatibility/provenance labels only.
+
+## Currently Not Granted After Latest Completed Seam
+
+- ZakFinalAuthorityContract implementation authority
+- file move authority
+- file move
+- commit
+- staging
