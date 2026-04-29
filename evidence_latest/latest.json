@@ -1,41 +1,41 @@
 {
-  "schema": "nodex.zak_final_authority_contract.plan.v1",
+  "schema": "nodex.zak_final_authority_contract.preflight.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T17:07:14.6602915-07:00",
+  "createdAt": "2026-04-28T17:17:06.3102695-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "ZakFinalAuthorityContractPlan v1",
-  "planOnly": true,
+  "seam": "ZakFinalAuthorityContractPreflight v1",
+  "preflightOnly": true,
   "claimStructureMode": "narrow_deterministic_evidence_scoped",
   "structurePriority": "audit_stable_over_human_readable",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorZakFinalAuthorityContractPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_plan_v1_20260428_170713.json",
   "priorUserAuthorityContractNameCorrection": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json",
   "priorFileMoveAuthorityPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\file_move_authority_preflight_v1_20260428_163107.json",
   "priorRepoDeletionAuthorityStateRecord": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\repo_deletion_authority_state_record_v1_20260428_133941.json",
-  "decision": "zak_final_authority_contract_preflight_planned",
+  "decision": "zak_final_authority_contract_implementation_plan_ready",
   "canonicalAuthorityContract": "ZakFinalAuthorityContract",
   "duplicateAuthoritySourcesAllowed": false,
-  "legacyAuthorityLabels": [
+  "legacyAuthorityLabelsVerified": [
     "zak_final_authority_preserved",
     "zak_final_authority_claim_structure_preserved"
   ],
-  "legacyLabelRelationship": [
+  "legacyLabelRelationshipVerified": [
     "legacy labels are compatibility/provenance labels only",
     "legacy labels do not define a separate authority system",
     "legacy labels grant no authority by themselves",
     "legacy labels cannot bypass ZakFinalAuthorityContract"
   ],
-  "zakFinalAuthorityContractPlanAllowedNow": true,
-  "zakFinalAuthorityContractPreflightAllowedNow": true,
-  "zakFinalAuthorityContractImplementationPlanAllowedNow": false,
+  "zakFinalAuthorityContractPreflightComplete": true,
+  "zakFinalAuthorityContractImplementationPlanAllowedNow": true,
   "zakFinalAuthorityContractImplementationAllowedNow": false,
   "zakFinalAuthorityContractGranted": false,
   "zakFinalAuthorityContractStateRecorded": false,
@@ -45,50 +45,25 @@
   "sourceMutationAllowedNow": true,
   "commitAllowedNow": false,
   "stagingAllowedNow": false,
-  "plannedContractInvariants": [
-    "explicit_operator_approval_required_for_authority_expansion",
-    "explicit_operator_approval_required_for_destructive_execution",
-    "explicit_operator_approval_required_for_cross_boundary_file_movement",
-    "operator_approval_cannot_be_inferred_from_model_output",
-    "operator_approval_cannot_be_simulated_by_generated_code",
-    "operator_approval_cannot_be_reused_outside_explicit_scope",
-    "operator_can_revoke_pause_or_narrow_authority",
-    "nodex_cannot_self_upgrade_authority",
-    "manual_packet_execution_requirement_preserved",
-    "autonomous_final_approval_not_granted"
-  ],
-  "plannedContractNonGrants": [
-    "no_file_move_authority",
-    "no_commit_authority",
-    "no_staging_authority",
-    "no_autonomous_approval",
-    "no_authority_self_expansion",
-    "no_privilege_escalation"
-  ],
+  "preflightVerified": {
+    "planVerified": true,
+    "canonicalContractVerified": true,
+    "duplicateAuthoritySourcesBlocked": true,
+    "legacyLabelMappingVerified": true,
+    "plannedContractInvariantsVerified": true,
+    "plannedContractNonGrantsVerified": true,
+    "implementationCandidateFilesVerified": true,
+    "plannedExportsVerified": true,
+    "plannedTestsVerified": true,
+    "fileMoveDecisionBlocked": true,
+    "sourceMutationAvailableForFutureImplementation": true
+  },
   "implementationCandidateFiles": [
     "core/zakFinalAuthorityContract.js",
     "tests/run.js"
   ],
-  "plannedExports": [
-    "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-    "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-    "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-    "createZakFinalAuthorityContract",
-    "validateZakFinalAuthorityContract",
-    "assertZakFinalAuthorityContract",
-    "summarizeZakFinalAuthorityContract"
-  ],
-  "plannedTests": [
-    "testZakFinalAuthorityContractValidation",
-    "testZakFinalAuthorityContractBlocksModelOutputApproval",
-    "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-    "testZakFinalAuthorityContractRequiresExplicitScope",
-    "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-    "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-  ],
-  "nextAllowedSeam": "ZakFinalAuthorityContractPreflight v1",
+  "nextAllowedSeam": "ZakFinalAuthorityContractImplementationPlan v1",
   "plannedFollowingSeams": [
-    "ZakFinalAuthorityContractPreflight v1",
     "ZakFinalAuthorityContractImplementationPlan v1",
     "ZakFinalAuthorityContractImplementationPreflight v1",
     "ZakFinalAuthorityContractImplementation v1",
@@ -98,21 +73,27 @@
     "FileMoveAuthorityDecision v1"
   ],
   "validation": {
+    "planVerified": true,
     "nameCorrectionVerified": true,
     "canonicalAuthorityContractVerified": true,
-    "duplicateAuthoritySourcesAllowed": false,
+    "duplicateAuthoritySourcesBlocked": true,
     "legacyLabelsMapped": true,
+    "plannedContractInvariantsVerified": true,
+    "plannedContractNonGrantsVerified": true,
+    "plannedExportsVerified": true,
+    "plannedTestsVerified": true,
+    "implementationCreateFileAbsent": true,
     "fileMoveAuthorityDecisionBlocked": true,
-    "zakFinalAuthorityContractPreflightAllowedNow": true,
+    "zakFinalAuthorityContractImplementationPlanAllowedNow": true,
     "zakFinalAuthorityContractImplementationAllowedNow": false,
     "zakFinalAuthorityContractGranted": false,
     "claimStructureModePreserved": true,
     "structurePriorityAuditStable": true,
     "expectedHeadVerified": true,
     "architectureSourcesVerified": true,
-    "prePlanWorkingTreeClean": true,
+    "preflightWorkingTreeClean": true,
     "fullHarnessPassed": true,
-    "postPlanWorkingTreeClean": true,
+    "postPreflightWorkingTreeClean": true,
     "fileMoveAuthorityGranted": false,
     "fileMoveAllowedNow": false,
     "commit": false,
@@ -129,9 +110,9 @@
       }
     },
     {
-      "name": "pre-plan working tree clean",
+      "name": "preflight working tree clean",
       "pass": true,
-      "reason": "ZakFinalAuthorityContractPlan v1 must start with clean working tree",
+      "reason": "ZakFinalAuthorityContractPreflight v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -139,10 +120,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match ZakFinalAuthorityContractPlan baseline",
+      "reason": "HEAD must match ZakFinalAuthorityContractPreflight baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "Zak final authority contract plan JSON exists",
+      "pass": true,
+      "reason": "missing zak_final_authority_contract_plan_v1_*.json evidence",
+      "data": {
+        "pattern": "zak_final_authority_contract_plan_v1_*.json"
       }
     },
     {
@@ -167,6 +156,22 @@
       "reason": "missing repo_deletion_authority_state_record_v1_*.json evidence",
       "data": {
         "pattern": "repo_deletion_authority_state_record_v1_*.json"
+      }
+    },
+    {
+      "name": "Zak final authority contract plan path present",
+      "pass": true,
+      "reason": "Zak final authority contract plan path must be present",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_plan_v1_20260428_170713.json"
+      }
+    },
+    {
+      "name": "Zak final authority contract plan file exists",
+      "pass": true,
+      "reason": "Zak final authority contract plan file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_plan_v1_20260428_170713.json"
       }
     },
     {
@@ -218,25 +223,712 @@
       }
     },
     {
+      "name": "plan status pass",
+      "pass": true,
+      "reason": "ZakFinalAuthorityContractPlan must be pass",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_plan_v1_20260428_170713.json"
+      }
+    },
+    {
+      "name": "plan decision exact",
+      "pass": true,
+      "reason": "plan decision must be exact",
+      "data": {
+        "decision": "zak_final_authority_contract_preflight_planned"
+      }
+    },
+    {
+      "name": "plan claim structure exact",
+      "pass": true,
+      "reason": "plan claim structure must be exact",
+      "data": {
+        "actual": "narrow_deterministic_evidence_scoped"
+      }
+    },
+    {
+      "name": "plan structure priority exact",
+      "pass": true,
+      "reason": "plan structure priority must be exact",
+      "data": {
+        "actual": "audit_stable_over_human_readable"
+      }
+    },
+    {
+      "name": "plan canonical contract exact",
+      "pass": true,
+      "reason": "plan canonical authority contract must be exact",
+      "data": {
+        "actual": "ZakFinalAuthorityContract"
+      }
+    },
+    {
+      "name": "plan duplicateAuthoritySourcesAllowed",
+      "pass": true,
+      "reason": "plan duplicateAuthoritySourcesAllowed must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan zakFinalAuthorityContractPreflightAllowedNow",
+      "pass": true,
+      "reason": "plan zakFinalAuthorityContractPreflightAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "plan zakFinalAuthorityContractImplementationPlanAllowedNow",
+      "pass": true,
+      "reason": "plan zakFinalAuthorityContractImplementationPlanAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan zakFinalAuthorityContractImplementationAllowedNow",
+      "pass": true,
+      "reason": "plan zakFinalAuthorityContractImplementationAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan zakFinalAuthorityContractGranted",
+      "pass": true,
+      "reason": "plan zakFinalAuthorityContractGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan zakFinalAuthorityContractStateRecorded",
+      "pass": true,
+      "reason": "plan zakFinalAuthorityContractStateRecorded must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan fileMoveAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "plan fileMoveAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan fileMoveAuthorityGranted",
+      "pass": true,
+      "reason": "plan fileMoveAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan fileMoveAllowedNow",
+      "pass": true,
+      "reason": "plan fileMoveAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan commitAllowedNow",
+      "pass": true,
+      "reason": "plan commitAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan stagingAllowedNow",
+      "pass": true,
+      "reason": "plan stagingAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "plan routes to preflight",
+      "pass": true,
+      "reason": "plan must route to ZakFinalAuthorityContractPreflight v1",
+      "data": {
+        "nextAllowedSeam": "ZakFinalAuthorityContractPreflight v1"
+      }
+    },
+    {
+      "name": "plan legacy label zak_final_authority_preserved",
+      "pass": true,
+      "reason": "plan legacy label zak_final_authority_preserved must contain zak_final_authority_preserved",
+      "data": {
+        "expected": "zak_final_authority_preserved",
+        "actual": [
+          "zak_final_authority_preserved",
+          "zak_final_authority_claim_structure_preserved"
+        ]
+      }
+    },
+    {
+      "name": "plan legacy label zak_final_authority_claim_structure_preserved",
+      "pass": true,
+      "reason": "plan legacy label zak_final_authority_claim_structure_preserved must contain zak_final_authority_claim_structure_preserved",
+      "data": {
+        "expected": "zak_final_authority_claim_structure_preserved",
+        "actual": [
+          "zak_final_authority_preserved",
+          "zak_final_authority_claim_structure_preserved"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant authority expansion",
+      "pass": true,
+      "reason": "planned invariant authority expansion must contain explicit_operator_approval_required_for_authority_expansion",
+      "data": {
+        "expected": "explicit_operator_approval_required_for_authority_expansion",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant destructive execution",
+      "pass": true,
+      "reason": "planned invariant destructive execution must contain explicit_operator_approval_required_for_destructive_execution",
+      "data": {
+        "expected": "explicit_operator_approval_required_for_destructive_execution",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant cross-boundary file movement",
+      "pass": true,
+      "reason": "planned invariant cross-boundary file movement must contain explicit_operator_approval_required_for_cross_boundary_file_movement",
+      "data": {
+        "expected": "explicit_operator_approval_required_for_cross_boundary_file_movement",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant no model approval",
+      "pass": true,
+      "reason": "planned invariant no model approval must contain operator_approval_cannot_be_inferred_from_model_output",
+      "data": {
+        "expected": "operator_approval_cannot_be_inferred_from_model_output",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant no generated approval",
+      "pass": true,
+      "reason": "planned invariant no generated approval must contain operator_approval_cannot_be_simulated_by_generated_code",
+      "data": {
+        "expected": "operator_approval_cannot_be_simulated_by_generated_code",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant scope",
+      "pass": true,
+      "reason": "planned invariant scope must contain operator_approval_cannot_be_reused_outside_explicit_scope",
+      "data": {
+        "expected": "operator_approval_cannot_be_reused_outside_explicit_scope",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant revoke pause narrow",
+      "pass": true,
+      "reason": "planned invariant revoke pause narrow must contain operator_can_revoke_pause_or_narrow_authority",
+      "data": {
+        "expected": "operator_can_revoke_pause_or_narrow_authority",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant no self upgrade",
+      "pass": true,
+      "reason": "planned invariant no self upgrade must contain nodex_cannot_self_upgrade_authority",
+      "data": {
+        "expected": "nodex_cannot_self_upgrade_authority",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant manual execution",
+      "pass": true,
+      "reason": "planned invariant manual execution must contain manual_packet_execution_requirement_preserved",
+      "data": {
+        "expected": "manual_packet_execution_requirement_preserved",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned invariant no autonomous approval",
+      "pass": true,
+      "reason": "planned invariant no autonomous approval must contain autonomous_final_approval_not_granted",
+      "data": {
+        "expected": "autonomous_final_approval_not_granted",
+        "actual": [
+          "explicit_operator_approval_required_for_authority_expansion",
+          "explicit_operator_approval_required_for_destructive_execution",
+          "explicit_operator_approval_required_for_cross_boundary_file_movement",
+          "operator_approval_cannot_be_inferred_from_model_output",
+          "operator_approval_cannot_be_simulated_by_generated_code",
+          "operator_approval_cannot_be_reused_outside_explicit_scope",
+          "operator_can_revoke_pause_or_narrow_authority",
+          "nodex_cannot_self_upgrade_authority",
+          "manual_packet_execution_requirement_preserved",
+          "autonomous_final_approval_not_granted"
+        ]
+      }
+    },
+    {
+      "name": "planned non-grant file move",
+      "pass": true,
+      "reason": "planned non-grant file move must contain no_file_move_authority",
+      "data": {
+        "expected": "no_file_move_authority",
+        "actual": [
+          "no_file_move_authority",
+          "no_commit_authority",
+          "no_staging_authority",
+          "no_autonomous_approval",
+          "no_authority_self_expansion",
+          "no_privilege_escalation"
+        ]
+      }
+    },
+    {
+      "name": "planned non-grant commit",
+      "pass": true,
+      "reason": "planned non-grant commit must contain no_commit_authority",
+      "data": {
+        "expected": "no_commit_authority",
+        "actual": [
+          "no_file_move_authority",
+          "no_commit_authority",
+          "no_staging_authority",
+          "no_autonomous_approval",
+          "no_authority_self_expansion",
+          "no_privilege_escalation"
+        ]
+      }
+    },
+    {
+      "name": "planned non-grant staging",
+      "pass": true,
+      "reason": "planned non-grant staging must contain no_staging_authority",
+      "data": {
+        "expected": "no_staging_authority",
+        "actual": [
+          "no_file_move_authority",
+          "no_commit_authority",
+          "no_staging_authority",
+          "no_autonomous_approval",
+          "no_authority_self_expansion",
+          "no_privilege_escalation"
+        ]
+      }
+    },
+    {
+      "name": "planned non-grant autonomous approval",
+      "pass": true,
+      "reason": "planned non-grant autonomous approval must contain no_autonomous_approval",
+      "data": {
+        "expected": "no_autonomous_approval",
+        "actual": [
+          "no_file_move_authority",
+          "no_commit_authority",
+          "no_staging_authority",
+          "no_autonomous_approval",
+          "no_authority_self_expansion",
+          "no_privilege_escalation"
+        ]
+      }
+    },
+    {
+      "name": "planned non-grant self expansion",
+      "pass": true,
+      "reason": "planned non-grant self expansion must contain no_authority_self_expansion",
+      "data": {
+        "expected": "no_authority_self_expansion",
+        "actual": [
+          "no_file_move_authority",
+          "no_commit_authority",
+          "no_staging_authority",
+          "no_autonomous_approval",
+          "no_authority_self_expansion",
+          "no_privilege_escalation"
+        ]
+      }
+    },
+    {
+      "name": "planned non-grant privilege escalation",
+      "pass": true,
+      "reason": "planned non-grant privilege escalation must contain no_privilege_escalation",
+      "data": {
+        "expected": "no_privilege_escalation",
+        "actual": [
+          "no_file_move_authority",
+          "no_commit_authority",
+          "no_staging_authority",
+          "no_autonomous_approval",
+          "no_authority_self_expansion",
+          "no_privilege_escalation"
+        ]
+      }
+    },
+    {
+      "name": "implementation candidate core file",
+      "pass": true,
+      "reason": "implementation candidate core file must contain core/zakFinalAuthorityContract.js",
+      "data": {
+        "expected": "core/zakFinalAuthorityContract.js",
+        "actual": [
+          "core/zakFinalAuthorityContract.js",
+          "tests/run.js"
+        ]
+      }
+    },
+    {
+      "name": "implementation candidate tests file",
+      "pass": true,
+      "reason": "implementation candidate tests file must contain tests/run.js",
+      "data": {
+        "expected": "tests/run.js",
+        "actual": [
+          "core/zakFinalAuthorityContract.js",
+          "tests/run.js"
+        ]
+      }
+    },
+    {
+      "name": "planned export statuses",
+      "pass": true,
+      "reason": "planned export statuses must contain ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+      "data": {
+        "expected": "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned export required approvals",
+      "pass": true,
+      "reason": "planned export required approvals must contain ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+      "data": {
+        "expected": "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned export non grants",
+      "pass": true,
+      "reason": "planned export non grants must contain ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+      "data": {
+        "expected": "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned export create",
+      "pass": true,
+      "reason": "planned export create must contain createZakFinalAuthorityContract",
+      "data": {
+        "expected": "createZakFinalAuthorityContract",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned export validate",
+      "pass": true,
+      "reason": "planned export validate must contain validateZakFinalAuthorityContract",
+      "data": {
+        "expected": "validateZakFinalAuthorityContract",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned export assert",
+      "pass": true,
+      "reason": "planned export assert must contain assertZakFinalAuthorityContract",
+      "data": {
+        "expected": "assertZakFinalAuthorityContract",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned export summarize",
+      "pass": true,
+      "reason": "planned export summarize must contain summarizeZakFinalAuthorityContract",
+      "data": {
+        "expected": "summarizeZakFinalAuthorityContract",
+        "actual": [
+          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
+          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
+          "createZakFinalAuthorityContract",
+          "validateZakFinalAuthorityContract",
+          "assertZakFinalAuthorityContract",
+          "summarizeZakFinalAuthorityContract"
+        ]
+      }
+    },
+    {
+      "name": "planned test validation",
+      "pass": true,
+      "reason": "planned test validation must contain testZakFinalAuthorityContractValidation",
+      "data": {
+        "expected": "testZakFinalAuthorityContractValidation",
+        "actual": [
+          "testZakFinalAuthorityContractValidation",
+          "testZakFinalAuthorityContractBlocksModelOutputApproval",
+          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+          "testZakFinalAuthorityContractRequiresExplicitScope",
+          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+        ]
+      }
+    },
+    {
+      "name": "planned test model output approval",
+      "pass": true,
+      "reason": "planned test model output approval must contain testZakFinalAuthorityContractBlocksModelOutputApproval",
+      "data": {
+        "expected": "testZakFinalAuthorityContractBlocksModelOutputApproval",
+        "actual": [
+          "testZakFinalAuthorityContractValidation",
+          "testZakFinalAuthorityContractBlocksModelOutputApproval",
+          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+          "testZakFinalAuthorityContractRequiresExplicitScope",
+          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+        ]
+      }
+    },
+    {
+      "name": "planned test generated code approval",
+      "pass": true,
+      "reason": "planned test generated code approval must contain testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+      "data": {
+        "expected": "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+        "actual": [
+          "testZakFinalAuthorityContractValidation",
+          "testZakFinalAuthorityContractBlocksModelOutputApproval",
+          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+          "testZakFinalAuthorityContractRequiresExplicitScope",
+          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+        ]
+      }
+    },
+    {
+      "name": "planned test explicit scope",
+      "pass": true,
+      "reason": "planned test explicit scope must contain testZakFinalAuthorityContractRequiresExplicitScope",
+      "data": {
+        "expected": "testZakFinalAuthorityContractRequiresExplicitScope",
+        "actual": [
+          "testZakFinalAuthorityContractValidation",
+          "testZakFinalAuthorityContractBlocksModelOutputApproval",
+          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+          "testZakFinalAuthorityContractRequiresExplicitScope",
+          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+        ]
+      }
+    },
+    {
+      "name": "planned test revocation narrowing",
+      "pass": true,
+      "reason": "planned test revocation narrowing must contain testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+      "data": {
+        "expected": "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+        "actual": [
+          "testZakFinalAuthorityContractValidation",
+          "testZakFinalAuthorityContractBlocksModelOutputApproval",
+          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+          "testZakFinalAuthorityContractRequiresExplicitScope",
+          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+        ]
+      }
+    },
+    {
+      "name": "planned test self upgrade",
+      "pass": true,
+      "reason": "planned test self upgrade must contain testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade",
+      "data": {
+        "expected": "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade",
+        "actual": [
+          "testZakFinalAuthorityContractValidation",
+          "testZakFinalAuthorityContractBlocksModelOutputApproval",
+          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
+          "testZakFinalAuthorityContractRequiresExplicitScope",
+          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
+          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
+        ]
+      }
+    },
+    {
       "name": "name correction status pass",
       "pass": true,
-      "reason": "name correction evidence must be pass",
+      "reason": "name correction must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
       }
     },
     {
-      "name": "name correction decision exact",
-      "pass": true,
-      "reason": "name correction decision must be exact",
-      "data": {
-        "decision": "user_authority_contract_name_corrected_to_zak_final_authority_contract_plan"
-      }
-    },
-    {
       "name": "name correction canonical contract exact",
       "pass": true,
-      "reason": "canonical contract must be ZakFinalAuthorityContract",
+      "reason": "name correction canonical contract must be exact",
       "data": {
         "actual": "ZakFinalAuthorityContract"
       }
@@ -250,116 +942,9 @@
       }
     },
     {
-      "name": "name correction userAuthorityContractGranted",
-      "pass": true,
-      "reason": "name correction userAuthorityContractGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction zakFinalAuthorityContractPlanAllowedNow",
-      "pass": true,
-      "reason": "name correction zakFinalAuthorityContractPlanAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "name correction zakFinalAuthorityContractPreflightAllowedNow",
-      "pass": true,
-      "reason": "name correction zakFinalAuthorityContractPreflightAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction zakFinalAuthorityContractImplementationAllowedNow",
-      "pass": true,
-      "reason": "name correction zakFinalAuthorityContractImplementationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction zakFinalAuthorityContractGranted",
-      "pass": true,
-      "reason": "name correction zakFinalAuthorityContractGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction fileMoveAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "name correction fileMoveAuthorityDecisionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction fileMoveAuthorityGranted",
-      "pass": true,
-      "reason": "name correction fileMoveAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction fileMoveAllowedNow",
-      "pass": true,
-      "reason": "name correction fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "name correction routes to Zak plan",
-      "pass": true,
-      "reason": "name correction must route to ZakFinalAuthorityContractPlan v1",
-      "data": {
-        "nextAllowedSeam": "ZakFinalAuthorityContractPlan v1"
-      }
-    },
-    {
-      "name": "deprecated name UserAuthorityContract",
-      "pass": true,
-      "reason": "deprecated name UserAuthorityContract must contain UserAuthorityContract",
-      "data": {
-        "expected": "UserAuthorityContract",
-        "actual": [
-          "UserAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "legacy label zak_final_authority_preserved",
-      "pass": true,
-      "reason": "legacy label zak_final_authority_preserved must contain zak_final_authority_preserved",
-      "data": {
-        "expected": "zak_final_authority_preserved",
-        "actual": [
-          "zak_final_authority_preserved",
-          "zak_final_authority_claim_structure_preserved"
-        ]
-      }
-    },
-    {
-      "name": "legacy label zak_final_authority_claim_structure_preserved",
-      "pass": true,
-      "reason": "legacy label zak_final_authority_claim_structure_preserved must contain zak_final_authority_claim_structure_preserved",
-      "data": {
-        "expected": "zak_final_authority_claim_structure_preserved",
-        "actual": [
-          "zak_final_authority_preserved",
-          "zak_final_authority_claim_structure_preserved"
-        ]
-      }
-    },
-    {
       "name": "file move preflight status pass",
       "pass": true,
-      "reason": "file move authority preflight must be pass",
+      "reason": "file move preflight must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\file_move_authority_preflight_v1_20260428_163107.json"
       }
@@ -368,6 +953,22 @@
       "name": "file move preflight fileMoveAuthorityDecisionAllowedNow",
       "pass": true,
       "reason": "file move preflight fileMoveAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "file move preflight fileMoveAuthorityGranted",
+      "pass": true,
+      "reason": "file move preflight fileMoveAuthorityGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "file move preflight fileMoveAllowedNow",
+      "pass": true,
+      "reason": "file move preflight fileMoveAllowedNow must be false",
       "data": {
         "actual": false
       }
@@ -389,6 +990,30 @@
       }
     },
     {
+      "name": "implementation create file absent",
+      "pass": true,
+      "reason": "core/zakFinalAuthorityContract.js must not exist before implementation",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\core\\zakFinalAuthorityContract.js"
+      }
+    },
+    {
+      "name": "tests/run.js exists",
+      "pass": true,
+      "reason": "tests/run.js must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\tests\\run.js"
+      }
+    },
+    {
+      "name": "package.json exists",
+      "pass": true,
+      "reason": "package.json must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\package.json"
+      }
+    },
+    {
       "name": "boundary architecture source exists",
       "pass": true,
       "reason": "boundary architecture source must exist",
@@ -405,33 +1030,17 @@
       }
     },
     {
-      "name": "package.json exists",
+      "name": "full harness passed during preflight",
       "pass": true,
-      "reason": "package.json must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\package.json"
-      }
-    },
-    {
-      "name": "tests/run.js exists",
-      "pass": true,
-      "reason": "tests/run.js must exist",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\tests\\run.js"
-      }
-    },
-    {
-      "name": "full harness passed during plan",
-      "pass": true,
-      "reason": "node tests/run.js must pass during ZakFinalAuthorityContractPlan v1",
+      "reason": "node tests/run.js must pass during ZakFinalAuthorityContractPreflight v1",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-plan working tree clean",
+      "name": "post-preflight working tree clean",
       "pass": true,
-      "reason": "ZakFinalAuthorityContractPlan v1 must leave working tree clean",
+      "reason": "ZakFinalAuthorityContractPreflight v1 must leave working tree clean",
       "data": {
         "statusShort": ""
       }
@@ -460,7 +1069,7 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS PLAN",
+      "label": "FULL HARNESS PREFLIGHT",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
