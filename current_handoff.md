@@ -1,6 +1,6 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T17:17:06.4735412-07:00
+Generated: 2026-04-28T17:22:37.0411892-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-ZakFinalAuthorityContractPreflight v1
+ZakFinalAuthorityContractImplementationPlan v1
 ``
 
 ## Latest Result
@@ -36,15 +36,15 @@ ZakFinalAuthorityContractPreflight v1
 ``text
 status: pass
 continuity_sync: pass
-decision: zak_final_authority_contract_implementation_plan_ready
+decision: zak_final_authority_contract_implementation_preflight_planned
 canonical_authority_contract: ZakFinalAuthorityContract
-next_allowed_seam: ZakFinalAuthorityContractImplementationPlan v1
+next_allowed_seam: ZakFinalAuthorityContractImplementationPreflight v1
 ``
 
 ## Current Open Seam
 
 ``text
-ZakFinalAuthorityContractImplementationPlan v1
+ZakFinalAuthorityContractImplementationPreflight v1
 ``
 
 ## Current Packet
@@ -56,13 +56,5 @@ not generated yet
 ## Authority Contract
 
 ZakFinalAuthorityContract is the canonical authority contract.
-UserAuthorityContract is deprecated and must not be used as a separate authority source.
-Legacy zak_final_authority_* labels are compatibility/provenance labels only.
-
-## Currently Not Granted After Latest Completed Seam
-
-- ZakFinalAuthorityContract implementation authority
-- file move authority
-- file move
-- commit
-- staging
+Implementation candidate files are core/zakFinalAuthorityContract.js and tests/run.js.
+FileMoveAuthorityDecision v1 remains blocked until post-contract spine audit passes.

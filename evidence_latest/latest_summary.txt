@@ -1,10 +1,10 @@
-ZAK FINAL AUTHORITY CONTRACT PREFLIGHT V1
+ZAK FINAL AUTHORITY CONTRACT IMPLEMENTATION PLAN V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: zak_final_authority_contract_implementation_plan_ready
+plan_only: true
+decision: zak_final_authority_contract_implementation_preflight_planned
 
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
@@ -12,47 +12,67 @@ structure_priority: audit_stable_over_human_readable
 canonical_authority_contract: ZakFinalAuthorityContract
 duplicate_authority_sources_allowed: false
 
-legacy_authority_labels_verified:
-- zak_final_authority_preserved
-- zak_final_authority_claim_structure_preserved
+prior_preflight_verified: true
 
-legacy_label_relationship_verified:
-- legacy labels are compatibility/provenance labels only
-- legacy labels do not define a separate authority system
-- legacy labels grant no authority by themselves
-- legacy labels cannot bypass ZakFinalAuthorityContract
-
-zak_final_authority_contract_preflight_complete: true
-zak_final_authority_contract_implementation_plan_allowed_now: true
+implementation_plan_allowed_now: true
+zak_final_authority_contract_implementation_preflight_allowed_now: true
 zak_final_authority_contract_implementation_allowed_now: false
 zak_final_authority_contract_granted: false
 zak_final_authority_contract_state_recorded: false
+
+source_mutation_allowed_now: true
+source_mutation_performed: false
+commit_allowed_now: false
+staging_allowed_now: false
 
 file_move_authority_decision_allowed_now: false
 file_move_authority_granted: false
 file_move_allowed_now: false
 
-source_mutation_allowed_now: true
-commit_allowed_now: false
-staging_allowed_now: false
+implementation_candidate_files:
+- core/zakFinalAuthorityContract.js
+- tests/run.js
 
-preflight_verified:
-- plan_verified: true
-- canonical_contract_verified: true
-- duplicate_authority_sources_blocked: true
-- legacy_label_mapping_verified: true
-- planned_contract_invariants_verified: true
-- planned_contract_non_grants_verified: true
-- implementation_candidate_files_verified: true
-- planned_exports_verified: true
-- planned_tests_verified: true
-- file_move_decision_blocked: true
-- source_mutation_available_for_future_implementation: true
+expected_dirty_state_after_implementation:
+-  M tests/run.js
+- ?? core/zakFinalAuthorityContract.js
 
-next_allowed_seam: ZakFinalAuthorityContractImplementationPlan v1
+planned_exports:
+- ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES
+- ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS
+- ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS
+- createZakFinalAuthorityContract
+- validateZakFinalAuthorityContract
+- assertZakFinalAuthorityContract
+- summarizeZakFinalAuthorityContract
+
+planned_tests:
+- testZakFinalAuthorityContractValidation
+- testZakFinalAuthorityContractBlocksModelOutputApproval
+- testZakFinalAuthorityContractBlocksGeneratedCodeApproval
+- testZakFinalAuthorityContractRequiresExplicitScope
+- testZakFinalAuthorityContractSupportsRevocationAndNarrowing
+- testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade
+
+implementation_constraints:
+- metadata_only
+- no_runtime_execution
+- no_tool_execution
+- no_file_move_execution
+- no_deletion_execution
+- no_process_spawn_execution
+- no_network_download_execution
+- no_privilege_escalation
+- no_hidden_persistence
+- no_autonomous_final_approval
+- no_authority_self_expansion
+- no_model_output_approval
+- no_generated_code_approval
+- no_approval_reuse_outside_explicit_scope
+
+next_allowed_seam: ZakFinalAuthorityContractImplementationPreflight v1
 
 planned_following_seams:
-- ZakFinalAuthorityContractImplementationPlan v1
 - ZakFinalAuthorityContractImplementationPreflight v1
 - ZakFinalAuthorityContractImplementation v1
 - ZakFinalAuthorityContractCommitGate v1
@@ -60,7 +80,7 @@ planned_following_seams:
 - Post-ZakFinalAuthorityContract Spine Audit v1
 - FileMoveAuthorityDecision v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_preflight_v1_20260428_171705.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_preflight_v1_summary_20260428_171705.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_implementation_plan_v1_20260428_172235.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_implementation_plan_v1_summary_20260428_172235.txt
 
 continuity_sync_message: continuity sync pending
