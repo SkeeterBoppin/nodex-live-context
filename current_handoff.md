@@ -1,6 +1,6 @@
 # NODEX CURRENT HANDOFF
 
-Generated: 2026-04-28T17:22:37.0411892-07:00
+Generated: 2026-04-28T17:29:55.6046399-07:00
 
 ## Boundary
 
@@ -28,7 +28,7 @@ Latest observed Nodex working tree status:
 ## Latest Completed Seam
 
 ``text
-ZakFinalAuthorityContractImplementationPlan v1
+ZakFinalAuthorityContractImplementationPreflight v1
 ``
 
 ## Latest Result
@@ -36,25 +36,26 @@ ZakFinalAuthorityContractImplementationPlan v1
 ``text
 status: pass
 continuity_sync: pass
-decision: zak_final_authority_contract_implementation_preflight_planned
-canonical_authority_contract: ZakFinalAuthorityContract
-next_allowed_seam: ZakFinalAuthorityContractImplementationPreflight v1
+decision: zak_final_authority_contract_implementation_ready
+next_allowed_seam: ZakFinalAuthorityContractImplementation v1
 ``
 
 ## Current Open Seam
 
 ``text
-ZakFinalAuthorityContractImplementationPreflight v1
+ZakFinalAuthorityContractImplementation v1
 ``
 
-## Current Packet
+## Expected Dirty State After Implementation
 
 ``text
-not generated yet
+ M tests/run.js
+?? core/zakFinalAuthorityContract.js
 ``
 
-## Authority Contract
+## Blocked Until Later
 
-ZakFinalAuthorityContract is the canonical authority contract.
-Implementation candidate files are core/zakFinalAuthorityContract.js and tests/run.js.
-FileMoveAuthorityDecision v1 remains blocked until post-contract spine audit passes.
+- commit
+- staging
+- file move authority
+- file move
