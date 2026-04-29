@@ -1,49 +1,51 @@
 {
-  "schema": "nodex.zak_final_authority_contract.implementation_preflight.v1",
+  "schema": "nodex.zak_final_authority_contract.implementation.v1",
   "status": "pass",
   "continuity_sync": "skipped",
   "continuity_sync_message": "continuity sync pending",
-  "createdAt": "2026-04-28T17:29:55.4934257-07:00",
+  "createdAt": "2026-04-28T17:35:51.1250778-07:00",
   "repoRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
   "systemRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System",
   "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "architectureRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture",
   "continuityRepo": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "seam": "ZakFinalAuthorityContractImplementationPreflight v1",
-  "preflightOnly": true,
+  "seam": "ZakFinalAuthorityContractImplementation v1",
+  "implementationOnly": true,
   "claimStructureMode": "narrow_deterministic_evidence_scoped",
   "structurePriority": "audit_stable_over_human_readable",
   "auditedCommit": {
     "expected": "c64ae68 Add proof claim layer manifest validator",
     "head": "c64ae68 Add proof claim layer manifest validator"
   },
+  "priorZakFinalAuthorityContractImplementationPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_implementation_preflight_v1_20260428_172954.json",
   "priorZakFinalAuthorityContractImplementationPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_implementation_plan_v1_20260428_172235.json",
   "priorZakFinalAuthorityContractPreflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_preflight_v1_20260428_171705.json",
   "priorZakFinalAuthorityContractPlan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_plan_v1_20260428_170713.json",
-  "priorUserAuthorityContractNameCorrection": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json",
-  "decision": "zak_final_authority_contract_implementation_ready",
+  "decision": "zak_final_authority_contract_implementation_complete",
   "canonicalAuthorityContract": "ZakFinalAuthorityContract",
   "duplicateAuthoritySourcesAllowed": false,
-  "implementationPlanVerified": true,
-  "zakFinalAuthorityContractImplementationAllowedNow": true,
-  "zakFinalAuthorityContractGranted": false,
-  "zakFinalAuthorityContractStateRecorded": false,
-  "sourceMutationAllowedNow": true,
-  "sourceMutationPerformed": false,
-  "commitAllowedNow": false,
-  "stagingAllowedNow": false,
-  "fileMoveAuthorityDecisionAllowedNow": false,
-  "fileMoveAuthorityGranted": false,
-  "fileMoveAllowedNow": false,
-  "approvedImplementationFiles": [
+  "implementationApplied": true,
+  "sourceMutationPerformed": true,
+  "approvedFilesModified": [
     "core/zakFinalAuthorityContract.js",
     "tests/run.js"
   ],
-  "expectedDirtyStateAfterImplementation": [
+  "dirtyStateExpected": [
     " M tests/run.js",
     "?? core/zakFinalAuthorityContract.js"
   ],
-  "requiredExports": [
+  "dirtyStateActual": [
+    " M tests/run.js",
+    "?? core/zakFinalAuthorityContract.js"
+  ],
+  "zakFinalAuthorityContractGranted": false,
+  "zakFinalAuthorityContractStateRecorded": false,
+  "fileMoveAuthorityDecisionAllowedNow": false,
+  "fileMoveAuthorityGranted": false,
+  "fileMoveAllowedNow": false,
+  "commitAllowedNow": false,
+  "stagingAllowedNow": false,
+  "exportsVerified": [
     "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
     "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
     "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
@@ -52,7 +54,7 @@
     "assertZakFinalAuthorityContract",
     "summarizeZakFinalAuthorityContract"
   ],
-  "requiredTests": [
+  "testsAdded": [
     "testZakFinalAuthorityContractValidation",
     "testZakFinalAuthorityContractBlocksModelOutputApproval",
     "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
@@ -60,60 +62,28 @@
     "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
     "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
   ],
-  "implementationConstraintsVerified": [
-    "metadata_only",
-    "no_runtime_execution",
-    "no_tool_execution",
-    "no_file_move_execution",
-    "no_deletion_execution",
-    "no_process_spawn_execution",
-    "no_network_download_execution",
-    "no_privilege_escalation",
-    "no_hidden_persistence",
-    "no_autonomous_final_approval",
-    "no_authority_self_expansion",
-    "no_model_output_approval",
-    "no_generated_code_approval",
-    "no_approval_reuse_outside_explicit_scope"
-  ],
-  "nextAllowedSeam": "ZakFinalAuthorityContractImplementation v1",
+  "validation": {
+    "implementationPreflightVerified": true,
+    "implementationPlanVerified": true,
+    "approvedFilesOnly": true,
+    "syntaxChecksPassed": true,
+    "targetedExportProbePassed": true,
+    "fullHarnessPassed": true,
+    "dirtyStateMatchesExpected": true,
+    "zakFinalAuthorityContractGranted": false,
+    "fileMoveAuthorityDecisionAllowedNow": false,
+    "fileMoveAuthorityGranted": false,
+    "fileMoveAllowedNow": false,
+    "commitAllowedNow": false,
+    "stagingAllowedNow": false
+  },
+  "nextAllowedSeam": "ZakFinalAuthorityContractCommitGate v1",
   "plannedFollowingSeams": [
-    "ZakFinalAuthorityContractImplementation v1",
     "ZakFinalAuthorityContractCommitGate v1",
     "ZakFinalAuthorityContractStateRecord v1",
     "Post-ZakFinalAuthorityContract Spine Audit v1",
     "FileMoveAuthorityDecision v1"
   ],
-  "validation": {
-    "implementationPlanVerified": true,
-    "preflightVerified": true,
-    "planVerified": true,
-    "nameCorrectionVerified": true,
-    "canonicalAuthorityContractVerified": true,
-    "duplicateAuthoritySourcesBlocked": true,
-    "approvedImplementationFilesVerified": true,
-    "expectedDirtyStateVerified": true,
-    "requiredExportsVerified": true,
-    "requiredTestsVerified": true,
-    "implementationConstraintsVerified": true,
-    "candidateCreateFileAbsent": true,
-    "candidateModifyFilePresent": true,
-    "fileMoveAuthorityDecisionBlocked": true,
-    "sourceMutationAllowedButNotPerformed": true,
-    "zakFinalAuthorityContractImplementationAllowedNow": true,
-    "zakFinalAuthorityContractGranted": false,
-    "claimStructureModePreserved": true,
-    "structurePriorityAuditStable": true,
-    "expectedHeadVerified": true,
-    "architectureSourcesVerified": true,
-    "preflightWorkingTreeClean": true,
-    "fullHarnessPassed": true,
-    "postPreflightWorkingTreeClean": true,
-    "fileMoveAuthorityGranted": false,
-    "fileMoveAllowedNow": false,
-    "commit": false,
-    "staging": false
-  },
   "checks": [
     {
       "name": "Nodex git root exact",
@@ -125,9 +95,9 @@
       }
     },
     {
-      "name": "preflight working tree clean",
+      "name": "pre-implementation working tree clean",
       "pass": true,
-      "reason": "ZakFinalAuthorityContractImplementationPreflight v1 must start with clean working tree",
+      "reason": "ZakFinalAuthorityContractImplementation v1 must start with clean working tree",
       "data": {
         "statusShort": ""
       }
@@ -135,10 +105,18 @@
     {
       "name": "committed baseline verified",
       "pass": true,
-      "reason": "HEAD must match ZakFinalAuthorityContractImplementationPreflight baseline",
+      "reason": "HEAD must match ZakFinalAuthorityContractImplementation baseline",
       "data": {
         "expected": "c64ae68 Add proof claim layer manifest validator",
         "actual": "c64ae68 Add proof claim layer manifest validator"
+      }
+    },
+    {
+      "name": "Zak final authority contract implementation preflight JSON exists",
+      "pass": true,
+      "reason": "missing zak_final_authority_contract_implementation_preflight_v1_*.json evidence",
+      "data": {
+        "pattern": "zak_final_authority_contract_implementation_preflight_v1_*.json"
       }
     },
     {
@@ -166,11 +144,19 @@
       }
     },
     {
-      "name": "user authority contract name correction JSON exists",
+      "name": "Zak final authority contract implementation preflight path present",
       "pass": true,
-      "reason": "missing user_authority_contract_plan_v1_name_correction_*.json evidence",
+      "reason": "Zak final authority contract implementation preflight path must be present",
       "data": {
-        "pattern": "user_authority_contract_plan_v1_name_correction_*.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_implementation_preflight_v1_20260428_172954.json"
+      }
+    },
+    {
+      "name": "Zak final authority contract implementation preflight file exists",
+      "pass": true,
+      "reason": "Zak final authority contract implementation preflight file must exist",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_implementation_preflight_v1_20260428_172954.json"
       }
     },
     {
@@ -222,790 +208,79 @@
       }
     },
     {
-      "name": "user authority contract name correction path present",
+      "name": "implementation preflight status pass",
       "pass": true,
-      "reason": "user authority contract name correction path must be present",
+      "reason": "implementation preflight must be pass",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_implementation_preflight_v1_20260428_172954.json"
       }
     },
     {
-      "name": "user authority contract name correction file exists",
+      "name": "implementation preflight decision exact",
       "pass": true,
-      "reason": "user authority contract name correction file must exist",
+      "reason": "implementation preflight decision must be exact",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
+        "decision": "zak_final_authority_contract_implementation_ready"
+      }
+    },
+    {
+      "name": "implementation preflight zakFinalAuthorityContractImplementationAllowedNow",
+      "pass": true,
+      "reason": "implementation preflight zakFinalAuthorityContractImplementationAllowedNow must be true",
+      "data": {
+        "actual": true
+      }
+    },
+    {
+      "name": "implementation preflight zakFinalAuthorityContractGranted",
+      "pass": true,
+      "reason": "implementation preflight zakFinalAuthorityContractGranted must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "implementation preflight fileMoveAuthorityDecisionAllowedNow",
+      "pass": true,
+      "reason": "implementation preflight fileMoveAuthorityDecisionAllowedNow must be false",
+      "data": {
+        "actual": false
+      }
+    },
+    {
+      "name": "implementation preflight routes to implementation",
+      "pass": true,
+      "reason": "implementation preflight must route to implementation",
+      "data": {
+        "nextAllowedSeam": "ZakFinalAuthorityContractImplementation v1"
       }
     },
     {
       "name": "implementation plan status pass",
       "pass": true,
-      "reason": "ZakFinalAuthorityContractImplementationPlan must be pass",
+      "reason": "implementation plan must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_implementation_plan_v1_20260428_172235.json"
       }
     },
     {
-      "name": "implementation plan decision exact",
+      "name": "contract preflight status pass",
       "pass": true,
-      "reason": "implementation plan decision must be exact",
-      "data": {
-        "decision": "zak_final_authority_contract_implementation_preflight_planned"
-      }
-    },
-    {
-      "name": "implementation plan canonical contract exact",
-      "pass": true,
-      "reason": "implementation plan canonical contract must be exact",
-      "data": {
-        "actual": "ZakFinalAuthorityContract"
-      }
-    },
-    {
-      "name": "implementation plan duplicateAuthoritySourcesAllowed",
-      "pass": true,
-      "reason": "implementation plan duplicateAuthoritySourcesAllowed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan priorPreflightVerified",
-      "pass": true,
-      "reason": "implementation plan priorPreflightVerified must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "implementation plan implementationPlanAllowedNow",
-      "pass": true,
-      "reason": "implementation plan implementationPlanAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "implementation plan zakFinalAuthorityContractImplementationPreflightAllowedNow",
-      "pass": true,
-      "reason": "implementation plan zakFinalAuthorityContractImplementationPreflightAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "implementation plan zakFinalAuthorityContractImplementationAllowedNow",
-      "pass": true,
-      "reason": "implementation plan zakFinalAuthorityContractImplementationAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan zakFinalAuthorityContractGranted",
-      "pass": true,
-      "reason": "implementation plan zakFinalAuthorityContractGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan zakFinalAuthorityContractStateRecorded",
-      "pass": true,
-      "reason": "implementation plan zakFinalAuthorityContractStateRecorded must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan sourceMutationAllowedNow",
-      "pass": true,
-      "reason": "implementation plan sourceMutationAllowedNow must be true",
-      "data": {
-        "actual": true
-      }
-    },
-    {
-      "name": "implementation plan sourceMutationPerformed",
-      "pass": true,
-      "reason": "implementation plan sourceMutationPerformed must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan commitAllowedNow",
-      "pass": true,
-      "reason": "implementation plan commitAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan stagingAllowedNow",
-      "pass": true,
-      "reason": "implementation plan stagingAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan fileMoveAuthorityDecisionAllowedNow",
-      "pass": true,
-      "reason": "implementation plan fileMoveAuthorityDecisionAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan fileMoveAuthorityGranted",
-      "pass": true,
-      "reason": "implementation plan fileMoveAuthorityGranted must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan fileMoveAllowedNow",
-      "pass": true,
-      "reason": "implementation plan fileMoveAllowedNow must be false",
-      "data": {
-        "actual": false
-      }
-    },
-    {
-      "name": "implementation plan routes to implementation preflight",
-      "pass": true,
-      "reason": "implementation plan must route to implementation preflight",
-      "data": {
-        "nextAllowedSeam": "ZakFinalAuthorityContractImplementationPreflight v1"
-      }
-    },
-    {
-      "name": "candidate file core",
-      "pass": true,
-      "reason": "candidate file core must contain core/zakFinalAuthorityContract.js",
-      "data": {
-        "expected": "core/zakFinalAuthorityContract.js",
-        "actual": [
-          "core/zakFinalAuthorityContract.js",
-          "tests/run.js"
-        ]
-      }
-    },
-    {
-      "name": "candidate file tests",
-      "pass": true,
-      "reason": "candidate file tests must contain tests/run.js",
-      "data": {
-        "expected": "tests/run.js",
-        "actual": [
-          "core/zakFinalAuthorityContract.js",
-          "tests/run.js"
-        ]
-      }
-    },
-    {
-      "name": "expected dirty tests",
-      "pass": true,
-      "reason": "expected dirty tests must contain  M tests/run.js",
-      "data": {
-        "expected": " M tests/run.js",
-        "actual": [
-          " M tests/run.js",
-          "?? core/zakFinalAuthorityContract.js"
-        ]
-      }
-    },
-    {
-      "name": "expected dirty core",
-      "pass": true,
-      "reason": "expected dirty core must contain ?? core/zakFinalAuthorityContract.js",
-      "data": {
-        "expected": "?? core/zakFinalAuthorityContract.js",
-        "actual": [
-          " M tests/run.js",
-          "?? core/zakFinalAuthorityContract.js"
-        ]
-      }
-    },
-    {
-      "name": "planned export statuses",
-      "pass": true,
-      "reason": "planned export statuses must contain ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-      "data": {
-        "expected": "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned export approvals",
-      "pass": true,
-      "reason": "planned export approvals must contain ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-      "data": {
-        "expected": "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned export non grants",
-      "pass": true,
-      "reason": "planned export non grants must contain ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-      "data": {
-        "expected": "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned export create",
-      "pass": true,
-      "reason": "planned export create must contain createZakFinalAuthorityContract",
-      "data": {
-        "expected": "createZakFinalAuthorityContract",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned export validate",
-      "pass": true,
-      "reason": "planned export validate must contain validateZakFinalAuthorityContract",
-      "data": {
-        "expected": "validateZakFinalAuthorityContract",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned export assert",
-      "pass": true,
-      "reason": "planned export assert must contain assertZakFinalAuthorityContract",
-      "data": {
-        "expected": "assertZakFinalAuthorityContract",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned export summarize",
-      "pass": true,
-      "reason": "planned export summarize must contain summarizeZakFinalAuthorityContract",
-      "data": {
-        "expected": "summarizeZakFinalAuthorityContract",
-        "actual": [
-          "ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS",
-          "ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS",
-          "createZakFinalAuthorityContract",
-          "validateZakFinalAuthorityContract",
-          "assertZakFinalAuthorityContract",
-          "summarizeZakFinalAuthorityContract"
-        ]
-      }
-    },
-    {
-      "name": "planned test validation",
-      "pass": true,
-      "reason": "planned test validation must contain testZakFinalAuthorityContractValidation",
-      "data": {
-        "expected": "testZakFinalAuthorityContractValidation",
-        "actual": [
-          "testZakFinalAuthorityContractValidation",
-          "testZakFinalAuthorityContractBlocksModelOutputApproval",
-          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-          "testZakFinalAuthorityContractRequiresExplicitScope",
-          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-        ]
-      }
-    },
-    {
-      "name": "planned test model output",
-      "pass": true,
-      "reason": "planned test model output must contain testZakFinalAuthorityContractBlocksModelOutputApproval",
-      "data": {
-        "expected": "testZakFinalAuthorityContractBlocksModelOutputApproval",
-        "actual": [
-          "testZakFinalAuthorityContractValidation",
-          "testZakFinalAuthorityContractBlocksModelOutputApproval",
-          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-          "testZakFinalAuthorityContractRequiresExplicitScope",
-          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-        ]
-      }
-    },
-    {
-      "name": "planned test generated code",
-      "pass": true,
-      "reason": "planned test generated code must contain testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-      "data": {
-        "expected": "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-        "actual": [
-          "testZakFinalAuthorityContractValidation",
-          "testZakFinalAuthorityContractBlocksModelOutputApproval",
-          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-          "testZakFinalAuthorityContractRequiresExplicitScope",
-          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-        ]
-      }
-    },
-    {
-      "name": "planned test scope",
-      "pass": true,
-      "reason": "planned test scope must contain testZakFinalAuthorityContractRequiresExplicitScope",
-      "data": {
-        "expected": "testZakFinalAuthorityContractRequiresExplicitScope",
-        "actual": [
-          "testZakFinalAuthorityContractValidation",
-          "testZakFinalAuthorityContractBlocksModelOutputApproval",
-          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-          "testZakFinalAuthorityContractRequiresExplicitScope",
-          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-        ]
-      }
-    },
-    {
-      "name": "planned test revocation",
-      "pass": true,
-      "reason": "planned test revocation must contain testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-      "data": {
-        "expected": "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-        "actual": [
-          "testZakFinalAuthorityContractValidation",
-          "testZakFinalAuthorityContractBlocksModelOutputApproval",
-          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-          "testZakFinalAuthorityContractRequiresExplicitScope",
-          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-        ]
-      }
-    },
-    {
-      "name": "planned test self upgrade",
-      "pass": true,
-      "reason": "planned test self upgrade must contain testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade",
-      "data": {
-        "expected": "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade",
-        "actual": [
-          "testZakFinalAuthorityContractValidation",
-          "testZakFinalAuthorityContractBlocksModelOutputApproval",
-          "testZakFinalAuthorityContractBlocksGeneratedCodeApproval",
-          "testZakFinalAuthorityContractRequiresExplicitScope",
-          "testZakFinalAuthorityContractSupportsRevocationAndNarrowing",
-          "testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade"
-        ]
-      }
-    },
-    {
-      "name": "constraint metadata",
-      "pass": true,
-      "reason": "constraint metadata must contain metadata_only",
-      "data": {
-        "expected": "metadata_only",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint runtime",
-      "pass": true,
-      "reason": "constraint runtime must contain no_runtime_execution",
-      "data": {
-        "expected": "no_runtime_execution",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint tool",
-      "pass": true,
-      "reason": "constraint tool must contain no_tool_execution",
-      "data": {
-        "expected": "no_tool_execution",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint file move",
-      "pass": true,
-      "reason": "constraint file move must contain no_file_move_execution",
-      "data": {
-        "expected": "no_file_move_execution",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint deletion",
-      "pass": true,
-      "reason": "constraint deletion must contain no_deletion_execution",
-      "data": {
-        "expected": "no_deletion_execution",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint process",
-      "pass": true,
-      "reason": "constraint process must contain no_process_spawn_execution",
-      "data": {
-        "expected": "no_process_spawn_execution",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint network",
-      "pass": true,
-      "reason": "constraint network must contain no_network_download_execution",
-      "data": {
-        "expected": "no_network_download_execution",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint privilege",
-      "pass": true,
-      "reason": "constraint privilege must contain no_privilege_escalation",
-      "data": {
-        "expected": "no_privilege_escalation",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint persistence",
-      "pass": true,
-      "reason": "constraint persistence must contain no_hidden_persistence",
-      "data": {
-        "expected": "no_hidden_persistence",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint autonomous",
-      "pass": true,
-      "reason": "constraint autonomous must contain no_autonomous_final_approval",
-      "data": {
-        "expected": "no_autonomous_final_approval",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint self expansion",
-      "pass": true,
-      "reason": "constraint self expansion must contain no_authority_self_expansion",
-      "data": {
-        "expected": "no_authority_self_expansion",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint model output",
-      "pass": true,
-      "reason": "constraint model output must contain no_model_output_approval",
-      "data": {
-        "expected": "no_model_output_approval",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint generated code",
-      "pass": true,
-      "reason": "constraint generated code must contain no_generated_code_approval",
-      "data": {
-        "expected": "no_generated_code_approval",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "constraint scope reuse",
-      "pass": true,
-      "reason": "constraint scope reuse must contain no_approval_reuse_outside_explicit_scope",
-      "data": {
-        "expected": "no_approval_reuse_outside_explicit_scope",
-        "actual": [
-          "metadata_only",
-          "no_runtime_execution",
-          "no_tool_execution",
-          "no_file_move_execution",
-          "no_deletion_execution",
-          "no_process_spawn_execution",
-          "no_network_download_execution",
-          "no_privilege_escalation",
-          "no_hidden_persistence",
-          "no_autonomous_final_approval",
-          "no_authority_self_expansion",
-          "no_model_output_approval",
-          "no_generated_code_approval",
-          "no_approval_reuse_outside_explicit_scope"
-        ]
-      }
-    },
-    {
-      "name": "prior preflight status pass",
-      "pass": true,
-      "reason": "ZakFinalAuthorityContractPreflight must be pass",
+      "reason": "contract preflight must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_preflight_v1_20260428_171705.json"
       }
     },
     {
-      "name": "prior plan status pass",
+      "name": "contract plan status pass",
       "pass": true,
-      "reason": "ZakFinalAuthorityContractPlan must be pass",
+      "reason": "contract plan must be pass",
       "data": {
         "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\zak_final_authority_contract_plan_v1_20260428_170713.json"
       }
     },
     {
-      "name": "name correction status pass",
-      "pass": true,
-      "reason": "name correction must be pass",
-      "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\user_authority_contract_plan_v1_name_correction_20260428_165904.json"
-      }
-    },
-    {
-      "name": "candidate create file absent",
+      "name": "approved core file absent before write",
       "pass": true,
       "reason": "core/zakFinalAuthorityContract.js must not exist before implementation",
       "data": {
@@ -1013,7 +288,7 @@
       }
     },
     {
-      "name": "candidate modify file present",
+      "name": "approved tests file present before write",
       "pass": true,
       "reason": "tests/run.js must exist before implementation",
       "data": {
@@ -1021,43 +296,104 @@
       }
     },
     {
-      "name": "package.json exists",
+      "name": "core directory present",
       "pass": true,
-      "reason": "package.json must exist",
+      "reason": "core directory must exist",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\package.json"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\core"
       }
     },
     {
-      "name": "boundary architecture source exists",
+      "name": "test marker absent before append",
       "pass": true,
-      "reason": "boundary architecture source must exist",
+      "reason": "ZakFinalAuthorityContract tests must not already be appended",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_boundary_pushing_master_architecture.md"
+        "marker": "// ZAK_FINAL_AUTHORITY_CONTRACT_TESTS_V1"
       }
     },
     {
-      "name": "continuity source exists",
+      "name": "core file written",
       "pass": true,
-      "reason": "continuity source must exist",
+      "reason": "core/zakFinalAuthorityContract.js must exist after implementation",
       "data": {
-        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Architecture\\nodex_exact_continuity_source_v1.md"
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\core\\zakFinalAuthorityContract.js"
       }
     },
     {
-      "name": "full harness passed during implementation preflight",
+      "name": "tests file still exists",
       "pass": true,
-      "reason": "node tests/run.js must pass during ZakFinalAuthorityContractImplementationPreflight v1",
+      "reason": "tests/run.js must exist after implementation",
+      "data": {
+        "path": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node\\tests\\run.js"
+      }
+    },
+    {
+      "name": "core syntax check passed",
+      "pass": true,
+      "reason": "node --check core/zakFinalAuthorityContract.js must pass",
+      "data": {
+        "output": ""
+      }
+    },
+    {
+      "name": "tests syntax check passed",
+      "pass": true,
+      "reason": "node --check tests/run.js must pass",
+      "data": {
+        "output": ""
+      }
+    },
+    {
+      "name": "targeted export probe passed",
+      "pass": true,
+      "reason": "targeted export probe must pass",
+      "data": {
+        "output": "zak_final_authority_contract_export_probe_passed"
+      }
+    },
+    {
+      "name": "full harness passed after implementation",
+      "pass": true,
+      "reason": "node tests/run.js must pass after implementation",
       "data": {
         "output": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
       }
     },
     {
-      "name": "post-preflight working tree clean",
+      "name": "dirty path count matches expected",
       "pass": true,
-      "reason": "ZakFinalAuthorityContractImplementationPreflight v1 must leave working tree clean",
+      "reason": "dirty path count must match expected files only",
       "data": {
-        "statusShort": ""
+        "expected": [
+          " M tests/run.js",
+          "?? core/zakFinalAuthorityContract.js"
+        ],
+        "actual": [
+          " M tests/run.js",
+          "?? core/zakFinalAuthorityContract.js"
+        ]
+      }
+    },
+    {
+      "name": "dirty state contains  M tests/run.js",
+      "pass": true,
+      "reason": "dirty state must contain  M tests/run.js",
+      "data": {
+        "actual": [
+          " M tests/run.js",
+          "?? core/zakFinalAuthorityContract.js"
+        ]
+      }
+    },
+    {
+      "name": "dirty state contains ?? core/zakFinalAuthorityContract.js",
+      "pass": true,
+      "reason": "dirty state must contain ?? core/zakFinalAuthorityContract.js",
+      "data": {
+        "actual": [
+          " M tests/run.js",
+          "?? core/zakFinalAuthorityContract.js"
+        ]
       }
     }
   ],
@@ -1084,7 +420,37 @@
       "stdoutStderr": "c64ae68 Add proof claim layer manifest validator"
     },
     {
-      "label": "FULL HARNESS IMPLEMENTATION PREFLIGHT",
+      "label": "NODE CHECK CORE",
+      "filePath": "node",
+      "arguments": [
+        "--check",
+        "core/zakFinalAuthorityContract.js"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": ""
+    },
+    {
+      "label": "NODE CHECK TESTS",
+      "filePath": "node",
+      "arguments": [
+        "--check",
+        "tests/run.js"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": ""
+    },
+    {
+      "label": "TARGETED EXPORT PROBE",
+      "filePath": "node",
+      "arguments": [
+        "-e",
+        "const m = require('./core/zakFinalAuthorityContract');\nconst required = [\n  'ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES',\n  'ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS',\n  'ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS',\n  'createZakFinalAuthorityContract',\n  'validateZakFinalAuthorityContract',\n  'assertZakFinalAuthorityContract',\n  'summarizeZakFinalAuthorityContract',\n];\nfor (const key of required) {\n  if (!(key in m)) throw new Error('missing export ' + key);\n}\nconst c = m.createZakFinalAuthorityContract();\nconst r = m.validateZakFinalAuthorityContract(c);\nif (!r.valid) throw new Error(r.errors.join('; '));\nif (c.canonicalAuthorityContract !== 'ZakFinalAuthorityContract') throw new Error('wrong canonical contract');\nif (c.duplicateAuthoritySourcesAllowed !== false) throw new Error('duplicate authority must be blocked');\nif (c.grants.fileMoveAuthority !== false) throw new Error('file move authority must not be granted');\nif (c.approvalRules.modelOutputApprovalAccepted !== false) throw new Error('model approval must be blocked');\nif (c.approvalRules.generatedCodeApprovalAccepted !== false) throw new Error('generated approval must be blocked');\nconsole.log('zak_final_authority_contract_export_probe_passed');"
+      ],
+      "exitCode": 0,
+      "stdoutStderr": "zak_final_authority_contract_export_probe_passed"
+    },
+    {
+      "label": "FULL HARNESS IMPLEMENTATION",
       "filePath": "node",
       "arguments": [
         "tests/run.js"
@@ -1093,14 +459,14 @@
       "stdoutStderr": "EvidenceGateManifestImplementation v1 tests passed\r\nActivationStopConditionManifestImplementation v1 tests passed\r\nValidityGraphDependencyImplementation v1 tests passed\r\nControlCoverageMatrixImplementation v1 tests passed\r\nModelOutputProposalAuthoritySplitImplementation v1 tests passed\r\nToolCapabilityRegistryCoverageImplementation v1 tests passed\r\nPacketSystemConsolidationImplementation v1 tests passed\r\nContext snapshot updated: diagnostic only\r\nAll Nodex tests passed"
     },
     {
-      "label": "GIT STATUS --SHORT POST",
+      "label": "GIT STATUS --SHORT AFTER IMPLEMENTATION",
       "filePath": "git",
       "arguments": [
         "status",
         "--short"
       ],
       "exitCode": 0,
-      "stdoutStderr": ""
+      "stdoutStderr": " M tests/run.js\r\n?? core/zakFinalAuthorityContract.js"
     }
   ],
   "failure": null

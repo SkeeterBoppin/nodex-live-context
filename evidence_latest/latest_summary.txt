@@ -1,10 +1,10 @@
-ZAK FINAL AUTHORITY CONTRACT IMPLEMENTATION PREFLIGHT V1
+ZAK FINAL AUTHORITY CONTRACT IMPLEMENTATION V1
 
 status: pass
 continuity_sync: skipped
 audited_commit: c64ae68 Add proof claim layer manifest validator
-preflight_only: true
-decision: zak_final_authority_contract_implementation_ready
+implementation_only: true
+decision: zak_final_authority_contract_implementation_complete
 
 claim_structure_mode: narrow_deterministic_evidence_scoped
 structure_priority: audit_stable_over_human_readable
@@ -12,29 +12,27 @@ structure_priority: audit_stable_over_human_readable
 canonical_authority_contract: ZakFinalAuthorityContract
 duplicate_authority_sources_allowed: false
 
-implementation_plan_verified: true
-zak_final_authority_contract_implementation_allowed_now: true
+implementation_applied: true
+source_mutation_performed: true
+approved_files_modified:
+- core/zakFinalAuthorityContract.js
+- tests/run.js
+
+dirty_state_expected:
+-  M tests/run.js
+- ?? core/zakFinalAuthorityContract.js
+
 zak_final_authority_contract_granted: false
 zak_final_authority_contract_state_recorded: false
-
-source_mutation_allowed_now: true
-source_mutation_performed: false
-commit_allowed_now: false
-staging_allowed_now: false
 
 file_move_authority_decision_allowed_now: false
 file_move_authority_granted: false
 file_move_allowed_now: false
 
-approved_implementation_files:
-- core/zakFinalAuthorityContract.js
-- tests/run.js
+commit_allowed_now: false
+staging_allowed_now: false
 
-expected_dirty_state_after_implementation:
--  M tests/run.js
-- ?? core/zakFinalAuthorityContract.js
-
-required_exports:
+exports_verified:
 - ZAK_FINAL_AUTHORITY_CONTRACT_STATUSES
 - ZAK_FINAL_AUTHORITY_CONTRACT_REQUIRED_APPROVALS
 - ZAK_FINAL_AUTHORITY_CONTRACT_NON_GRANTS
@@ -43,7 +41,7 @@ required_exports:
 - assertZakFinalAuthorityContract
 - summarizeZakFinalAuthorityContract
 
-required_tests:
+tests_added:
 - testZakFinalAuthorityContractValidation
 - testZakFinalAuthorityContractBlocksModelOutputApproval
 - testZakFinalAuthorityContractBlocksGeneratedCodeApproval
@@ -51,32 +49,21 @@ required_tests:
 - testZakFinalAuthorityContractSupportsRevocationAndNarrowing
 - testZakFinalAuthorityContractBlocksAuthoritySelfUpgrade
 
-implementation_constraints_verified:
-- metadata_only
-- no_runtime_execution
-- no_tool_execution
-- no_file_move_execution
-- no_deletion_execution
-- no_process_spawn_execution
-- no_network_download_execution
-- no_privilege_escalation
-- no_hidden_persistence
-- no_autonomous_final_approval
-- no_authority_self_expansion
-- no_model_output_approval
-- no_generated_code_approval
-- no_approval_reuse_outside_explicit_scope
+validation:
+- syntax_checks_passed: true
+- targeted_export_probe_passed: true
+- full_harness_passed: true
+- dirty_state_matches_expected: true
 
-next_allowed_seam: ZakFinalAuthorityContractImplementation v1
+next_allowed_seam: ZakFinalAuthorityContractCommitGate v1
 
 planned_following_seams:
-- ZakFinalAuthorityContractImplementation v1
 - ZakFinalAuthorityContractCommitGate v1
 - ZakFinalAuthorityContractStateRecord v1
 - Post-ZakFinalAuthorityContract Spine Audit v1
 - FileMoveAuthorityDecision v1
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_implementation_preflight_v1_20260428_172954.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_implementation_preflight_v1_summary_20260428_172954.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_implementation_v1_20260428_173549.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\zak_final_authority_contract_implementation_v1_summary_20260428_173549.txt
 
 continuity_sync_message: continuity sync pending
