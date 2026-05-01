@@ -1,27 +1,26 @@
 NODEX LATEST CONTINUITY SUMMARY
 
 status: pass
-latest_completed_seam: ContinuitySyncExecution v1
-latest_completed_capability_seam_before_continuity_sync: Post-FileOperationCapabilityHardening Spine Audit v1
-latest_audited_nodex_commit: 035021a Add file operation capability hardening manifest
+latest_completed_seam: ContinuitySyncExecution v1 Repair v1
+latest_completed_capability_seam_before_continuity_sync: FileOperationCapabilityBoundaryReadinessDecision v1
+latest_audited_nodex_commit: 65454cb Add file operation capability boundary manifest
 
 continuity_sync:
 - executed: true
 - state_recorded: false
+- committed: false
 - authoritative: false
 
 current_open_seam: ContinuitySyncStateRecord v1
 
 blocked:
-- runtime_file_operation_authority
-- broad_filesystem_capability
 - file_move_execution
-- file_move_allowed_now
-- nodex_repo_commit
-- nodex_repo_staging
+- broad_filesystem_capability
+- live_context_commit_until_continuity_sync_commit_gate
+- live_context_staging_until_continuity_sync_commit_gate
 - generated_code_approval
 - model_output_approval
 - authority_self_expansion
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v4_20260430_145126.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v4_summary_20260430_145126.txt
+evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v1_20260501_103358.json
+evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v1_summary_20260501_103358.txt

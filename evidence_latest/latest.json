@@ -1,7 +1,22 @@
 {
-  "latestCompletedSeam": "ContinuitySyncExecution v1",
+  "latestCompletedSeam": "ContinuitySyncExecution v1 Repair v1",
   "currentOpenSeam": "ContinuitySyncStateRecord v1",
   "continuity": "TRUE",
+  "drift": "BLOCKED",
+  "speculation": "BLOCKED",
+  "localEvidenceRemainsAuthority": true,
+  "latestCompletedCapabilitySeamBeforeContinuitySync": "FileOperationCapabilityBoundaryReadinessDecision v1",
+  "latestAuditedNodexCommit": "65454cb Add file operation capability boundary manifest",
+  "liveContextCommittedHeadBeforeSync": "ff0e346 Update continuity after file operation capability hardening",
+  "continuitySyncStatus": {
+    "executed": true,
+    "stateRecorded": false,
+    "committed": false,
+    "authoritative": false,
+    "executionEvidence": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_repair_v1_20260501_103358.json",
+    "executionSummary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_repair_v1_summary_20260501_103358.txt",
+    "nextAllowedSeam": "ContinuitySyncStateRecord v1"
+  },
   "authorityOrder": [
     "Live terminal output pasted by Zak",
     "git status / git diff / harness output",
@@ -11,34 +26,20 @@
     "Assistant memory",
     "Advisory artifacts"
   ],
-  "liveContextRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "latestCompletedCapabilitySeamBeforeContinuitySync": "Post-FileOperationCapabilityHardening Spine Audit v1",
-  "drift": "BLOCKED",
-  "speculation": "BLOCKED",
-  "doNotInfer": "Do not infer ContinuitySyncStateRecord v1 passed until terminal/evidence shows status: pass.",
-  "generatedAt": "2026-04-30T14:51:26.4010642-07:00",
-  "continuitySyncStatus": {
-    "stateRecorded": false,
-    "authoritative": false,
-    "executionEvidence": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_repair_v4_20260430_145126.json",
-    "nextAllowedSeam": "ContinuitySyncStateRecord v1",
-    "executionSummary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_repair_v4_summary_20260430_145126.txt",
-    "executed": true
-  },
-  "localEvidenceRemainsAuthority": true,
-  "latestAuditedNodexCommit": "035021a Add file operation capability hardening manifest",
-  "schema": "nodex.live_context.latest.v1",
-  "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
   "repo": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
+  "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
+  "liveContextRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
   "currentBlockedAuthority": [
-    "runtime_file_operation_authority",
-    "broad_filesystem_capability",
     "file_move_execution",
-    "file_move_allowed_now",
-    "nodex_repo_commit",
-    "nodex_repo_staging",
+    "broad_filesystem_capability",
+    "commit",
+    "staging",
+    "live_context_commit",
+    "live_context_staging",
     "generated_code_approval",
     "model_output_approval",
     "authority_self_expansion"
-  ]
+  ],
+  "generatedAt": "2026-05-01T10:34:01.6307161-07:00",
+  "schema": "nodex.live_context.latest.v1"
 }
