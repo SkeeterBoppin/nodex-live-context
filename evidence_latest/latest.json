@@ -1,45 +1,39 @@
 {
-  "latestCompletedSeam": "ContinuitySyncExecution v1 Repair v1",
-  "currentOpenSeam": "ContinuitySyncStateRecord v1",
-  "continuity": "TRUE",
-  "drift": "BLOCKED",
-  "speculation": "BLOCKED",
-  "localEvidenceRemainsAuthority": true,
-  "latestCompletedCapabilitySeamBeforeContinuitySync": "FileOperationCapabilityBoundaryReadinessDecision v1",
-  "latestAuditedNodexCommit": "65454cb Add file operation capability boundary manifest",
-  "liveContextCommittedHeadBeforeSync": "ff0e346 Update continuity after file operation capability hardening",
-  "continuitySyncStatus": {
-    "executed": true,
-    "stateRecorded": false,
-    "committed": false,
-    "authoritative": false,
-    "executionEvidence": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_repair_v1_20260501_103358.json",
-    "executionSummary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_repair_v1_summary_20260501_103358.txt",
-    "nextAllowedSeam": "ContinuitySyncStateRecord v1"
+  "schema": "nodex.live_context.latest.v1",
+  "status": "pass",
+  "latest_completed_seam": "Post-FileMoveAuthorityBoundary Spine Audit v1",
+  "latest_audited_nodex_commit": "5fe293c Add file move authority boundary manifest",
+  "latest_live_context_commit_before_sync": "f0f0fcb Update continuity after file operation capability boundary",
+  "current_open_seam": "ContinuitySyncStateRecord v1",
+  "local_evidence_remains_authority": true,
+  "source": {
+    "evidence_json": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_file_move_authority_boundary_spine_audit_v1_20260501_112757.json",
+    "evidence_summary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_file_move_authority_boundary_spine_audit_v1_summary_20260501_112757.txt"
   },
-  "authorityOrder": [
-    "Live terminal output pasted by Zak",
-    "git status / git diff / harness output",
-    "Evidence JSON/TXT in C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-    "Committed repo state",
-    "Architecture docs",
-    "Assistant memory",
-    "Advisory artifacts"
-  ],
-  "repo": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex System\\Node",
-  "evidenceRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence",
-  "liveContextRoot": "C:\\Users\\Zak\\OneDrive\\Desktop\\nodex-live-context",
-  "currentBlockedAuthority": [
+  "validation": {
+    "post_file_move_authority_boundary_spine_audit": "pass",
+    "nodex_head_verified": true,
+    "live_context_head_before_sync_verified": true,
+    "required_spine_files_present": true,
+    "module_load_probe_passed": true,
+    "targeted_boundary_probe_passed": true,
+    "full_harness_passed": true,
+    "nodex_working_tree_clean": true,
+    "live_context_working_tree_clean_before_sync": true,
+    "blocking_findings": 0
+  },
+  "blocked": [
     "file_move_execution",
     "broad_filesystem_capability",
+    "source_mutation",
+    "implementation",
     "commit",
     "staging",
-    "live_context_commit",
-    "live_context_staging",
+    "live_context_commit_until_continuity_sync_commit_gate",
+    "live_context_staging_until_continuity_sync_commit_gate",
     "generated_code_approval",
     "model_output_approval",
     "authority_self_expansion"
   ],
-  "generatedAt": "2026-05-01T10:34:01.6307161-07:00",
-  "schema": "nodex.live_context.latest.v1"
+  "next_allowed_seam": "ContinuitySyncStateRecord v1"
 }

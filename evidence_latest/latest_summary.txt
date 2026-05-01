@@ -1,26 +1,34 @@
-NODEX LATEST CONTINUITY SUMMARY
+CONTINUITY SNAPSHOT
 
 status: pass
-latest_completed_seam: ContinuitySyncExecution v1 Repair v1
-latest_completed_capability_seam_before_continuity_sync: FileOperationCapabilityBoundaryReadinessDecision v1
-latest_audited_nodex_commit: 65454cb Add file operation capability boundary manifest
-
-continuity_sync:
-- executed: true
-- state_recorded: false
-- committed: false
-- authoritative: false
-
+latest_completed_seam: Post-FileMoveAuthorityBoundary Spine Audit v1
+latest_audited_nodex_commit: 5fe293c Add file move authority boundary manifest
+latest_live_context_commit_before_sync: f0f0fcb Update continuity after file operation capability boundary
 current_open_seam: ContinuitySyncStateRecord v1
+
+local_evidence_remains_authority: true
+
+validated:
+- Post-FileMoveAuthorityBoundary Spine Audit v1 passed
+- required spine files present
+- module load probe passed
+- targeted boundary probe passed
+- full harness passed
+- Nodex working tree clean
+- live-context working tree clean before sync
+- blocking findings: 0
 
 blocked:
 - file_move_execution
 - broad_filesystem_capability
+- source_mutation
+- implementation
+- commit
+- staging
 - live_context_commit_until_continuity_sync_commit_gate
 - live_context_staging_until_continuity_sync_commit_gate
 - generated_code_approval
 - model_output_approval
 - authority_self_expansion
 
-evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v1_20260501_103358.json
-evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v1_summary_20260501_103358.txt
+next_allowed_seam: ContinuitySyncStateRecord v1

@@ -1,80 +1,48 @@
-# NODEX CURRENT HANDOFF
+# Nodex Current Handoff
 
-Generated: 2026-05-01T10:34:01.6308726-07:00
+status: pass
+latest_completed_seam: Post-FileMoveAuthorityBoundary Spine Audit v1
+latest_audited_nodex_commit: 5fe293c Add file move authority boundary manifest
+latest_live_context_commit_before_sync: f0f0fcb Update continuity after file operation capability boundary
+current_open_seam: ContinuitySyncStateRecord v1
 
-## Boundary
+## Authority
 
-This repo is near-live continuity context only.
-It is NOT Nodex authority.
-
-## Nodex Continuity State
-
-``text
-NODEX CONTINUITY HANDOFF
-
-Continuity = TRUE
-Drift = BLOCKED
-Speculation = BLOCKED
 Local evidence remains authority.
+GitHub-visible live-context is a continuity snapshot only.
+Do not infer a seam passed from this file without matching local evidence.
 
-Latest completed seam:
-ContinuitySyncExecution v1 Repair v1
+## Latest verified state
 
-Latest completed capability seam before continuity sync:
-FileOperationCapabilityBoundaryReadinessDecision v1
+- FileMoveAuthorityBoundary was implemented and committed as metadata-only.
+- Nodex commit: 5fe293c Add file move authority boundary manifest
+- Post-FileMoveAuthorityBoundary Spine Audit v1 passed.
+- Required spine files were present.
+- Module load probe passed.
+- Targeted file move authority boundary probe passed.
+- Full Nodex harness passed.
+- Nodex working tree was clean.
+- live-context working tree was clean before continuity sync execution.
+- Blocking findings: 0.
 
-Latest audited Nodex commit:
-65454cb Add file operation capability boundary manifest
+## Current open seam
 
-Live-context committed head before this sync:
-ff0e346 Update continuity after file operation capability hardening
+ContinuitySyncStateRecord v1
 
-Continuity sync status:
-- executed: true
-- state_recorded: false
-- committed: false
-- authoritative: false
-- next_allowed_seam: ContinuitySyncStateRecord v1
+## Blocked authorities
 
-Current blocked authority:
 - file_move_execution
 - broad_filesystem_capability
-- live-context commit until continuity sync commit gate
-- live-context staging until continuity sync commit gate
-- generated-code approval
-- model-output approval
-- authority self-expansion
+- source_mutation
+- implementation
+- commit
+- staging
+- live_context_commit_until_continuity_sync_commit_gate
+- live_context_staging_until_continuity_sync_commit_gate
+- generated_code_approval
+- model_output_approval
+- authority_self_expansion
 
-Authority order:
-1. Live terminal output pasted by Zak
-2. git status / git diff / harness output
-3. Evidence JSON/TXT in C:\Users\Zak\OneDrive\Desktop\Nodex Evidence
-4. Committed repo state
-5. Architecture docs
-6. Assistant memory
-7. Advisory artifacts
+## Next action
 
-Repo:
-C:\Users\Zak\OneDrive\Desktop\Nodex System\Node
-
-Evidence root:
-C:\Users\Zak\OneDrive\Desktop\Nodex Evidence
-
-Live context root:
-C:\Users\Zak\OneDrive\Desktop\nodex-live-context
-``
-
-## Latest Continuity Execution Evidence
-
-``text
-C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_sync_execution_v1_repair_v1_20260501_103358.json
-``
-
-## Current Open Seam
-
-``text
-ContinuitySyncStateRecord v1
-``
-
-Do not infer ContinuitySyncStateRecord v1 passed until terminal/evidence shows status: pass.
-Do not commit or stage this live-context repo until a local packet explicitly allows it.
+Run ContinuitySyncStateRecord v1.
