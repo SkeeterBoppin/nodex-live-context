@@ -1,10 +1,10 @@
 NODEX LIVE CONTEXT LATEST SUMMARY
 
 status: current
-latest_completed_seam: Post-PacketGenerationReliability Spine Audit v1
-latest_nodex_commit: a263c3f Add packet generation reliability manifest
-previous_nodex_commit: 5fe293c Add file move authority boundary manifest
-latest_live_context_commit_before_sync: a013c0b Update continuity after file move authority boundary
+latest_completed_seam: Post-GeneratedCodeApprovalBoundary Spine Audit v1
+latest_nodex_commit: 78c407e Add generated code approval boundary manifest
+previous_nodex_commit: a263c3f Add packet generation reliability manifest
+latest_live_context_commit_before_sync: 581175b Update continuity after packet generation reliability
 current_open_seam: ContinuitySyncStateRecord v1
 expected_next_after_continuity: OperatorDirectionRequired v1
 
@@ -18,6 +18,12 @@ boundary:
 - local_evidence_authority: true
 - live_context_snapshot_authority: false
 - do_not_infer_open_seam_passed: true
+- generated_code_approval_granted: false
+- generated_code_approval_allowed_now: false
+- model_output_approval_granted: false
+- prompt_output_authority_granted: false
+- self_approval_authority_granted: false
+- authority_self_expansion_granted: false
 
 blocked:
 - file_move_execution
@@ -30,5 +36,7 @@ blocked:
 - live_context_staging_until_continuity_sync_commit_gate
 - generated_code_approval
 - model_output_approval
+- prompt_output_authority
+- self_approval_authority
 - authority_self_expansion
 
