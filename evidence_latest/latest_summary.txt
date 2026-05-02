@@ -1,14 +1,20 @@
 NODEX LATEST CONTINUITY SUMMARY
 
 status: pass
-latest_completed_seam: Post-ModelOutputApprovalBoundary Spine Audit v1
+latest_completed_seam: Post-SuccessSignalBoundary Spine Audit Repair v2
 current_open_seam: ContinuitySyncStateRecord v1
 expected_next_after_continuity: OperatorDirectionRequired v1
-latest_nodex_commit: 062b834 Add model output approval boundary manifest
-previous_nodex_commit: 78c407e Add generated code approval boundary manifest
-live_context_commit_before_sync: 09ec3c6 Update continuity after generated code approval boundary
+recommended_operator_direction_after_continuity: PacketGenerationReliabilityHardeningPlan v1 before further feature expansion
+latest_nodex_commit: 9aa487b Add success signal boundary manifest validator
+previous_nodex_commit: 062b834 Add model output approval boundary manifest
+live_context_commit_before_sync: 20b654a Update continuity after model output approval boundary
 
 authority_granted:
+- reward_authority: false
+- reward_authority_allowed_now: false
+- success_signal_authority: false
+- success_signal_authority_allowed_now: false
+- graph_expansion_allowed_now: false
 - model_output_approval: false
 - model_output_approval_allowed_now: false
 - generated_code_approval: false
@@ -24,9 +30,12 @@ blocked:
 - implementation
 - commit
 - staging
-- live_context_commit_until_commit_gate
 - generated_code_approval
 - model_output_approval
 - prompt_output_authority
 - self_approval_authority
 - authority_self_expansion
+- reward_authority
+- autonomous_priority_authority
+- success_signal_authority
+- graph_expansion
