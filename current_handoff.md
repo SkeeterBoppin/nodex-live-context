@@ -1,36 +1,44 @@
 # Nodex Current Handoff
 
-status: pass
-latest_completed_seam: Post-FileMoveAuthorityBoundary Spine Audit v1
-latest_audited_nodex_commit: 5fe293c Add file move authority boundary manifest
-latest_live_context_commit_before_sync: f0f0fcb Update continuity after file operation capability boundary
-current_open_seam: ContinuitySyncStateRecord v1
+MasterSourceCheck:
+- pass: true
+- conflict: false
+- scope_limited: true
+- allowed_now: ContinuitySyncStateRecord v1
+- blocked_now: file_move_execution, broad_filesystem_capability, source_mutation, implementation, commit, staging, live_context_commit_until_continuity_sync_commit_gate, live_context_staging_until_continuity_sync_commit_gate, generated_code_approval, model_output_approval, authority_self_expansion
+- reason: ContinuitySyncExecution v1 has written the planned live-context snapshot for the latest validated Nodex seam, but ContinuitySyncStateRecord v1 must still pass before continuity is closed.
 
-## Authority
+Latest completed seam:
+- Post-PacketGenerationReliability Spine Audit v1
 
-Local evidence remains authority.
-GitHub-visible live-context is a continuity snapshot only.
-Do not infer a seam passed from this file without matching local evidence.
+Latest Nodex commit:
+- a263c3f Add packet generation reliability manifest
 
-## Latest verified state
+Previous Nodex commit:
+- 5fe293c Add file move authority boundary manifest
 
-- FileMoveAuthorityBoundary was implemented and committed as metadata-only.
-- Nodex commit: 5fe293c Add file move authority boundary manifest
-- Post-FileMoveAuthorityBoundary Spine Audit v1 passed.
-- Required spine files were present.
-- Module load probe passed.
-- Targeted file move authority boundary probe passed.
-- Full Nodex harness passed.
-- Nodex working tree was clean.
-- live-context working tree was clean before continuity sync execution.
-- Blocking findings: 0.
+Latest live-context commit before this sync:
+- a013c0b Update continuity after file move authority boundary
 
-## Current open seam
+Current open seam:
+- ContinuitySyncStateRecord v1
 
-ContinuitySyncStateRecord v1
+Expected next seam after continuity sync closes:
+- OperatorDirectionRequired v1
 
-## Blocked authorities
+Continuity targets written:
+- current_handoff.md
+- evidence_latest/latest.json
+- evidence_latest/latest_summary.txt
+- packets/current_open_packet.ps1
 
+Authority boundary:
+- Local evidence remains authority.
+- The live-context repository is a snapshot, not authority.
+- Do not infer ContinuitySyncStateRecord v1 passed from this file.
+- Do not infer any future seam passed from this file.
+
+Still blocked:
 - file_move_execution
 - broad_filesystem_capability
 - source_mutation
@@ -43,6 +51,3 @@ ContinuitySyncStateRecord v1
 - model_output_approval
 - authority_self_expansion
 
-## Next action
-
-Run ContinuitySyncStateRecord v1.

@@ -1,28 +1,18 @@
 {
   "schema": "nodex.live_context.latest.v1",
-  "status": "pass",
-  "latest_completed_seam": "Post-FileMoveAuthorityBoundary Spine Audit v1",
-  "latest_audited_nodex_commit": "5fe293c Add file move authority boundary manifest",
-  "latest_live_context_commit_before_sync": "f0f0fcb Update continuity after file operation capability boundary",
+  "status": "current",
+  "continuity": true,
+  "latest_completed_seam": "Post-PacketGenerationReliability Spine Audit v1",
+  "latest_audited_nodex_commit": "a263c3f Add packet generation reliability manifest",
+  "previous_audited_nodex_commit": "5fe293c Add file move authority boundary manifest",
+  "latest_live_context_commit": "a013c0b Update continuity after file move authority boundary",
   "current_open_seam": "ContinuitySyncStateRecord v1",
-  "local_evidence_remains_authority": true,
-  "source": {
-    "evidence_json": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_file_move_authority_boundary_spine_audit_v1_20260501_112757.json",
-    "evidence_summary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\post_file_move_authority_boundary_spine_audit_v1_summary_20260501_112757.txt"
-  },
-  "validation": {
-    "post_file_move_authority_boundary_spine_audit": "pass",
-    "nodex_head_verified": true,
-    "live_context_head_before_sync_verified": true,
-    "required_spine_files_present": true,
-    "module_load_probe_passed": true,
-    "targeted_boundary_probe_passed": true,
-    "full_harness_passed": true,
-    "nodex_working_tree_clean": true,
-    "live_context_working_tree_clean_before_sync": true,
-    "blocking_findings": 0
-  },
-  "blocked": [
+  "expected_next_after_continuity": "OperatorDirectionRequired v1",
+  "updated_at": "2026-05-01T23:01:27.1124092-07:00",
+  "local_evidence_authority": true,
+  "live_context_snapshot_authority": false,
+  "do_not_infer_open_seam_passed": true,
+  "blocked_authorities": [
     "file_move_execution",
     "broad_filesystem_capability",
     "source_mutation",
@@ -35,5 +25,15 @@
     "model_output_approval",
     "authority_self_expansion"
   ],
-  "next_allowed_seam": "ContinuitySyncStateRecord v1"
+  "continuity_targets": [
+    "current_handoff.md",
+    "evidence_latest/latest.json",
+    "evidence_latest/latest_summary.txt",
+    "packets/current_open_packet.ps1"
+  ],
+  "last_passed_evidence": {
+    "seam": "ContinuitySyncPreflight v1",
+    "decision": "continuity_sync_execution_allowed",
+    "evidence_json": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_preflight_v1_20260501_225944.json"
+  }
 }

@@ -1,22 +1,23 @@
-CONTINUITY SNAPSHOT
+NODEX LIVE CONTEXT LATEST SUMMARY
 
-status: pass
-latest_completed_seam: Post-FileMoveAuthorityBoundary Spine Audit v1
-latest_audited_nodex_commit: 5fe293c Add file move authority boundary manifest
-latest_live_context_commit_before_sync: f0f0fcb Update continuity after file operation capability boundary
+status: current
+latest_completed_seam: Post-PacketGenerationReliability Spine Audit v1
+latest_nodex_commit: a263c3f Add packet generation reliability manifest
+previous_nodex_commit: 5fe293c Add file move authority boundary manifest
+latest_live_context_commit_before_sync: a013c0b Update continuity after file move authority boundary
 current_open_seam: ContinuitySyncStateRecord v1
+expected_next_after_continuity: OperatorDirectionRequired v1
 
-local_evidence_remains_authority: true
+continuity_targets_written:
+- current_handoff.md
+- evidence_latest/latest.json
+- evidence_latest/latest_summary.txt
+- packets/current_open_packet.ps1
 
-validated:
-- Post-FileMoveAuthorityBoundary Spine Audit v1 passed
-- required spine files present
-- module load probe passed
-- targeted boundary probe passed
-- full harness passed
-- Nodex working tree clean
-- live-context working tree clean before sync
-- blocking findings: 0
+boundary:
+- local_evidence_authority: true
+- live_context_snapshot_authority: false
+- do_not_infer_open_seam_passed: true
 
 blocked:
 - file_move_execution
@@ -31,4 +32,3 @@ blocked:
 - model_output_approval
 - authority_self_expansion
 
-next_allowed_seam: ContinuitySyncStateRecord v1
