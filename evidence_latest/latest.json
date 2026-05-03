@@ -1,21 +1,30 @@
 {
-  "schema": "nodex.live_context.latest.v2",
+  "schema": "nodex.live_context.latest.v1",
   "status": "pass",
-  "latestCompletedSeam": "LiveContextPushStateRecord v3",
-  "currentOpenSeam": "MasterSourceCheck v1",
-  "latestNodexCommit": "5f062d6 Add packet generation reliability hardening manifests",
+  "latest_completed_seam": "PacketGenerationAssistantBoundaryPushStateRecord v1",
+  "current_open_seam": "MasterSourceCheck v1",
+  "nextAllowedSeam": "MasterSourceCheck v1",
+  "latest_nodex_commit": "ae7e393 Add packet generation assistant boundary manifest",
+  "latest_live_context_commit_policy": "external_evidence_only",
+  "live_context_head_observed_before_update": "c7b2c4d Repair live-context self-reference invariant",
   "liveContextCommitTracking": "external_evidence_only",
-  "liveContextHeadInvariant": "verify_head_equals_origin_main_and_clean_working_tree",
   "liveContextTrackedCommitSelfReferenceBlocked": true,
-  "authoritativeEvidencePolicy": "local_evidence_remains_authority",
-  "liveContextPushStateRecordEvidence": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_state_record_v3_20260503_010642.json",
-  "conflict": false,
-  "blocked": [
-    "manual_commit",
-    "manual_staging",
-    "reset",
-    "source_mutation",
-    "implementation",
+  "nodex_repo_clean": true,
+  "nodex_origin_synced": true,
+  "live_context_update_pending_commit": true,
+  "live_context_commit_message_planned": "Update continuity after packet generation assistant boundary",
+  "latest_evidence": {
+    "push_state_record": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\packet_generation_assistant_boundary_push_state_record_v1_20260503_103912.json",
+    "push_execution": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\packet_generation_assistant_boundary_push_execution_v1_20260503_103737.json",
+    "live_context_commit_preflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_commit_preflight_v1_20260503_104125.json",
+    "failed_update_execution": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_update_execution_v1_20260503_104310.json"
+  },
+  "blocked_authorities": [
+    "runtime_execution",
+    "tool_execution",
+    "packet_execution_by_nodex",
+    "packet_commit_by_nodex",
+    "packet_push_by_nodex",
     "generated_code_approval",
     "model_output_approval",
     "prompt_output_authority",
@@ -24,7 +33,10 @@
     "reward_authority",
     "autonomous_priority_authority",
     "success_signal_authority",
-    "graph_expansion"
+    "graph_expansion",
+    "nodex_source_mutation",
+    "nodex_commit",
+    "nodex_push"
   ],
-  "nextAllowedSeam": "MasterSourceCheck v1"
+  "createdAt": "2026-05-03T10:45:18.1667719-07:00"
 }
