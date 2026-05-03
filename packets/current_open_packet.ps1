@@ -9,5 +9,7 @@ Write-Host 'latest_nodex_commit: ae7e393 Add packet generation assistant boundar
 Write-Host 'latest_live_context_commit_policy: external_evidence_only'
 Write-Host 'live_context_commit_tracking: external_evidence_only'
 Write-Host 'live_context_tracked_commit_self_reference_blocked: true'
+Write-Host 'live_context_update_pending_commit: false'
+Write-Host 'live_context_continuity_synced: true'
 Write-Host ''
-Write-Host 'Run MasterSourceCheck v1 after live-context commit and push state records pass.'
+Write-Host 'Run MasterSourceCheck v1.'

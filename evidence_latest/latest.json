@@ -6,18 +6,19 @@
   "nextAllowedSeam": "MasterSourceCheck v1",
   "latest_nodex_commit": "ae7e393 Add packet generation assistant boundary manifest",
   "latest_live_context_commit_policy": "external_evidence_only",
-  "live_context_head_observed_before_update": "c7b2c4d Repair live-context self-reference invariant",
   "liveContextCommitTracking": "external_evidence_only",
   "liveContextTrackedCommitSelfReferenceBlocked": true,
   "nodex_repo_clean": true,
   "nodex_origin_synced": true,
-  "live_context_update_pending_commit": true,
-  "live_context_commit_message_planned": "Update continuity after packet generation assistant boundary",
+  "live_context_update_pending_commit": false,
+  "live_context_continuity_synced": true,
+  "post_push_continuity_repair_applied": true,
   "latest_evidence": {
-    "push_state_record": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\packet_generation_assistant_boundary_push_state_record_v1_20260503_103912.json",
-    "push_execution": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\packet_generation_assistant_boundary_push_execution_v1_20260503_103737.json",
-    "live_context_commit_preflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_commit_preflight_v1_20260503_104125.json",
-    "failed_update_execution": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_update_execution_v1_20260503_104310.json"
+    "live_context_push_state_record": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_state_record_v1_20260503_105723.json",
+    "live_context_push_execution": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_execution_v1_20260503_105600.json",
+    "master_source_check": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\master_source_check_v1_20260503_110237.json",
+    "post_push_repair_plan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_post_push_continuity_repair_plan_v1_20260503_110459.json",
+    "post_push_repair_preflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_post_push_continuity_repair_preflight_v1_20260503_110637.json"
   },
   "blocked_authorities": [
     "runtime_execution",
@@ -36,7 +37,9 @@
     "graph_expansion",
     "nodex_source_mutation",
     "nodex_commit",
-    "nodex_push"
+    "nodex_push",
+    "live_context_commit",
+    "live_context_push"
   ],
-  "createdAt": "2026-05-03T10:45:18.1667719-07:00"
+  "createdAt": "2026-05-03T11:09:11.8910005-07:00"
 }
