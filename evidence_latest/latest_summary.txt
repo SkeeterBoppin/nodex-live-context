@@ -1,35 +1,19 @@
-NODEX LATEST CONTINUITY SUMMARY
+CONTINUITY SYNC EXECUTION V1 COMPLETE
 
 status: pass
-latest_completed_seam: Post-SuccessSignalBoundary Spine Audit Repair v2
+latest_completed_seam: ContinuitySyncExecution v1
 current_open_seam: ContinuitySyncStateRecord v1
-expected_next_after_continuity: OperatorDirectionRequired v1
-recommended_operator_direction_after_continuity: PacketGenerationReliabilityHardeningPlan v1 before further feature expansion
-latest_nodex_commit: 9aa487b Add success signal boundary manifest validator
-previous_nodex_commit: 062b834 Add model output approval boundary manifest
-live_context_commit_before_sync: 20b654a Update continuity after model output approval boundary
-
-authority_granted:
-- reward_authority: false
-- reward_authority_allowed_now: false
-- success_signal_authority: false
-- success_signal_authority_allowed_now: false
-- graph_expansion_allowed_now: false
-- model_output_approval: false
-- model_output_approval_allowed_now: false
-- generated_code_approval: false
-- generated_code_approval_allowed_now: false
-- prompt_output_authority: false
-- self_approval_authority: false
-- authority_self_expansion: false
+audited_commit: 5f062d6 Add packet generation reliability hardening manifests
+live_context_previous_head: db7709d Update continuity after success signal boundary
 
 blocked:
-- file_move_execution
-- broad_filesystem_capability
+- push
+- nodex_repo_push
+- manual_commit
+- manual_staging
+- reset
 - source_mutation
 - implementation
-- commit
-- staging
 - generated_code_approval
 - model_output_approval
 - prompt_output_authority
@@ -39,3 +23,5 @@ blocked:
 - autonomous_priority_authority
 - success_signal_authority
 - graph_expansion
+
+next_allowed_seam: ContinuitySyncStateRecord v1
