@@ -4,15 +4,15 @@ Set-StrictMode -Version Latest
 $RepoRoot = Join-Path $env:USERPROFILE 'OneDrive\Desktop\Nodex System\Node'
 $LiveContextRoot = Join-Path $env:USERPROFILE 'OneDrive\Desktop\nodex-live-context'
 $EvidenceRoot = Join-Path $env:USERPROFILE 'OneDrive\Desktop\Nodex Evidence'
-$AuthoritativeLocalEvidencePath = Join-Path $EvidenceRoot 'live_context_push_state_record_v1_20260502_233525.json'
+$AuthoritativeLocalEvidencePath = Join-Path $EvidenceRoot 'live_context_push_state_record_v2_20260503_002414.json'
 $Timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
 $EvidenceJsonPath = Join-Path $EvidenceRoot ('master_source_check_v1_' + $Timestamp + '.json')
 $EvidenceSummaryPath = Join-Path $EvidenceRoot ('master_source_check_v1_summary_' + $Timestamp + '.txt')
 
-$ExpectedLatestCompletedSeam = 'LiveContextPushStateRecord v1'
+$ExpectedLatestCompletedSeam = 'LiveContextPushStateRecord v2'
 $ExpectedCurrentOpenSeam = 'MasterSourceCheck v1'
 $ExpectedNodexCommit = '5f062d6 Add packet generation reliability hardening manifests'
-$ExpectedLiveContextCommit = '2c6a21f Update continuity after packet generation reliability hardening'
+$ExpectedLiveContextCommit = '183d4da Update continuity after live-context repair state record'
 $ExpectedNextSeam = 'OperatorDirectionRequired v1'
 
 $BlockedAuthorities = @(
@@ -38,17 +38,16 @@ function Write-TextFileUtf8NoBom {
   if (-not (Test-Path -LiteralPath $parent)) {
     New-Item -ItemType Directory -Path $parent -Force | Out-Null
   }
-  $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-  [System.IO.File]::WriteAllText($Path, $Text, $utf8NoBom)
+  [System.IO.File]::WriteAllText($Path, $Text, [System.Text.UTF8Encoding]::new($false))
 }
 
 function Invoke-GitText {
   param([string[]]$Arguments)
   $lines = & git @Arguments 2>&1 | ForEach-Object { $_.ToString() }
   if ($LASTEXITCODE -ne 0) {
-    throw ('git command failed: git ' + ($Arguments -join ' ') + "`n" + (($lines | ForEach-Object { [string]$_ }) -join "`n"))
+    throw ('git command failed: git ' + ($Arguments -join ' ') + "`n" + ($lines -join "`n"))
   }
-  return (($lines | ForEach-Object { [string]$_ }) -join "`n")
+  return ($lines -join "`n")
 }
 
 try {
@@ -114,23 +113,10 @@ try {
     latestNodexCommit = $ExpectedNodexCommit
     latestLiveContextCommit = $ExpectedLiveContextCommit
     currentOpenSeam = $ExpectedCurrentOpenSeam
-    observed = [pscustomobject]@{
-      nodexHead = $nodexHead
-      nodexOriginHead = $nodexOriginHead
-      nodexStatus = $nodexStatus
-      liveContextHead = $liveHead
-      liveContextOriginHead = $liveOriginHead
-      liveContextStatus = $liveStatus
-      latestJsonLatestCompletedSeam = $latestJson.latestCompletedSeam
-      latestJsonCurrentOpenSeam = $latestJson.currentOpenSeam
-      latestJsonNextAllowedSeam = $latestJson.nextAllowedSeam
-    }
-    failures = $failures
     nextAllowedSeam = $nextAllowedSeam
   }
 
-  $json = $evidence | ConvertTo-Json -Depth 20
-  Write-TextFileUtf8NoBom -Path $EvidenceJsonPath -Text $json
+  Write-TextFileUtf8NoBom -Path $EvidenceJsonPath -Text ($evidence | ConvertTo-Json -Depth 20)
 
   $summary = @(
     'MASTER SOURCE CHECK V1 COMPLETE',
