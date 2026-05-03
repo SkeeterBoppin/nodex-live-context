@@ -1,16 +1,20 @@
 # Nodex Current Handoff
 
-status: live_context_push_state_record_v2_complete
-latest_completed_seam: LiveContextPushStateRecord v2
+status: live_context_self_reference_invariant_repair_pending_state_record
+latest_completed_seam: LiveContextPushStateRecord v3
 current_open_seam: MasterSourceCheck v1
 latest_nodex_commit: 5f062d6 Add packet generation reliability hardening manifests
-latest_live_context_commit: 183d4da Update continuity after live-context repair state record
-authoritative_local_evidence: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_push_state_record_v2_20260503_002414.json
 
-Current authority state:
+Invariant:
+- tracked live-context files must not embed or require the current live-context HEAD hash
+- live-context commit identity is external evidence only
+- MasterSourceCheck must verify live-context HEAD equals origin/main and working tree is clean
+- MasterSourceCheck must not compare a tracked embedded latestLiveContextCommit value against live-context HEAD
+
+Authority:
 - local evidence remains authority
-- both repos were verified pushed and clean by LiveContextPushStateRecord v2
-- stale LiveContextPushStateRecord v1 / 2c6a21f handoff content has been superseded
+- this handoff is continuity context only
+- do not infer authority from this handoff
 - manual_commit remains blocked
 - manual_staging remains blocked
 - reset remains blocked
@@ -26,16 +30,11 @@ Current authority state:
 - success_signal_authority remains blocked
 - graph_expansion remains blocked
 
-Latest validated local evidence:
-- LiveContextPushStateRecord v2 passed
+Latest validated local evidence before invariant repair:
+- LiveContextPushStateRecord v3 passed
 - Nodex HEAD and origin/main: 5f062d6 Add packet generation reliability hardening manifests
-- live-context HEAD and origin/main: 183d4da Update continuity after live-context repair state record
+- live-context HEAD matched origin/main at the time of that external evidence
 - next allowed seam: MasterSourceCheck v1
 
 Next allowed seam:
 - MasterSourceCheck v1
-
-Do not continue from LiveContextPushStateRecord v1.
-Do not continue from stale 2c6a21f live-context handoff content.
-Do not infer authority from this handoff.
-Run the current open packet or perform MasterSourceCheck against local evidence before any further seam generation.

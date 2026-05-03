@@ -4,15 +4,13 @@ Set-StrictMode -Version Latest
 $RepoRoot = Join-Path $env:USERPROFILE 'OneDrive\Desktop\Nodex System\Node'
 $LiveContextRoot = Join-Path $env:USERPROFILE 'OneDrive\Desktop\nodex-live-context'
 $EvidenceRoot = Join-Path $env:USERPROFILE 'OneDrive\Desktop\Nodex Evidence'
-$AuthoritativeLocalEvidencePath = Join-Path $EvidenceRoot 'live_context_push_state_record_v2_20260503_002414.json'
+
 $Timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
 $EvidenceJsonPath = Join-Path $EvidenceRoot ('master_source_check_v1_' + $Timestamp + '.json')
 $EvidenceSummaryPath = Join-Path $EvidenceRoot ('master_source_check_v1_summary_' + $Timestamp + '.txt')
 
-$ExpectedLatestCompletedSeam = 'LiveContextPushStateRecord v2'
 $ExpectedCurrentOpenSeam = 'MasterSourceCheck v1'
 $ExpectedNodexCommit = '5f062d6 Add packet generation reliability hardening manifests'
-$ExpectedLiveContextCommit = '183d4da Update continuity after live-context repair state record'
 $ExpectedNextSeam = 'OperatorDirectionRequired v1'
 
 $BlockedAuthorities = @(
@@ -51,12 +49,11 @@ function Invoke-GitText {
 }
 
 try {
-  if (-not (Test-Path -LiteralPath $AuthoritativeLocalEvidencePath)) {
-    throw ('authoritative local evidence missing: ' + $AuthoritativeLocalEvidencePath)
+  $latestJsonPath = Join-Path $LiveContextRoot 'evidence_latest\latest.json'
+  if (-not (Test-Path -LiteralPath $latestJsonPath)) {
+    throw ('latest.json missing: ' + $latestJsonPath)
   }
 
-  $localEvidence = Get-Content -LiteralPath $AuthoritativeLocalEvidencePath -Raw | ConvertFrom-Json
-  $latestJsonPath = Join-Path $LiveContextRoot 'evidence_latest\latest.json'
   $latestJson = Get-Content -LiteralPath $latestJsonPath -Raw | ConvertFrom-Json
 
   $nodexHead = Invoke-GitText -Arguments @('-C', $RepoRoot, 'log', '-1', '--pretty=format:%h %s')
@@ -67,34 +64,36 @@ try {
   $liveStatus = Invoke-GitText -Arguments @('-C', $LiveContextRoot, 'status', '--porcelain=v1')
 
   $failures = @()
-  if ($localEvidence.status -ne 'pass') { $failures += 'local evidence status not pass' }
-  if ($localEvidence.seam -ne $ExpectedLatestCompletedSeam) { $failures += 'local evidence seam mismatch' }
-  if ($localEvidence.nextAllowedSeam -ne $ExpectedCurrentOpenSeam) { $failures += 'local evidence next seam mismatch' }
-  if ($latestJson.latestCompletedSeam -ne $ExpectedLatestCompletedSeam) { $failures += 'latest.json latestCompletedSeam mismatch' }
   if ($latestJson.currentOpenSeam -ne $ExpectedCurrentOpenSeam) { $failures += 'latest.json currentOpenSeam mismatch' }
   if ($latestJson.nextAllowedSeam -ne $ExpectedCurrentOpenSeam) { $failures += 'latest.json nextAllowedSeam mismatch' }
+  if ($latestJson.latestNodexCommit -ne $ExpectedNodexCommit) { $failures += 'latest.json latestNodexCommit mismatch' }
+  if ($latestJson.liveContextCommitTracking -ne 'external_evidence_only') { $failures += 'latest.json liveContextCommitTracking invariant mismatch' }
+  if ($latestJson.liveContextTrackedCommitSelfReferenceBlocked -ne $true) { $failures += 'latest.json self-reference block missing' }
   if ($nodexHead -ne $ExpectedNodexCommit) { $failures += 'Nodex HEAD mismatch' }
   if ($nodexOriginHead -ne $ExpectedNodexCommit) { $failures += 'Nodex origin/main mismatch' }
   if ($nodexStatus -ne '') { $failures += 'Nodex working tree not clean' }
-  if ($liveHead -ne $ExpectedLiveContextCommit) { $failures += 'live-context HEAD mismatch' }
-  if ($liveOriginHead -ne $ExpectedLiveContextCommit) { $failures += 'live-context origin/main mismatch' }
+  if ($liveHead -ne $liveOriginHead) { $failures += 'live-context HEAD does not match origin/main' }
   if ($liveStatus -ne '') { $failures += 'live-context working tree not clean' }
 
   if (($failures -join '; ') -ne '') {
-    $decision = 'master_source_check_conflict_operator_direction_blocked'
+    $status = 'fail'
+    $pass = $false
     $conflict = $true
+    $decision = 'master_source_check_conflict_operator_direction_blocked'
     $nextAllowedSeam = 'MasterSourceCheckRepair v1'
     $reason = 'one or more master sources disagree: ' + ($failures -join '; ')
   } else {
-    $decision = 'master_source_check_passed_operator_direction_required'
+    $status = 'pass'
+    $pass = $true
     $conflict = $false
+    $decision = 'master_source_check_passed_operator_direction_required'
     $nextAllowedSeam = $ExpectedNextSeam
-    $reason = 'local evidence, live-context latest files, repo heads, and working trees agree'
+    $reason = 'local live-context latest file, repo heads, and working trees agree under external-evidence-only live-context commit invariant'
   }
 
   $evidence = [pscustomobject]@{
     schema = 'nodex.master_source_check.v1'
-    status = if ($conflict) { 'fail' } else { 'pass' }
+    status = $status
     seam = 'MasterSourceCheck v1'
     readOnly = $true
     decision = $decision
@@ -102,16 +101,17 @@ try {
     repoRoot = $RepoRoot
     liveContextRoot = $LiveContextRoot
     evidenceRoot = $EvidenceRoot
-    authoritativeLocalEvidence = $AuthoritativeLocalEvidencePath
-    pass = (-not $conflict)
+    pass = $pass
     conflict = $conflict
     scope_limited = $true
     allowed_now = $nextAllowedSeam
     blocked_now = $BlockedAuthorities
     reason = $reason
-    latestCompletedSeam = $ExpectedLatestCompletedSeam
+    latestCompletedSeam = $latestJson.latestCompletedSeam
     latestNodexCommit = $ExpectedNodexCommit
-    latestLiveContextCommit = $ExpectedLiveContextCommit
+    latestLiveContextCommitPolicy = 'external_evidence_only'
+    liveContextHeadObserved = $liveHead
+    liveContextOriginObserved = $liveOriginHead
     currentOpenSeam = $ExpectedCurrentOpenSeam
     nextAllowedSeam = $nextAllowedSeam
   }
@@ -121,16 +121,17 @@ try {
   $summary = @(
     'MASTER SOURCE CHECK V1 COMPLETE',
     '',
-    'status: ' + $evidence.status,
-    'pass: ' + ([string](-not $conflict)).ToLowerInvariant(),
+    'status: ' + $status,
+    'pass: ' + ([string]$pass).ToLowerInvariant(),
     'conflict: ' + ([string]$conflict).ToLowerInvariant(),
     'scope_limited: true',
     'allowed_now: ' + $nextAllowedSeam,
     'reason: ' + $reason,
     '',
-    'latest_completed_seam: ' + $ExpectedLatestCompletedSeam,
+    'latest_completed_seam: ' + $latestJson.latestCompletedSeam,
     'latest_nodex_commit: ' + $ExpectedNodexCommit,
-    'latest_live_context_commit: ' + $ExpectedLiveContextCommit,
+    'latest_live_context_commit_policy: external_evidence_only',
+    'live_context_head_observed: ' + $liveHead,
     'current_open_seam: ' + $ExpectedCurrentOpenSeam,
     '',
     'next_allowed_seam: ' + $nextAllowedSeam,
@@ -141,7 +142,6 @@ try {
   Write-TextFileUtf8NoBom -Path $EvidenceSummaryPath -Text $summary
   try { Set-Clipboard -Value $summary } catch {}
   Write-Host $summary
-
   if ($conflict) { exit 1 }
   exit 0
 } catch {
