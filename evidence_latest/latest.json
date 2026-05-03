@@ -1,22 +1,23 @@
 {
   "schema": "nodex.live_context.latest.v1",
   "status": "pass",
-  "latestCompletedSeam": "ContinuitySyncExecution v1",
-  "currentOpenSeam": "ContinuitySyncStateRecord v1",
+  "latestCompletedSeam": "LiveContextPushStateRecord v1",
+  "currentOpenSeam": "MasterSourceCheck v1",
   "latestNodexCommit": "5f062d6 Add packet generation reliability hardening manifests",
-  "previousNodexCommit": "9aa487b Add success signal boundary manifest validator",
-  "liveContextPreviousHead": "db7709d Update continuity after success signal boundary",
-  "continuitySyncExecutionEvidence": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_sync_execution_v1_20260502_225805.json",
-  "pushAllowedNow": false,
-  "nodexRepoPushAllowedNow": false,
+  "latestLiveContextCommit": "2c6a21f Update continuity after packet generation reliability hardening",
+  "liveContextPushStateRecordEvidence": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_state_record_v1_20260502_233525.json",
+  "liveContextPushStateRecordSummary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_state_record_v1_summary_20260502_233525.txt",
+  "conflict": false,
+  "staleContinuitySyncStateRecordBlocked": true,
+  "bothReposPushedAndClean": true,
   "blocked": [
-    "push",
-    "nodex_repo_push",
     "manual_commit",
     "manual_staging",
     "reset",
     "source_mutation",
     "implementation",
+    "live_context_commit",
+    "live_context_push",
     "generated_code_approval",
     "model_output_approval",
     "prompt_output_authority",
@@ -27,5 +28,5 @@
     "success_signal_authority",
     "graph_expansion"
   ],
-  "nextAllowedSeam": "ContinuitySyncStateRecord v1"
+  "nextAllowedSeam": "MasterSourceCheck v1"
 }
