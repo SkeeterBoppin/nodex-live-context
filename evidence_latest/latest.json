@@ -1,26 +1,24 @@
 {
   "schema": "nodex.live_context.latest.v1",
   "status": "pass",
-  "latest_completed_seam": "PacketGenerationAssistantBoundaryPushStateRecord v1",
-  "current_open_seam": "MasterSourceCheck v1",
-  "nextAllowedSeam": "MasterSourceCheck v1",
-  "latest_nodex_commit": "ae7e393 Add packet generation assistant boundary manifest",
-  "latest_live_context_commit_policy": "external_evidence_only",
-  "liveContextCommitTracking": "external_evidence_only",
-  "liveContextTrackedCommitSelfReferenceBlocked": true,
-  "nodex_repo_clean": true,
-  "nodex_origin_synced": true,
-  "live_context_update_pending_commit": false,
-  "live_context_continuity_synced": true,
-  "post_push_continuity_repair_applied": true,
-  "latest_evidence": {
-    "live_context_push_state_record": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_state_record_v1_20260503_105723.json",
-    "live_context_push_execution": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_push_execution_v1_20260503_105600.json",
-    "master_source_check": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\master_source_check_v1_20260503_110237.json",
-    "post_push_repair_plan": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_post_push_continuity_repair_plan_v1_20260503_110459.json",
-    "post_push_repair_preflight": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_post_push_continuity_repair_preflight_v1_20260503_110637.json"
-  },
-  "blocked_authorities": [
+  "latestCompletedSeam": "LiveContextUpdateExecution v1",
+  "currentOpenSeam": "LiveContextCommitPlan v1",
+  "updatedAt": "2026-05-04T23:33:33.7179074-07:00",
+  "sourceAuthority": "local_evidence_only",
+  "latestNodexCommit": "0514da1 Add static packet schema validation layer manifest",
+  "latestNodexOriginCommit": "0514da1 Add static packet schema validation layer manifest",
+  "latestLiveContextCommitBeforeUpdate": "4c6e1c0 Repair live-context post-push continuity markers",
+  "latestEvidenceJson": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_update_execution_v1_20260504_233333.json",
+  "latestEvidenceSummary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_update_execution_v1_summary_20260504_233333.txt",
+  "previousEvidenceJson": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_update_preflight_v1_20260504_232535.json",
+  "previousEvidenceSummary": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_update_preflight_v1_summary_20260504_232535.txt",
+  "plannedNextPacket": "packets/current_open_packet.ps1",
+  "blockedAuthorities": [
+    "live_context_commit",
+    "live_context_push",
+    "nodex_source_mutation",
+    "nodex_commit",
+    "nodex_push",
     "runtime_execution",
     "tool_execution",
     "packet_execution_by_nodex",
@@ -35,11 +33,10 @@
     "autonomous_priority_authority",
     "success_signal_authority",
     "graph_expansion",
-    "nodex_source_mutation",
-    "nodex_commit",
-    "nodex_push",
-    "live_context_commit",
-    "live_context_push"
+    "deep_research_authority",
+    "external_review_authority",
+    "advisory_output_authority",
+    "direct_finding_adoption"
   ],
-  "createdAt": "2026-05-03T11:09:11.8910005-07:00"
+  "nextAllowedSeam": "LiveContextCommitPlan v1"
 }
