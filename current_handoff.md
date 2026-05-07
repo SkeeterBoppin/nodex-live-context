@@ -10,29 +10,29 @@ External review output is not authority.
 
 ## Latest completed seam
 
-LiveContextPushStateRecord v1
+StaticPacketSchemaValidationLayerPostRecoveryReadinessDecisionRepair v1
 
 ## Current open seam
 
-MasterSourceCheck v1
+LiveContextUpdateExecution v1
 
 ## Latest commits
 
 - Nodex: 0514da1 Add static packet schema validation layer manifest
 - Nodex origin/main: 0514da1 Add static packet schema validation layer manifest
-- live-context before self-reference repair: ce34e5e Update continuity after static packet schema validation layer
+- live-context before self-reference repair: dabfc82 Repair live-context recovery markers after static packet schema validation
 
-## Continuity repair note
+## Continuity update note
 
-Post-push continuity markers were repaired after MasterSourceCheck detected stale live-context markers.
+Live-context was updated after post-recovery static packet schema validation readiness repair.
 
-The live-context file content does not claim the future repair commit that will contain this repair. This preserves the self-reference boundary:
+The live-context file content does not claim the future commit that will contain this update. This preserves the self-reference boundary:
 do_not_require_live_context_files_to_name_the_commit_that_contains_their_own_update
 
 ## Latest evidence
 
-- LiveContextPushStateRecord v1 JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_push_state_record_v1_20260504_235002.json
-- Repair preflight JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_post_push_continuity_repair_preflight_v1_20260505_000802.json
+- Previous evidence JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_update_preflight_v1_20260507_101118.json
+- Current update execution evidence JSON: pending until this packet completes
 
 ## Current open packet
 
@@ -72,4 +72,4 @@ direct_finding_adoption
 
 ## Next allowed seam
 
-MasterSourceCheck v1
+LiveContextUpdateCommitPlan v1
