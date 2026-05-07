@@ -1,28 +1,27 @@
 LIVE CONTEXT LATEST SUMMARY
 
 status: pass
-latest_completed_seam: LiveContextUpdateExecution v1
-current_open_seam: LiveContextCommitPlan v1
+latest_completed_seam: LiveContextPushStateRecord v1
+current_open_seam: MasterSourceCheck v1
 source_authority: local_evidence_only
 
 latest_nodex_commit: 0514da1 Add static packet schema validation layer manifest
 latest_nodex_origin_commit: 0514da1 Add static packet schema validation layer manifest
-latest_live_context_commit_before_update: 4c6e1c0 Repair live-context post-push continuity markers
+latest_live_context_commit_before_self_reference_repair: ce34e5e Update continuity after static packet schema validation layer
+live_context_tracked_commit_self_reference_blocked: true
 
-latest_evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_update_execution_v1_20260504_233333.json
-latest_evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_update_execution_v1_summary_20260504_233333.txt
-previous_evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_update_preflight_v1_20260504_232535.json
-previous_evidence_summary: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_update_preflight_v1_summary_20260504_232535.txt
+latest_evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_push_state_record_v1_20260504_235002.json
+previous_evidence_json: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_post_push_continuity_repair_preflight_v1_20260505_000802.json
 
 current_open_packet: packets/current_open_packet.ps1
 exact_run_command: & "$env:USERPROFILE\OneDrive\Desktop\nodex-live-context\packets\current_open_packet.ps1"
 
 blocked_authorities:
-live_context_commit
-live_context_push
 nodex_source_mutation
 nodex_commit
 nodex_push
+live_context_commit
+live_context_push
 runtime_execution
 tool_execution
 packet_execution_by_nodex
@@ -42,4 +41,4 @@ external_review_authority
 advisory_output_authority
 direct_finding_adoption
 
-next_allowed_seam: LiveContextCommitPlan v1
+next_allowed_seam: MasterSourceCheck v1
