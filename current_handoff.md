@@ -10,29 +10,32 @@ External review output is not authority.
 
 ## Latest completed seam
 
-StaticPacketSchemaValidationLayerPostRecoveryReadinessDecisionRepair v1
+LiveContextUpdatePushStateRecord v1
 
 ## Current open seam
 
-LiveContextUpdateExecution v1
+LiveContextPostPushContinuityRepairExecution v1
 
 ## Latest commits
 
 - Nodex: 0514da1 Add static packet schema validation layer manifest
 - Nodex origin/main: 0514da1 Add static packet schema validation layer manifest
-- live-context before self-reference repair: dabfc82 Repair live-context recovery markers after static packet schema validation
+- live-context: 7bdb15c Update continuity after post-recovery static schema validation
+- live-context origin/main: 7bdb15c Update continuity after post-recovery static schema validation
 
-## Continuity update note
+## Continuity repair note
 
-Live-context was updated after post-recovery static packet schema validation readiness repair.
+This continuity repair follows LiveContextUpdatePushStateRecord v1.
 
-The live-context file content does not claim the future commit that will contain this update. This preserves the self-reference boundary:
+The prior live-context marker files were stale relative to local evidence after the 7bdb15c push. This repair updates marker files only; it does not claim the future commit that will contain this repair.
+
+Self-reference boundary:
 do_not_require_live_context_files_to_name_the_commit_that_contains_their_own_update
 
 ## Latest evidence
 
-- Previous evidence JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_update_preflight_v1_20260507_101118.json
-- Current update execution evidence JSON: pending until this packet completes
+- Previous evidence JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_post_push_continuity_repair_preflight_v1_20260507_104508.json
+- Current repair execution evidence JSON: pending until this packet completes
 
 ## Current open packet
 
@@ -72,4 +75,4 @@ direct_finding_adoption
 
 ## Next allowed seam
 
-LiveContextUpdateCommitPlan v1
+LiveContextPostPushContinuityRepairCommitPlan v1
