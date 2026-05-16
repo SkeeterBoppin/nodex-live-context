@@ -10,49 +10,47 @@ External review output is not authority.
 
 ## Latest completed seam
 
-LiveContextUpdatePushStateRecord v1
+ContinuityMarkerSyncOneShot v1
 
 ## Current open seam
 
-LiveContextPostPushContinuityRepairExecution v1
+MasterSourceCheck v1
 
 ## Latest commits
 
 - Nodex: 0514da1 Add static packet schema validation layer manifest
 - Nodex origin/main: 0514da1 Add static packet schema validation layer manifest
-- live-context: 7bdb15c Update continuity after post-recovery static schema validation
-- live-context origin/main: 7bdb15c Update continuity after post-recovery static schema validation
+- live-context before self-reference sync: 21ccf48 Repair continuity after post-push marker update
+- live-context tracked commit self-reference: blocked by invariant
 
-## Continuity repair note
+## Continuity marker sync note
 
-This continuity repair follows LiveContextUpdatePushStateRecord v1.
-
-The prior live-context marker files were stale relative to local evidence after the 7bdb15c push. This repair updates marker files only; it does not claim the future commit that will contain this repair.
+This marker update was performed by ContinuityMarkerSyncOneShot v1.
 
 Self-reference boundary:
 do_not_require_live_context_files_to_name_the_commit_that_contains_their_own_update
 
+The marker files intentionally do not claim the live-context commit hash that contains this marker update. Local evidence remains authority for the final pushed commit verification.
+
 ## Latest evidence
 
-- Previous evidence JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\live_context_post_push_continuity_repair_preflight_v1_20260507_104508.json
-- Current repair execution evidence JSON: pending until this packet completes
+- Previous preflight evidence JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_marker_sync_oneshot_preflight_v1_20260516_115306.json
+- Current marker sync evidence JSON: C:\Users\Zak\OneDrive\Desktop\Nodex Evidence\continuity_marker_sync_oneshot_v1_20260516_121427.json
 
 ## Current open packet
 
 Run:
 
-``powershell
+```powershell
 & "$env:USERPROFILE\OneDrive\Desktop\nodex-live-context\packets\current_open_packet.ps1"
-``
+```
 
 ## Blocked authorities
 
-``text
+```text
 nodex_source_mutation
 nodex_commit
 nodex_push
-live_context_commit
-live_context_push
 runtime_execution
 tool_execution
 packet_execution_by_nodex
@@ -71,8 +69,8 @@ deep_research_authority
 external_review_authority
 advisory_output_authority
 direct_finding_adoption
-``
+```
 
 ## Next allowed seam
 
-LiveContextPostPushContinuityRepairCommitPlan v1
+MasterSourceCheck v1

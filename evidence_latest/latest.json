@@ -1,19 +1,19 @@
 {
   "schema": "nodex.live_context.latest.v1",
   "status": "pass",
-  "latestCompletedSeam": "LiveContextUpdatePushStateRecord v1",
-  "currentOpenSeam": "LiveContextPostPushContinuityRepairExecution v1",
-  "updatedAt": "2026-05-07T10:48:20.1389275-07:00",
+  "latestCompletedSeam": "ContinuityMarkerSyncOneShot v1",
+  "currentOpenSeam": "MasterSourceCheck v1",
+  "updatedAt": "2026-05-16T12:14:28.0747534-07:00",
   "sourceAuthority": "local_evidence_only",
   "latestNodexCommit": "0514da1 Add static packet schema validation layer manifest",
   "latestNodexOriginCommit": "0514da1 Add static packet schema validation layer manifest",
-  "latestLiveContextCommit": "7bdb15c Update continuity after post-recovery static schema validation",
-  "latestLiveContextOriginCommit": "7bdb15c Update continuity after post-recovery static schema validation",
-  "latestEvidenceJson": "",
-  "previousEvidenceJson": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\live_context_post_push_continuity_repair_preflight_v1_20260507_104508.json",
+  "latestLiveContextCommitBeforeSelfReferenceSync": "21ccf48 Repair continuity after post-push marker update",
+  "latestLiveContextFullHashBeforeSelfReferenceSync": "21ccf48cf78b5c211f4fc38b31d98bcaecb7a10c",
+  "latestEvidenceJson": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_marker_sync_oneshot_v1_20260516_121427.json",
+  "previousEvidenceJson": "C:\\Users\\Zak\\OneDrive\\Desktop\\Nodex Evidence\\continuity_marker_sync_oneshot_preflight_v1_20260516_115306.json",
   "selfReferenceBoundary": "do_not_require_live_context_files_to_name_the_commit_that_contains_their_own_update",
   "liveContextTrackedCommitSelfReferenceBlocked": true,
   "localEvidenceRemainsAuthority": true,
-  "nextAllowedSeam": "LiveContextPostPushContinuityRepairCommitPlan v1",
-  "blockedAuthoritiesText": "nodex_source_mutation\nnodex_commit\nnodex_push\nlive_context_commit\nlive_context_push\nruntime_execution\ntool_execution\npacket_execution_by_nodex\npacket_commit_by_nodex\npacket_push_by_nodex\ngenerated_code_approval\nmodel_output_approval\nprompt_output_authority\nself_approval_authority\nauthority_self_expansion\nreward_authority\nautonomous_priority_authority\nsuccess_signal_authority\ngraph_expansion\ndeep_research_authority\nexternal_review_authority\nadvisory_output_authority\ndirect_finding_adoption"
+  "nextAllowedSeam": "MasterSourceCheck v1",
+  "blockedAuthoritiesText": "nodex_source_mutation\nnodex_commit\nnodex_push\nruntime_execution\ntool_execution\npacket_execution_by_nodex\npacket_commit_by_nodex\npacket_push_by_nodex\ngenerated_code_approval\nmodel_output_approval\nprompt_output_authority\nself_approval_authority\nauthority_self_expansion\nreward_authority\nautonomous_priority_authority\nsuccess_signal_authority\ngraph_expansion\ndeep_research_authority\nexternal_review_authority\nadvisory_output_authority\ndirect_finding_adoption"
 }
